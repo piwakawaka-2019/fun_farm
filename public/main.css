@@ -1,8 +1,12 @@
 .farm {
   font-family: 'Dokdo', cursive;
   width: 180px;  
+  
 }
-
+body {
+background-image:url(images/background.jpg);
+background-size:100%;
+}
 .Cow {
 
   position: 30px;
@@ -36,8 +40,8 @@
 
   margin-left: 1500px;
 
--webkit-animation: sheep-move 2s linear infinite normal;
-          animation: sheep-move 2s linear infinite normal;
+-webkit-animation: sheep-move 4s linear infinite normal;
+          animation: sheep-move 4s linear infinite normal;
 }
 @-webkit-keyframes sheep-move {
   0% {
@@ -55,8 +59,8 @@
             transform: translateY(150px);
   }
   100% {
-    -webkit-transform: translateY(-1000px);
-            transform: translateY(-1000px);
+    -webkit-transform: translateY(-1200px);
+            transform: translateY(-1200px);
   }
 }
 
@@ -152,3 +156,14 @@
             transform: translateX(1750px);
   }
 } 
+
+button {
+  background: none;
+  padding: 0;
+  border:none;
+}
+
+img {
+  width: 150px;
+  height: 140px
+}
