@@ -248,8 +248,8 @@ function (_React$Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "I'm Pig"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: "/images/pig.jpg",
-        width: "100",
-        height: "100"
+        width: "150",
+        height: "150"
       }));
     }
   }]);
