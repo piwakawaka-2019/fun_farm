@@ -12,11 +12,11 @@ const App = () => {
   return (
     <div>
       <h1>Fun farm</h1>,
-    <Pig />,
+    {/* <Pig />,
     <Cow />,
     <Rooster />,
     <Snake />,
-    <Sheep />
+    <Sheep /> */}
 
     </div>
   )
