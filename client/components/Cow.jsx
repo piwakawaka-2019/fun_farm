@@ -1,4 +1,5 @@
 import React from 'react'
+import reactSound from 'react-sound'
 
 class Cow extends React.Component {
   constructor(props) {
