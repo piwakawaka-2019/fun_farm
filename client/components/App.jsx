@@ -11,7 +11,8 @@ import Sheep from './Sheep.jsx'
 const App = () => {
   return (
     <div>
-      <h1>Fun farm</h1>,
+      <h1>Fun farm</h1>
+      <Cow/>
     {/* <Pig />,
     <Cow />,
     <Rooster />,
