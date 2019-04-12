@@ -1,8 +1,11 @@
-
+.farm {
+  font-family: 'Dokdo', cursive;
+  width: 180px;  
+}
 
 .Cow {
 
-  position: 50px;
+  position: 30px;
 
 -webkit-animation: cow-move 7s linear infinite normal;
           animation: cow-move 7s linear infinite normal;
@@ -31,39 +34,37 @@
 
 .Sheep {
 
-  position: 30px;
-   
+  margin-left: 1500px;
 
 -webkit-animation: sheep-move 2s linear infinite normal;
           animation: sheep-move 2s linear infinite normal;
 }
 @-webkit-keyframes sheep-move {
   0% {
-    -webkit-transform: translateX(2000px);
-            transform: translateX(2000px);
+    -webkit-transform: translateY(150px);
+            transform: translateY(150px);
   }
   100% {
-    -webkit-transform: translateX(-150px);
-            transform: translateX(-150px);
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
   }
 }
 @keyframes sheep-move {
   0% {
-    -webkit-transform: translateX(2000px);
-            transform: translateX(2000px);
+    -webkit-transform: translateY(150px);
+            transform: translateY(150px);
   }
   100% {
-    -webkit-transform: translateX(-150px);
-            transform: translateX(-150px);
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
   }
 }
-
 
 
 
 .Snake {
 
-  position: 5px;
+  position: 15px;
  
   
 
@@ -72,28 +73,28 @@
 }
 @-webkit-keyframes snake-move {
   0% {
-    -webkit-transform: translateX(-150px);
-            transform: translateX(-150px);
+    -webkit-transform: translateY(150px);
+            transform: translateY(150px);
   }
   100% {
-    -webkit-transform: translateX(2000px);
-            transform: translateX(2000px);
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
   }
 }
 @keyframes snake-move {
   0% {
-    -webkit-transform: translateX(-150px);
-            transform: translateX(-150px);
+    -webkit-transform: translateY(150px);
+            transform: translateY(150px);
   }
   100% {
-    -webkit-transform: translateX(2000px);
-            transform: translateX(2000px);
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
   }
 }
 
 .Rooster {
 
-  position:30px;
+ margin-left:800px;
 
   
 
@@ -102,29 +103,29 @@
 }
 @-webkit-keyframes Rooster-move {
   0% {
-    -webkit-transform: translateX(2000px);
-            transform: translateX(2000px);
+    -webkit-transform: translateY(-1500px);
+            transform: translateY(-1500px);
   }
   100% {
-    -webkit-transform: translateX(-150px);
-            transform: translateX(-150px);
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
   }
 }
 @keyframes Rooster-move {
   0% {
-    -webkit-transform: translateX(2000px);
-            transform: translateX(2000px);
+    -webkit-transform: translateY(-1500px);
+            transform: translateY(-1500px);
   }
   100% {
-    -webkit-transform: translateX(-150px);
-            transform: translateX(-150px);
+    -webkit-transform: translateY(200px);
+            transform: translateY(200px);
   }
 }
 
 
 .Pig {
 
-  position: 13px;
+  position: 155px;
   
   
 
@@ -137,8 +138,8 @@
             transform: translateX(-150px);
   }
   100% {
-    -webkit-transform: translateX(2000px);
-            transform: translateX(2000px);
+    -webkit-transform: translateX(1750px);
+            transform: translateX(1750px);
   }
 }
 @keyframes pig-move {
@@ -147,7 +148,7 @@
             transform: translateX(-150px);
   }
   100% {
-    -webkit-transform: translateX(2000px);
-            transform: translateX(2000px);
+    -webkit-transform: translateX(1750px);
+            transform: translateX(1750px);
   }
 } 

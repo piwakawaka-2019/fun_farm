@@ -279,9 +279,15 @@ function (_React$Component) {
         onClick: this.play.bind(this)
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: "/images/pig.jpg",
+<<<<<<< HEAD
         width: "100",
         height: "100"
       })));
+=======
+        width: "150",
+        height: "150"
+      }));
+>>>>>>> 0efffae90e69bcbbbabe2de680d5cad9c72ccb81
     }
   }]);
 
