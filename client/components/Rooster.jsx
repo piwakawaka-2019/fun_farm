@@ -13,6 +13,12 @@ class Rooster extends React.Component {
 
 
 render(){
+  return (
+  <div>
+  <h2>I'm Rooster</h2>
+  <img src="/images/rooster.jpg"width="100" height="100"></img>
+</div>
+  )
 
   }
 }

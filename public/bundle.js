@@ -110,7 +110,21 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var App = function App() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Fun farm"), ",");
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "farm"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "title"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Fun farm"), ","), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "Pig"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Pig_jsx__WEBPACK_IMPORTED_MODULE_1__["default"], null), ","), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "Cow"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Cow_jsx__WEBPACK_IMPORTED_MODULE_2__["default"], null), ","), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "Rooster"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Rooster_jsx__WEBPACK_IMPORTED_MODULE_3__["default"], null), ","), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "Snake"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Snake_jsx__WEBPACK_IMPORTED_MODULE_4__["default"], null), ","), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "Sheep"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Sheep_jsx__WEBPACK_IMPORTED_MODULE_5__["default"], null), ","));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
@@ -166,7 +180,13 @@ function (_React$Component) {
 
   _createClass(Cow, [{
     key: "render",
-    value: function render() {}
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "I'm cow"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "/images/cow.gif",
+        width: "100",
+        height: "100"
+      }));
+    }
   }]);
 
   return Cow;
@@ -225,7 +245,13 @@ function (_React$Component) {
 
   _createClass(Pig, [{
     key: "render",
-    value: function render() {}
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "I'm Pig"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "/images/pig.jpg",
+        width: "100",
+        height: "100"
+      }));
+    }
   }]);
 
   return Pig;
@@ -284,7 +310,13 @@ function (_React$Component) {
 
   _createClass(Rooster, [{
     key: "render",
-    value: function render() {}
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "I'm Rooster"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "/images/rooster.jpg",
+        width: "100",
+        height: "100"
+      }));
+    }
   }]);
 
   return Rooster;
@@ -343,7 +375,13 @@ function (_React$Component) {
 
   _createClass(Sheep, [{
     key: "render",
-    value: function render() {}
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "I'm Sheep"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "/images/sheep.jpg",
+        width: "100",
+        height: "100"
+      }));
+    }
   }]);
 
   return Sheep;
@@ -402,7 +440,13 @@ function (_React$Component) {
 
   _createClass(Snake, [{
     key: "render",
-    value: function render() {}
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "I'm Snake"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: "/images/snake.jpg",
+        width: "100",
+        height: "100"
+      }));
+    }
   }]);
 
   return Snake;

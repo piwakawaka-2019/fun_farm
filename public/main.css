@@ -1,6 +1,153 @@
-body {
-backgroud-color:pink;
 
 
+.Cow {
+
+  position: 50px;
+
+-webkit-animation: cow-move 7s linear infinite normal;
+          animation: cow-move 7s linear infinite normal;
+}
+@-webkit-keyframes cow-move {
+  0% {
+    -webkit-transform: translateX(-150px);
+            transform: translateX(-150px);
+  }
+  100% {
+    -webkit-transform: translateX(1750px);
+            transform: translateX(1750px);
+  }
+}
+@keyframes cow-move {
+  0% {
+    -webkit-transform: translateX(-150px);
+            transform: translateX(-150px);
+  }
+  100% {
+    -webkit-transform: translateX(1750px);
+            transform: translateX(1750px);
+  }
 }
 
+
+.Sheep {
+
+  position: 30px;
+   
+
+-webkit-animation: sheep-move 2s linear infinite normal;
+          animation: sheep-move 2s linear infinite normal;
+}
+@-webkit-keyframes sheep-move {
+  0% {
+    -webkit-transform: translateX(2000px);
+            transform: translateX(2000px);
+  }
+  100% {
+    -webkit-transform: translateX(-150px);
+            transform: translateX(-150px);
+  }
+}
+@keyframes sheep-move {
+  0% {
+    -webkit-transform: translateX(2000px);
+            transform: translateX(2000px);
+  }
+  100% {
+    -webkit-transform: translateX(-150px);
+            transform: translateX(-150px);
+  }
+}
+
+
+
+
+.Snake {
+
+  position: 5px;
+ 
+  
+
+-webkit-animation: snake-move 7s linear infinite normal;
+          animation: snake-move 7s linear infinite normal;
+}
+@-webkit-keyframes snake-move {
+  0% {
+    -webkit-transform: translateX(-150px);
+            transform: translateX(-150px);
+  }
+  100% {
+    -webkit-transform: translateX(2000px);
+            transform: translateX(2000px);
+  }
+}
+@keyframes snake-move {
+  0% {
+    -webkit-transform: translateX(-150px);
+            transform: translateX(-150px);
+  }
+  100% {
+    -webkit-transform: translateX(2000px);
+            transform: translateX(2000px);
+  }
+}
+
+.Rooster {
+
+  position:30px;
+
+  
+
+-webkit-animation: Rooster-move 5s linear infinite normal;
+          animation: Rooster-move 5s linear infinite normal;
+}
+@-webkit-keyframes Rooster-move {
+  0% {
+    -webkit-transform: translateX(2000px);
+            transform: translateX(2000px);
+  }
+  100% {
+    -webkit-transform: translateX(-150px);
+            transform: translateX(-150px);
+  }
+}
+@keyframes Rooster-move {
+  0% {
+    -webkit-transform: translateX(2000px);
+            transform: translateX(2000px);
+  }
+  100% {
+    -webkit-transform: translateX(-150px);
+            transform: translateX(-150px);
+  }
+}
+
+
+.Pig {
+
+  position: 13px;
+  
+  
+
+-webkit-animation: pig-move 4s linear infinite normal;
+          animation: pig-move 4s linear infinite normal;
+}
+@-webkit-keyframes pig-move {
+  0% {
+    -webkit-transform: translateX(-150px);
+            transform: translateX(-150px);
+  }
+  100% {
+    -webkit-transform: translateX(2000px);
+            transform: translateX(2000px);
+  }
+}
+@keyframes pig-move {
+  0% {
+    -webkit-transform: translateX(-150px);
+            transform: translateX(-150px);
+  }
+  100% {
+    -webkit-transform: translateX(2000px);
+            transform: translateX(2000px);
+  }
+} 

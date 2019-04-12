@@ -13,7 +13,12 @@ class Cow extends React.Component {
 
 
 render(){
-
+        return(
+          <div>
+              <h2>I'm cow</h2>
+              <img src="/images/cow.gif"width="100" height="100"></img>
+          </div>
+        )
   }
 }
 

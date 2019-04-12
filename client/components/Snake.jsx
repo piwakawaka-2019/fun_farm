@@ -13,7 +13,12 @@ class Snake extends React.Component {
 
 
 render(){
-
+  return (
+  <div>
+  <h2>I'm Snake</h2>
+  <img src="/images/snake.jpg"width="100" height="100"></img>
+</div>
+  )
   }
 }
 
