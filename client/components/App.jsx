@@ -11,22 +11,22 @@ import Sheep from './Sheep.jsx'
 const App = () => {
   return (
     <div className='farm'>
-      <div  className='title'>
+      <div className='title'>
         <h1>Fun farm</h1>,
     </div>
-      <div  className='Pig'>
+      <div className='Pig'>
         <Pig />,
     </div>
-      <div  className='Cow'>
+      <div className='Cow'>
         <Cow />,
     </div>
-      <div  className='Rooster'>
+      <div className='Rooster'>
         <Rooster />,
     </div>
-      <div  className='Snake'>
+      <div className='Snake'>
         <Snake />,
     </div>
-      <div  className='Sheep'>
+      <div className='Sheep'>
         <Sheep />,
     </div>
     </div>
