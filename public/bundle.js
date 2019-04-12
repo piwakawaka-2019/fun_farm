@@ -142,6 +142,8 @@ var App = function App() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_sound__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-sound */ "./node_modules/react-sound/lib/index.js");
+/* harmony import */ var react_sound__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_sound__WEBPACK_IMPORTED_MODULE_1__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -162,6 +164,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
 var Cow =
 /*#__PURE__*/
 function (_React$Component) {
@@ -173,19 +176,33 @@ function (_React$Component) {
     _classCallCheck(this, Cow);
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Cow).call(this, props));
-    _this.state = {};
+    _this.state = {
+      play: false
+    };
+    _this.url = "../../sound/cow.mp3";
+    _this.audio = new Audio(_this.url);
     return _this;
-  } // sound event listener here 
-
+  }
 
   _createClass(Cow, [{
+    key: "play",
+    value: function play() {
+      this.setState({
+        play: true
+      });
+      this.audio.play();
+    }
+  }, {
     key: "render",
+    // sound event listener here 
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "I'm cow"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "I'm cow"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        onClick: this.play.bind(this)
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: "/images/cow.gif",
         width: "100",
         height: "100"
-      }));
+      })));
     }
   }]);
 
@@ -238,19 +255,39 @@ function (_React$Component) {
     _classCallCheck(this, Pig);
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Pig).call(this, props));
-    _this.state = {};
+    _this.state = {
+      play: false
+    };
+    _this.url = "../../sound/pig.mp3";
+    _this.audio = new Audio(_this.url);
     return _this;
-  } // sound event listener here 
-
+  }
 
   _createClass(Pig, [{
+    key: "play",
+    value: function play() {
+      this.setState({
+        play: true
+      });
+      this.audio.play();
+    }
+  }, {
     key: "render",
+    // sound event listener here 
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "I'm Pig"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "I'm Pig"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        onClick: this.play.bind(this)
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: "/images/pig.jpg",
+<<<<<<< HEAD
+        width: "100",
+        height: "100"
+      })));
+=======
         width: "150",
         height: "150"
       }));
+>>>>>>> 0efffae90e69bcbbbabe2de680d5cad9c72ccb81
     }
   }]);
 
@@ -303,19 +340,33 @@ function (_React$Component) {
     _classCallCheck(this, Rooster);
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Rooster).call(this, props));
-    _this.state = {};
+    _this.state = {
+      play: false
+    };
+    _this.url = "../../sound/rooster.mp3";
+    _this.audio = new Audio(_this.url);
     return _this;
-  } // sound event listener here 
-
+  }
 
   _createClass(Rooster, [{
+    key: "play",
+    value: function play() {
+      this.setState({
+        play: true
+      });
+      this.audio.play();
+    }
+  }, {
     key: "render",
+    // sound event listener here 
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "I'm Rooster"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "I'm Rooster"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        onClick: this.play.bind(this)
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: "/images/rooster.jpg",
         width: "100",
         height: "100"
-      }));
+      })));
     }
   }]);
 
@@ -368,19 +419,33 @@ function (_React$Component) {
     _classCallCheck(this, Sheep);
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Sheep).call(this, props));
-    _this.state = {};
+    _this.state = {
+      play: false
+    };
+    _this.url = "../../sound/damn.mp3";
+    _this.audio = new Audio(_this.url);
     return _this;
-  } // sound event listener here 
-
+  }
 
   _createClass(Sheep, [{
+    key: "play",
+    value: function play() {
+      this.setState({
+        play: true
+      });
+      this.audio.play();
+    }
+  }, {
     key: "render",
+    // sound event listener here 
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "I'm Sheep"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "I'm Sheep"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        onClick: this.play.bind(this)
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: "/images/sheep.jpg",
         width: "100",
         height: "100"
-      }));
+      })));
     }
   }]);
 
@@ -433,19 +498,33 @@ function (_React$Component) {
     _classCallCheck(this, Snake);
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(Snake).call(this, props));
-    _this.state = {};
+    _this.state = {
+      play: false
+    };
+    _this.url = "../../sound/airhorn.mp3";
+    _this.audio = new Audio(_this.url);
     return _this;
-  } // sound event listener here 
-
+  }
 
   _createClass(Snake, [{
+    key: "play",
+    value: function play() {
+      this.setState({
+        play: true
+      });
+      this.audio.play();
+    }
+  }, {
     key: "render",
+    // sound event listener here 
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "I'm Snake"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "I'm Snake"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        onClick: this.play.bind(this)
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: "/images/snake.jpg",
         width: "100",
         height: "100"
-      }));
+      })));
     }
   }]);
 
@@ -684,6 +763,608 @@ module.exports = checkPropTypes;
 
 /***/ }),
 
+/***/ "./node_modules/prop-types/factoryWithTypeCheckers.js":
+/*!************************************************************!*\
+  !*** ./node_modules/prop-types/factoryWithTypeCheckers.js ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+var assign = __webpack_require__(/*! object-assign */ "./node_modules/object-assign/index.js");
+
+var ReactPropTypesSecret = __webpack_require__(/*! ./lib/ReactPropTypesSecret */ "./node_modules/prop-types/lib/ReactPropTypesSecret.js");
+var checkPropTypes = __webpack_require__(/*! ./checkPropTypes */ "./node_modules/prop-types/checkPropTypes.js");
+
+var printWarning = function() {};
+
+if (true) {
+  printWarning = function(text) {
+    var message = 'Warning: ' + text;
+    if (typeof console !== 'undefined') {
+      console.error(message);
+    }
+    try {
+      // --- Welcome to debugging React ---
+      // This error was thrown as a convenience so that you can use this stack
+      // to find the callsite that caused this warning to fire.
+      throw new Error(message);
+    } catch (x) {}
+  };
+}
+
+function emptyFunctionThatReturnsNull() {
+  return null;
+}
+
+module.exports = function(isValidElement, throwOnDirectAccess) {
+  /* global Symbol */
+  var ITERATOR_SYMBOL = typeof Symbol === 'function' && Symbol.iterator;
+  var FAUX_ITERATOR_SYMBOL = '@@iterator'; // Before Symbol spec.
+
+  /**
+   * Returns the iterator method function contained on the iterable object.
+   *
+   * Be sure to invoke the function with the iterable as context:
+   *
+   *     var iteratorFn = getIteratorFn(myIterable);
+   *     if (iteratorFn) {
+   *       var iterator = iteratorFn.call(myIterable);
+   *       ...
+   *     }
+   *
+   * @param {?object} maybeIterable
+   * @return {?function}
+   */
+  function getIteratorFn(maybeIterable) {
+    var iteratorFn = maybeIterable && (ITERATOR_SYMBOL && maybeIterable[ITERATOR_SYMBOL] || maybeIterable[FAUX_ITERATOR_SYMBOL]);
+    if (typeof iteratorFn === 'function') {
+      return iteratorFn;
+    }
+  }
+
+  /**
+   * Collection of methods that allow declaration and validation of props that are
+   * supplied to React components. Example usage:
+   *
+   *   var Props = require('ReactPropTypes');
+   *   var MyArticle = React.createClass({
+   *     propTypes: {
+   *       // An optional string prop named "description".
+   *       description: Props.string,
+   *
+   *       // A required enum prop named "category".
+   *       category: Props.oneOf(['News','Photos']).isRequired,
+   *
+   *       // A prop named "dialog" that requires an instance of Dialog.
+   *       dialog: Props.instanceOf(Dialog).isRequired
+   *     },
+   *     render: function() { ... }
+   *   });
+   *
+   * A more formal specification of how these methods are used:
+   *
+   *   type := array|bool|func|object|number|string|oneOf([...])|instanceOf(...)
+   *   decl := ReactPropTypes.{type}(.isRequired)?
+   *
+   * Each and every declaration produces a function with the same signature. This
+   * allows the creation of custom validation functions. For example:
+   *
+   *  var MyLink = React.createClass({
+   *    propTypes: {
+   *      // An optional string or URI prop named "href".
+   *      href: function(props, propName, componentName) {
+   *        var propValue = props[propName];
+   *        if (propValue != null && typeof propValue !== 'string' &&
+   *            !(propValue instanceof URI)) {
+   *          return new Error(
+   *            'Expected a string or an URI for ' + propName + ' in ' +
+   *            componentName
+   *          );
+   *        }
+   *      }
+   *    },
+   *    render: function() {...}
+   *  });
+   *
+   * @internal
+   */
+
+  var ANONYMOUS = '<<anonymous>>';
+
+  // Important!
+  // Keep this list in sync with production version in `./factoryWithThrowingShims.js`.
+  var ReactPropTypes = {
+    array: createPrimitiveTypeChecker('array'),
+    bool: createPrimitiveTypeChecker('boolean'),
+    func: createPrimitiveTypeChecker('function'),
+    number: createPrimitiveTypeChecker('number'),
+    object: createPrimitiveTypeChecker('object'),
+    string: createPrimitiveTypeChecker('string'),
+    symbol: createPrimitiveTypeChecker('symbol'),
+
+    any: createAnyTypeChecker(),
+    arrayOf: createArrayOfTypeChecker,
+    element: createElementTypeChecker(),
+    instanceOf: createInstanceTypeChecker,
+    node: createNodeChecker(),
+    objectOf: createObjectOfTypeChecker,
+    oneOf: createEnumTypeChecker,
+    oneOfType: createUnionTypeChecker,
+    shape: createShapeTypeChecker,
+    exact: createStrictShapeTypeChecker,
+  };
+
+  /**
+   * inlined Object.is polyfill to avoid requiring consumers ship their own
+   * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
+   */
+  /*eslint-disable no-self-compare*/
+  function is(x, y) {
+    // SameValue algorithm
+    if (x === y) {
+      // Steps 1-5, 7-10
+      // Steps 6.b-6.e: +0 != -0
+      return x !== 0 || 1 / x === 1 / y;
+    } else {
+      // Step 6.a: NaN == NaN
+      return x !== x && y !== y;
+    }
+  }
+  /*eslint-enable no-self-compare*/
+
+  /**
+   * We use an Error-like object for backward compatibility as people may call
+   * PropTypes directly and inspect their output. However, we don't use real
+   * Errors anymore. We don't inspect their stack anyway, and creating them
+   * is prohibitively expensive if they are created too often, such as what
+   * happens in oneOfType() for any type before the one that matched.
+   */
+  function PropTypeError(message) {
+    this.message = message;
+    this.stack = '';
+  }
+  // Make `instanceof Error` still work for returned errors.
+  PropTypeError.prototype = Error.prototype;
+
+  function createChainableTypeChecker(validate) {
+    if (true) {
+      var manualPropTypeCallCache = {};
+      var manualPropTypeWarningCount = 0;
+    }
+    function checkType(isRequired, props, propName, componentName, location, propFullName, secret) {
+      componentName = componentName || ANONYMOUS;
+      propFullName = propFullName || propName;
+
+      if (secret !== ReactPropTypesSecret) {
+        if (throwOnDirectAccess) {
+          // New behavior only for users of `prop-types` package
+          var err = new Error(
+            'Calling PropTypes validators directly is not supported by the `prop-types` package. ' +
+            'Use `PropTypes.checkPropTypes()` to call them. ' +
+            'Read more at http://fb.me/use-check-prop-types'
+          );
+          err.name = 'Invariant Violation';
+          throw err;
+        } else if ( true && typeof console !== 'undefined') {
+          // Old behavior for people using React.PropTypes
+          var cacheKey = componentName + ':' + propName;
+          if (
+            !manualPropTypeCallCache[cacheKey] &&
+            // Avoid spamming the console because they are often not actionable except for lib authors
+            manualPropTypeWarningCount < 3
+          ) {
+            printWarning(
+              'You are manually calling a React.PropTypes validation ' +
+              'function for the `' + propFullName + '` prop on `' + componentName  + '`. This is deprecated ' +
+              'and will throw in the standalone `prop-types` package. ' +
+              'You may be seeing this warning due to a third-party PropTypes ' +
+              'library. See https://fb.me/react-warning-dont-call-proptypes ' + 'for details.'
+            );
+            manualPropTypeCallCache[cacheKey] = true;
+            manualPropTypeWarningCount++;
+          }
+        }
+      }
+      if (props[propName] == null) {
+        if (isRequired) {
+          if (props[propName] === null) {
+            return new PropTypeError('The ' + location + ' `' + propFullName + '` is marked as required ' + ('in `' + componentName + '`, but its value is `null`.'));
+          }
+          return new PropTypeError('The ' + location + ' `' + propFullName + '` is marked as required in ' + ('`' + componentName + '`, but its value is `undefined`.'));
+        }
+        return null;
+      } else {
+        return validate(props, propName, componentName, location, propFullName);
+      }
+    }
+
+    var chainedCheckType = checkType.bind(null, false);
+    chainedCheckType.isRequired = checkType.bind(null, true);
+
+    return chainedCheckType;
+  }
+
+  function createPrimitiveTypeChecker(expectedType) {
+    function validate(props, propName, componentName, location, propFullName, secret) {
+      var propValue = props[propName];
+      var propType = getPropType(propValue);
+      if (propType !== expectedType) {
+        // `propValue` being instance of, say, date/regexp, pass the 'object'
+        // check, but we can offer a more precise error message here rather than
+        // 'of type `object`'.
+        var preciseType = getPreciseType(propValue);
+
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + preciseType + '` supplied to `' + componentName + '`, expected ') + ('`' + expectedType + '`.'));
+      }
+      return null;
+    }
+    return createChainableTypeChecker(validate);
+  }
+
+  function createAnyTypeChecker() {
+    return createChainableTypeChecker(emptyFunctionThatReturnsNull);
+  }
+
+  function createArrayOfTypeChecker(typeChecker) {
+    function validate(props, propName, componentName, location, propFullName) {
+      if (typeof typeChecker !== 'function') {
+        return new PropTypeError('Property `' + propFullName + '` of component `' + componentName + '` has invalid PropType notation inside arrayOf.');
+      }
+      var propValue = props[propName];
+      if (!Array.isArray(propValue)) {
+        var propType = getPropType(propValue);
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected an array.'));
+      }
+      for (var i = 0; i < propValue.length; i++) {
+        var error = typeChecker(propValue, i, componentName, location, propFullName + '[' + i + ']', ReactPropTypesSecret);
+        if (error instanceof Error) {
+          return error;
+        }
+      }
+      return null;
+    }
+    return createChainableTypeChecker(validate);
+  }
+
+  function createElementTypeChecker() {
+    function validate(props, propName, componentName, location, propFullName) {
+      var propValue = props[propName];
+      if (!isValidElement(propValue)) {
+        var propType = getPropType(propValue);
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected a single ReactElement.'));
+      }
+      return null;
+    }
+    return createChainableTypeChecker(validate);
+  }
+
+  function createInstanceTypeChecker(expectedClass) {
+    function validate(props, propName, componentName, location, propFullName) {
+      if (!(props[propName] instanceof expectedClass)) {
+        var expectedClassName = expectedClass.name || ANONYMOUS;
+        var actualClassName = getClassName(props[propName]);
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + actualClassName + '` supplied to `' + componentName + '`, expected ') + ('instance of `' + expectedClassName + '`.'));
+      }
+      return null;
+    }
+    return createChainableTypeChecker(validate);
+  }
+
+  function createEnumTypeChecker(expectedValues) {
+    if (!Array.isArray(expectedValues)) {
+       true ? printWarning('Invalid argument supplied to oneOf, expected an instance of array.') : undefined;
+      return emptyFunctionThatReturnsNull;
+    }
+
+    function validate(props, propName, componentName, location, propFullName) {
+      var propValue = props[propName];
+      for (var i = 0; i < expectedValues.length; i++) {
+        if (is(propValue, expectedValues[i])) {
+          return null;
+        }
+      }
+
+      var valuesString = JSON.stringify(expectedValues);
+      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of value `' + propValue + '` ' + ('supplied to `' + componentName + '`, expected one of ' + valuesString + '.'));
+    }
+    return createChainableTypeChecker(validate);
+  }
+
+  function createObjectOfTypeChecker(typeChecker) {
+    function validate(props, propName, componentName, location, propFullName) {
+      if (typeof typeChecker !== 'function') {
+        return new PropTypeError('Property `' + propFullName + '` of component `' + componentName + '` has invalid PropType notation inside objectOf.');
+      }
+      var propValue = props[propName];
+      var propType = getPropType(propValue);
+      if (propType !== 'object') {
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected an object.'));
+      }
+      for (var key in propValue) {
+        if (propValue.hasOwnProperty(key)) {
+          var error = typeChecker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
+          if (error instanceof Error) {
+            return error;
+          }
+        }
+      }
+      return null;
+    }
+    return createChainableTypeChecker(validate);
+  }
+
+  function createUnionTypeChecker(arrayOfTypeCheckers) {
+    if (!Array.isArray(arrayOfTypeCheckers)) {
+       true ? printWarning('Invalid argument supplied to oneOfType, expected an instance of array.') : undefined;
+      return emptyFunctionThatReturnsNull;
+    }
+
+    for (var i = 0; i < arrayOfTypeCheckers.length; i++) {
+      var checker = arrayOfTypeCheckers[i];
+      if (typeof checker !== 'function') {
+        printWarning(
+          'Invalid argument supplied to oneOfType. Expected an array of check functions, but ' +
+          'received ' + getPostfixForTypeWarning(checker) + ' at index ' + i + '.'
+        );
+        return emptyFunctionThatReturnsNull;
+      }
+    }
+
+    function validate(props, propName, componentName, location, propFullName) {
+      for (var i = 0; i < arrayOfTypeCheckers.length; i++) {
+        var checker = arrayOfTypeCheckers[i];
+        if (checker(props, propName, componentName, location, propFullName, ReactPropTypesSecret) == null) {
+          return null;
+        }
+      }
+
+      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` supplied to ' + ('`' + componentName + '`.'));
+    }
+    return createChainableTypeChecker(validate);
+  }
+
+  function createNodeChecker() {
+    function validate(props, propName, componentName, location, propFullName) {
+      if (!isNode(props[propName])) {
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` supplied to ' + ('`' + componentName + '`, expected a ReactNode.'));
+      }
+      return null;
+    }
+    return createChainableTypeChecker(validate);
+  }
+
+  function createShapeTypeChecker(shapeTypes) {
+    function validate(props, propName, componentName, location, propFullName) {
+      var propValue = props[propName];
+      var propType = getPropType(propValue);
+      if (propType !== 'object') {
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type `' + propType + '` ' + ('supplied to `' + componentName + '`, expected `object`.'));
+      }
+      for (var key in shapeTypes) {
+        var checker = shapeTypes[key];
+        if (!checker) {
+          continue;
+        }
+        var error = checker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
+        if (error) {
+          return error;
+        }
+      }
+      return null;
+    }
+    return createChainableTypeChecker(validate);
+  }
+
+  function createStrictShapeTypeChecker(shapeTypes) {
+    function validate(props, propName, componentName, location, propFullName) {
+      var propValue = props[propName];
+      var propType = getPropType(propValue);
+      if (propType !== 'object') {
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type `' + propType + '` ' + ('supplied to `' + componentName + '`, expected `object`.'));
+      }
+      // We need to check all keys in case some are required but missing from
+      // props.
+      var allKeys = assign({}, props[propName], shapeTypes);
+      for (var key in allKeys) {
+        var checker = shapeTypes[key];
+        if (!checker) {
+          return new PropTypeError(
+            'Invalid ' + location + ' `' + propFullName + '` key `' + key + '` supplied to `' + componentName + '`.' +
+            '\nBad object: ' + JSON.stringify(props[propName], null, '  ') +
+            '\nValid keys: ' +  JSON.stringify(Object.keys(shapeTypes), null, '  ')
+          );
+        }
+        var error = checker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
+        if (error) {
+          return error;
+        }
+      }
+      return null;
+    }
+
+    return createChainableTypeChecker(validate);
+  }
+
+  function isNode(propValue) {
+    switch (typeof propValue) {
+      case 'number':
+      case 'string':
+      case 'undefined':
+        return true;
+      case 'boolean':
+        return !propValue;
+      case 'object':
+        if (Array.isArray(propValue)) {
+          return propValue.every(isNode);
+        }
+        if (propValue === null || isValidElement(propValue)) {
+          return true;
+        }
+
+        var iteratorFn = getIteratorFn(propValue);
+        if (iteratorFn) {
+          var iterator = iteratorFn.call(propValue);
+          var step;
+          if (iteratorFn !== propValue.entries) {
+            while (!(step = iterator.next()).done) {
+              if (!isNode(step.value)) {
+                return false;
+              }
+            }
+          } else {
+            // Iterator will provide entry [k,v] tuples rather than values.
+            while (!(step = iterator.next()).done) {
+              var entry = step.value;
+              if (entry) {
+                if (!isNode(entry[1])) {
+                  return false;
+                }
+              }
+            }
+          }
+        } else {
+          return false;
+        }
+
+        return true;
+      default:
+        return false;
+    }
+  }
+
+  function isSymbol(propType, propValue) {
+    // Native Symbol.
+    if (propType === 'symbol') {
+      return true;
+    }
+
+    // 19.4.3.5 Symbol.prototype[@@toStringTag] === 'Symbol'
+    if (propValue['@@toStringTag'] === 'Symbol') {
+      return true;
+    }
+
+    // Fallback for non-spec compliant Symbols which are polyfilled.
+    if (typeof Symbol === 'function' && propValue instanceof Symbol) {
+      return true;
+    }
+
+    return false;
+  }
+
+  // Equivalent of `typeof` but with special handling for array and regexp.
+  function getPropType(propValue) {
+    var propType = typeof propValue;
+    if (Array.isArray(propValue)) {
+      return 'array';
+    }
+    if (propValue instanceof RegExp) {
+      // Old webkits (at least until Android 4.0) return 'function' rather than
+      // 'object' for typeof a RegExp. We'll normalize this here so that /bla/
+      // passes PropTypes.object.
+      return 'object';
+    }
+    if (isSymbol(propType, propValue)) {
+      return 'symbol';
+    }
+    return propType;
+  }
+
+  // This handles more types than `getPropType`. Only used for error messages.
+  // See `createPrimitiveTypeChecker`.
+  function getPreciseType(propValue) {
+    if (typeof propValue === 'undefined' || propValue === null) {
+      return '' + propValue;
+    }
+    var propType = getPropType(propValue);
+    if (propType === 'object') {
+      if (propValue instanceof Date) {
+        return 'date';
+      } else if (propValue instanceof RegExp) {
+        return 'regexp';
+      }
+    }
+    return propType;
+  }
+
+  // Returns a string that is postfixed to a warning about an invalid type.
+  // For example, "undefined" or "of type array"
+  function getPostfixForTypeWarning(value) {
+    var type = getPreciseType(value);
+    switch (type) {
+      case 'array':
+      case 'object':
+        return 'an ' + type;
+      case 'boolean':
+      case 'date':
+      case 'regexp':
+        return 'a ' + type;
+      default:
+        return type;
+    }
+  }
+
+  // Returns class name of the object, if any.
+  function getClassName(propValue) {
+    if (!propValue.constructor || !propValue.constructor.name) {
+      return ANONYMOUS;
+    }
+    return propValue.constructor.name;
+  }
+
+  ReactPropTypes.checkPropTypes = checkPropTypes;
+  ReactPropTypes.PropTypes = ReactPropTypes;
+
+  return ReactPropTypes;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/prop-types/index.js":
+/*!******************************************!*\
+  !*** ./node_modules/prop-types/index.js ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+if (true) {
+  var REACT_ELEMENT_TYPE = (typeof Symbol === 'function' &&
+    Symbol.for &&
+    Symbol.for('react.element')) ||
+    0xeac7;
+
+  var isValidElement = function(object) {
+    return typeof object === 'object' &&
+      object !== null &&
+      object.$$typeof === REACT_ELEMENT_TYPE;
+  };
+
+  // By explicitly using `prop-types` you are opting into new development behavior.
+  // http://fb.me/prop-types-in-prod
+  var throwOnDirectAccess = true;
+  module.exports = __webpack_require__(/*! ./factoryWithTypeCheckers */ "./node_modules/prop-types/factoryWithTypeCheckers.js")(isValidElement, throwOnDirectAccess);
+} else {}
+
+
+/***/ }),
+
 /***/ "./node_modules/prop-types/lib/ReactPropTypesSecret.js":
 /*!*************************************************************!*\
   !*** ./node_modules/prop-types/lib/ReactPropTypesSecret.js ***!
@@ -716,7 +1397,7 @@ module.exports = ReactPropTypesSecret;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/** @license React v16.6.1
+/** @license React v16.8.6
  * react-dom.development.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -736,8 +1417,8 @@ if (true) {
 var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 var _assign = __webpack_require__(/*! object-assign */ "./node_modules/object-assign/index.js");
 var checkPropTypes = __webpack_require__(/*! prop-types/checkPropTypes */ "./node_modules/prop-types/checkPropTypes.js");
-var scheduler = __webpack_require__(/*! scheduler */ "./node_modules/scheduler/index.js");
-var tracing = __webpack_require__(/*! scheduler/tracing */ "./node_modules/scheduler/tracing.js");
+var scheduler = __webpack_require__(/*! scheduler */ "./node_modules/react-dom/node_modules/scheduler/index.js");
+var tracing = __webpack_require__(/*! scheduler/tracing */ "./node_modules/react-dom/node_modules/scheduler/tracing.js");
 
 /**
  * Use invariant() to assert state which your program assumes to be true.
@@ -803,7 +1484,7 @@ var invokeGuardedCallbackImpl = function (name, func, context, a, b, c, d, e, f)
   // invokeGuardedCallback uses a try-catch, all user exceptions are treated
   // like caught exceptions, and the DevTools won't pause unless the developer
   // takes the extra step of enabling pause on caught exceptions. This is
-  // untintuitive, though, because even though React has caught the error, from
+  // unintuitive, though, because even though React has caught the error, from
   // the developer's perspective, the error is uncaught.
   //
   // To preserve the expected "Pause on exceptions" behavior, we don't use a
@@ -1560,6 +2241,7 @@ var MemoComponent = 14;
 var SimpleMemoComponent = 15;
 var LazyComponent = 16;
 var IncompleteClassComponent = 17;
+var DehydratedSuspenseComponent = 18;
 
 var randomKey = Math.random().toString(36).slice(2);
 var internalInstanceKey = '__reactInternalInstance$' + randomKey;
@@ -3102,6 +3784,15 @@ function updateValueIfChanged(node) {
 
 var ReactSharedInternals = React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
 
+// Prevent newer renderers from RTE when used with older react package versions.
+// Current owner and dispatcher used to share the same ref,
+// but PR #14548 split them out to better support the react-debug-tools package.
+if (!ReactSharedInternals.hasOwnProperty('ReactCurrentDispatcher')) {
+  ReactSharedInternals.ReactCurrentDispatcher = {
+    current: null
+  };
+}
+
 var BEFORE_SLASH_RE = /^(.*)[\\\/]/;
 
 var describeComponentFrame = function (name, source, ownerName) {
@@ -3232,13 +3923,14 @@ var ReactDebugCurrentFrame = ReactSharedInternals.ReactDebugCurrentFrame;
 
 function describeFiber(fiber) {
   switch (fiber.tag) {
-    case IndeterminateComponent:
-    case LazyComponent:
-    case FunctionComponent:
-    case ClassComponent:
-    case HostComponent:
-    case Mode:
-    case SuspenseComponent:
+    case HostRoot:
+    case HostPortal:
+    case HostText:
+    case Fragment:
+    case ContextProvider:
+    case ContextConsumer:
+      return '';
+    default:
       var owner = fiber._debugOwner;
       var source = fiber._debugSource;
       var name = getComponentName(fiber.type);
@@ -3247,8 +3939,6 @@ function describeFiber(fiber) {
         ownerName = getComponentName(owner.type);
       }
       return describeComponentFrame(name, source, ownerName);
-    default:
-      return '';
   }
 }
 
@@ -3613,12 +4303,15 @@ var capitalize = function (token) {
   attributeName, 'http://www.w3.org/XML/1998/namespace');
 });
 
-// Special case: this attribute exists both in HTML and SVG.
-// Its "tabindex" attribute name is case-sensitive in SVG so we can't just use
-// its React `tabIndex` name, like we do for attributes that exist only in HTML.
-properties.tabIndex = new PropertyInfoRecord('tabIndex', STRING, false, // mustUseProperty
-'tabindex', // attributeName
-null);
+// These attribute exists both in HTML and SVG.
+// The attribute name is case-sensitive in SVG so we can't just use
+// the React name like we do for attributes that exist only in HTML.
+['tabIndex', 'crossOrigin'].forEach(function (attributeName) {
+  properties[attributeName] = new PropertyInfoRecord(attributeName, STRING, false, // mustUseProperty
+  attributeName.toLowerCase(), // attributeName
+  null);
+} // attributeNamespace
+);
 
 /**
  * Get the value for a property on a node. Only used in DEV for SSR validation.
@@ -3834,7 +4527,6 @@ var ReactControlledValuePropTypes = {
 
 var enableUserTimingAPI = true;
 
-var enableHooks = false;
 // Helps identify side effects in begin-phase lifecycle hooks and setState reducers:
 var debugRenderPhaseSideEffects = false;
 
@@ -3858,6 +4550,9 @@ var enableProfilerTimer = true;
 var enableSchedulerTracing = true;
 
 // Only used in www builds.
+var enableSuspenseServerRenderer = false; // TODO: true? Here it might just be false.
+
+// Only used in www builds.
 
 
 // Only used in www builds.
@@ -3870,6 +4565,8 @@ var disableInputAttributeSyncing = false;
 // These APIs will no longer be "unstable" in the upcoming 16.7 release,
 // Control this behavior with a flag to support 16.6 minor releases in the meanwhile.
 var enableStableConcurrentModeAPIs = false;
+
+var warnAboutShorthandPropertyCollision = false;
 
 // TODO: direct imports like some-package/src/* are bad. Fix me.
 var didWarnValueDefaultValue = false;
@@ -4664,26 +5361,16 @@ var EnterLeaveEventPlugin = {
   }
 };
 
-/*eslint-disable no-self-compare */
-
-var hasOwnProperty$1 = Object.prototype.hasOwnProperty;
-
 /**
  * inlined Object.is polyfill to avoid requiring consumers ship their own
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
  */
 function is(x, y) {
-  // SameValue algorithm
-  if (x === y) {
-    // Steps 1-5, 7-10
-    // Steps 6.b-6.e: +0 != -0
-    // Added the nonzero y check to make Flow happy, but it is redundant
-    return x !== 0 || y !== 0 || 1 / x === 1 / y;
-  } else {
-    // Step 6.a: NaN == NaN
-    return x !== x && y !== y;
-  }
+  return x === y && (x !== 0 || 1 / x === 1 / y) || x !== x && y !== y // eslint-disable-line no-self-compare
+  ;
 }
+
+var hasOwnProperty$1 = Object.prototype.hasOwnProperty;
 
 /**
  * Performs equality by iterating through keys on an object and returning false
@@ -6044,15 +6731,29 @@ function isInDocument(node) {
   return node && node.ownerDocument && containsNode(node.ownerDocument.documentElement, node);
 }
 
+function isSameOriginFrame(iframe) {
+  try {
+    // Accessing the contentDocument of a HTMLIframeElement can cause the browser
+    // to throw, e.g. if it has a cross-origin src attribute.
+    // Safari will show an error in the console when the access results in "Blocked a frame with origin". e.g:
+    // iframe.contentDocument.defaultView;
+    // A safety way is to access one of the cross origin properties: Window or Location
+    // Which might result in "SecurityError" DOM Exception and it is compatible to Safari.
+    // https://html.spec.whatwg.org/multipage/browsers.html#integration-with-idl
+
+    return typeof iframe.contentWindow.location.href === 'string';
+  } catch (err) {
+    return false;
+  }
+}
+
 function getActiveElementDeep() {
   var win = window;
   var element = getActiveElement();
   while (element instanceof win.HTMLIFrameElement) {
-    // Accessing the contentDocument of a HTMLIframeElement can cause the browser
-    // to throw, e.g. if it has a cross-origin src attribute
-    try {
-      win = element.contentDocument.defaultView;
-    } catch (e) {
+    if (isSameOriginFrame(element)) {
+      win = element.contentWindow;
+    } else {
       return element;
     }
     element = getActiveElement(win.document);
@@ -6808,6 +7509,58 @@ var setTextContent = function (node, text) {
   node.textContent = text;
 };
 
+// List derived from Gecko source code:
+// https://github.com/mozilla/gecko-dev/blob/4e638efc71/layout/style/test/property_database.js
+var shorthandToLonghand = {
+  animation: ['animationDelay', 'animationDirection', 'animationDuration', 'animationFillMode', 'animationIterationCount', 'animationName', 'animationPlayState', 'animationTimingFunction'],
+  background: ['backgroundAttachment', 'backgroundClip', 'backgroundColor', 'backgroundImage', 'backgroundOrigin', 'backgroundPositionX', 'backgroundPositionY', 'backgroundRepeat', 'backgroundSize'],
+  backgroundPosition: ['backgroundPositionX', 'backgroundPositionY'],
+  border: ['borderBottomColor', 'borderBottomStyle', 'borderBottomWidth', 'borderImageOutset', 'borderImageRepeat', 'borderImageSlice', 'borderImageSource', 'borderImageWidth', 'borderLeftColor', 'borderLeftStyle', 'borderLeftWidth', 'borderRightColor', 'borderRightStyle', 'borderRightWidth', 'borderTopColor', 'borderTopStyle', 'borderTopWidth'],
+  borderBlockEnd: ['borderBlockEndColor', 'borderBlockEndStyle', 'borderBlockEndWidth'],
+  borderBlockStart: ['borderBlockStartColor', 'borderBlockStartStyle', 'borderBlockStartWidth'],
+  borderBottom: ['borderBottomColor', 'borderBottomStyle', 'borderBottomWidth'],
+  borderColor: ['borderBottomColor', 'borderLeftColor', 'borderRightColor', 'borderTopColor'],
+  borderImage: ['borderImageOutset', 'borderImageRepeat', 'borderImageSlice', 'borderImageSource', 'borderImageWidth'],
+  borderInlineEnd: ['borderInlineEndColor', 'borderInlineEndStyle', 'borderInlineEndWidth'],
+  borderInlineStart: ['borderInlineStartColor', 'borderInlineStartStyle', 'borderInlineStartWidth'],
+  borderLeft: ['borderLeftColor', 'borderLeftStyle', 'borderLeftWidth'],
+  borderRadius: ['borderBottomLeftRadius', 'borderBottomRightRadius', 'borderTopLeftRadius', 'borderTopRightRadius'],
+  borderRight: ['borderRightColor', 'borderRightStyle', 'borderRightWidth'],
+  borderStyle: ['borderBottomStyle', 'borderLeftStyle', 'borderRightStyle', 'borderTopStyle'],
+  borderTop: ['borderTopColor', 'borderTopStyle', 'borderTopWidth'],
+  borderWidth: ['borderBottomWidth', 'borderLeftWidth', 'borderRightWidth', 'borderTopWidth'],
+  columnRule: ['columnRuleColor', 'columnRuleStyle', 'columnRuleWidth'],
+  columns: ['columnCount', 'columnWidth'],
+  flex: ['flexBasis', 'flexGrow', 'flexShrink'],
+  flexFlow: ['flexDirection', 'flexWrap'],
+  font: ['fontFamily', 'fontFeatureSettings', 'fontKerning', 'fontLanguageOverride', 'fontSize', 'fontSizeAdjust', 'fontStretch', 'fontStyle', 'fontVariant', 'fontVariantAlternates', 'fontVariantCaps', 'fontVariantEastAsian', 'fontVariantLigatures', 'fontVariantNumeric', 'fontVariantPosition', 'fontWeight', 'lineHeight'],
+  fontVariant: ['fontVariantAlternates', 'fontVariantCaps', 'fontVariantEastAsian', 'fontVariantLigatures', 'fontVariantNumeric', 'fontVariantPosition'],
+  gap: ['columnGap', 'rowGap'],
+  grid: ['gridAutoColumns', 'gridAutoFlow', 'gridAutoRows', 'gridTemplateAreas', 'gridTemplateColumns', 'gridTemplateRows'],
+  gridArea: ['gridColumnEnd', 'gridColumnStart', 'gridRowEnd', 'gridRowStart'],
+  gridColumn: ['gridColumnEnd', 'gridColumnStart'],
+  gridColumnGap: ['columnGap'],
+  gridGap: ['columnGap', 'rowGap'],
+  gridRow: ['gridRowEnd', 'gridRowStart'],
+  gridRowGap: ['rowGap'],
+  gridTemplate: ['gridTemplateAreas', 'gridTemplateColumns', 'gridTemplateRows'],
+  listStyle: ['listStyleImage', 'listStylePosition', 'listStyleType'],
+  margin: ['marginBottom', 'marginLeft', 'marginRight', 'marginTop'],
+  marker: ['markerEnd', 'markerMid', 'markerStart'],
+  mask: ['maskClip', 'maskComposite', 'maskImage', 'maskMode', 'maskOrigin', 'maskPositionX', 'maskPositionY', 'maskRepeat', 'maskSize'],
+  maskPosition: ['maskPositionX', 'maskPositionY'],
+  outline: ['outlineColor', 'outlineStyle', 'outlineWidth'],
+  overflow: ['overflowX', 'overflowY'],
+  padding: ['paddingBottom', 'paddingLeft', 'paddingRight', 'paddingTop'],
+  placeContent: ['alignContent', 'justifyContent'],
+  placeItems: ['alignItems', 'justifyItems'],
+  placeSelf: ['alignSelf', 'justifySelf'],
+  textDecoration: ['textDecorationColor', 'textDecorationLine', 'textDecorationStyle'],
+  textEmphasis: ['textEmphasisColor', 'textEmphasisStyle'],
+  transition: ['transitionDelay', 'transitionDuration', 'transitionProperty', 'transitionTimingFunction'],
+  wordWrap: ['overflowWrap']
+};
+
 /**
  * CSS properties which accept numbers but are not in units of "px".
  */
@@ -7084,6 +7837,69 @@ function setValueForStyles(node, styles) {
       style.setProperty(styleName, styleValue);
     } else {
       style[styleName] = styleValue;
+    }
+  }
+}
+
+function isValueEmpty(value) {
+  return value == null || typeof value === 'boolean' || value === '';
+}
+
+/**
+ * Given {color: 'red', overflow: 'hidden'} returns {
+ *   color: 'color',
+ *   overflowX: 'overflow',
+ *   overflowY: 'overflow',
+ * }. This can be read as "the overflowY property was set by the overflow
+ * shorthand". That is, the values are the property that each was derived from.
+ */
+function expandShorthandMap(styles) {
+  var expanded = {};
+  for (var key in styles) {
+    var longhands = shorthandToLonghand[key] || [key];
+    for (var i = 0; i < longhands.length; i++) {
+      expanded[longhands[i]] = key;
+    }
+  }
+  return expanded;
+}
+
+/**
+ * When mixing shorthand and longhand property names, we warn during updates if
+ * we expect an incorrect result to occur. In particular, we warn for:
+ *
+ * Updating a shorthand property (longhand gets overwritten):
+ *   {font: 'foo', fontVariant: 'bar'} -> {font: 'baz', fontVariant: 'bar'}
+ *   becomes .style.font = 'baz'
+ * Removing a shorthand property (longhand gets lost too):
+ *   {font: 'foo', fontVariant: 'bar'} -> {fontVariant: 'bar'}
+ *   becomes .style.font = ''
+ * Removing a longhand property (should revert to shorthand; doesn't):
+ *   {font: 'foo', fontVariant: 'bar'} -> {font: 'foo'}
+ *   becomes .style.fontVariant = ''
+ */
+function validateShorthandPropertyCollisionInDev(styleUpdates, nextStyles) {
+  if (!warnAboutShorthandPropertyCollision) {
+    return;
+  }
+
+  if (!nextStyles) {
+    return;
+  }
+
+  var expandedUpdates = expandShorthandMap(styleUpdates);
+  var expandedStyles = expandShorthandMap(nextStyles);
+  var warnedAbout = {};
+  for (var key in expandedUpdates) {
+    var originalKey = expandedUpdates[key];
+    var correctOriginalKey = expandedStyles[key];
+    if (correctOriginalKey && originalKey !== correctOriginalKey) {
+      var warningKey = originalKey + ',' + correctOriginalKey;
+      if (warnedAbout[warningKey]) {
+        continue;
+      }
+      warnedAbout[warningKey] = true;
+      warning$1(false, '%s a style property during rerender (%s) when a ' + 'conflicting property is set (%s) can lead to styling bugs. To ' + "avoid this, don't mix shorthand and non-shorthand properties " + 'for the same value; instead, replace the shorthand with ' + 'separate values.', isValueEmpty(styleUpdates[originalKey]) ? 'Removing' : 'Updating', originalKey, correctOriginalKey);
     }
   }
 }
@@ -8227,14 +9043,25 @@ function createElement(type, props, rootContainerElement, parentNamespace) {
       // See discussion in https://github.com/facebook/react/pull/6896
       // and discussion in https://bugzilla.mozilla.org/show_bug.cgi?id=1276240
       domElement = ownerDocument.createElement(type);
-      // Normally attributes are assigned in `setInitialDOMProperties`, however the `multiple`
-      // attribute on `select`s needs to be added before `option`s are inserted. This prevents
-      // a bug where the `select` does not scroll to the correct option because singular
-      // `select` elements automatically pick the first item.
+      // Normally attributes are assigned in `setInitialDOMProperties`, however the `multiple` and `size`
+      // attributes on `select`s needs to be added before `option`s are inserted.
+      // This prevents:
+      // - a bug where the `select` does not scroll to the correct option because singular
+      //  `select` elements automatically pick the first item #13222
+      // - a bug where the `select` set the first item as selected despite the `size` attribute #14239
       // See https://github.com/facebook/react/issues/13222
-      if (type === 'select' && props.multiple) {
+      // and https://github.com/facebook/react/issues/14239
+      if (type === 'select') {
         var node = domElement;
-        node.multiple = true;
+        if (props.multiple) {
+          node.multiple = true;
+        } else if (props.size) {
+          // Setting a size greater than 1 causes a select to behave like `multiple=true`, where
+          // it is possible that no option is selected.
+          //
+          // This is only necessary when a select in "single selection mode".
+          node.size = props.size;
+        }
       }
     }
   } else {
@@ -8527,6 +9354,9 @@ function diffProperties(domElement, tag, lastRawProps, nextRawProps, rootContain
     }
   }
   if (styleUpdates) {
+    {
+      validateShorthandPropertyCollisionInDev(styleUpdates, nextProps[STYLE$1]);
+    }
     (updatePayload = updatePayload || []).push(STYLE$1, styleUpdates);
   }
   return updatePayload;
@@ -9220,6 +10050,9 @@ var SUPPRESS_HYDRATION_WARNING = void 0;
   SUPPRESS_HYDRATION_WARNING = 'suppressHydrationWarning';
 }
 
+var SUSPENSE_START_DATA = '$';
+var SUSPENSE_END_DATA = '/$';
+
 var STYLE = 'style';
 
 var eventsEnabled = null;
@@ -9359,6 +10192,8 @@ var isPrimaryRenderer = true;
 var scheduleTimeout = typeof setTimeout === 'function' ? setTimeout : undefined;
 var cancelTimeout = typeof clearTimeout === 'function' ? clearTimeout : undefined;
 var noTimeout = -1;
+var schedulePassiveEffects = scheduler.unstable_scheduleCallback;
+var cancelPassiveEffects = scheduler.unstable_cancelCallback;
 
 // -------------------
 //     Mutation
@@ -9446,6 +10281,43 @@ function removeChildFromContainer(container, child) {
   }
 }
 
+function clearSuspenseBoundary(parentInstance, suspenseInstance) {
+  var node = suspenseInstance;
+  // Delete all nodes within this suspense boundary.
+  // There might be nested nodes so we need to keep track of how
+  // deep we are and only break out when we're back on top.
+  var depth = 0;
+  do {
+    var nextNode = node.nextSibling;
+    parentInstance.removeChild(node);
+    if (nextNode && nextNode.nodeType === COMMENT_NODE) {
+      var data = nextNode.data;
+      if (data === SUSPENSE_END_DATA) {
+        if (depth === 0) {
+          parentInstance.removeChild(nextNode);
+          return;
+        } else {
+          depth--;
+        }
+      } else if (data === SUSPENSE_START_DATA) {
+        depth++;
+      }
+    }
+    node = nextNode;
+  } while (node);
+  // TODO: Warn, we didn't find the end comment boundary.
+}
+
+function clearSuspenseBoundaryFromContainer(container, suspenseInstance) {
+  if (container.nodeType === COMMENT_NODE) {
+    clearSuspenseBoundary(container.parentNode, suspenseInstance);
+  } else if (container.nodeType === ELEMENT_NODE) {
+    clearSuspenseBoundary(container, suspenseInstance);
+  } else {
+    // Document nodes should never contain suspense boundaries.
+  }
+}
+
 function hideInstance(instance) {
   // TODO: Does this work for all element types? What about MathML? Should we
   // pass host context to this method?
@@ -9491,10 +10363,19 @@ function canHydrateTextInstance(instance, text) {
   return instance;
 }
 
+function canHydrateSuspenseInstance(instance) {
+  if (instance.nodeType !== COMMENT_NODE) {
+    // Empty strings are not parsed by HTML so there won't be a correct match here.
+    return null;
+  }
+  // This has now been refined to a suspense node.
+  return instance;
+}
+
 function getNextHydratableSibling(instance) {
   var node = instance.nextSibling;
   // Skip non-hydratable nodes.
-  while (node && node.nodeType !== ELEMENT_NODE && node.nodeType !== TEXT_NODE) {
+  while (node && node.nodeType !== ELEMENT_NODE && node.nodeType !== TEXT_NODE && (!enableSuspenseServerRenderer || node.nodeType !== COMMENT_NODE || node.data !== SUSPENSE_START_DATA)) {
     node = node.nextSibling;
   }
   return node;
@@ -9503,7 +10384,7 @@ function getNextHydratableSibling(instance) {
 function getFirstHydratableChild(parentInstance) {
   var next = parentInstance.firstChild;
   // Skip non-hydratable nodes.
-  while (next && next.nodeType !== ELEMENT_NODE && next.nodeType !== TEXT_NODE) {
+  while (next && next.nodeType !== ELEMENT_NODE && next.nodeType !== TEXT_NODE && (!enableSuspenseServerRenderer || next.nodeType !== COMMENT_NODE || next.data !== SUSPENSE_START_DATA)) {
     next = next.nextSibling;
   }
   return next;
@@ -9527,6 +10408,31 @@ function hydrateTextInstance(textInstance, text, internalInstanceHandle) {
   return diffHydratedText(textInstance, text);
 }
 
+function getNextHydratableInstanceAfterSuspenseInstance(suspenseInstance) {
+  var node = suspenseInstance.nextSibling;
+  // Skip past all nodes within this suspense boundary.
+  // There might be nested nodes so we need to keep track of how
+  // deep we are and only break out when we're back on top.
+  var depth = 0;
+  while (node) {
+    if (node.nodeType === COMMENT_NODE) {
+      var data = node.data;
+      if (data === SUSPENSE_END_DATA) {
+        if (depth === 0) {
+          return getNextHydratableSibling(node);
+        } else {
+          depth--;
+        }
+      } else if (data === SUSPENSE_START_DATA) {
+        depth++;
+      }
+    }
+    node = node.nextSibling;
+  }
+  // TODO: Warn, we didn't find the end comment boundary.
+  return null;
+}
+
 function didNotMatchHydratedContainerTextInstance(parentContainer, textInstance, text) {
   {
     warnForUnmatchedText(textInstance, text);
@@ -9543,6 +10449,8 @@ function didNotHydrateContainerInstance(parentContainer, instance) {
   {
     if (instance.nodeType === ELEMENT_NODE) {
       warnForDeletedHydratableElement(parentContainer, instance);
+    } else if (instance.nodeType === COMMENT_NODE) {
+      // TODO: warnForDeletedHydratableSuspenseBoundary
     } else {
       warnForDeletedHydratableText(parentContainer, instance);
     }
@@ -9553,6 +10461,8 @@ function didNotHydrateInstance(parentType, parentProps, parentInstance, instance
   if ( true && parentProps[SUPPRESS_HYDRATION_WARNING] !== true) {
     if (instance.nodeType === ELEMENT_NODE) {
       warnForDeletedHydratableElement(parentInstance, instance);
+    } else if (instance.nodeType === COMMENT_NODE) {
+      // TODO: warnForDeletedHydratableSuspenseBoundary
     } else {
       warnForDeletedHydratableText(parentInstance, instance);
     }
@@ -9571,6 +10481,8 @@ function didNotFindHydratableContainerTextInstance(parentContainer, text) {
   }
 }
 
+
+
 function didNotFindHydratableInstance(parentType, parentProps, parentInstance, type, props) {
   if ( true && parentProps[SUPPRESS_HYDRATION_WARNING] !== true) {
     warnForInsertedHydratedElement(parentInstance, type, props);
@@ -9580,6 +10492,12 @@ function didNotFindHydratableInstance(parentType, parentProps, parentInstance, t
 function didNotFindHydratableTextInstance(parentType, parentProps, parentInstance, text) {
   if ( true && parentProps[SUPPRESS_HYDRATION_WARNING] !== true) {
     warnForInsertedHydratedText(parentInstance, text);
+  }
+}
+
+function didNotFindHydratableSuspenseInstance(parentType, parentProps, parentInstance) {
+  if ( true && parentProps[SUPPRESS_HYDRATION_WARNING] !== true) {
+    // TODO: warnForInsertedHydratedSuspense(parentInstance);
   }
 }
 
@@ -9838,7 +10756,7 @@ function stopFailedWorkTimer(fiber) {
       return;
     }
     fiber._debugIsCurrentlyTiming = false;
-    var warning = fiber.tag === SuspenseComponent ? 'Rendering was suspended' : 'An error was thrown inside this error boundary';
+    var warning = fiber.tag === SuspenseComponent || fiber.tag === DehydratedSuspenseComponent ? 'Rendering was suspended' : 'An error was thrown inside this error boundary';
     endFiberMark(fiber, null, warning);
   }
 }
@@ -10459,7 +11377,7 @@ function FiberNode(tag, pendingProps, key, mode) {
   this.memoizedProps = null;
   this.updateQueue = null;
   this.memoizedState = null;
-  this.firstContextDependency = null;
+  this.contextDependencies = null;
 
   this.mode = mode;
 
@@ -10476,6 +11394,26 @@ function FiberNode(tag, pendingProps, key, mode) {
   this.alternate = null;
 
   if (enableProfilerTimer) {
+    // Note: The following is done to avoid a v8 performance cliff.
+    //
+    // Initializing the fields below to smis and later updating them with
+    // double values will cause Fibers to end up having separate shapes.
+    // This behavior/bug has something to do with Object.preventExtension().
+    // Fortunately this only impacts DEV builds.
+    // Unfortunately it makes React unusably slow for some applications.
+    // To work around this, initialize the fields below with doubles.
+    //
+    // Learn more about this here:
+    // https://github.com/facebook/react/issues/14365
+    // https://bugs.chromium.org/p/v8/issues/detail?id=8538
+    this.actualDuration = Number.NaN;
+    this.actualStartTime = Number.NaN;
+    this.selfBaseDuration = Number.NaN;
+    this.treeBaseDuration = Number.NaN;
+
+    // It's okay to replace the initial doubles with smis after initialization.
+    // This won't trigger the performance cliff mentioned above,
+    // and it simplifies other profiler code (including DevTools).
     this.actualDuration = 0;
     this.actualStartTime = -1;
     this.selfBaseDuration = 0;
@@ -10487,6 +11425,7 @@ function FiberNode(tag, pendingProps, key, mode) {
     this._debugSource = null;
     this._debugOwner = null;
     this._debugIsCurrentlyTiming = false;
+    this._debugHookTypes = null;
     if (!hasBadMapPolyfill && typeof Object.preventExtensions === 'function') {
       Object.preventExtensions(this);
     }
@@ -10554,6 +11493,7 @@ function createWorkInProgress(current, pendingProps, expirationTime) {
       workInProgress._debugID = current._debugID;
       workInProgress._debugSource = current._debugSource;
       workInProgress._debugOwner = current._debugOwner;
+      workInProgress._debugHookTypes = current._debugHookTypes;
     }
 
     workInProgress.alternate = current;
@@ -10587,7 +11527,7 @@ function createWorkInProgress(current, pendingProps, expirationTime) {
   workInProgress.memoizedProps = current.memoizedProps;
   workInProgress.memoizedState = current.memoizedState;
   workInProgress.updateQueue = current.updateQueue;
-  workInProgress.firstContextDependency = current.firstContextDependency;
+  workInProgress.contextDependencies = current.contextDependencies;
 
   // These will be overridden during the parent's reconciliation
   workInProgress.sibling = current.sibling;
@@ -10802,7 +11742,7 @@ function assignFiberPropertiesInDEV(target, source) {
   target.memoizedProps = source.memoizedProps;
   target.updateQueue = source.updateQueue;
   target.memoizedState = source.memoizedState;
-  target.firstContextDependency = source.firstContextDependency;
+  target.contextDependencies = source.contextDependencies;
   target.mode = source.mode;
   target.effectTag = source.effectTag;
   target.nextEffect = source.nextEffect;
@@ -10821,6 +11761,7 @@ function assignFiberPropertiesInDEV(target, source) {
   target._debugSource = source._debugSource;
   target._debugOwner = source._debugOwner;
   target._debugIsCurrentlyTiming = source._debugIsCurrentlyTiming;
+  target._debugHookTypes = source._debugHookTypes;
   return target;
 }
 
@@ -10858,6 +11799,8 @@ function createFiberRoot(containerInfo, isConcurrent, hydrate) {
       latestSuspendedTime: NoWork,
       latestPingedTime: NoWork,
 
+      pingCache: null,
+
       didError: false,
 
       pendingCommitExpirationTime: NoWork,
@@ -10880,6 +11823,8 @@ function createFiberRoot(containerInfo, isConcurrent, hydrate) {
       current: uninitializedFiber,
       containerInfo: containerInfo,
       pendingChildren: null,
+
+      pingCache: null,
 
       earliestPendingTime: NoWork,
       latestPendingTime: NoWork,
@@ -11010,7 +11955,7 @@ var ReactStrictModeWarnings = {
 
   ReactStrictModeWarnings.flushPendingUnsafeLifecycleWarnings = function () {
     pendingUnsafeLifecycleWarnings.forEach(function (lifecycleWarningsMap, strictRoot) {
-      var lifecyclesWarningMesages = [];
+      var lifecyclesWarningMessages = [];
 
       Object.keys(lifecycleWarningsMap).forEach(function (lifecycle) {
         var lifecycleWarnings = lifecycleWarningsMap[lifecycle];
@@ -11025,14 +11970,14 @@ var ReactStrictModeWarnings = {
           var suggestion = LIFECYCLE_SUGGESTIONS[lifecycle];
           var sortedComponentNames = setToSortedString(componentNames);
 
-          lifecyclesWarningMesages.push(formatted + ': Please update the following components to use ' + (suggestion + ' instead: ' + sortedComponentNames));
+          lifecyclesWarningMessages.push(formatted + ': Please update the following components to use ' + (suggestion + ' instead: ' + sortedComponentNames));
         }
       });
 
-      if (lifecyclesWarningMesages.length > 0) {
+      if (lifecyclesWarningMessages.length > 0) {
         var strictRootComponentStack = getStackByFiberInDevAndProd(strictRoot);
 
-        warningWithoutStack$1(false, 'Unsafe lifecycle methods were found within a strict-mode tree:%s' + '\n\n%s' + '\n\nLearn more about this warning here:' + '\nhttps://fb.me/react-strict-mode-warnings', strictRootComponentStack, lifecyclesWarningMesages.join('\n\n'));
+        warningWithoutStack$1(false, 'Unsafe lifecycle methods were found within a strict-mode tree:%s' + '\n\n%s' + '\n\nLearn more about this warning here:' + '\nhttps://fb.me/react-strict-mode-warnings', strictRootComponentStack, lifecyclesWarningMessages.join('\n\n'));
       }
     });
 
@@ -11255,6 +12200,10 @@ function markCommittedPriorityLevels(root, earliestRemainingTime) {
     return;
   }
 
+  if (earliestRemainingTime < root.latestPingedTime) {
+    root.latestPingedTime = NoWork;
+  }
+
   // Let's see if the previous latest known pending level was just flushed.
   var latestPendingTime = root.latestPendingTime;
   if (latestPendingTime !== NoWork) {
@@ -11380,10 +12329,8 @@ function markPingedPriorityLevel(root, pingedTime) {
 }
 
 function clearPing(root, completedTime) {
-  // TODO: Track whether the root was pinged during the render phase. If so,
-  // we need to make sure we don't lose track of it.
   var latestPingedTime = root.latestPingedTime;
-  if (latestPingedTime !== NoWork && latestPingedTime >= completedTime) {
+  if (latestPingedTime >= completedTime) {
     root.latestPingedTime = NoWork;
   }
 }
@@ -11437,1416 +12384,6 @@ function findNextExpirationTimeToWorkOn(completedExpirationTime, root) {
 
   root.nextExpirationTimeToWorkOn = nextExpirationTimeToWorkOn;
   root.expirationTime = expirationTime;
-}
-
-// UpdateQueue is a linked list of prioritized updates.
-//
-// Like fibers, update queues come in pairs: a current queue, which represents
-// the visible state of the screen, and a work-in-progress queue, which is
-// can be mutated and processed asynchronously before it is committed — a form
-// of double buffering. If a work-in-progress render is discarded before
-// finishing, we create a new work-in-progress by cloning the current queue.
-//
-// Both queues share a persistent, singly-linked list structure. To schedule an
-// update, we append it to the end of both queues. Each queue maintains a
-// pointer to first update in the persistent list that hasn't been processed.
-// The work-in-progress pointer always has a position equal to or greater than
-// the current queue, since we always work on that one. The current queue's
-// pointer is only updated during the commit phase, when we swap in the
-// work-in-progress.
-//
-// For example:
-//
-//   Current pointer:           A - B - C - D - E - F
-//   Work-in-progress pointer:              D - E - F
-//                                          ^
-//                                          The work-in-progress queue has
-//                                          processed more updates than current.
-//
-// The reason we append to both queues is because otherwise we might drop
-// updates without ever processing them. For example, if we only add updates to
-// the work-in-progress queue, some updates could be lost whenever a work-in
-// -progress render restarts by cloning from current. Similarly, if we only add
-// updates to the current queue, the updates will be lost whenever an already
-// in-progress queue commits and swaps with the current queue. However, by
-// adding to both queues, we guarantee that the update will be part of the next
-// work-in-progress. (And because the work-in-progress queue becomes the
-// current queue once it commits, there's no danger of applying the same
-// update twice.)
-//
-// Prioritization
-// --------------
-//
-// Updates are not sorted by priority, but by insertion; new updates are always
-// appended to the end of the list.
-//
-// The priority is still important, though. When processing the update queue
-// during the render phase, only the updates with sufficient priority are
-// included in the result. If we skip an update because it has insufficient
-// priority, it remains in the queue to be processed later, during a lower
-// priority render. Crucially, all updates subsequent to a skipped update also
-// remain in the queue *regardless of their priority*. That means high priority
-// updates are sometimes processed twice, at two separate priorities. We also
-// keep track of a base state, that represents the state before the first
-// update in the queue is applied.
-//
-// For example:
-//
-//   Given a base state of '', and the following queue of updates
-//
-//     A1 - B2 - C1 - D2
-//
-//   where the number indicates the priority, and the update is applied to the
-//   previous state by appending a letter, React will process these updates as
-//   two separate renders, one per distinct priority level:
-//
-//   First render, at priority 1:
-//     Base state: ''
-//     Updates: [A1, C1]
-//     Result state: 'AC'
-//
-//   Second render, at priority 2:
-//     Base state: 'A'            <-  The base state does not include C1,
-//                                    because B2 was skipped.
-//     Updates: [B2, C1, D2]      <-  C1 was rebased on top of B2
-//     Result state: 'ABCD'
-//
-// Because we process updates in insertion order, and rebase high priority
-// updates when preceding updates are skipped, the final result is deterministic
-// regardless of priority. Intermediate state may vary according to system
-// resources, but the final state is always the same.
-
-var UpdateState = 0;
-var ReplaceState = 1;
-var ForceUpdate = 2;
-var CaptureUpdate = 3;
-
-// Global state that is reset at the beginning of calling `processUpdateQueue`.
-// It should only be read right after calling `processUpdateQueue`, via
-// `checkHasForceUpdateAfterProcessing`.
-var hasForceUpdate = false;
-
-var didWarnUpdateInsideUpdate = void 0;
-var currentlyProcessingQueue = void 0;
-var resetCurrentlyProcessingQueue = void 0;
-{
-  didWarnUpdateInsideUpdate = false;
-  currentlyProcessingQueue = null;
-  resetCurrentlyProcessingQueue = function () {
-    currentlyProcessingQueue = null;
-  };
-}
-
-function createUpdateQueue(baseState) {
-  var queue = {
-    baseState: baseState,
-    firstUpdate: null,
-    lastUpdate: null,
-    firstCapturedUpdate: null,
-    lastCapturedUpdate: null,
-    firstEffect: null,
-    lastEffect: null,
-    firstCapturedEffect: null,
-    lastCapturedEffect: null
-  };
-  return queue;
-}
-
-function cloneUpdateQueue(currentQueue) {
-  var queue = {
-    baseState: currentQueue.baseState,
-    firstUpdate: currentQueue.firstUpdate,
-    lastUpdate: currentQueue.lastUpdate,
-
-    // TODO: With resuming, if we bail out and resuse the child tree, we should
-    // keep these effects.
-    firstCapturedUpdate: null,
-    lastCapturedUpdate: null,
-
-    firstEffect: null,
-    lastEffect: null,
-
-    firstCapturedEffect: null,
-    lastCapturedEffect: null
-  };
-  return queue;
-}
-
-function createUpdate(expirationTime) {
-  return {
-    expirationTime: expirationTime,
-
-    tag: UpdateState,
-    payload: null,
-    callback: null,
-
-    next: null,
-    nextEffect: null
-  };
-}
-
-function appendUpdateToQueue(queue, update) {
-  // Append the update to the end of the list.
-  if (queue.lastUpdate === null) {
-    // Queue is empty
-    queue.firstUpdate = queue.lastUpdate = update;
-  } else {
-    queue.lastUpdate.next = update;
-    queue.lastUpdate = update;
-  }
-}
-
-function enqueueUpdate(fiber, update) {
-  // Update queues are created lazily.
-  var alternate = fiber.alternate;
-  var queue1 = void 0;
-  var queue2 = void 0;
-  if (alternate === null) {
-    // There's only one fiber.
-    queue1 = fiber.updateQueue;
-    queue2 = null;
-    if (queue1 === null) {
-      queue1 = fiber.updateQueue = createUpdateQueue(fiber.memoizedState);
-    }
-  } else {
-    // There are two owners.
-    queue1 = fiber.updateQueue;
-    queue2 = alternate.updateQueue;
-    if (queue1 === null) {
-      if (queue2 === null) {
-        // Neither fiber has an update queue. Create new ones.
-        queue1 = fiber.updateQueue = createUpdateQueue(fiber.memoizedState);
-        queue2 = alternate.updateQueue = createUpdateQueue(alternate.memoizedState);
-      } else {
-        // Only one fiber has an update queue. Clone to create a new one.
-        queue1 = fiber.updateQueue = cloneUpdateQueue(queue2);
-      }
-    } else {
-      if (queue2 === null) {
-        // Only one fiber has an update queue. Clone to create a new one.
-        queue2 = alternate.updateQueue = cloneUpdateQueue(queue1);
-      } else {
-        // Both owners have an update queue.
-      }
-    }
-  }
-  if (queue2 === null || queue1 === queue2) {
-    // There's only a single queue.
-    appendUpdateToQueue(queue1, update);
-  } else {
-    // There are two queues. We need to append the update to both queues,
-    // while accounting for the persistent structure of the list — we don't
-    // want the same update to be added multiple times.
-    if (queue1.lastUpdate === null || queue2.lastUpdate === null) {
-      // One of the queues is not empty. We must add the update to both queues.
-      appendUpdateToQueue(queue1, update);
-      appendUpdateToQueue(queue2, update);
-    } else {
-      // Both queues are non-empty. The last update is the same in both lists,
-      // because of structural sharing. So, only append to one of the lists.
-      appendUpdateToQueue(queue1, update);
-      // But we still need to update the `lastUpdate` pointer of queue2.
-      queue2.lastUpdate = update;
-    }
-  }
-
-  {
-    if (fiber.tag === ClassComponent && (currentlyProcessingQueue === queue1 || queue2 !== null && currentlyProcessingQueue === queue2) && !didWarnUpdateInsideUpdate) {
-      warningWithoutStack$1(false, 'An update (setState, replaceState, or forceUpdate) was scheduled ' + 'from inside an update function. Update functions should be pure, ' + 'with zero side-effects. Consider using componentDidUpdate or a ' + 'callback.');
-      didWarnUpdateInsideUpdate = true;
-    }
-  }
-}
-
-function enqueueCapturedUpdate(workInProgress, update) {
-  // Captured updates go into a separate list, and only on the work-in-
-  // progress queue.
-  var workInProgressQueue = workInProgress.updateQueue;
-  if (workInProgressQueue === null) {
-    workInProgressQueue = workInProgress.updateQueue = createUpdateQueue(workInProgress.memoizedState);
-  } else {
-    // TODO: I put this here rather than createWorkInProgress so that we don't
-    // clone the queue unnecessarily. There's probably a better way to
-    // structure this.
-    workInProgressQueue = ensureWorkInProgressQueueIsAClone(workInProgress, workInProgressQueue);
-  }
-
-  // Append the update to the end of the list.
-  if (workInProgressQueue.lastCapturedUpdate === null) {
-    // This is the first render phase update
-    workInProgressQueue.firstCapturedUpdate = workInProgressQueue.lastCapturedUpdate = update;
-  } else {
-    workInProgressQueue.lastCapturedUpdate.next = update;
-    workInProgressQueue.lastCapturedUpdate = update;
-  }
-}
-
-function ensureWorkInProgressQueueIsAClone(workInProgress, queue) {
-  var current = workInProgress.alternate;
-  if (current !== null) {
-    // If the work-in-progress queue is equal to the current queue,
-    // we need to clone it first.
-    if (queue === current.updateQueue) {
-      queue = workInProgress.updateQueue = cloneUpdateQueue(queue);
-    }
-  }
-  return queue;
-}
-
-function getStateFromUpdate(workInProgress, queue, update, prevState, nextProps, instance) {
-  switch (update.tag) {
-    case ReplaceState:
-      {
-        var _payload = update.payload;
-        if (typeof _payload === 'function') {
-          // Updater function
-          {
-            if (debugRenderPhaseSideEffects || debugRenderPhaseSideEffectsForStrictMode && workInProgress.mode & StrictMode) {
-              _payload.call(instance, prevState, nextProps);
-            }
-          }
-          return _payload.call(instance, prevState, nextProps);
-        }
-        // State object
-        return _payload;
-      }
-    case CaptureUpdate:
-      {
-        workInProgress.effectTag = workInProgress.effectTag & ~ShouldCapture | DidCapture;
-      }
-    // Intentional fallthrough
-    case UpdateState:
-      {
-        var _payload2 = update.payload;
-        var partialState = void 0;
-        if (typeof _payload2 === 'function') {
-          // Updater function
-          {
-            if (debugRenderPhaseSideEffects || debugRenderPhaseSideEffectsForStrictMode && workInProgress.mode & StrictMode) {
-              _payload2.call(instance, prevState, nextProps);
-            }
-          }
-          partialState = _payload2.call(instance, prevState, nextProps);
-        } else {
-          // Partial state object
-          partialState = _payload2;
-        }
-        if (partialState === null || partialState === undefined) {
-          // Null and undefined are treated as no-ops.
-          return prevState;
-        }
-        // Merge the partial state and the previous state.
-        return _assign({}, prevState, partialState);
-      }
-    case ForceUpdate:
-      {
-        hasForceUpdate = true;
-        return prevState;
-      }
-  }
-  return prevState;
-}
-
-function processUpdateQueue(workInProgress, queue, props, instance, renderExpirationTime) {
-  hasForceUpdate = false;
-
-  queue = ensureWorkInProgressQueueIsAClone(workInProgress, queue);
-
-  {
-    currentlyProcessingQueue = queue;
-  }
-
-  // These values may change as we process the queue.
-  var newBaseState = queue.baseState;
-  var newFirstUpdate = null;
-  var newExpirationTime = NoWork;
-
-  // Iterate through the list of updates to compute the result.
-  var update = queue.firstUpdate;
-  var resultState = newBaseState;
-  while (update !== null) {
-    var updateExpirationTime = update.expirationTime;
-    if (updateExpirationTime < renderExpirationTime) {
-      // This update does not have sufficient priority. Skip it.
-      if (newFirstUpdate === null) {
-        // This is the first skipped update. It will be the first update in
-        // the new list.
-        newFirstUpdate = update;
-        // Since this is the first update that was skipped, the current result
-        // is the new base state.
-        newBaseState = resultState;
-      }
-      // Since this update will remain in the list, update the remaining
-      // expiration time.
-      if (newExpirationTime < updateExpirationTime) {
-        newExpirationTime = updateExpirationTime;
-      }
-    } else {
-      // This update does have sufficient priority. Process it and compute
-      // a new result.
-      resultState = getStateFromUpdate(workInProgress, queue, update, resultState, props, instance);
-      var _callback = update.callback;
-      if (_callback !== null) {
-        workInProgress.effectTag |= Callback;
-        // Set this to null, in case it was mutated during an aborted render.
-        update.nextEffect = null;
-        if (queue.lastEffect === null) {
-          queue.firstEffect = queue.lastEffect = update;
-        } else {
-          queue.lastEffect.nextEffect = update;
-          queue.lastEffect = update;
-        }
-      }
-    }
-    // Continue to the next update.
-    update = update.next;
-  }
-
-  // Separately, iterate though the list of captured updates.
-  var newFirstCapturedUpdate = null;
-  update = queue.firstCapturedUpdate;
-  while (update !== null) {
-    var _updateExpirationTime = update.expirationTime;
-    if (_updateExpirationTime < renderExpirationTime) {
-      // This update does not have sufficient priority. Skip it.
-      if (newFirstCapturedUpdate === null) {
-        // This is the first skipped captured update. It will be the first
-        // update in the new list.
-        newFirstCapturedUpdate = update;
-        // If this is the first update that was skipped, the current result is
-        // the new base state.
-        if (newFirstUpdate === null) {
-          newBaseState = resultState;
-        }
-      }
-      // Since this update will remain in the list, update the remaining
-      // expiration time.
-      if (newExpirationTime < _updateExpirationTime) {
-        newExpirationTime = _updateExpirationTime;
-      }
-    } else {
-      // This update does have sufficient priority. Process it and compute
-      // a new result.
-      resultState = getStateFromUpdate(workInProgress, queue, update, resultState, props, instance);
-      var _callback2 = update.callback;
-      if (_callback2 !== null) {
-        workInProgress.effectTag |= Callback;
-        // Set this to null, in case it was mutated during an aborted render.
-        update.nextEffect = null;
-        if (queue.lastCapturedEffect === null) {
-          queue.firstCapturedEffect = queue.lastCapturedEffect = update;
-        } else {
-          queue.lastCapturedEffect.nextEffect = update;
-          queue.lastCapturedEffect = update;
-        }
-      }
-    }
-    update = update.next;
-  }
-
-  if (newFirstUpdate === null) {
-    queue.lastUpdate = null;
-  }
-  if (newFirstCapturedUpdate === null) {
-    queue.lastCapturedUpdate = null;
-  } else {
-    workInProgress.effectTag |= Callback;
-  }
-  if (newFirstUpdate === null && newFirstCapturedUpdate === null) {
-    // We processed every update, without skipping. That means the new base
-    // state is the same as the result state.
-    newBaseState = resultState;
-  }
-
-  queue.baseState = newBaseState;
-  queue.firstUpdate = newFirstUpdate;
-  queue.firstCapturedUpdate = newFirstCapturedUpdate;
-
-  // Set the remaining expiration time to be whatever is remaining in the queue.
-  // This should be fine because the only two other things that contribute to
-  // expiration time are props and context. We're already in the middle of the
-  // begin phase by the time we start processing the queue, so we've already
-  // dealt with the props. Context in components that specify
-  // shouldComponentUpdate is tricky; but we'll have to account for
-  // that regardless.
-  workInProgress.expirationTime = newExpirationTime;
-  workInProgress.memoizedState = resultState;
-
-  {
-    currentlyProcessingQueue = null;
-  }
-}
-
-function callCallback(callback, context) {
-  !(typeof callback === 'function') ? invariant(false, 'Invalid argument passed as callback. Expected a function. Instead received: %s', callback) : void 0;
-  callback.call(context);
-}
-
-function resetHasForceUpdateBeforeProcessing() {
-  hasForceUpdate = false;
-}
-
-function checkHasForceUpdateAfterProcessing() {
-  return hasForceUpdate;
-}
-
-function commitUpdateQueue(finishedWork, finishedQueue, instance, renderExpirationTime) {
-  // If the finished render included captured updates, and there are still
-  // lower priority updates left over, we need to keep the captured updates
-  // in the queue so that they are rebased and not dropped once we process the
-  // queue again at the lower priority.
-  if (finishedQueue.firstCapturedUpdate !== null) {
-    // Join the captured update list to the end of the normal list.
-    if (finishedQueue.lastUpdate !== null) {
-      finishedQueue.lastUpdate.next = finishedQueue.firstCapturedUpdate;
-      finishedQueue.lastUpdate = finishedQueue.lastCapturedUpdate;
-    }
-    // Clear the list of captured updates.
-    finishedQueue.firstCapturedUpdate = finishedQueue.lastCapturedUpdate = null;
-  }
-
-  // Commit the effects
-  commitUpdateEffects(finishedQueue.firstEffect, instance);
-  finishedQueue.firstEffect = finishedQueue.lastEffect = null;
-
-  commitUpdateEffects(finishedQueue.firstCapturedEffect, instance);
-  finishedQueue.firstCapturedEffect = finishedQueue.lastCapturedEffect = null;
-}
-
-function commitUpdateEffects(effect, instance) {
-  while (effect !== null) {
-    var _callback3 = effect.callback;
-    if (_callback3 !== null) {
-      effect.callback = null;
-      callCallback(_callback3, instance);
-    }
-    effect = effect.nextEffect;
-  }
-}
-
-function createCapturedValue(value, source) {
-  // If the value is an error, call this function immediately after it is thrown
-  // so the stack is accurate.
-  return {
-    value: value,
-    source: source,
-    stack: getStackByFiberInDevAndProd(source)
-  };
-}
-
-var valueCursor = createCursor(null);
-
-var rendererSigil = void 0;
-{
-  // Use this to detect multiple renderers using the same context
-  rendererSigil = {};
-}
-
-var currentlyRenderingFiber = null;
-var lastContextDependency = null;
-var lastContextWithAllBitsObserved = null;
-
-function resetContextDependences() {
-  // This is called right before React yields execution, to ensure `readContext`
-  // cannot be called outside the render phase.
-  currentlyRenderingFiber = null;
-  lastContextDependency = null;
-  lastContextWithAllBitsObserved = null;
-}
-
-function pushProvider(providerFiber, nextValue) {
-  var context = providerFiber.type._context;
-
-  if (isPrimaryRenderer) {
-    push(valueCursor, context._currentValue, providerFiber);
-
-    context._currentValue = nextValue;
-    {
-      !(context._currentRenderer === undefined || context._currentRenderer === null || context._currentRenderer === rendererSigil) ? warningWithoutStack$1(false, 'Detected multiple renderers concurrently rendering the ' + 'same context provider. This is currently unsupported.') : void 0;
-      context._currentRenderer = rendererSigil;
-    }
-  } else {
-    push(valueCursor, context._currentValue2, providerFiber);
-
-    context._currentValue2 = nextValue;
-    {
-      !(context._currentRenderer2 === undefined || context._currentRenderer2 === null || context._currentRenderer2 === rendererSigil) ? warningWithoutStack$1(false, 'Detected multiple renderers concurrently rendering the ' + 'same context provider. This is currently unsupported.') : void 0;
-      context._currentRenderer2 = rendererSigil;
-    }
-  }
-}
-
-function popProvider(providerFiber) {
-  var currentValue = valueCursor.current;
-
-  pop(valueCursor, providerFiber);
-
-  var context = providerFiber.type._context;
-  if (isPrimaryRenderer) {
-    context._currentValue = currentValue;
-  } else {
-    context._currentValue2 = currentValue;
-  }
-}
-
-function calculateChangedBits(context, newValue, oldValue) {
-  // Use Object.is to compare the new context value to the old value. Inlined
-  // Object.is polyfill.
-  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
-  if (oldValue === newValue && (oldValue !== 0 || 1 / oldValue === 1 / newValue) || oldValue !== oldValue && newValue !== newValue // eslint-disable-line no-self-compare
-  ) {
-      // No change
-      return 0;
-    } else {
-    var changedBits = typeof context._calculateChangedBits === 'function' ? context._calculateChangedBits(oldValue, newValue) : maxSigned31BitInt;
-
-    {
-      !((changedBits & maxSigned31BitInt) === changedBits) ? warning$1(false, 'calculateChangedBits: Expected the return value to be a ' + '31-bit integer. Instead received: %s', changedBits) : void 0;
-    }
-    return changedBits | 0;
-  }
-}
-
-function propagateContextChange(workInProgress, context, changedBits, renderExpirationTime) {
-  var fiber = workInProgress.child;
-  if (fiber !== null) {
-    // Set the return pointer of the child to the work-in-progress fiber.
-    fiber.return = workInProgress;
-  }
-  while (fiber !== null) {
-    var nextFiber = void 0;
-
-    // Visit this fiber.
-    var dependency = fiber.firstContextDependency;
-    if (dependency !== null) {
-      do {
-        // Check if the context matches.
-        if (dependency.context === context && (dependency.observedBits & changedBits) !== 0) {
-          // Match! Schedule an update on this fiber.
-
-          if (fiber.tag === ClassComponent) {
-            // Schedule a force update on the work-in-progress.
-            var update = createUpdate(renderExpirationTime);
-            update.tag = ForceUpdate;
-            // TODO: Because we don't have a work-in-progress, this will add the
-            // update to the current fiber, too, which means it will persist even if
-            // this render is thrown away. Since it's a race condition, not sure it's
-            // worth fixing.
-            enqueueUpdate(fiber, update);
-          }
-
-          if (fiber.expirationTime < renderExpirationTime) {
-            fiber.expirationTime = renderExpirationTime;
-          }
-          var alternate = fiber.alternate;
-          if (alternate !== null && alternate.expirationTime < renderExpirationTime) {
-            alternate.expirationTime = renderExpirationTime;
-          }
-          // Update the child expiration time of all the ancestors, including
-          // the alternates.
-          var node = fiber.return;
-          while (node !== null) {
-            alternate = node.alternate;
-            if (node.childExpirationTime < renderExpirationTime) {
-              node.childExpirationTime = renderExpirationTime;
-              if (alternate !== null && alternate.childExpirationTime < renderExpirationTime) {
-                alternate.childExpirationTime = renderExpirationTime;
-              }
-            } else if (alternate !== null && alternate.childExpirationTime < renderExpirationTime) {
-              alternate.childExpirationTime = renderExpirationTime;
-            } else {
-              // Neither alternate was updated, which means the rest of the
-              // ancestor path already has sufficient priority.
-              break;
-            }
-            node = node.return;
-          }
-        }
-        nextFiber = fiber.child;
-        dependency = dependency.next;
-      } while (dependency !== null);
-    } else if (fiber.tag === ContextProvider) {
-      // Don't scan deeper if this is a matching provider
-      nextFiber = fiber.type === workInProgress.type ? null : fiber.child;
-    } else {
-      // Traverse down.
-      nextFiber = fiber.child;
-    }
-
-    if (nextFiber !== null) {
-      // Set the return pointer of the child to the work-in-progress fiber.
-      nextFiber.return = fiber;
-    } else {
-      // No child. Traverse to next sibling.
-      nextFiber = fiber;
-      while (nextFiber !== null) {
-        if (nextFiber === workInProgress) {
-          // We're back to the root of this subtree. Exit.
-          nextFiber = null;
-          break;
-        }
-        var sibling = nextFiber.sibling;
-        if (sibling !== null) {
-          // Set the return pointer of the sibling to the work-in-progress fiber.
-          sibling.return = nextFiber.return;
-          nextFiber = sibling;
-          break;
-        }
-        // No more siblings. Traverse up.
-        nextFiber = nextFiber.return;
-      }
-    }
-    fiber = nextFiber;
-  }
-}
-
-function prepareToReadContext(workInProgress, renderExpirationTime) {
-  currentlyRenderingFiber = workInProgress;
-  lastContextDependency = null;
-  lastContextWithAllBitsObserved = null;
-
-  // Reset the work-in-progress list
-  workInProgress.firstContextDependency = null;
-}
-
-function readContext(context, observedBits) {
-  if (lastContextWithAllBitsObserved === context) {
-    // Nothing to do. We already observe everything in this context.
-  } else if (observedBits === false || observedBits === 0) {
-    // Do not observe any updates.
-  } else {
-    var resolvedObservedBits = void 0; // Avoid deopting on observable arguments or heterogeneous types.
-    if (typeof observedBits !== 'number' || observedBits === maxSigned31BitInt) {
-      // Observe all updates.
-      lastContextWithAllBitsObserved = context;
-      resolvedObservedBits = maxSigned31BitInt;
-    } else {
-      resolvedObservedBits = observedBits;
-    }
-
-    var contextItem = {
-      context: context,
-      observedBits: resolvedObservedBits,
-      next: null
-    };
-
-    if (lastContextDependency === null) {
-      !(currentlyRenderingFiber !== null) ? invariant(false, 'Context can only be read while React is rendering, e.g. inside the render method or getDerivedStateFromProps.') : void 0;
-      // This is the first dependency in the list
-      currentlyRenderingFiber.firstContextDependency = lastContextDependency = contextItem;
-    } else {
-      // Append a new context item.
-      lastContextDependency = lastContextDependency.next = contextItem;
-    }
-  }
-  return isPrimaryRenderer ? context._currentValue : context._currentValue2;
-}
-
-var NoEffect$1 = /*             */0;
-var UnmountSnapshot = /*      */2;
-var UnmountMutation = /*      */4;
-var MountMutation = /*        */8;
-var UnmountLayout = /*        */16;
-var MountLayout = /*          */32;
-var MountPassive = /*         */64;
-var UnmountPassive = /*       */128;
-
-function areHookInputsEqual(arr1, arr2) {
-  // Don't bother comparing lengths in prod because these arrays should be
-  // passed inline.
-  {
-    !(arr1.length === arr2.length) ? warning$1(false, 'Detected a variable number of hook dependencies. The length of the ' + 'dependencies array should be constant between renders.\n\n' + 'Previous: %s\n' + 'Incoming: %s', arr1.join(', '), arr2.join(', ')) : void 0;
-  }
-  for (var i = 0; i < arr1.length; i++) {
-    // Inlined Object.is polyfill.
-    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
-    var val1 = arr1[i];
-    var val2 = arr2[i];
-    if (val1 === val2 && (val1 !== 0 || 1 / val1 === 1 / val2) || val1 !== val1 && val2 !== val2 // eslint-disable-line no-self-compare
-    ) {
-        continue;
-      }
-    return false;
-  }
-  return true;
-}
-
-// These are set right before calling the component.
-var renderExpirationTime = NoWork;
-// The work-in-progress fiber. I've named it differently to distinguish it from
-// the work-in-progress hook.
-var currentlyRenderingFiber$1 = null;
-
-// Hooks are stored as a linked list on the fiber's memoizedState field. The
-// current hook list is the list that belongs to the current fiber. The
-// work-in-progress hook list is a new list that will be added to the
-// work-in-progress fiber.
-var firstCurrentHook = null;
-var currentHook = null;
-var firstWorkInProgressHook = null;
-var workInProgressHook = null;
-
-var remainingExpirationTime = NoWork;
-var componentUpdateQueue = null;
-
-// Updates scheduled during render will trigger an immediate re-render at the
-// end of the current pass. We can't store these updates on the normal queue,
-// because if the work is aborted, they should be discarded. Because this is
-// a relatively rare case, we also don't want to add an additional field to
-// either the hook or queue object types. So we store them in a lazily create
-// map of queue -> render-phase updates, which are discarded once the component
-// completes without re-rendering.
-
-// Whether the work-in-progress hook is a re-rendered hook
-var isReRender = false;
-// Whether an update was scheduled during the currently executing render pass.
-var didScheduleRenderPhaseUpdate = false;
-// Lazily created map of render-phase updates
-var renderPhaseUpdates = null;
-// Counter to prevent infinite loops.
-var numberOfReRenders = 0;
-var RE_RENDER_LIMIT = 25;
-
-function resolveCurrentlyRenderingFiber() {
-  !(currentlyRenderingFiber$1 !== null) ? invariant(false, 'Hooks can only be called inside the body of a function component.') : void 0;
-  return currentlyRenderingFiber$1;
-}
-
-function prepareToUseHooks(current, workInProgress, nextRenderExpirationTime) {
-  if (!enableHooks) {
-    return;
-  }
-  renderExpirationTime = nextRenderExpirationTime;
-  currentlyRenderingFiber$1 = workInProgress;
-  firstCurrentHook = current !== null ? current.memoizedState : null;
-
-  // The following should have already been reset
-  // currentHook = null;
-  // workInProgressHook = null;
-
-  // remainingExpirationTime = NoWork;
-  // componentUpdateQueue = null;
-
-  // isReRender = false;
-  // didScheduleRenderPhaseUpdate = false;
-  // renderPhaseUpdates = null;
-  // numberOfReRenders = 0;
-}
-
-function finishHooks(Component, props, children, refOrContext) {
-  if (!enableHooks) {
-    return children;
-  }
-
-  // This must be called after every function component to prevent hooks from
-  // being used in classes.
-
-  while (didScheduleRenderPhaseUpdate) {
-    // Updates were scheduled during the render phase. They are stored in
-    // the `renderPhaseUpdates` map. Call the component again, reusing the
-    // work-in-progress hooks and applying the additional updates on top. Keep
-    // restarting until no more updates are scheduled.
-    didScheduleRenderPhaseUpdate = false;
-    numberOfReRenders += 1;
-
-    // Start over from the beginning of the list
-    currentHook = null;
-    workInProgressHook = null;
-    componentUpdateQueue = null;
-
-    children = Component(props, refOrContext);
-  }
-  renderPhaseUpdates = null;
-  numberOfReRenders = 0;
-
-  var renderedWork = currentlyRenderingFiber$1;
-
-  renderedWork.memoizedState = firstWorkInProgressHook;
-  renderedWork.expirationTime = remainingExpirationTime;
-  renderedWork.updateQueue = componentUpdateQueue;
-
-  var didRenderTooFewHooks = currentHook !== null && currentHook.next !== null;
-
-  renderExpirationTime = NoWork;
-  currentlyRenderingFiber$1 = null;
-
-  firstCurrentHook = null;
-  currentHook = null;
-  firstWorkInProgressHook = null;
-  workInProgressHook = null;
-
-  remainingExpirationTime = NoWork;
-  componentUpdateQueue = null;
-
-  // Always set during createWorkInProgress
-  // isReRender = false;
-
-  // These were reset above
-  // didScheduleRenderPhaseUpdate = false;
-  // renderPhaseUpdates = null;
-  // numberOfReRenders = 0;
-
-  !!didRenderTooFewHooks ? invariant(false, 'Rendered fewer hooks than expected. This may be caused by an accidental early return statement.') : void 0;
-
-  return children;
-}
-
-function resetHooks() {
-  if (!enableHooks) {
-    return;
-  }
-
-  // This is called instead of `finishHooks` if the component throws. It's also
-  // called inside mountIndeterminateComponent if we determine the component
-  // is a module-style component.
-  renderExpirationTime = NoWork;
-  currentlyRenderingFiber$1 = null;
-
-  firstCurrentHook = null;
-  currentHook = null;
-  firstWorkInProgressHook = null;
-  workInProgressHook = null;
-
-  remainingExpirationTime = NoWork;
-  componentUpdateQueue = null;
-
-  // Always set during createWorkInProgress
-  // isReRender = false;
-
-  didScheduleRenderPhaseUpdate = false;
-  renderPhaseUpdates = null;
-  numberOfReRenders = 0;
-}
-
-function createHook() {
-  return {
-    memoizedState: null,
-
-    baseState: null,
-    queue: null,
-    baseUpdate: null,
-
-    next: null
-  };
-}
-
-function cloneHook(hook) {
-  return {
-    memoizedState: hook.memoizedState,
-
-    baseState: hook.memoizedState,
-    queue: hook.queue,
-    baseUpdate: hook.baseUpdate,
-
-    next: null
-  };
-}
-
-function createWorkInProgressHook() {
-  if (workInProgressHook === null) {
-    // This is the first hook in the list
-    if (firstWorkInProgressHook === null) {
-      isReRender = false;
-      currentHook = firstCurrentHook;
-      if (currentHook === null) {
-        // This is a newly mounted hook
-        workInProgressHook = createHook();
-      } else {
-        // Clone the current hook.
-        workInProgressHook = cloneHook(currentHook);
-      }
-      firstWorkInProgressHook = workInProgressHook;
-    } else {
-      // There's already a work-in-progress. Reuse it.
-      isReRender = true;
-      currentHook = firstCurrentHook;
-      workInProgressHook = firstWorkInProgressHook;
-    }
-  } else {
-    if (workInProgressHook.next === null) {
-      isReRender = false;
-      var hook = void 0;
-      if (currentHook === null) {
-        // This is a newly mounted hook
-        hook = createHook();
-      } else {
-        currentHook = currentHook.next;
-        if (currentHook === null) {
-          // This is a newly mounted hook
-          hook = createHook();
-        } else {
-          // Clone the current hook.
-          hook = cloneHook(currentHook);
-        }
-      }
-      // Append to the end of the list
-      workInProgressHook = workInProgressHook.next = hook;
-    } else {
-      // There's already a work-in-progress. Reuse it.
-      isReRender = true;
-      workInProgressHook = workInProgressHook.next;
-      currentHook = currentHook !== null ? currentHook.next : null;
-    }
-  }
-  return workInProgressHook;
-}
-
-function createFunctionComponentUpdateQueue() {
-  return {
-    lastEffect: null
-  };
-}
-
-function basicStateReducer(state, action) {
-  return typeof action === 'function' ? action(state) : action;
-}
-
-function useContext(context, observedBits) {
-  // Ensure we're in a function component (class components support only the
-  // .unstable_read() form)
-  resolveCurrentlyRenderingFiber();
-  return readContext(context, observedBits);
-}
-
-function useState(initialState) {
-  return useReducer(basicStateReducer,
-  // useReducer has a special case to support lazy useState initializers
-  initialState);
-}
-
-function useReducer(reducer, initialState, initialAction) {
-  currentlyRenderingFiber$1 = resolveCurrentlyRenderingFiber();
-  workInProgressHook = createWorkInProgressHook();
-  var queue = workInProgressHook.queue;
-  if (queue !== null) {
-    // Already have a queue, so this is an update.
-    if (isReRender) {
-      // This is a re-render. Apply the new render phase updates to the previous
-      var _dispatch2 = queue.dispatch;
-      if (renderPhaseUpdates !== null) {
-        // Render phase updates are stored in a map of queue -> linked list
-        var firstRenderPhaseUpdate = renderPhaseUpdates.get(queue);
-        if (firstRenderPhaseUpdate !== undefined) {
-          renderPhaseUpdates.delete(queue);
-          var newState = workInProgressHook.memoizedState;
-          var update = firstRenderPhaseUpdate;
-          do {
-            // Process this render phase update. We don't have to check the
-            // priority because it will always be the same as the current
-            // render's.
-            var _action = update.action;
-            newState = reducer(newState, _action);
-            update = update.next;
-          } while (update !== null);
-
-          workInProgressHook.memoizedState = newState;
-
-          // Don't persist the state accumlated from the render phase updates to
-          // the base state unless the queue is empty.
-          // TODO: Not sure if this is the desired semantics, but it's what we
-          // do for gDSFP. I can't remember why.
-          if (workInProgressHook.baseUpdate === queue.last) {
-            workInProgressHook.baseState = newState;
-          }
-
-          return [newState, _dispatch2];
-        }
-      }
-      return [workInProgressHook.memoizedState, _dispatch2];
-    }
-
-    // The last update in the entire queue
-    var _last = queue.last;
-    // The last update that is part of the base state.
-    var _baseUpdate = workInProgressHook.baseUpdate;
-
-    // Find the first unprocessed update.
-    var first = void 0;
-    if (_baseUpdate !== null) {
-      if (_last !== null) {
-        // For the first update, the queue is a circular linked list where
-        // `queue.last.next = queue.first`. Once the first update commits, and
-        // the `baseUpdate` is no longer empty, we can unravel the list.
-        _last.next = null;
-      }
-      first = _baseUpdate.next;
-    } else {
-      first = _last !== null ? _last.next : null;
-    }
-    if (first !== null) {
-      var _newState = workInProgressHook.baseState;
-      var newBaseState = null;
-      var newBaseUpdate = null;
-      var prevUpdate = _baseUpdate;
-      var _update = first;
-      var didSkip = false;
-      do {
-        var updateExpirationTime = _update.expirationTime;
-        if (updateExpirationTime < renderExpirationTime) {
-          // Priority is insufficient. Skip this update. If this is the first
-          // skipped update, the previous update/state is the new base
-          // update/state.
-          if (!didSkip) {
-            didSkip = true;
-            newBaseUpdate = prevUpdate;
-            newBaseState = _newState;
-          }
-          // Update the remaining priority in the queue.
-          if (updateExpirationTime > remainingExpirationTime) {
-            remainingExpirationTime = updateExpirationTime;
-          }
-        } else {
-          // Process this update.
-          var _action2 = _update.action;
-          _newState = reducer(_newState, _action2);
-        }
-        prevUpdate = _update;
-        _update = _update.next;
-      } while (_update !== null && _update !== first);
-
-      if (!didSkip) {
-        newBaseUpdate = prevUpdate;
-        newBaseState = _newState;
-      }
-
-      workInProgressHook.memoizedState = _newState;
-      workInProgressHook.baseUpdate = newBaseUpdate;
-      workInProgressHook.baseState = newBaseState;
-    }
-
-    var _dispatch = queue.dispatch;
-    return [workInProgressHook.memoizedState, _dispatch];
-  }
-
-  // There's no existing queue, so this is the initial render.
-  if (reducer === basicStateReducer) {
-    // Special case for `useState`.
-    if (typeof initialState === 'function') {
-      initialState = initialState();
-    }
-  } else if (initialAction !== undefined && initialAction !== null) {
-    initialState = reducer(initialState, initialAction);
-  }
-  workInProgressHook.memoizedState = workInProgressHook.baseState = initialState;
-  queue = workInProgressHook.queue = {
-    last: null,
-    dispatch: null
-  };
-  var dispatch = queue.dispatch = dispatchAction.bind(null, currentlyRenderingFiber$1, queue);
-  return [workInProgressHook.memoizedState, dispatch];
-}
-
-function pushEffect(tag, create, destroy, inputs) {
-  var effect = {
-    tag: tag,
-    create: create,
-    destroy: destroy,
-    inputs: inputs,
-    // Circular
-    next: null
-  };
-  if (componentUpdateQueue === null) {
-    componentUpdateQueue = createFunctionComponentUpdateQueue();
-    componentUpdateQueue.lastEffect = effect.next = effect;
-  } else {
-    var _lastEffect = componentUpdateQueue.lastEffect;
-    if (_lastEffect === null) {
-      componentUpdateQueue.lastEffect = effect.next = effect;
-    } else {
-      var firstEffect = _lastEffect.next;
-      _lastEffect.next = effect;
-      effect.next = firstEffect;
-      componentUpdateQueue.lastEffect = effect;
-    }
-  }
-  return effect;
-}
-
-function useRef(initialValue) {
-  currentlyRenderingFiber$1 = resolveCurrentlyRenderingFiber();
-  workInProgressHook = createWorkInProgressHook();
-  var ref = void 0;
-
-  if (workInProgressHook.memoizedState === null) {
-    ref = { current: initialValue };
-    {
-      Object.seal(ref);
-    }
-    workInProgressHook.memoizedState = ref;
-  } else {
-    ref = workInProgressHook.memoizedState;
-  }
-  return ref;
-}
-
-function useMutationEffect(create, inputs) {
-  useEffectImpl(Snapshot | Update, UnmountSnapshot | MountMutation, create, inputs);
-}
-
-function useLayoutEffect(create, inputs) {
-  useEffectImpl(Update, UnmountMutation | MountLayout, create, inputs);
-}
-
-function useEffect(create, inputs) {
-  useEffectImpl(Update | Passive, UnmountPassive | MountPassive, create, inputs);
-}
-
-function useEffectImpl(fiberEffectTag, hookEffectTag, create, inputs) {
-  currentlyRenderingFiber$1 = resolveCurrentlyRenderingFiber();
-  workInProgressHook = createWorkInProgressHook();
-
-  var nextInputs = inputs !== undefined && inputs !== null ? inputs : [create];
-  var destroy = null;
-  if (currentHook !== null) {
-    var prevEffect = currentHook.memoizedState;
-    destroy = prevEffect.destroy;
-    if (areHookInputsEqual(nextInputs, prevEffect.inputs)) {
-      pushEffect(NoEffect$1, create, destroy, nextInputs);
-      return;
-    }
-  }
-
-  currentlyRenderingFiber$1.effectTag |= fiberEffectTag;
-  workInProgressHook.memoizedState = pushEffect(hookEffectTag, create, destroy, nextInputs);
-}
-
-function useImperativeMethods(ref, create, inputs) {
-  // TODO: If inputs are provided, should we skip comparing the ref itself?
-  var nextInputs = inputs !== null && inputs !== undefined ? inputs.concat([ref]) : [ref, create];
-
-  // TODO: I've implemented this on top of useEffect because it's almost the
-  // same thing, and it would require an equal amount of code. It doesn't seem
-  // like a common enough use case to justify the additional size.
-  useEffectImpl(Update, UnmountMutation | MountLayout, function () {
-    if (typeof ref === 'function') {
-      var refCallback = ref;
-      var _inst = create();
-      refCallback(_inst);
-      return function () {
-        return refCallback(null);
-      };
-    } else if (ref !== null && ref !== undefined) {
-      var refObject = ref;
-      var _inst2 = create();
-      refObject.current = _inst2;
-      return function () {
-        refObject.current = null;
-      };
-    }
-  }, nextInputs);
-}
-
-function useCallback(callback, inputs) {
-  currentlyRenderingFiber$1 = resolveCurrentlyRenderingFiber();
-  workInProgressHook = createWorkInProgressHook();
-
-  var nextInputs = inputs !== undefined && inputs !== null ? inputs : [callback];
-
-  var prevState = workInProgressHook.memoizedState;
-  if (prevState !== null) {
-    var prevInputs = prevState[1];
-    if (areHookInputsEqual(nextInputs, prevInputs)) {
-      return prevState[0];
-    }
-  }
-  workInProgressHook.memoizedState = [callback, nextInputs];
-  return callback;
-}
-
-function useMemo(nextCreate, inputs) {
-  currentlyRenderingFiber$1 = resolveCurrentlyRenderingFiber();
-  workInProgressHook = createWorkInProgressHook();
-
-  var nextInputs = inputs !== undefined && inputs !== null ? inputs : [nextCreate];
-
-  var prevState = workInProgressHook.memoizedState;
-  if (prevState !== null) {
-    var prevInputs = prevState[1];
-    if (areHookInputsEqual(nextInputs, prevInputs)) {
-      return prevState[0];
-    }
-  }
-
-  var nextValue = nextCreate();
-  workInProgressHook.memoizedState = [nextValue, nextInputs];
-  return nextValue;
-}
-
-function dispatchAction(fiber, queue, action) {
-  !(numberOfReRenders < RE_RENDER_LIMIT) ? invariant(false, 'Too many re-renders. React limits the number of renders to prevent an infinite loop.') : void 0;
-
-  var alternate = fiber.alternate;
-  if (fiber === currentlyRenderingFiber$1 || alternate !== null && alternate === currentlyRenderingFiber$1) {
-    // This is a render phase update. Stash it in a lazily-created map of
-    // queue -> linked list of updates. After this render pass, we'll restart
-    // and apply the stashed updates on top of the work-in-progress hook.
-    didScheduleRenderPhaseUpdate = true;
-    var update = {
-      expirationTime: renderExpirationTime,
-      action: action,
-      next: null
-    };
-    if (renderPhaseUpdates === null) {
-      renderPhaseUpdates = new Map();
-    }
-    var firstRenderPhaseUpdate = renderPhaseUpdates.get(queue);
-    if (firstRenderPhaseUpdate === undefined) {
-      renderPhaseUpdates.set(queue, update);
-    } else {
-      // Append the update to the end of the list.
-      var lastRenderPhaseUpdate = firstRenderPhaseUpdate;
-      while (lastRenderPhaseUpdate.next !== null) {
-        lastRenderPhaseUpdate = lastRenderPhaseUpdate.next;
-      }
-      lastRenderPhaseUpdate.next = update;
-    }
-  } else {
-    var currentTime = requestCurrentTime();
-    var _expirationTime = computeExpirationForFiber(currentTime, fiber);
-    var _update2 = {
-      expirationTime: _expirationTime,
-      action: action,
-      next: null
-    };
-    flushPassiveEffects();
-    // Append the update to the end of the list.
-    var _last2 = queue.last;
-    if (_last2 === null) {
-      // This is the first update. Create a circular list.
-      _update2.next = _update2;
-    } else {
-      var first = _last2.next;
-      if (first !== null) {
-        // Still circular.
-        _update2.next = first;
-      }
-      _last2.next = _update2;
-    }
-    queue.last = _update2;
-    scheduleWork(fiber, _expirationTime);
-  }
-}
-
-var NO_CONTEXT = {};
-
-var contextStackCursor$1 = createCursor(NO_CONTEXT);
-var contextFiberStackCursor = createCursor(NO_CONTEXT);
-var rootInstanceStackCursor = createCursor(NO_CONTEXT);
-
-function requiredContext(c) {
-  !(c !== NO_CONTEXT) ? invariant(false, 'Expected host context to exist. This error is likely caused by a bug in React. Please file an issue.') : void 0;
-  return c;
-}
-
-function getRootHostContainer() {
-  var rootInstance = requiredContext(rootInstanceStackCursor.current);
-  return rootInstance;
-}
-
-function pushHostContainer(fiber, nextRootInstance) {
-  // Push current root instance onto the stack;
-  // This allows us to reset root when portals are popped.
-  push(rootInstanceStackCursor, nextRootInstance, fiber);
-  // Track the context and the Fiber that provided it.
-  // This enables us to pop only Fibers that provide unique contexts.
-  push(contextFiberStackCursor, fiber, fiber);
-
-  // Finally, we need to push the host context to the stack.
-  // However, we can't just call getRootHostContext() and push it because
-  // we'd have a different number of entries on the stack depending on
-  // whether getRootHostContext() throws somewhere in renderer code or not.
-  // So we push an empty value first. This lets us safely unwind on errors.
-  push(contextStackCursor$1, NO_CONTEXT, fiber);
-  var nextRootContext = getRootHostContext(nextRootInstance);
-  // Now that we know this function doesn't throw, replace it.
-  pop(contextStackCursor$1, fiber);
-  push(contextStackCursor$1, nextRootContext, fiber);
-}
-
-function popHostContainer(fiber) {
-  pop(contextStackCursor$1, fiber);
-  pop(contextFiberStackCursor, fiber);
-  pop(rootInstanceStackCursor, fiber);
-}
-
-function getHostContext() {
-  var context = requiredContext(contextStackCursor$1.current);
-  return context;
-}
-
-function pushHostContext(fiber) {
-  var rootInstance = requiredContext(rootInstanceStackCursor.current);
-  var context = requiredContext(contextStackCursor$1.current);
-  var nextContext = getChildHostContext(context, fiber.type, rootInstance);
-
-  // Don't push this Fiber's context unless it's unique.
-  if (context === nextContext) {
-    return;
-  }
-
-  // Track the context and the Fiber that provided it.
-  // This enables us to pop only Fibers that provide unique contexts.
-  push(contextFiberStackCursor, fiber, fiber);
-  push(contextStackCursor$1, nextContext, fiber);
-}
-
-function popHostContext(fiber) {
-  // Do not pop unless this Fiber provided the current context.
-  // pushHostContext() only pushes Fibers that provide unique contexts.
-  if (contextFiberStackCursor.current !== fiber) {
-    return;
-  }
-
-  pop(contextStackCursor$1, fiber);
-  pop(contextFiberStackCursor, fiber);
-}
-
-var commitTime = 0;
-var profilerStartTime = -1;
-
-function getCommitTime() {
-  return commitTime;
-}
-
-function recordCommitTime() {
-  if (!enableProfilerTimer) {
-    return;
-  }
-  commitTime = scheduler.unstable_now();
-}
-
-function startProfilerTimer(fiber) {
-  if (!enableProfilerTimer) {
-    return;
-  }
-
-  profilerStartTime = scheduler.unstable_now();
-
-  if (fiber.actualStartTime < 0) {
-    fiber.actualStartTime = scheduler.unstable_now();
-  }
-}
-
-function stopProfilerTimerIfRunning(fiber) {
-  if (!enableProfilerTimer) {
-    return;
-  }
-  profilerStartTime = -1;
-}
-
-function stopProfilerTimerIfRunningAndRecordDelta(fiber, overrideBaseTime) {
-  if (!enableProfilerTimer) {
-    return;
-  }
-
-  if (profilerStartTime >= 0) {
-    var elapsedTime = scheduler.unstable_now() - profilerStartTime;
-    fiber.actualDuration += elapsedTime;
-    if (overrideBaseTime) {
-      fiber.selfBaseDuration = elapsedTime;
-    }
-    profilerStartTime = -1;
-  }
 }
 
 function resolveDefaultProps(Component, baseProps) {
@@ -12905,17 +12442,17 @@ function readLazyComponentType(lazyComponent) {
             lazyComponent._result = error;
           }
         });
+        // Handle synchronous thenables.
+        switch (lazyComponent._status) {
+          case Resolved:
+            return lazyComponent._result;
+          case Rejected:
+            throw lazyComponent._result;
+        }
         lazyComponent._result = _thenable;
         throw _thenable;
       }
   }
-}
-
-var ReactCurrentOwner$4 = ReactSharedInternals.ReactCurrentOwner;
-
-function readContext$1(contextType) {
-  var dispatcher = ReactCurrentOwner$4.currentDispatcher;
-  return dispatcher.readContext(contextType);
 }
 
 var fakeInternalInstance = {};
@@ -13176,15 +12713,36 @@ function constructClassInstance(workInProgress, ctor, props, renderExpirationTim
   var unmaskedContext = emptyContextObject;
   var context = null;
   var contextType = ctor.contextType;
-  if (typeof contextType === 'object' && contextType !== null) {
-    {
-      if (contextType.$$typeof !== REACT_CONTEXT_TYPE && !didWarnAboutInvalidateContextType.has(ctor)) {
+
+  {
+    if ('contextType' in ctor) {
+      var isValid =
+      // Allow null for conditional declaration
+      contextType === null || contextType !== undefined && contextType.$$typeof === REACT_CONTEXT_TYPE && contextType._context === undefined; // Not a <Context.Consumer>
+
+      if (!isValid && !didWarnAboutInvalidateContextType.has(ctor)) {
         didWarnAboutInvalidateContextType.add(ctor);
-        warningWithoutStack$1(false, '%s defines an invalid contextType. ' + 'contextType should point to the Context object returned by React.createContext(). ' + 'Did you accidentally pass the Context.Provider instead?', getComponentName(ctor) || 'Component');
+
+        var addendum = '';
+        if (contextType === undefined) {
+          addendum = ' However, it is set to undefined. ' + 'This can be caused by a typo or by mixing up named and default imports. ' + 'This can also happen due to a circular dependency, so ' + 'try moving the createContext() call to a separate file.';
+        } else if (typeof contextType !== 'object') {
+          addendum = ' However, it is set to a ' + typeof contextType + '.';
+        } else if (contextType.$$typeof === REACT_PROVIDER_TYPE) {
+          addendum = ' Did you accidentally pass the Context.Provider instead?';
+        } else if (contextType._context !== undefined) {
+          // <Context.Consumer>
+          addendum = ' Did you accidentally pass the Context.Consumer instead?';
+        } else {
+          addendum = ' However, it is set to an object with keys {' + Object.keys(contextType).join(', ') + '}.';
+        }
+        warningWithoutStack$1(false, '%s defines an invalid contextType. ' + 'contextType should point to the Context object returned by React.createContext().%s', getComponentName(ctor) || 'Component', addendum);
       }
     }
+  }
 
-    context = readContext$1(contextType);
+  if (typeof contextType === 'object' && contextType !== null) {
+    context = readContext(contextType);
   } else {
     unmaskedContext = getUnmaskedContext(workInProgress, ctor, true);
     var contextTypes = ctor.contextTypes;
@@ -13311,7 +12869,7 @@ function mountClassInstance(workInProgress, ctor, newProps, renderExpirationTime
 
   var contextType = ctor.contextType;
   if (typeof contextType === 'object' && contextType !== null) {
-    instance.context = readContext$1(contextType);
+    instance.context = readContext(contextType);
   } else {
     var unmaskedContext = getUnmaskedContext(workInProgress, ctor, true);
     instance.context = getMaskedContext(workInProgress, unmaskedContext);
@@ -13377,7 +12935,7 @@ function resumeMountClassInstance(workInProgress, ctor, newProps, renderExpirati
   var contextType = ctor.contextType;
   var nextContext = void 0;
   if (typeof contextType === 'object' && contextType !== null) {
-    nextContext = readContext$1(contextType);
+    nextContext = readContext(contextType);
   } else {
     var nextLegacyUnmaskedContext = getUnmaskedContext(workInProgress, ctor, true);
     nextContext = getMaskedContext(workInProgress, nextLegacyUnmaskedContext);
@@ -13472,7 +13030,7 @@ function updateClassInstance(current, workInProgress, ctor, newProps, renderExpi
   var contextType = ctor.contextType;
   var nextContext = void 0;
   if (typeof contextType === 'object' && contextType !== null) {
-    nextContext = readContext$1(contextType);
+    nextContext = readContext(contextType);
   } else {
     var nextUnmaskedContext = getUnmaskedContext(workInProgress, ctor, true);
     nextContext = getMaskedContext(workInProgress, nextUnmaskedContext);
@@ -13604,13 +13162,13 @@ var warnForMissingKey = function (child) {};
     !(typeof child._store === 'object') ? invariant(false, 'React Component in warnForMissingKey should have a _store. This error is likely caused by a bug in React. Please file an issue.') : void 0;
     child._store.validated = true;
 
-    var currentComponentErrorInfo = 'Each child in an array or iterator should have a unique ' + '"key" prop. See https://fb.me/react-warning-keys for ' + 'more information.' + getCurrentFiberStackInDev();
+    var currentComponentErrorInfo = 'Each child in a list should have a unique ' + '"key" prop. See https://fb.me/react-warning-keys for ' + 'more information.' + getCurrentFiberStackInDev();
     if (ownerHasKeyUseWarning[currentComponentErrorInfo]) {
       return;
     }
     ownerHasKeyUseWarning[currentComponentErrorInfo] = true;
 
-    warning$1(false, 'Each child in an array or iterator should have a unique ' + '"key" prop. See https://fb.me/react-warning-keys for ' + 'more information.');
+    warning$1(false, 'Each child in a list should have a unique ' + '"key" prop. See https://fb.me/react-warning-keys for ' + 'more information.');
   };
 }
 
@@ -13634,7 +13192,7 @@ function coerceRef(returnFiber, current$$1, element) {
       var inst = void 0;
       if (owner) {
         var ownerFiber = owner;
-        !(ownerFiber.tag === ClassComponent) ? invariant(false, 'Function components cannot have refs.') : void 0;
+        !(ownerFiber.tag === ClassComponent) ? invariant(false, 'Function components cannot have refs. Did you mean to use React.forwardRef()?') : void 0;
         inst = ownerFiber.stateNode;
       }
       !inst ? invariant(false, 'Missing owner for string ref %s. This error is likely caused by a bug in React. Please file an issue.', mixedRef) : void 0;
@@ -14029,7 +13587,7 @@ function ChildReconciler(shouldTrackSideEffects) {
   }
 
   function reconcileChildrenArray(returnFiber, currentFirstChild, newChildren, expirationTime) {
-    // This algorithm can't optimize by searching from boths ends since we
+    // This algorithm can't optimize by searching from both ends since we
     // don't have backpointers on fibers. I'm trying to see how far we can get
     // with that model. If it ends up not being worth the tradeoffs, we can
     // add it later.
@@ -14509,6 +14067,1409 @@ function cloneChildFibers(current$$1, workInProgress) {
   newChild.sibling = null;
 }
 
+var NO_CONTEXT = {};
+
+var contextStackCursor$1 = createCursor(NO_CONTEXT);
+var contextFiberStackCursor = createCursor(NO_CONTEXT);
+var rootInstanceStackCursor = createCursor(NO_CONTEXT);
+
+function requiredContext(c) {
+  !(c !== NO_CONTEXT) ? invariant(false, 'Expected host context to exist. This error is likely caused by a bug in React. Please file an issue.') : void 0;
+  return c;
+}
+
+function getRootHostContainer() {
+  var rootInstance = requiredContext(rootInstanceStackCursor.current);
+  return rootInstance;
+}
+
+function pushHostContainer(fiber, nextRootInstance) {
+  // Push current root instance onto the stack;
+  // This allows us to reset root when portals are popped.
+  push(rootInstanceStackCursor, nextRootInstance, fiber);
+  // Track the context and the Fiber that provided it.
+  // This enables us to pop only Fibers that provide unique contexts.
+  push(contextFiberStackCursor, fiber, fiber);
+
+  // Finally, we need to push the host context to the stack.
+  // However, we can't just call getRootHostContext() and push it because
+  // we'd have a different number of entries on the stack depending on
+  // whether getRootHostContext() throws somewhere in renderer code or not.
+  // So we push an empty value first. This lets us safely unwind on errors.
+  push(contextStackCursor$1, NO_CONTEXT, fiber);
+  var nextRootContext = getRootHostContext(nextRootInstance);
+  // Now that we know this function doesn't throw, replace it.
+  pop(contextStackCursor$1, fiber);
+  push(contextStackCursor$1, nextRootContext, fiber);
+}
+
+function popHostContainer(fiber) {
+  pop(contextStackCursor$1, fiber);
+  pop(contextFiberStackCursor, fiber);
+  pop(rootInstanceStackCursor, fiber);
+}
+
+function getHostContext() {
+  var context = requiredContext(contextStackCursor$1.current);
+  return context;
+}
+
+function pushHostContext(fiber) {
+  var rootInstance = requiredContext(rootInstanceStackCursor.current);
+  var context = requiredContext(contextStackCursor$1.current);
+  var nextContext = getChildHostContext(context, fiber.type, rootInstance);
+
+  // Don't push this Fiber's context unless it's unique.
+  if (context === nextContext) {
+    return;
+  }
+
+  // Track the context and the Fiber that provided it.
+  // This enables us to pop only Fibers that provide unique contexts.
+  push(contextFiberStackCursor, fiber, fiber);
+  push(contextStackCursor$1, nextContext, fiber);
+}
+
+function popHostContext(fiber) {
+  // Do not pop unless this Fiber provided the current context.
+  // pushHostContext() only pushes Fibers that provide unique contexts.
+  if (contextFiberStackCursor.current !== fiber) {
+    return;
+  }
+
+  pop(contextStackCursor$1, fiber);
+  pop(contextFiberStackCursor, fiber);
+}
+
+var NoEffect$1 = /*             */0;
+var UnmountSnapshot = /*      */2;
+var UnmountMutation = /*      */4;
+var MountMutation = /*        */8;
+var UnmountLayout = /*        */16;
+var MountLayout = /*          */32;
+var MountPassive = /*         */64;
+var UnmountPassive = /*       */128;
+
+var ReactCurrentDispatcher$1 = ReactSharedInternals.ReactCurrentDispatcher;
+
+
+var didWarnAboutMismatchedHooksForComponent = void 0;
+{
+  didWarnAboutMismatchedHooksForComponent = new Set();
+}
+
+// These are set right before calling the component.
+var renderExpirationTime = NoWork;
+// The work-in-progress fiber. I've named it differently to distinguish it from
+// the work-in-progress hook.
+var currentlyRenderingFiber$1 = null;
+
+// Hooks are stored as a linked list on the fiber's memoizedState field. The
+// current hook list is the list that belongs to the current fiber. The
+// work-in-progress hook list is a new list that will be added to the
+// work-in-progress fiber.
+var currentHook = null;
+var nextCurrentHook = null;
+var firstWorkInProgressHook = null;
+var workInProgressHook = null;
+var nextWorkInProgressHook = null;
+
+var remainingExpirationTime = NoWork;
+var componentUpdateQueue = null;
+var sideEffectTag = 0;
+
+// Updates scheduled during render will trigger an immediate re-render at the
+// end of the current pass. We can't store these updates on the normal queue,
+// because if the work is aborted, they should be discarded. Because this is
+// a relatively rare case, we also don't want to add an additional field to
+// either the hook or queue object types. So we store them in a lazily create
+// map of queue -> render-phase updates, which are discarded once the component
+// completes without re-rendering.
+
+// Whether an update was scheduled during the currently executing render pass.
+var didScheduleRenderPhaseUpdate = false;
+// Lazily created map of render-phase updates
+var renderPhaseUpdates = null;
+// Counter to prevent infinite loops.
+var numberOfReRenders = 0;
+var RE_RENDER_LIMIT = 25;
+
+// In DEV, this is the name of the currently executing primitive hook
+var currentHookNameInDev = null;
+
+// In DEV, this list ensures that hooks are called in the same order between renders.
+// The list stores the order of hooks used during the initial render (mount).
+// Subsequent renders (updates) reference this list.
+var hookTypesDev = null;
+var hookTypesUpdateIndexDev = -1;
+
+function mountHookTypesDev() {
+  {
+    var hookName = currentHookNameInDev;
+
+    if (hookTypesDev === null) {
+      hookTypesDev = [hookName];
+    } else {
+      hookTypesDev.push(hookName);
+    }
+  }
+}
+
+function updateHookTypesDev() {
+  {
+    var hookName = currentHookNameInDev;
+
+    if (hookTypesDev !== null) {
+      hookTypesUpdateIndexDev++;
+      if (hookTypesDev[hookTypesUpdateIndexDev] !== hookName) {
+        warnOnHookMismatchInDev(hookName);
+      }
+    }
+  }
+}
+
+function warnOnHookMismatchInDev(currentHookName) {
+  {
+    var componentName = getComponentName(currentlyRenderingFiber$1.type);
+    if (!didWarnAboutMismatchedHooksForComponent.has(componentName)) {
+      didWarnAboutMismatchedHooksForComponent.add(componentName);
+
+      if (hookTypesDev !== null) {
+        var table = '';
+
+        var secondColumnStart = 30;
+
+        for (var i = 0; i <= hookTypesUpdateIndexDev; i++) {
+          var oldHookName = hookTypesDev[i];
+          var newHookName = i === hookTypesUpdateIndexDev ? currentHookName : oldHookName;
+
+          var row = i + 1 + '. ' + oldHookName;
+
+          // Extra space so second column lines up
+          // lol @ IE not supporting String#repeat
+          while (row.length < secondColumnStart) {
+            row += ' ';
+          }
+
+          row += newHookName + '\n';
+
+          table += row;
+        }
+
+        warning$1(false, 'React has detected a change in the order of Hooks called by %s. ' + 'This will lead to bugs and errors if not fixed. ' + 'For more information, read the Rules of Hooks: https://fb.me/rules-of-hooks\n\n' + '   Previous render            Next render\n' + '   ------------------------------------------------------\n' + '%s' + '   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n', componentName, table);
+      }
+    }
+  }
+}
+
+function throwInvalidHookError() {
+  invariant(false, 'Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:\n1. You might have mismatching versions of React and the renderer (such as React DOM)\n2. You might be breaking the Rules of Hooks\n3. You might have more than one copy of React in the same app\nSee https://fb.me/react-invalid-hook-call for tips about how to debug and fix this problem.');
+}
+
+function areHookInputsEqual(nextDeps, prevDeps) {
+  if (prevDeps === null) {
+    {
+      warning$1(false, '%s received a final argument during this render, but not during ' + 'the previous render. Even though the final argument is optional, ' + 'its type cannot change between renders.', currentHookNameInDev);
+    }
+    return false;
+  }
+
+  {
+    // Don't bother comparing lengths in prod because these arrays should be
+    // passed inline.
+    if (nextDeps.length !== prevDeps.length) {
+      warning$1(false, 'The final argument passed to %s changed size between renders. The ' + 'order and size of this array must remain constant.\n\n' + 'Previous: %s\n' + 'Incoming: %s', currentHookNameInDev, '[' + nextDeps.join(', ') + ']', '[' + prevDeps.join(', ') + ']');
+    }
+  }
+  for (var i = 0; i < prevDeps.length && i < nextDeps.length; i++) {
+    if (is(nextDeps[i], prevDeps[i])) {
+      continue;
+    }
+    return false;
+  }
+  return true;
+}
+
+function renderWithHooks(current, workInProgress, Component, props, refOrContext, nextRenderExpirationTime) {
+  renderExpirationTime = nextRenderExpirationTime;
+  currentlyRenderingFiber$1 = workInProgress;
+  nextCurrentHook = current !== null ? current.memoizedState : null;
+
+  {
+    hookTypesDev = current !== null ? current._debugHookTypes : null;
+    hookTypesUpdateIndexDev = -1;
+  }
+
+  // The following should have already been reset
+  // currentHook = null;
+  // workInProgressHook = null;
+
+  // remainingExpirationTime = NoWork;
+  // componentUpdateQueue = null;
+
+  // didScheduleRenderPhaseUpdate = false;
+  // renderPhaseUpdates = null;
+  // numberOfReRenders = 0;
+  // sideEffectTag = 0;
+
+  // TODO Warn if no hooks are used at all during mount, then some are used during update.
+  // Currently we will identify the update render as a mount because nextCurrentHook === null.
+  // This is tricky because it's valid for certain types of components (e.g. React.lazy)
+
+  // Using nextCurrentHook to differentiate between mount/update only works if at least one stateful hook is used.
+  // Non-stateful hooks (e.g. context) don't get added to memoizedState,
+  // so nextCurrentHook would be null during updates and mounts.
+  {
+    if (nextCurrentHook !== null) {
+      ReactCurrentDispatcher$1.current = HooksDispatcherOnUpdateInDEV;
+    } else if (hookTypesDev !== null) {
+      // This dispatcher handles an edge case where a component is updating,
+      // but no stateful hooks have been used.
+      // We want to match the production code behavior (which will use HooksDispatcherOnMount),
+      // but with the extra DEV validation to ensure hooks ordering hasn't changed.
+      // This dispatcher does that.
+      ReactCurrentDispatcher$1.current = HooksDispatcherOnMountWithHookTypesInDEV;
+    } else {
+      ReactCurrentDispatcher$1.current = HooksDispatcherOnMountInDEV;
+    }
+  }
+
+  var children = Component(props, refOrContext);
+
+  if (didScheduleRenderPhaseUpdate) {
+    do {
+      didScheduleRenderPhaseUpdate = false;
+      numberOfReRenders += 1;
+
+      // Start over from the beginning of the list
+      nextCurrentHook = current !== null ? current.memoizedState : null;
+      nextWorkInProgressHook = firstWorkInProgressHook;
+
+      currentHook = null;
+      workInProgressHook = null;
+      componentUpdateQueue = null;
+
+      {
+        // Also validate hook order for cascading updates.
+        hookTypesUpdateIndexDev = -1;
+      }
+
+      ReactCurrentDispatcher$1.current = HooksDispatcherOnUpdateInDEV;
+
+      children = Component(props, refOrContext);
+    } while (didScheduleRenderPhaseUpdate);
+
+    renderPhaseUpdates = null;
+    numberOfReRenders = 0;
+  }
+
+  // We can assume the previous dispatcher is always this one, since we set it
+  // at the beginning of the render phase and there's no re-entrancy.
+  ReactCurrentDispatcher$1.current = ContextOnlyDispatcher;
+
+  var renderedWork = currentlyRenderingFiber$1;
+
+  renderedWork.memoizedState = firstWorkInProgressHook;
+  renderedWork.expirationTime = remainingExpirationTime;
+  renderedWork.updateQueue = componentUpdateQueue;
+  renderedWork.effectTag |= sideEffectTag;
+
+  {
+    renderedWork._debugHookTypes = hookTypesDev;
+  }
+
+  // This check uses currentHook so that it works the same in DEV and prod bundles.
+  // hookTypesDev could catch more cases (e.g. context) but only in DEV bundles.
+  var didRenderTooFewHooks = currentHook !== null && currentHook.next !== null;
+
+  renderExpirationTime = NoWork;
+  currentlyRenderingFiber$1 = null;
+
+  currentHook = null;
+  nextCurrentHook = null;
+  firstWorkInProgressHook = null;
+  workInProgressHook = null;
+  nextWorkInProgressHook = null;
+
+  {
+    currentHookNameInDev = null;
+    hookTypesDev = null;
+    hookTypesUpdateIndexDev = -1;
+  }
+
+  remainingExpirationTime = NoWork;
+  componentUpdateQueue = null;
+  sideEffectTag = 0;
+
+  // These were reset above
+  // didScheduleRenderPhaseUpdate = false;
+  // renderPhaseUpdates = null;
+  // numberOfReRenders = 0;
+
+  !!didRenderTooFewHooks ? invariant(false, 'Rendered fewer hooks than expected. This may be caused by an accidental early return statement.') : void 0;
+
+  return children;
+}
+
+function bailoutHooks(current, workInProgress, expirationTime) {
+  workInProgress.updateQueue = current.updateQueue;
+  workInProgress.effectTag &= ~(Passive | Update);
+  if (current.expirationTime <= expirationTime) {
+    current.expirationTime = NoWork;
+  }
+}
+
+function resetHooks() {
+  // We can assume the previous dispatcher is always this one, since we set it
+  // at the beginning of the render phase and there's no re-entrancy.
+  ReactCurrentDispatcher$1.current = ContextOnlyDispatcher;
+
+  // This is used to reset the state of this module when a component throws.
+  // It's also called inside mountIndeterminateComponent if we determine the
+  // component is a module-style component.
+  renderExpirationTime = NoWork;
+  currentlyRenderingFiber$1 = null;
+
+  currentHook = null;
+  nextCurrentHook = null;
+  firstWorkInProgressHook = null;
+  workInProgressHook = null;
+  nextWorkInProgressHook = null;
+
+  {
+    hookTypesDev = null;
+    hookTypesUpdateIndexDev = -1;
+
+    currentHookNameInDev = null;
+  }
+
+  remainingExpirationTime = NoWork;
+  componentUpdateQueue = null;
+  sideEffectTag = 0;
+
+  didScheduleRenderPhaseUpdate = false;
+  renderPhaseUpdates = null;
+  numberOfReRenders = 0;
+}
+
+function mountWorkInProgressHook() {
+  var hook = {
+    memoizedState: null,
+
+    baseState: null,
+    queue: null,
+    baseUpdate: null,
+
+    next: null
+  };
+
+  if (workInProgressHook === null) {
+    // This is the first hook in the list
+    firstWorkInProgressHook = workInProgressHook = hook;
+  } else {
+    // Append to the end of the list
+    workInProgressHook = workInProgressHook.next = hook;
+  }
+  return workInProgressHook;
+}
+
+function updateWorkInProgressHook() {
+  // This function is used both for updates and for re-renders triggered by a
+  // render phase update. It assumes there is either a current hook we can
+  // clone, or a work-in-progress hook from a previous render pass that we can
+  // use as a base. When we reach the end of the base list, we must switch to
+  // the dispatcher used for mounts.
+  if (nextWorkInProgressHook !== null) {
+    // There's already a work-in-progress. Reuse it.
+    workInProgressHook = nextWorkInProgressHook;
+    nextWorkInProgressHook = workInProgressHook.next;
+
+    currentHook = nextCurrentHook;
+    nextCurrentHook = currentHook !== null ? currentHook.next : null;
+  } else {
+    // Clone from the current hook.
+    !(nextCurrentHook !== null) ? invariant(false, 'Rendered more hooks than during the previous render.') : void 0;
+    currentHook = nextCurrentHook;
+
+    var newHook = {
+      memoizedState: currentHook.memoizedState,
+
+      baseState: currentHook.baseState,
+      queue: currentHook.queue,
+      baseUpdate: currentHook.baseUpdate,
+
+      next: null
+    };
+
+    if (workInProgressHook === null) {
+      // This is the first hook in the list.
+      workInProgressHook = firstWorkInProgressHook = newHook;
+    } else {
+      // Append to the end of the list.
+      workInProgressHook = workInProgressHook.next = newHook;
+    }
+    nextCurrentHook = currentHook.next;
+  }
+  return workInProgressHook;
+}
+
+function createFunctionComponentUpdateQueue() {
+  return {
+    lastEffect: null
+  };
+}
+
+function basicStateReducer(state, action) {
+  return typeof action === 'function' ? action(state) : action;
+}
+
+function mountReducer(reducer, initialArg, init) {
+  var hook = mountWorkInProgressHook();
+  var initialState = void 0;
+  if (init !== undefined) {
+    initialState = init(initialArg);
+  } else {
+    initialState = initialArg;
+  }
+  hook.memoizedState = hook.baseState = initialState;
+  var queue = hook.queue = {
+    last: null,
+    dispatch: null,
+    lastRenderedReducer: reducer,
+    lastRenderedState: initialState
+  };
+  var dispatch = queue.dispatch = dispatchAction.bind(null,
+  // Flow doesn't know this is non-null, but we do.
+  currentlyRenderingFiber$1, queue);
+  return [hook.memoizedState, dispatch];
+}
+
+function updateReducer(reducer, initialArg, init) {
+  var hook = updateWorkInProgressHook();
+  var queue = hook.queue;
+  !(queue !== null) ? invariant(false, 'Should have a queue. This is likely a bug in React. Please file an issue.') : void 0;
+
+  queue.lastRenderedReducer = reducer;
+
+  if (numberOfReRenders > 0) {
+    // This is a re-render. Apply the new render phase updates to the previous
+    var _dispatch = queue.dispatch;
+    if (renderPhaseUpdates !== null) {
+      // Render phase updates are stored in a map of queue -> linked list
+      var firstRenderPhaseUpdate = renderPhaseUpdates.get(queue);
+      if (firstRenderPhaseUpdate !== undefined) {
+        renderPhaseUpdates.delete(queue);
+        var newState = hook.memoizedState;
+        var update = firstRenderPhaseUpdate;
+        do {
+          // Process this render phase update. We don't have to check the
+          // priority because it will always be the same as the current
+          // render's.
+          var _action = update.action;
+          newState = reducer(newState, _action);
+          update = update.next;
+        } while (update !== null);
+
+        // Mark that the fiber performed work, but only if the new state is
+        // different from the current state.
+        if (!is(newState, hook.memoizedState)) {
+          markWorkInProgressReceivedUpdate();
+        }
+
+        hook.memoizedState = newState;
+        // Don't persist the state accumlated from the render phase updates to
+        // the base state unless the queue is empty.
+        // TODO: Not sure if this is the desired semantics, but it's what we
+        // do for gDSFP. I can't remember why.
+        if (hook.baseUpdate === queue.last) {
+          hook.baseState = newState;
+        }
+
+        queue.lastRenderedState = newState;
+
+        return [newState, _dispatch];
+      }
+    }
+    return [hook.memoizedState, _dispatch];
+  }
+
+  // The last update in the entire queue
+  var last = queue.last;
+  // The last update that is part of the base state.
+  var baseUpdate = hook.baseUpdate;
+  var baseState = hook.baseState;
+
+  // Find the first unprocessed update.
+  var first = void 0;
+  if (baseUpdate !== null) {
+    if (last !== null) {
+      // For the first update, the queue is a circular linked list where
+      // `queue.last.next = queue.first`. Once the first update commits, and
+      // the `baseUpdate` is no longer empty, we can unravel the list.
+      last.next = null;
+    }
+    first = baseUpdate.next;
+  } else {
+    first = last !== null ? last.next : null;
+  }
+  if (first !== null) {
+    var _newState = baseState;
+    var newBaseState = null;
+    var newBaseUpdate = null;
+    var prevUpdate = baseUpdate;
+    var _update = first;
+    var didSkip = false;
+    do {
+      var updateExpirationTime = _update.expirationTime;
+      if (updateExpirationTime < renderExpirationTime) {
+        // Priority is insufficient. Skip this update. If this is the first
+        // skipped update, the previous update/state is the new base
+        // update/state.
+        if (!didSkip) {
+          didSkip = true;
+          newBaseUpdate = prevUpdate;
+          newBaseState = _newState;
+        }
+        // Update the remaining priority in the queue.
+        if (updateExpirationTime > remainingExpirationTime) {
+          remainingExpirationTime = updateExpirationTime;
+        }
+      } else {
+        // Process this update.
+        if (_update.eagerReducer === reducer) {
+          // If this update was processed eagerly, and its reducer matches the
+          // current reducer, we can use the eagerly computed state.
+          _newState = _update.eagerState;
+        } else {
+          var _action2 = _update.action;
+          _newState = reducer(_newState, _action2);
+        }
+      }
+      prevUpdate = _update;
+      _update = _update.next;
+    } while (_update !== null && _update !== first);
+
+    if (!didSkip) {
+      newBaseUpdate = prevUpdate;
+      newBaseState = _newState;
+    }
+
+    // Mark that the fiber performed work, but only if the new state is
+    // different from the current state.
+    if (!is(_newState, hook.memoizedState)) {
+      markWorkInProgressReceivedUpdate();
+    }
+
+    hook.memoizedState = _newState;
+    hook.baseUpdate = newBaseUpdate;
+    hook.baseState = newBaseState;
+
+    queue.lastRenderedState = _newState;
+  }
+
+  var dispatch = queue.dispatch;
+  return [hook.memoizedState, dispatch];
+}
+
+function mountState(initialState) {
+  var hook = mountWorkInProgressHook();
+  if (typeof initialState === 'function') {
+    initialState = initialState();
+  }
+  hook.memoizedState = hook.baseState = initialState;
+  var queue = hook.queue = {
+    last: null,
+    dispatch: null,
+    lastRenderedReducer: basicStateReducer,
+    lastRenderedState: initialState
+  };
+  var dispatch = queue.dispatch = dispatchAction.bind(null,
+  // Flow doesn't know this is non-null, but we do.
+  currentlyRenderingFiber$1, queue);
+  return [hook.memoizedState, dispatch];
+}
+
+function updateState(initialState) {
+  return updateReducer(basicStateReducer, initialState);
+}
+
+function pushEffect(tag, create, destroy, deps) {
+  var effect = {
+    tag: tag,
+    create: create,
+    destroy: destroy,
+    deps: deps,
+    // Circular
+    next: null
+  };
+  if (componentUpdateQueue === null) {
+    componentUpdateQueue = createFunctionComponentUpdateQueue();
+    componentUpdateQueue.lastEffect = effect.next = effect;
+  } else {
+    var _lastEffect = componentUpdateQueue.lastEffect;
+    if (_lastEffect === null) {
+      componentUpdateQueue.lastEffect = effect.next = effect;
+    } else {
+      var firstEffect = _lastEffect.next;
+      _lastEffect.next = effect;
+      effect.next = firstEffect;
+      componentUpdateQueue.lastEffect = effect;
+    }
+  }
+  return effect;
+}
+
+function mountRef(initialValue) {
+  var hook = mountWorkInProgressHook();
+  var ref = { current: initialValue };
+  {
+    Object.seal(ref);
+  }
+  hook.memoizedState = ref;
+  return ref;
+}
+
+function updateRef(initialValue) {
+  var hook = updateWorkInProgressHook();
+  return hook.memoizedState;
+}
+
+function mountEffectImpl(fiberEffectTag, hookEffectTag, create, deps) {
+  var hook = mountWorkInProgressHook();
+  var nextDeps = deps === undefined ? null : deps;
+  sideEffectTag |= fiberEffectTag;
+  hook.memoizedState = pushEffect(hookEffectTag, create, undefined, nextDeps);
+}
+
+function updateEffectImpl(fiberEffectTag, hookEffectTag, create, deps) {
+  var hook = updateWorkInProgressHook();
+  var nextDeps = deps === undefined ? null : deps;
+  var destroy = undefined;
+
+  if (currentHook !== null) {
+    var prevEffect = currentHook.memoizedState;
+    destroy = prevEffect.destroy;
+    if (nextDeps !== null) {
+      var prevDeps = prevEffect.deps;
+      if (areHookInputsEqual(nextDeps, prevDeps)) {
+        pushEffect(NoEffect$1, create, destroy, nextDeps);
+        return;
+      }
+    }
+  }
+
+  sideEffectTag |= fiberEffectTag;
+  hook.memoizedState = pushEffect(hookEffectTag, create, destroy, nextDeps);
+}
+
+function mountEffect(create, deps) {
+  return mountEffectImpl(Update | Passive, UnmountPassive | MountPassive, create, deps);
+}
+
+function updateEffect(create, deps) {
+  return updateEffectImpl(Update | Passive, UnmountPassive | MountPassive, create, deps);
+}
+
+function mountLayoutEffect(create, deps) {
+  return mountEffectImpl(Update, UnmountMutation | MountLayout, create, deps);
+}
+
+function updateLayoutEffect(create, deps) {
+  return updateEffectImpl(Update, UnmountMutation | MountLayout, create, deps);
+}
+
+function imperativeHandleEffect(create, ref) {
+  if (typeof ref === 'function') {
+    var refCallback = ref;
+    var _inst = create();
+    refCallback(_inst);
+    return function () {
+      refCallback(null);
+    };
+  } else if (ref !== null && ref !== undefined) {
+    var refObject = ref;
+    {
+      !refObject.hasOwnProperty('current') ? warning$1(false, 'Expected useImperativeHandle() first argument to either be a ' + 'ref callback or React.createRef() object. Instead received: %s.', 'an object with keys {' + Object.keys(refObject).join(', ') + '}') : void 0;
+    }
+    var _inst2 = create();
+    refObject.current = _inst2;
+    return function () {
+      refObject.current = null;
+    };
+  }
+}
+
+function mountImperativeHandle(ref, create, deps) {
+  {
+    !(typeof create === 'function') ? warning$1(false, 'Expected useImperativeHandle() second argument to be a function ' + 'that creates a handle. Instead received: %s.', create !== null ? typeof create : 'null') : void 0;
+  }
+
+  // TODO: If deps are provided, should we skip comparing the ref itself?
+  var effectDeps = deps !== null && deps !== undefined ? deps.concat([ref]) : null;
+
+  return mountEffectImpl(Update, UnmountMutation | MountLayout, imperativeHandleEffect.bind(null, create, ref), effectDeps);
+}
+
+function updateImperativeHandle(ref, create, deps) {
+  {
+    !(typeof create === 'function') ? warning$1(false, 'Expected useImperativeHandle() second argument to be a function ' + 'that creates a handle. Instead received: %s.', create !== null ? typeof create : 'null') : void 0;
+  }
+
+  // TODO: If deps are provided, should we skip comparing the ref itself?
+  var effectDeps = deps !== null && deps !== undefined ? deps.concat([ref]) : null;
+
+  return updateEffectImpl(Update, UnmountMutation | MountLayout, imperativeHandleEffect.bind(null, create, ref), effectDeps);
+}
+
+function mountDebugValue(value, formatterFn) {
+  // This hook is normally a no-op.
+  // The react-debug-hooks package injects its own implementation
+  // so that e.g. DevTools can display custom hook values.
+}
+
+var updateDebugValue = mountDebugValue;
+
+function mountCallback(callback, deps) {
+  var hook = mountWorkInProgressHook();
+  var nextDeps = deps === undefined ? null : deps;
+  hook.memoizedState = [callback, nextDeps];
+  return callback;
+}
+
+function updateCallback(callback, deps) {
+  var hook = updateWorkInProgressHook();
+  var nextDeps = deps === undefined ? null : deps;
+  var prevState = hook.memoizedState;
+  if (prevState !== null) {
+    if (nextDeps !== null) {
+      var prevDeps = prevState[1];
+      if (areHookInputsEqual(nextDeps, prevDeps)) {
+        return prevState[0];
+      }
+    }
+  }
+  hook.memoizedState = [callback, nextDeps];
+  return callback;
+}
+
+function mountMemo(nextCreate, deps) {
+  var hook = mountWorkInProgressHook();
+  var nextDeps = deps === undefined ? null : deps;
+  var nextValue = nextCreate();
+  hook.memoizedState = [nextValue, nextDeps];
+  return nextValue;
+}
+
+function updateMemo(nextCreate, deps) {
+  var hook = updateWorkInProgressHook();
+  var nextDeps = deps === undefined ? null : deps;
+  var prevState = hook.memoizedState;
+  if (prevState !== null) {
+    // Assume these are defined. If they're not, areHookInputsEqual will warn.
+    if (nextDeps !== null) {
+      var prevDeps = prevState[1];
+      if (areHookInputsEqual(nextDeps, prevDeps)) {
+        return prevState[0];
+      }
+    }
+  }
+  var nextValue = nextCreate();
+  hook.memoizedState = [nextValue, nextDeps];
+  return nextValue;
+}
+
+// in a test-like environment, we want to warn if dispatchAction()
+// is called outside of a batchedUpdates/TestUtils.act(...) call.
+var shouldWarnForUnbatchedSetState = false;
+
+{
+  // jest isn't a 'global', it's just exposed to tests via a wrapped function
+  // further, this isn't a test file, so flow doesn't recognize the symbol. So...
+  // $FlowExpectedError - because requirements don't give a damn about your type sigs.
+  if ('undefined' !== typeof jest) {
+    shouldWarnForUnbatchedSetState = true;
+  }
+}
+
+function dispatchAction(fiber, queue, action) {
+  !(numberOfReRenders < RE_RENDER_LIMIT) ? invariant(false, 'Too many re-renders. React limits the number of renders to prevent an infinite loop.') : void 0;
+
+  {
+    !(arguments.length <= 3) ? warning$1(false, "State updates from the useState() and useReducer() Hooks don't support the " + 'second callback argument. To execute a side effect after ' + 'rendering, declare it in the component body with useEffect().') : void 0;
+  }
+
+  var alternate = fiber.alternate;
+  if (fiber === currentlyRenderingFiber$1 || alternate !== null && alternate === currentlyRenderingFiber$1) {
+    // This is a render phase update. Stash it in a lazily-created map of
+    // queue -> linked list of updates. After this render pass, we'll restart
+    // and apply the stashed updates on top of the work-in-progress hook.
+    didScheduleRenderPhaseUpdate = true;
+    var update = {
+      expirationTime: renderExpirationTime,
+      action: action,
+      eagerReducer: null,
+      eagerState: null,
+      next: null
+    };
+    if (renderPhaseUpdates === null) {
+      renderPhaseUpdates = new Map();
+    }
+    var firstRenderPhaseUpdate = renderPhaseUpdates.get(queue);
+    if (firstRenderPhaseUpdate === undefined) {
+      renderPhaseUpdates.set(queue, update);
+    } else {
+      // Append the update to the end of the list.
+      var lastRenderPhaseUpdate = firstRenderPhaseUpdate;
+      while (lastRenderPhaseUpdate.next !== null) {
+        lastRenderPhaseUpdate = lastRenderPhaseUpdate.next;
+      }
+      lastRenderPhaseUpdate.next = update;
+    }
+  } else {
+    flushPassiveEffects();
+
+    var currentTime = requestCurrentTime();
+    var _expirationTime = computeExpirationForFiber(currentTime, fiber);
+
+    var _update2 = {
+      expirationTime: _expirationTime,
+      action: action,
+      eagerReducer: null,
+      eagerState: null,
+      next: null
+    };
+
+    // Append the update to the end of the list.
+    var _last = queue.last;
+    if (_last === null) {
+      // This is the first update. Create a circular list.
+      _update2.next = _update2;
+    } else {
+      var first = _last.next;
+      if (first !== null) {
+        // Still circular.
+        _update2.next = first;
+      }
+      _last.next = _update2;
+    }
+    queue.last = _update2;
+
+    if (fiber.expirationTime === NoWork && (alternate === null || alternate.expirationTime === NoWork)) {
+      // The queue is currently empty, which means we can eagerly compute the
+      // next state before entering the render phase. If the new state is the
+      // same as the current state, we may be able to bail out entirely.
+      var _lastRenderedReducer = queue.lastRenderedReducer;
+      if (_lastRenderedReducer !== null) {
+        var prevDispatcher = void 0;
+        {
+          prevDispatcher = ReactCurrentDispatcher$1.current;
+          ReactCurrentDispatcher$1.current = InvalidNestedHooksDispatcherOnUpdateInDEV;
+        }
+        try {
+          var currentState = queue.lastRenderedState;
+          var _eagerState = _lastRenderedReducer(currentState, action);
+          // Stash the eagerly computed state, and the reducer used to compute
+          // it, on the update object. If the reducer hasn't changed by the
+          // time we enter the render phase, then the eager state can be used
+          // without calling the reducer again.
+          _update2.eagerReducer = _lastRenderedReducer;
+          _update2.eagerState = _eagerState;
+          if (is(_eagerState, currentState)) {
+            // Fast path. We can bail out without scheduling React to re-render.
+            // It's still possible that we'll need to rebase this update later,
+            // if the component re-renders for a different reason and by that
+            // time the reducer has changed.
+            return;
+          }
+        } catch (error) {
+          // Suppress the error. It will throw again in the render phase.
+        } finally {
+          {
+            ReactCurrentDispatcher$1.current = prevDispatcher;
+          }
+        }
+      }
+    }
+    {
+      if (shouldWarnForUnbatchedSetState === true) {
+        warnIfNotCurrentlyBatchingInDev(fiber);
+      }
+    }
+    scheduleWork(fiber, _expirationTime);
+  }
+}
+
+var ContextOnlyDispatcher = {
+  readContext: readContext,
+
+  useCallback: throwInvalidHookError,
+  useContext: throwInvalidHookError,
+  useEffect: throwInvalidHookError,
+  useImperativeHandle: throwInvalidHookError,
+  useLayoutEffect: throwInvalidHookError,
+  useMemo: throwInvalidHookError,
+  useReducer: throwInvalidHookError,
+  useRef: throwInvalidHookError,
+  useState: throwInvalidHookError,
+  useDebugValue: throwInvalidHookError
+};
+
+var HooksDispatcherOnMountInDEV = null;
+var HooksDispatcherOnMountWithHookTypesInDEV = null;
+var HooksDispatcherOnUpdateInDEV = null;
+var InvalidNestedHooksDispatcherOnMountInDEV = null;
+var InvalidNestedHooksDispatcherOnUpdateInDEV = null;
+
+{
+  var warnInvalidContextAccess = function () {
+    warning$1(false, 'Context can only be read while React is rendering. ' + 'In classes, you can read it in the render method or getDerivedStateFromProps. ' + 'In function components, you can read it directly in the function body, but not ' + 'inside Hooks like useReducer() or useMemo().');
+  };
+
+  var warnInvalidHookAccess = function () {
+    warning$1(false, 'Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. ' + 'You can only call Hooks at the top level of your React function. ' + 'For more information, see ' + 'https://fb.me/rules-of-hooks');
+  };
+
+  HooksDispatcherOnMountInDEV = {
+    readContext: function (context, observedBits) {
+      return readContext(context, observedBits);
+    },
+    useCallback: function (callback, deps) {
+      currentHookNameInDev = 'useCallback';
+      mountHookTypesDev();
+      return mountCallback(callback, deps);
+    },
+    useContext: function (context, observedBits) {
+      currentHookNameInDev = 'useContext';
+      mountHookTypesDev();
+      return readContext(context, observedBits);
+    },
+    useEffect: function (create, deps) {
+      currentHookNameInDev = 'useEffect';
+      mountHookTypesDev();
+      return mountEffect(create, deps);
+    },
+    useImperativeHandle: function (ref, create, deps) {
+      currentHookNameInDev = 'useImperativeHandle';
+      mountHookTypesDev();
+      return mountImperativeHandle(ref, create, deps);
+    },
+    useLayoutEffect: function (create, deps) {
+      currentHookNameInDev = 'useLayoutEffect';
+      mountHookTypesDev();
+      return mountLayoutEffect(create, deps);
+    },
+    useMemo: function (create, deps) {
+      currentHookNameInDev = 'useMemo';
+      mountHookTypesDev();
+      var prevDispatcher = ReactCurrentDispatcher$1.current;
+      ReactCurrentDispatcher$1.current = InvalidNestedHooksDispatcherOnMountInDEV;
+      try {
+        return mountMemo(create, deps);
+      } finally {
+        ReactCurrentDispatcher$1.current = prevDispatcher;
+      }
+    },
+    useReducer: function (reducer, initialArg, init) {
+      currentHookNameInDev = 'useReducer';
+      mountHookTypesDev();
+      var prevDispatcher = ReactCurrentDispatcher$1.current;
+      ReactCurrentDispatcher$1.current = InvalidNestedHooksDispatcherOnMountInDEV;
+      try {
+        return mountReducer(reducer, initialArg, init);
+      } finally {
+        ReactCurrentDispatcher$1.current = prevDispatcher;
+      }
+    },
+    useRef: function (initialValue) {
+      currentHookNameInDev = 'useRef';
+      mountHookTypesDev();
+      return mountRef(initialValue);
+    },
+    useState: function (initialState) {
+      currentHookNameInDev = 'useState';
+      mountHookTypesDev();
+      var prevDispatcher = ReactCurrentDispatcher$1.current;
+      ReactCurrentDispatcher$1.current = InvalidNestedHooksDispatcherOnMountInDEV;
+      try {
+        return mountState(initialState);
+      } finally {
+        ReactCurrentDispatcher$1.current = prevDispatcher;
+      }
+    },
+    useDebugValue: function (value, formatterFn) {
+      currentHookNameInDev = 'useDebugValue';
+      mountHookTypesDev();
+      return mountDebugValue(value, formatterFn);
+    }
+  };
+
+  HooksDispatcherOnMountWithHookTypesInDEV = {
+    readContext: function (context, observedBits) {
+      return readContext(context, observedBits);
+    },
+    useCallback: function (callback, deps) {
+      currentHookNameInDev = 'useCallback';
+      updateHookTypesDev();
+      return mountCallback(callback, deps);
+    },
+    useContext: function (context, observedBits) {
+      currentHookNameInDev = 'useContext';
+      updateHookTypesDev();
+      return readContext(context, observedBits);
+    },
+    useEffect: function (create, deps) {
+      currentHookNameInDev = 'useEffect';
+      updateHookTypesDev();
+      return mountEffect(create, deps);
+    },
+    useImperativeHandle: function (ref, create, deps) {
+      currentHookNameInDev = 'useImperativeHandle';
+      updateHookTypesDev();
+      return mountImperativeHandle(ref, create, deps);
+    },
+    useLayoutEffect: function (create, deps) {
+      currentHookNameInDev = 'useLayoutEffect';
+      updateHookTypesDev();
+      return mountLayoutEffect(create, deps);
+    },
+    useMemo: function (create, deps) {
+      currentHookNameInDev = 'useMemo';
+      updateHookTypesDev();
+      var prevDispatcher = ReactCurrentDispatcher$1.current;
+      ReactCurrentDispatcher$1.current = InvalidNestedHooksDispatcherOnMountInDEV;
+      try {
+        return mountMemo(create, deps);
+      } finally {
+        ReactCurrentDispatcher$1.current = prevDispatcher;
+      }
+    },
+    useReducer: function (reducer, initialArg, init) {
+      currentHookNameInDev = 'useReducer';
+      updateHookTypesDev();
+      var prevDispatcher = ReactCurrentDispatcher$1.current;
+      ReactCurrentDispatcher$1.current = InvalidNestedHooksDispatcherOnMountInDEV;
+      try {
+        return mountReducer(reducer, initialArg, init);
+      } finally {
+        ReactCurrentDispatcher$1.current = prevDispatcher;
+      }
+    },
+    useRef: function (initialValue) {
+      currentHookNameInDev = 'useRef';
+      updateHookTypesDev();
+      return mountRef(initialValue);
+    },
+    useState: function (initialState) {
+      currentHookNameInDev = 'useState';
+      updateHookTypesDev();
+      var prevDispatcher = ReactCurrentDispatcher$1.current;
+      ReactCurrentDispatcher$1.current = InvalidNestedHooksDispatcherOnMountInDEV;
+      try {
+        return mountState(initialState);
+      } finally {
+        ReactCurrentDispatcher$1.current = prevDispatcher;
+      }
+    },
+    useDebugValue: function (value, formatterFn) {
+      currentHookNameInDev = 'useDebugValue';
+      updateHookTypesDev();
+      return mountDebugValue(value, formatterFn);
+    }
+  };
+
+  HooksDispatcherOnUpdateInDEV = {
+    readContext: function (context, observedBits) {
+      return readContext(context, observedBits);
+    },
+    useCallback: function (callback, deps) {
+      currentHookNameInDev = 'useCallback';
+      updateHookTypesDev();
+      return updateCallback(callback, deps);
+    },
+    useContext: function (context, observedBits) {
+      currentHookNameInDev = 'useContext';
+      updateHookTypesDev();
+      return readContext(context, observedBits);
+    },
+    useEffect: function (create, deps) {
+      currentHookNameInDev = 'useEffect';
+      updateHookTypesDev();
+      return updateEffect(create, deps);
+    },
+    useImperativeHandle: function (ref, create, deps) {
+      currentHookNameInDev = 'useImperativeHandle';
+      updateHookTypesDev();
+      return updateImperativeHandle(ref, create, deps);
+    },
+    useLayoutEffect: function (create, deps) {
+      currentHookNameInDev = 'useLayoutEffect';
+      updateHookTypesDev();
+      return updateLayoutEffect(create, deps);
+    },
+    useMemo: function (create, deps) {
+      currentHookNameInDev = 'useMemo';
+      updateHookTypesDev();
+      var prevDispatcher = ReactCurrentDispatcher$1.current;
+      ReactCurrentDispatcher$1.current = InvalidNestedHooksDispatcherOnUpdateInDEV;
+      try {
+        return updateMemo(create, deps);
+      } finally {
+        ReactCurrentDispatcher$1.current = prevDispatcher;
+      }
+    },
+    useReducer: function (reducer, initialArg, init) {
+      currentHookNameInDev = 'useReducer';
+      updateHookTypesDev();
+      var prevDispatcher = ReactCurrentDispatcher$1.current;
+      ReactCurrentDispatcher$1.current = InvalidNestedHooksDispatcherOnUpdateInDEV;
+      try {
+        return updateReducer(reducer, initialArg, init);
+      } finally {
+        ReactCurrentDispatcher$1.current = prevDispatcher;
+      }
+    },
+    useRef: function (initialValue) {
+      currentHookNameInDev = 'useRef';
+      updateHookTypesDev();
+      return updateRef(initialValue);
+    },
+    useState: function (initialState) {
+      currentHookNameInDev = 'useState';
+      updateHookTypesDev();
+      var prevDispatcher = ReactCurrentDispatcher$1.current;
+      ReactCurrentDispatcher$1.current = InvalidNestedHooksDispatcherOnUpdateInDEV;
+      try {
+        return updateState(initialState);
+      } finally {
+        ReactCurrentDispatcher$1.current = prevDispatcher;
+      }
+    },
+    useDebugValue: function (value, formatterFn) {
+      currentHookNameInDev = 'useDebugValue';
+      updateHookTypesDev();
+      return updateDebugValue(value, formatterFn);
+    }
+  };
+
+  InvalidNestedHooksDispatcherOnMountInDEV = {
+    readContext: function (context, observedBits) {
+      warnInvalidContextAccess();
+      return readContext(context, observedBits);
+    },
+    useCallback: function (callback, deps) {
+      currentHookNameInDev = 'useCallback';
+      warnInvalidHookAccess();
+      mountHookTypesDev();
+      return mountCallback(callback, deps);
+    },
+    useContext: function (context, observedBits) {
+      currentHookNameInDev = 'useContext';
+      warnInvalidHookAccess();
+      mountHookTypesDev();
+      return readContext(context, observedBits);
+    },
+    useEffect: function (create, deps) {
+      currentHookNameInDev = 'useEffect';
+      warnInvalidHookAccess();
+      mountHookTypesDev();
+      return mountEffect(create, deps);
+    },
+    useImperativeHandle: function (ref, create, deps) {
+      currentHookNameInDev = 'useImperativeHandle';
+      warnInvalidHookAccess();
+      mountHookTypesDev();
+      return mountImperativeHandle(ref, create, deps);
+    },
+    useLayoutEffect: function (create, deps) {
+      currentHookNameInDev = 'useLayoutEffect';
+      warnInvalidHookAccess();
+      mountHookTypesDev();
+      return mountLayoutEffect(create, deps);
+    },
+    useMemo: function (create, deps) {
+      currentHookNameInDev = 'useMemo';
+      warnInvalidHookAccess();
+      mountHookTypesDev();
+      var prevDispatcher = ReactCurrentDispatcher$1.current;
+      ReactCurrentDispatcher$1.current = InvalidNestedHooksDispatcherOnMountInDEV;
+      try {
+        return mountMemo(create, deps);
+      } finally {
+        ReactCurrentDispatcher$1.current = prevDispatcher;
+      }
+    },
+    useReducer: function (reducer, initialArg, init) {
+      currentHookNameInDev = 'useReducer';
+      warnInvalidHookAccess();
+      mountHookTypesDev();
+      var prevDispatcher = ReactCurrentDispatcher$1.current;
+      ReactCurrentDispatcher$1.current = InvalidNestedHooksDispatcherOnMountInDEV;
+      try {
+        return mountReducer(reducer, initialArg, init);
+      } finally {
+        ReactCurrentDispatcher$1.current = prevDispatcher;
+      }
+    },
+    useRef: function (initialValue) {
+      currentHookNameInDev = 'useRef';
+      warnInvalidHookAccess();
+      mountHookTypesDev();
+      return mountRef(initialValue);
+    },
+    useState: function (initialState) {
+      currentHookNameInDev = 'useState';
+      warnInvalidHookAccess();
+      mountHookTypesDev();
+      var prevDispatcher = ReactCurrentDispatcher$1.current;
+      ReactCurrentDispatcher$1.current = InvalidNestedHooksDispatcherOnMountInDEV;
+      try {
+        return mountState(initialState);
+      } finally {
+        ReactCurrentDispatcher$1.current = prevDispatcher;
+      }
+    },
+    useDebugValue: function (value, formatterFn) {
+      currentHookNameInDev = 'useDebugValue';
+      warnInvalidHookAccess();
+      mountHookTypesDev();
+      return mountDebugValue(value, formatterFn);
+    }
+  };
+
+  InvalidNestedHooksDispatcherOnUpdateInDEV = {
+    readContext: function (context, observedBits) {
+      warnInvalidContextAccess();
+      return readContext(context, observedBits);
+    },
+    useCallback: function (callback, deps) {
+      currentHookNameInDev = 'useCallback';
+      warnInvalidHookAccess();
+      updateHookTypesDev();
+      return updateCallback(callback, deps);
+    },
+    useContext: function (context, observedBits) {
+      currentHookNameInDev = 'useContext';
+      warnInvalidHookAccess();
+      updateHookTypesDev();
+      return readContext(context, observedBits);
+    },
+    useEffect: function (create, deps) {
+      currentHookNameInDev = 'useEffect';
+      warnInvalidHookAccess();
+      updateHookTypesDev();
+      return updateEffect(create, deps);
+    },
+    useImperativeHandle: function (ref, create, deps) {
+      currentHookNameInDev = 'useImperativeHandle';
+      warnInvalidHookAccess();
+      updateHookTypesDev();
+      return updateImperativeHandle(ref, create, deps);
+    },
+    useLayoutEffect: function (create, deps) {
+      currentHookNameInDev = 'useLayoutEffect';
+      warnInvalidHookAccess();
+      updateHookTypesDev();
+      return updateLayoutEffect(create, deps);
+    },
+    useMemo: function (create, deps) {
+      currentHookNameInDev = 'useMemo';
+      warnInvalidHookAccess();
+      updateHookTypesDev();
+      var prevDispatcher = ReactCurrentDispatcher$1.current;
+      ReactCurrentDispatcher$1.current = InvalidNestedHooksDispatcherOnUpdateInDEV;
+      try {
+        return updateMemo(create, deps);
+      } finally {
+        ReactCurrentDispatcher$1.current = prevDispatcher;
+      }
+    },
+    useReducer: function (reducer, initialArg, init) {
+      currentHookNameInDev = 'useReducer';
+      warnInvalidHookAccess();
+      updateHookTypesDev();
+      var prevDispatcher = ReactCurrentDispatcher$1.current;
+      ReactCurrentDispatcher$1.current = InvalidNestedHooksDispatcherOnUpdateInDEV;
+      try {
+        return updateReducer(reducer, initialArg, init);
+      } finally {
+        ReactCurrentDispatcher$1.current = prevDispatcher;
+      }
+    },
+    useRef: function (initialValue) {
+      currentHookNameInDev = 'useRef';
+      warnInvalidHookAccess();
+      updateHookTypesDev();
+      return updateRef(initialValue);
+    },
+    useState: function (initialState) {
+      currentHookNameInDev = 'useState';
+      warnInvalidHookAccess();
+      updateHookTypesDev();
+      var prevDispatcher = ReactCurrentDispatcher$1.current;
+      ReactCurrentDispatcher$1.current = InvalidNestedHooksDispatcherOnUpdateInDEV;
+      try {
+        return updateState(initialState);
+      } finally {
+        ReactCurrentDispatcher$1.current = prevDispatcher;
+      }
+    },
+    useDebugValue: function (value, formatterFn) {
+      currentHookNameInDev = 'useDebugValue';
+      warnInvalidHookAccess();
+      updateHookTypesDev();
+      return updateDebugValue(value, formatterFn);
+    }
+  };
+}
+
+var commitTime = 0;
+var profilerStartTime = -1;
+
+function getCommitTime() {
+  return commitTime;
+}
+
+function recordCommitTime() {
+  if (!enableProfilerTimer) {
+    return;
+  }
+  commitTime = scheduler.unstable_now();
+}
+
+function startProfilerTimer(fiber) {
+  if (!enableProfilerTimer) {
+    return;
+  }
+
+  profilerStartTime = scheduler.unstable_now();
+
+  if (fiber.actualStartTime < 0) {
+    fiber.actualStartTime = scheduler.unstable_now();
+  }
+}
+
+function stopProfilerTimerIfRunning(fiber) {
+  if (!enableProfilerTimer) {
+    return;
+  }
+  profilerStartTime = -1;
+}
+
+function stopProfilerTimerIfRunningAndRecordDelta(fiber, overrideBaseTime) {
+  if (!enableProfilerTimer) {
+    return;
+  }
+
+  if (profilerStartTime >= 0) {
+    var elapsedTime = scheduler.unstable_now() - profilerStartTime;
+    fiber.actualDuration += elapsedTime;
+    if (overrideBaseTime) {
+      fiber.selfBaseDuration = elapsedTime;
+    }
+    profilerStartTime = -1;
+  }
+}
+
 // The deepest Fiber on the stack involved in a hydration context.
 // This may have been an insertion or a hydration.
 var hydrationParentFiber = null;
@@ -14523,6 +15484,18 @@ function enterHydrationState(fiber) {
   var parentInstance = fiber.stateNode.containerInfo;
   nextHydratableInstance = getFirstHydratableChild(parentInstance);
   hydrationParentFiber = fiber;
+  isHydrating = true;
+  return true;
+}
+
+function reenterHydrationStateFromDehydratedSuspenseInstance(fiber) {
+  if (!supportsHydration) {
+    return false;
+  }
+
+  var suspenseInstance = fiber.stateNode;
+  nextHydratableInstance = getNextHydratableSibling(suspenseInstance);
+  popToNextHostParent(fiber);
   isHydrating = true;
   return true;
 }
@@ -14574,6 +15547,9 @@ function insertNonHydratedInstance(returnFiber, fiber) {
               var text = fiber.pendingProps;
               didNotFindHydratableContainerTextInstance(parentContainer, text);
               break;
+            case SuspenseComponent:
+              
+              break;
           }
           break;
         }
@@ -14591,6 +15567,9 @@ function insertNonHydratedInstance(returnFiber, fiber) {
             case HostText:
               var _text = fiber.pendingProps;
               didNotFindHydratableTextInstance(parentType, parentProps, parentInstance, _text);
+              break;
+            case SuspenseComponent:
+              didNotFindHydratableSuspenseInstance(parentType, parentProps, parentInstance);
               break;
           }
           break;
@@ -14621,6 +15600,19 @@ function tryHydrate(fiber, nextInstance) {
         if (textInstance !== null) {
           fiber.stateNode = textInstance;
           return true;
+        }
+        return false;
+      }
+    case SuspenseComponent:
+      {
+        if (enableSuspenseServerRenderer) {
+          var suspenseInstance = canHydrateSuspenseInstance(nextInstance);
+          if (suspenseInstance !== null) {
+            // Downgrade the tag to a dehydrated component until we've hydrated it.
+            fiber.tag = DehydratedSuspenseComponent;
+            fiber.stateNode = suspenseInstance;
+            return true;
+          }
         }
         return false;
       }
@@ -14717,9 +15709,18 @@ function prepareToHydrateHostTextInstance(fiber) {
   return shouldUpdate;
 }
 
+function skipPastDehydratedSuspenseInstance(fiber) {
+  if (!supportsHydration) {
+    invariant(false, 'Expected skipPastDehydratedSuspenseInstance() to never be called. This error is likely caused by a bug in React. Please file an issue.');
+  }
+  var suspenseInstance = fiber.stateNode;
+  !suspenseInstance ? invariant(false, 'Expected to have a hydrated suspense instance. This error is likely caused by a bug in React. Please file an issue.') : void 0;
+  nextHydratableInstance = getNextHydratableInstanceAfterSuspenseInstance(suspenseInstance);
+}
+
 function popToNextHostParent(fiber) {
   var parent = fiber.return;
-  while (parent !== null && parent.tag !== HostComponent && parent.tag !== HostRoot) {
+  while (parent !== null && parent.tag !== HostComponent && parent.tag !== HostRoot && parent.tag !== DehydratedSuspenseComponent) {
     parent = parent.return;
   }
   hydrationParentFiber = parent;
@@ -14775,16 +15776,20 @@ function resetHydrationState() {
 
 var ReactCurrentOwner$3 = ReactSharedInternals.ReactCurrentOwner;
 
+var didReceiveUpdate = false;
+
 var didWarnAboutBadClass = void 0;
 var didWarnAboutContextTypeOnFunctionComponent = void 0;
 var didWarnAboutGetDerivedStateOnFunctionComponent = void 0;
 var didWarnAboutFunctionRefs = void 0;
+var didWarnAboutReassigningProps = void 0;
 
 {
   didWarnAboutBadClass = {};
   didWarnAboutContextTypeOnFunctionComponent = {};
   didWarnAboutGetDerivedStateOnFunctionComponent = {};
   didWarnAboutFunctionRefs = {};
+  didWarnAboutReassigningProps = false;
 }
 
 function reconcileChildren(current$$1, workInProgress, nextChildren, renderExpirationTime) {
@@ -14823,20 +15828,45 @@ function forceUnmountCurrentAndReconcile(current$$1, workInProgress, nextChildre
 }
 
 function updateForwardRef(current$$1, workInProgress, Component, nextProps, renderExpirationTime) {
+  // TODO: current can be non-null here even if the component
+  // hasn't yet mounted. This happens after the first render suspends.
+  // We'll need to figure out if this is fine or can cause issues.
+
+  {
+    if (workInProgress.type !== workInProgress.elementType) {
+      // Lazy component props can't be validated in createElement
+      // because they're only guaranteed to be resolved here.
+      var innerPropTypes = Component.propTypes;
+      if (innerPropTypes) {
+        checkPropTypes(innerPropTypes, nextProps, // Resolved props
+        'prop', getComponentName(Component), getCurrentFiberStackInDev);
+      }
+    }
+  }
+
   var render = Component.render;
   var ref = workInProgress.ref;
 
   // The rest is a fork of updateFunctionComponent
   var nextChildren = void 0;
   prepareToReadContext(workInProgress, renderExpirationTime);
-  prepareToUseHooks(current$$1, workInProgress, renderExpirationTime);
   {
     ReactCurrentOwner$3.current = workInProgress;
     setCurrentPhase('render');
-    nextChildren = render(nextProps, ref);
+    nextChildren = renderWithHooks(current$$1, workInProgress, render, nextProps, ref, renderExpirationTime);
+    if (debugRenderPhaseSideEffects || debugRenderPhaseSideEffectsForStrictMode && workInProgress.mode & StrictMode) {
+      // Only double-render components with Hooks
+      if (workInProgress.memoizedState !== null) {
+        nextChildren = renderWithHooks(current$$1, workInProgress, render, nextProps, ref, renderExpirationTime);
+      }
+    }
     setCurrentPhase(null);
   }
-  nextChildren = finishHooks(render, nextProps, nextChildren, ref);
+
+  if (current$$1 !== null && !didReceiveUpdate) {
+    bailoutHooks(current$$1, workInProgress, renderExpirationTime);
+    return bailoutOnAlreadyFinishedWork(current$$1, workInProgress, renderExpirationTime);
+  }
 
   // React DevTools reads this flag.
   workInProgress.effectTag |= PerformedWork;
@@ -14847,19 +15877,43 @@ function updateForwardRef(current$$1, workInProgress, Component, nextProps, rend
 function updateMemoComponent(current$$1, workInProgress, Component, nextProps, updateExpirationTime, renderExpirationTime) {
   if (current$$1 === null) {
     var type = Component.type;
-    if (isSimpleFunctionComponent(type) && Component.compare === null) {
+    if (isSimpleFunctionComponent(type) && Component.compare === null &&
+    // SimpleMemoComponent codepath doesn't resolve outer props either.
+    Component.defaultProps === undefined) {
       // If this is a plain function component without default props,
       // and with only the default shallow comparison, we upgrade it
       // to a SimpleMemoComponent to allow fast path updates.
       workInProgress.tag = SimpleMemoComponent;
       workInProgress.type = type;
+      {
+        validateFunctionComponentInDev(workInProgress, type);
+      }
       return updateSimpleMemoComponent(current$$1, workInProgress, type, nextProps, updateExpirationTime, renderExpirationTime);
+    }
+    {
+      var innerPropTypes = type.propTypes;
+      if (innerPropTypes) {
+        // Inner memo component props aren't currently validated in createElement.
+        // We could move it there, but we'd still need this for lazy code path.
+        checkPropTypes(innerPropTypes, nextProps, // Resolved props
+        'prop', getComponentName(type), getCurrentFiberStackInDev);
+      }
     }
     var child = createFiberFromTypeAndProps(Component.type, null, nextProps, null, workInProgress.mode, renderExpirationTime);
     child.ref = workInProgress.ref;
     child.return = workInProgress;
     workInProgress.child = child;
     return child;
+  }
+  {
+    var _type = Component.type;
+    var _innerPropTypes = _type.propTypes;
+    if (_innerPropTypes) {
+      // Inner memo component props aren't currently validated in createElement.
+      // We could move it there, but we'd still need this for lazy code path.
+      checkPropTypes(_innerPropTypes, nextProps, // Resolved props
+      'prop', getComponentName(_type), getCurrentFiberStackInDev);
+    }
   }
   var currentChild = current$$1.child; // This is always exactly one child
   if (updateExpirationTime < renderExpirationTime) {
@@ -14883,10 +15937,36 @@ function updateMemoComponent(current$$1, workInProgress, Component, nextProps, u
 }
 
 function updateSimpleMemoComponent(current$$1, workInProgress, Component, nextProps, updateExpirationTime, renderExpirationTime) {
-  if (current$$1 !== null && updateExpirationTime < renderExpirationTime) {
+  // TODO: current can be non-null here even if the component
+  // hasn't yet mounted. This happens when the inner render suspends.
+  // We'll need to figure out if this is fine or can cause issues.
+
+  {
+    if (workInProgress.type !== workInProgress.elementType) {
+      // Lazy component props can't be validated in createElement
+      // because they're only guaranteed to be resolved here.
+      var outerMemoType = workInProgress.elementType;
+      if (outerMemoType.$$typeof === REACT_LAZY_TYPE) {
+        // We warn when you define propTypes on lazy()
+        // so let's just skip over it to find memo() outer wrapper.
+        // Inner props for memo are validated later.
+        outerMemoType = refineResolvedLazyComponent(outerMemoType);
+      }
+      var outerPropTypes = outerMemoType && outerMemoType.propTypes;
+      if (outerPropTypes) {
+        checkPropTypes(outerPropTypes, nextProps, // Resolved (SimpleMemoComponent has no defaultProps)
+        'prop', getComponentName(outerMemoType), getCurrentFiberStackInDev);
+      }
+      // Inner propTypes will be validated in the function component path.
+    }
+  }
+  if (current$$1 !== null) {
     var prevProps = current$$1.memoizedProps;
     if (shallowEqual(prevProps, nextProps) && current$$1.ref === workInProgress.ref) {
-      return bailoutOnAlreadyFinishedWork(current$$1, workInProgress, renderExpirationTime);
+      didReceiveUpdate = false;
+      if (updateExpirationTime < renderExpirationTime) {
+        return bailoutOnAlreadyFinishedWork(current$$1, workInProgress, renderExpirationTime);
+      }
     }
   }
   return updateFunctionComponent(current$$1, workInProgress, Component, nextProps, renderExpirationTime);
@@ -14923,19 +16003,40 @@ function markRef(current$$1, workInProgress) {
 }
 
 function updateFunctionComponent(current$$1, workInProgress, Component, nextProps, renderExpirationTime) {
+  {
+    if (workInProgress.type !== workInProgress.elementType) {
+      // Lazy component props can't be validated in createElement
+      // because they're only guaranteed to be resolved here.
+      var innerPropTypes = Component.propTypes;
+      if (innerPropTypes) {
+        checkPropTypes(innerPropTypes, nextProps, // Resolved props
+        'prop', getComponentName(Component), getCurrentFiberStackInDev);
+      }
+    }
+  }
+
   var unmaskedContext = getUnmaskedContext(workInProgress, Component, true);
   var context = getMaskedContext(workInProgress, unmaskedContext);
 
   var nextChildren = void 0;
   prepareToReadContext(workInProgress, renderExpirationTime);
-  prepareToUseHooks(current$$1, workInProgress, renderExpirationTime);
   {
     ReactCurrentOwner$3.current = workInProgress;
     setCurrentPhase('render');
-    nextChildren = Component(nextProps, context);
+    nextChildren = renderWithHooks(current$$1, workInProgress, Component, nextProps, context, renderExpirationTime);
+    if (debugRenderPhaseSideEffects || debugRenderPhaseSideEffectsForStrictMode && workInProgress.mode & StrictMode) {
+      // Only double-render components with Hooks
+      if (workInProgress.memoizedState !== null) {
+        nextChildren = renderWithHooks(current$$1, workInProgress, Component, nextProps, context, renderExpirationTime);
+      }
+    }
     setCurrentPhase(null);
   }
-  nextChildren = finishHooks(Component, nextProps, nextChildren, context);
+
+  if (current$$1 !== null && !didReceiveUpdate) {
+    bailoutHooks(current$$1, workInProgress, renderExpirationTime);
+    return bailoutOnAlreadyFinishedWork(current$$1, workInProgress, renderExpirationTime);
+  }
 
   // React DevTools reads this flag.
   workInProgress.effectTag |= PerformedWork;
@@ -14944,6 +16045,18 @@ function updateFunctionComponent(current$$1, workInProgress, Component, nextProp
 }
 
 function updateClassComponent(current$$1, workInProgress, Component, nextProps, renderExpirationTime) {
+  {
+    if (workInProgress.type !== workInProgress.elementType) {
+      // Lazy component props can't be validated in createElement
+      // because they're only guaranteed to be resolved here.
+      var innerPropTypes = Component.propTypes;
+      if (innerPropTypes) {
+        checkPropTypes(innerPropTypes, nextProps, // Resolved props
+        'prop', getComponentName(Component), getCurrentFiberStackInDev);
+      }
+    }
+  }
+
   // Push context providers early to prevent context stack mismatches.
   // During mounting we don't know the child context yet as the instance doesn't exist.
   // We will invalidate the child context in finishClassComponent() right after rendering.
@@ -14979,7 +16092,15 @@ function updateClassComponent(current$$1, workInProgress, Component, nextProps, 
   } else {
     shouldUpdate = updateClassInstance(current$$1, workInProgress, Component, nextProps, renderExpirationTime);
   }
-  return finishClassComponent(current$$1, workInProgress, Component, shouldUpdate, hasContext, renderExpirationTime);
+  var nextUnitOfWork = finishClassComponent(current$$1, workInProgress, Component, shouldUpdate, hasContext, renderExpirationTime);
+  {
+    var inst = workInProgress.stateNode;
+    if (inst.props !== nextProps) {
+      !didWarnAboutReassigningProps ? warning$1(false, 'It looks like %s is reassigning its own `this.props` while rendering. ' + 'This is not supported and can lead to confusing bugs.', getComponentName(workInProgress.type) || 'a component') : void 0;
+      didWarnAboutReassigningProps = true;
+    }
+  }
+  return nextUnitOfWork;
 }
 
 function finishClassComponent(current$$1, workInProgress, Component, shouldUpdate, hasContext, renderExpirationTime) {
@@ -15134,7 +16255,7 @@ function updateHostComponent(current$$1, workInProgress, renderExpirationTime) {
   // Check the host config to see if the children are offscreen/hidden.
   if (renderExpirationTime !== Never && workInProgress.mode & ConcurrentMode && shouldDeprioritizeSubtree(type, nextProps)) {
     // Schedule this fiber to re-render at offscreen priority. Then bailout.
-    workInProgress.expirationTime = Never;
+    workInProgress.expirationTime = workInProgress.childExpirationTime = Never;
     return null;
   }
 
@@ -15177,6 +16298,9 @@ function mountLazyComponent(_current, workInProgress, elementType, updateExpirat
   switch (resolvedTag) {
     case FunctionComponent:
       {
+        {
+          validateFunctionComponentInDev(workInProgress, Component);
+        }
         child = updateFunctionComponent(null, workInProgress, Component, resolvedProps, renderExpirationTime);
         break;
       }
@@ -15192,16 +16316,31 @@ function mountLazyComponent(_current, workInProgress, elementType, updateExpirat
       }
     case MemoComponent:
       {
+        {
+          if (workInProgress.type !== workInProgress.elementType) {
+            var outerPropTypes = Component.propTypes;
+            if (outerPropTypes) {
+              checkPropTypes(outerPropTypes, resolvedProps, // Resolved for outer only
+              'prop', getComponentName(Component), getCurrentFiberStackInDev);
+            }
+          }
+        }
         child = updateMemoComponent(null, workInProgress, Component, resolveDefaultProps(Component.type, resolvedProps), // The inner type can have defaults too
         updateExpirationTime, renderExpirationTime);
         break;
       }
     default:
       {
+        var hint = '';
+        {
+          if (Component !== null && typeof Component === 'object' && Component.$$typeof === REACT_LAZY_TYPE) {
+            hint = ' Did you wrap a component in React.lazy() more than once?';
+          }
+        }
         // This message intentionally doesn't mention ForwardRef or MemoComponent
         // because the fact that it's a separate type of work is an
         // implementation detail.
-        invariant(false, 'Element type is invalid. Received a promise that resolves to: %s. Promise elements must resolve to a class or function.', Component);
+        invariant(false, 'Element type is invalid. Received a promise that resolves to: %s. Lazy element type must resolve to a class or function.%s', Component, hint);
       }
   }
   return child;
@@ -15259,7 +16398,6 @@ function mountIndeterminateComponent(_current, workInProgress, Component, render
   var context = getMaskedContext(workInProgress, unmaskedContext);
 
   prepareToReadContext(workInProgress, renderExpirationTime);
-  prepareToUseHooks(null, workInProgress, renderExpirationTime);
 
   var value = void 0;
 
@@ -15278,7 +16416,7 @@ function mountIndeterminateComponent(_current, workInProgress, Component, render
     }
 
     ReactCurrentOwner$3.current = workInProgress;
-    value = Component(props, context);
+    value = renderWithHooks(null, workInProgress, Component, props, context, renderExpirationTime);
   }
   // React DevTools reads this flag.
   workInProgress.effectTag |= PerformedWork;
@@ -15314,49 +16452,60 @@ function mountIndeterminateComponent(_current, workInProgress, Component, render
   } else {
     // Proceed under the assumption that this is a function component
     workInProgress.tag = FunctionComponent;
-    value = finishHooks(Component, props, value, context);
     {
-      if (Component) {
-        !!Component.childContextTypes ? warningWithoutStack$1(false, '%s(...): childContextTypes cannot be defined on a function component.', Component.displayName || Component.name || 'Component') : void 0;
-      }
-      if (workInProgress.ref !== null) {
-        var info = '';
-        var ownerName = getCurrentFiberOwnerNameInDevOrNull();
-        if (ownerName) {
-          info += '\n\nCheck the render method of `' + ownerName + '`.';
-        }
-
-        var warningKey = ownerName || workInProgress._debugID || '';
-        var debugSource = workInProgress._debugSource;
-        if (debugSource) {
-          warningKey = debugSource.fileName + ':' + debugSource.lineNumber;
-        }
-        if (!didWarnAboutFunctionRefs[warningKey]) {
-          didWarnAboutFunctionRefs[warningKey] = true;
-          warning$1(false, 'Function components cannot be given refs. ' + 'Attempts to access this ref will fail.%s', info);
-        }
-      }
-
-      if (typeof Component.getDerivedStateFromProps === 'function') {
-        var _componentName = getComponentName(Component) || 'Unknown';
-
-        if (!didWarnAboutGetDerivedStateOnFunctionComponent[_componentName]) {
-          warningWithoutStack$1(false, '%s: Function components do not support getDerivedStateFromProps.', _componentName);
-          didWarnAboutGetDerivedStateOnFunctionComponent[_componentName] = true;
-        }
-      }
-
-      if (typeof Component.contextType === 'object' && Component.contextType !== null) {
-        var _componentName2 = getComponentName(Component) || 'Unknown';
-
-        if (!didWarnAboutContextTypeOnFunctionComponent[_componentName2]) {
-          warningWithoutStack$1(false, '%s: Function components do not support contextType.', _componentName2);
-          didWarnAboutContextTypeOnFunctionComponent[_componentName2] = true;
+      if (debugRenderPhaseSideEffects || debugRenderPhaseSideEffectsForStrictMode && workInProgress.mode & StrictMode) {
+        // Only double-render components with Hooks
+        if (workInProgress.memoizedState !== null) {
+          value = renderWithHooks(null, workInProgress, Component, props, context, renderExpirationTime);
         }
       }
     }
     reconcileChildren(null, workInProgress, value, renderExpirationTime);
+    {
+      validateFunctionComponentInDev(workInProgress, Component);
+    }
     return workInProgress.child;
+  }
+}
+
+function validateFunctionComponentInDev(workInProgress, Component) {
+  if (Component) {
+    !!Component.childContextTypes ? warningWithoutStack$1(false, '%s(...): childContextTypes cannot be defined on a function component.', Component.displayName || Component.name || 'Component') : void 0;
+  }
+  if (workInProgress.ref !== null) {
+    var info = '';
+    var ownerName = getCurrentFiberOwnerNameInDevOrNull();
+    if (ownerName) {
+      info += '\n\nCheck the render method of `' + ownerName + '`.';
+    }
+
+    var warningKey = ownerName || workInProgress._debugID || '';
+    var debugSource = workInProgress._debugSource;
+    if (debugSource) {
+      warningKey = debugSource.fileName + ':' + debugSource.lineNumber;
+    }
+    if (!didWarnAboutFunctionRefs[warningKey]) {
+      didWarnAboutFunctionRefs[warningKey] = true;
+      warning$1(false, 'Function components cannot be given refs. ' + 'Attempts to access this ref will fail. ' + 'Did you mean to use React.forwardRef()?%s', info);
+    }
+  }
+
+  if (typeof Component.getDerivedStateFromProps === 'function') {
+    var componentName = getComponentName(Component) || 'Unknown';
+
+    if (!didWarnAboutGetDerivedStateOnFunctionComponent[componentName]) {
+      warningWithoutStack$1(false, '%s: Function components do not support getDerivedStateFromProps.', componentName);
+      didWarnAboutGetDerivedStateOnFunctionComponent[componentName] = true;
+    }
+  }
+
+  if (typeof Component.contextType === 'object' && Component.contextType !== null) {
+    var _componentName = getComponentName(Component) || 'Unknown';
+
+    if (!didWarnAboutContextTypeOnFunctionComponent[_componentName]) {
+      warningWithoutStack$1(false, '%s: Function components do not support contextType.', _componentName);
+      didWarnAboutContextTypeOnFunctionComponent[_componentName] = true;
+    }
   }
 }
 
@@ -15415,6 +16564,18 @@ function updateSuspenseComponent(current$$1, workInProgress, renderExpirationTim
   // children -- we skip over the primary children entirely.
   var next = void 0;
   if (current$$1 === null) {
+    if (enableSuspenseServerRenderer) {
+      // If we're currently hydrating, try to hydrate this boundary.
+      // But only if this has a fallback.
+      if (nextProps.fallback !== undefined) {
+        tryToClaimNextHydratableInstance(workInProgress);
+        // This could've changed the tag if this was a dehydrated suspense component.
+        if (workInProgress.tag === DehydratedSuspenseComponent) {
+          return updateDehydratedSuspenseComponent(null, workInProgress, renderExpirationTime);
+        }
+      }
+    }
+
     // This is the initial mount. This branch is pretty simple because there's
     // no previous state that needs to be preserved.
     if (nextDidTimeout) {
@@ -15558,11 +16719,71 @@ function updateSuspenseComponent(current$$1, workInProgress, renderExpirationTim
         next = child = reconcileChildFibers(workInProgress, _currentPrimaryChild, _nextPrimaryChildren2, renderExpirationTime);
       }
     }
+    workInProgress.stateNode = current$$1.stateNode;
   }
 
   workInProgress.memoizedState = nextState;
   workInProgress.child = child;
   return next;
+}
+
+function updateDehydratedSuspenseComponent(current$$1, workInProgress, renderExpirationTime) {
+  if (current$$1 === null) {
+    // During the first pass, we'll bail out and not drill into the children.
+    // Instead, we'll leave the content in place and try to hydrate it later.
+    workInProgress.expirationTime = Never;
+    return null;
+  }
+  // We use childExpirationTime to indicate that a child might depend on context, so if
+  // any context has changed, we need to treat is as if the input might have changed.
+  var hasContextChanged$$1 = current$$1.childExpirationTime >= renderExpirationTime;
+  if (didReceiveUpdate || hasContextChanged$$1) {
+    // This boundary has changed since the first render. This means that we are now unable to
+    // hydrate it. We might still be able to hydrate it using an earlier expiration time but
+    // during this render we can't. Instead, we're going to delete the whole subtree and
+    // instead inject a new real Suspense boundary to take its place, which may render content
+    // or fallback. The real Suspense boundary will suspend for a while so we have some time
+    // to ensure it can produce real content, but all state and pending events will be lost.
+
+    // Detach from the current dehydrated boundary.
+    current$$1.alternate = null;
+    workInProgress.alternate = null;
+
+    // Insert a deletion in the effect list.
+    var returnFiber = workInProgress.return;
+    !(returnFiber !== null) ? invariant(false, 'Suspense boundaries are never on the root. This is probably a bug in React.') : void 0;
+    var last = returnFiber.lastEffect;
+    if (last !== null) {
+      last.nextEffect = current$$1;
+      returnFiber.lastEffect = current$$1;
+    } else {
+      returnFiber.firstEffect = returnFiber.lastEffect = current$$1;
+    }
+    current$$1.nextEffect = null;
+    current$$1.effectTag = Deletion;
+
+    // Upgrade this work in progress to a real Suspense component.
+    workInProgress.tag = SuspenseComponent;
+    workInProgress.stateNode = null;
+    workInProgress.memoizedState = null;
+    // This is now an insertion.
+    workInProgress.effectTag |= Placement;
+    // Retry as a real Suspense component.
+    return updateSuspenseComponent(null, workInProgress, renderExpirationTime);
+  }
+  if ((workInProgress.effectTag & DidCapture) === NoEffect) {
+    // This is the first attempt.
+    reenterHydrationStateFromDehydratedSuspenseInstance(workInProgress);
+    var nextProps = workInProgress.pendingProps;
+    var nextChildren = nextProps.children;
+    workInProgress.child = mountChildFibers(workInProgress, null, nextChildren, renderExpirationTime);
+    return workInProgress.child;
+  } else {
+    // Something suspended. Leave the existing children in place.
+    // TODO: In non-concurrent mode, should we commit the nodes we have hydrated so far?
+    workInProgress.child = null;
+    return null;
+  }
 }
 
 function updatePortalComponent(current$$1, workInProgress, renderExpirationTime) {
@@ -15669,12 +16890,16 @@ function updateContextConsumer(current$$1, workInProgress, renderExpirationTime)
   return workInProgress.child;
 }
 
+function markWorkInProgressReceivedUpdate() {
+  didReceiveUpdate = true;
+}
+
 function bailoutOnAlreadyFinishedWork(current$$1, workInProgress, renderExpirationTime) {
   cancelWorkTimer(workInProgress);
 
   if (current$$1 !== null) {
     // Reuse previous context list
-    workInProgress.firstContextDependency = current$$1.firstContextDependency;
+    workInProgress.contextDependencies = current$$1.contextDependencies;
   }
 
   if (enableProfilerTimer) {
@@ -15703,7 +16928,13 @@ function beginWork(current$$1, workInProgress, renderExpirationTime) {
   if (current$$1 !== null) {
     var oldProps = current$$1.memoizedProps;
     var newProps = workInProgress.pendingProps;
-    if (oldProps === newProps && !hasContextChanged() && updateExpirationTime < renderExpirationTime) {
+
+    if (oldProps !== newProps || hasContextChanged()) {
+      // If props or context changed, mark the fiber as having performed work.
+      // This may be unset if the props are determined to be equal later (memo).
+      didReceiveUpdate = true;
+    } else if (updateExpirationTime < renderExpirationTime) {
+      didReceiveUpdate = false;
       // This fiber does not have any pending work. Bailout without entering
       // the begin phase. There's still some bookkeeping we that needs to be done
       // in this optimized path, mostly pushing stuff onto the stack.
@@ -15766,9 +16997,21 @@ function beginWork(current$$1, workInProgress, renderExpirationTime) {
             }
             break;
           }
+        case DehydratedSuspenseComponent:
+          {
+            if (enableSuspenseServerRenderer) {
+              // We know that this component will suspend again because if it has
+              // been unsuspended it has committed as a regular Suspense component.
+              // If it needs to be retried, it should have work scheduled on it.
+              workInProgress.effectTag |= DidCapture;
+              break;
+            }
+          }
       }
       return bailoutOnAlreadyFinishedWork(current$$1, workInProgress, renderExpirationTime);
     }
+  } else {
+    didReceiveUpdate = false;
   }
 
   // Before entering the begin phase, clear the expiration time.
@@ -15828,10 +17071,21 @@ function beginWork(current$$1, workInProgress, renderExpirationTime) {
       return updateContextConsumer(current$$1, workInProgress, renderExpirationTime);
     case MemoComponent:
       {
-        var _type = workInProgress.type;
+        var _type2 = workInProgress.type;
         var _unresolvedProps3 = workInProgress.pendingProps;
-        var _resolvedProps3 = resolveDefaultProps(_type.type, _unresolvedProps3);
-        return updateMemoComponent(current$$1, workInProgress, _type, _resolvedProps3, updateExpirationTime, renderExpirationTime);
+        // Resolve outer props first, then resolve inner props.
+        var _resolvedProps3 = resolveDefaultProps(_type2, _unresolvedProps3);
+        {
+          if (workInProgress.type !== workInProgress.elementType) {
+            var outerPropTypes = _type2.propTypes;
+            if (outerPropTypes) {
+              checkPropTypes(outerPropTypes, _resolvedProps3, // Resolved for outer only
+              'prop', getComponentName(_type2), getCurrentFiberStackInDev);
+            }
+          }
+        }
+        _resolvedProps3 = resolveDefaultProps(_type2.type, _resolvedProps3);
+        return updateMemoComponent(current$$1, workInProgress, _type2, _resolvedProps3, updateExpirationTime, renderExpirationTime);
       }
     case SimpleMemoComponent:
       {
@@ -15844,9 +17098,790 @@ function beginWork(current$$1, workInProgress, renderExpirationTime) {
         var _resolvedProps4 = workInProgress.elementType === _Component3 ? _unresolvedProps4 : resolveDefaultProps(_Component3, _unresolvedProps4);
         return mountIncompleteClassComponent(current$$1, workInProgress, _Component3, _resolvedProps4, renderExpirationTime);
       }
-    default:
-      invariant(false, 'Unknown unit of work tag. This error is likely caused by a bug in React. Please file an issue.');
+    case DehydratedSuspenseComponent:
+      {
+        if (enableSuspenseServerRenderer) {
+          return updateDehydratedSuspenseComponent(current$$1, workInProgress, renderExpirationTime);
+        }
+        break;
+      }
   }
+  invariant(false, 'Unknown unit of work tag. This error is likely caused by a bug in React. Please file an issue.');
+}
+
+var valueCursor = createCursor(null);
+
+var rendererSigil = void 0;
+{
+  // Use this to detect multiple renderers using the same context
+  rendererSigil = {};
+}
+
+var currentlyRenderingFiber = null;
+var lastContextDependency = null;
+var lastContextWithAllBitsObserved = null;
+
+var isDisallowedContextReadInDEV = false;
+
+function resetContextDependences() {
+  // This is called right before React yields execution, to ensure `readContext`
+  // cannot be called outside the render phase.
+  currentlyRenderingFiber = null;
+  lastContextDependency = null;
+  lastContextWithAllBitsObserved = null;
+  {
+    isDisallowedContextReadInDEV = false;
+  }
+}
+
+function enterDisallowedContextReadInDEV() {
+  {
+    isDisallowedContextReadInDEV = true;
+  }
+}
+
+function exitDisallowedContextReadInDEV() {
+  {
+    isDisallowedContextReadInDEV = false;
+  }
+}
+
+function pushProvider(providerFiber, nextValue) {
+  var context = providerFiber.type._context;
+
+  if (isPrimaryRenderer) {
+    push(valueCursor, context._currentValue, providerFiber);
+
+    context._currentValue = nextValue;
+    {
+      !(context._currentRenderer === undefined || context._currentRenderer === null || context._currentRenderer === rendererSigil) ? warningWithoutStack$1(false, 'Detected multiple renderers concurrently rendering the ' + 'same context provider. This is currently unsupported.') : void 0;
+      context._currentRenderer = rendererSigil;
+    }
+  } else {
+    push(valueCursor, context._currentValue2, providerFiber);
+
+    context._currentValue2 = nextValue;
+    {
+      !(context._currentRenderer2 === undefined || context._currentRenderer2 === null || context._currentRenderer2 === rendererSigil) ? warningWithoutStack$1(false, 'Detected multiple renderers concurrently rendering the ' + 'same context provider. This is currently unsupported.') : void 0;
+      context._currentRenderer2 = rendererSigil;
+    }
+  }
+}
+
+function popProvider(providerFiber) {
+  var currentValue = valueCursor.current;
+
+  pop(valueCursor, providerFiber);
+
+  var context = providerFiber.type._context;
+  if (isPrimaryRenderer) {
+    context._currentValue = currentValue;
+  } else {
+    context._currentValue2 = currentValue;
+  }
+}
+
+function calculateChangedBits(context, newValue, oldValue) {
+  if (is(oldValue, newValue)) {
+    // No change
+    return 0;
+  } else {
+    var changedBits = typeof context._calculateChangedBits === 'function' ? context._calculateChangedBits(oldValue, newValue) : maxSigned31BitInt;
+
+    {
+      !((changedBits & maxSigned31BitInt) === changedBits) ? warning$1(false, 'calculateChangedBits: Expected the return value to be a ' + '31-bit integer. Instead received: %s', changedBits) : void 0;
+    }
+    return changedBits | 0;
+  }
+}
+
+function scheduleWorkOnParentPath(parent, renderExpirationTime) {
+  // Update the child expiration time of all the ancestors, including
+  // the alternates.
+  var node = parent;
+  while (node !== null) {
+    var alternate = node.alternate;
+    if (node.childExpirationTime < renderExpirationTime) {
+      node.childExpirationTime = renderExpirationTime;
+      if (alternate !== null && alternate.childExpirationTime < renderExpirationTime) {
+        alternate.childExpirationTime = renderExpirationTime;
+      }
+    } else if (alternate !== null && alternate.childExpirationTime < renderExpirationTime) {
+      alternate.childExpirationTime = renderExpirationTime;
+    } else {
+      // Neither alternate was updated, which means the rest of the
+      // ancestor path already has sufficient priority.
+      break;
+    }
+    node = node.return;
+  }
+}
+
+function propagateContextChange(workInProgress, context, changedBits, renderExpirationTime) {
+  var fiber = workInProgress.child;
+  if (fiber !== null) {
+    // Set the return pointer of the child to the work-in-progress fiber.
+    fiber.return = workInProgress;
+  }
+  while (fiber !== null) {
+    var nextFiber = void 0;
+
+    // Visit this fiber.
+    var list = fiber.contextDependencies;
+    if (list !== null) {
+      nextFiber = fiber.child;
+
+      var dependency = list.first;
+      while (dependency !== null) {
+        // Check if the context matches.
+        if (dependency.context === context && (dependency.observedBits & changedBits) !== 0) {
+          // Match! Schedule an update on this fiber.
+
+          if (fiber.tag === ClassComponent) {
+            // Schedule a force update on the work-in-progress.
+            var update = createUpdate(renderExpirationTime);
+            update.tag = ForceUpdate;
+            // TODO: Because we don't have a work-in-progress, this will add the
+            // update to the current fiber, too, which means it will persist even if
+            // this render is thrown away. Since it's a race condition, not sure it's
+            // worth fixing.
+            enqueueUpdate(fiber, update);
+          }
+
+          if (fiber.expirationTime < renderExpirationTime) {
+            fiber.expirationTime = renderExpirationTime;
+          }
+          var alternate = fiber.alternate;
+          if (alternate !== null && alternate.expirationTime < renderExpirationTime) {
+            alternate.expirationTime = renderExpirationTime;
+          }
+
+          scheduleWorkOnParentPath(fiber.return, renderExpirationTime);
+
+          // Mark the expiration time on the list, too.
+          if (list.expirationTime < renderExpirationTime) {
+            list.expirationTime = renderExpirationTime;
+          }
+
+          // Since we already found a match, we can stop traversing the
+          // dependency list.
+          break;
+        }
+        dependency = dependency.next;
+      }
+    } else if (fiber.tag === ContextProvider) {
+      // Don't scan deeper if this is a matching provider
+      nextFiber = fiber.type === workInProgress.type ? null : fiber.child;
+    } else if (enableSuspenseServerRenderer && fiber.tag === DehydratedSuspenseComponent) {
+      // If a dehydrated suspense component is in this subtree, we don't know
+      // if it will have any context consumers in it. The best we can do is
+      // mark it as having updates on its children.
+      if (fiber.expirationTime < renderExpirationTime) {
+        fiber.expirationTime = renderExpirationTime;
+      }
+      var _alternate = fiber.alternate;
+      if (_alternate !== null && _alternate.expirationTime < renderExpirationTime) {
+        _alternate.expirationTime = renderExpirationTime;
+      }
+      // This is intentionally passing this fiber as the parent
+      // because we want to schedule this fiber as having work
+      // on its children. We'll use the childExpirationTime on
+      // this fiber to indicate that a context has changed.
+      scheduleWorkOnParentPath(fiber, renderExpirationTime);
+      nextFiber = fiber.sibling;
+    } else {
+      // Traverse down.
+      nextFiber = fiber.child;
+    }
+
+    if (nextFiber !== null) {
+      // Set the return pointer of the child to the work-in-progress fiber.
+      nextFiber.return = fiber;
+    } else {
+      // No child. Traverse to next sibling.
+      nextFiber = fiber;
+      while (nextFiber !== null) {
+        if (nextFiber === workInProgress) {
+          // We're back to the root of this subtree. Exit.
+          nextFiber = null;
+          break;
+        }
+        var sibling = nextFiber.sibling;
+        if (sibling !== null) {
+          // Set the return pointer of the sibling to the work-in-progress fiber.
+          sibling.return = nextFiber.return;
+          nextFiber = sibling;
+          break;
+        }
+        // No more siblings. Traverse up.
+        nextFiber = nextFiber.return;
+      }
+    }
+    fiber = nextFiber;
+  }
+}
+
+function prepareToReadContext(workInProgress, renderExpirationTime) {
+  currentlyRenderingFiber = workInProgress;
+  lastContextDependency = null;
+  lastContextWithAllBitsObserved = null;
+
+  var currentDependencies = workInProgress.contextDependencies;
+  if (currentDependencies !== null && currentDependencies.expirationTime >= renderExpirationTime) {
+    // Context list has a pending update. Mark that this fiber performed work.
+    markWorkInProgressReceivedUpdate();
+  }
+
+  // Reset the work-in-progress list
+  workInProgress.contextDependencies = null;
+}
+
+function readContext(context, observedBits) {
+  {
+    // This warning would fire if you read context inside a Hook like useMemo.
+    // Unlike the class check below, it's not enforced in production for perf.
+    !!isDisallowedContextReadInDEV ? warning$1(false, 'Context can only be read while React is rendering. ' + 'In classes, you can read it in the render method or getDerivedStateFromProps. ' + 'In function components, you can read it directly in the function body, but not ' + 'inside Hooks like useReducer() or useMemo().') : void 0;
+  }
+
+  if (lastContextWithAllBitsObserved === context) {
+    // Nothing to do. We already observe everything in this context.
+  } else if (observedBits === false || observedBits === 0) {
+    // Do not observe any updates.
+  } else {
+    var resolvedObservedBits = void 0; // Avoid deopting on observable arguments or heterogeneous types.
+    if (typeof observedBits !== 'number' || observedBits === maxSigned31BitInt) {
+      // Observe all updates.
+      lastContextWithAllBitsObserved = context;
+      resolvedObservedBits = maxSigned31BitInt;
+    } else {
+      resolvedObservedBits = observedBits;
+    }
+
+    var contextItem = {
+      context: context,
+      observedBits: resolvedObservedBits,
+      next: null
+    };
+
+    if (lastContextDependency === null) {
+      !(currentlyRenderingFiber !== null) ? invariant(false, 'Context can only be read while React is rendering. In classes, you can read it in the render method or getDerivedStateFromProps. In function components, you can read it directly in the function body, but not inside Hooks like useReducer() or useMemo().') : void 0;
+
+      // This is the first dependency for this component. Create a new list.
+      lastContextDependency = contextItem;
+      currentlyRenderingFiber.contextDependencies = {
+        first: contextItem,
+        expirationTime: NoWork
+      };
+    } else {
+      // Append a new context item.
+      lastContextDependency = lastContextDependency.next = contextItem;
+    }
+  }
+  return isPrimaryRenderer ? context._currentValue : context._currentValue2;
+}
+
+// UpdateQueue is a linked list of prioritized updates.
+//
+// Like fibers, update queues come in pairs: a current queue, which represents
+// the visible state of the screen, and a work-in-progress queue, which can be
+// mutated and processed asynchronously before it is committed — a form of
+// double buffering. If a work-in-progress render is discarded before finishing,
+// we create a new work-in-progress by cloning the current queue.
+//
+// Both queues share a persistent, singly-linked list structure. To schedule an
+// update, we append it to the end of both queues. Each queue maintains a
+// pointer to first update in the persistent list that hasn't been processed.
+// The work-in-progress pointer always has a position equal to or greater than
+// the current queue, since we always work on that one. The current queue's
+// pointer is only updated during the commit phase, when we swap in the
+// work-in-progress.
+//
+// For example:
+//
+//   Current pointer:           A - B - C - D - E - F
+//   Work-in-progress pointer:              D - E - F
+//                                          ^
+//                                          The work-in-progress queue has
+//                                          processed more updates than current.
+//
+// The reason we append to both queues is because otherwise we might drop
+// updates without ever processing them. For example, if we only add updates to
+// the work-in-progress queue, some updates could be lost whenever a work-in
+// -progress render restarts by cloning from current. Similarly, if we only add
+// updates to the current queue, the updates will be lost whenever an already
+// in-progress queue commits and swaps with the current queue. However, by
+// adding to both queues, we guarantee that the update will be part of the next
+// work-in-progress. (And because the work-in-progress queue becomes the
+// current queue once it commits, there's no danger of applying the same
+// update twice.)
+//
+// Prioritization
+// --------------
+//
+// Updates are not sorted by priority, but by insertion; new updates are always
+// appended to the end of the list.
+//
+// The priority is still important, though. When processing the update queue
+// during the render phase, only the updates with sufficient priority are
+// included in the result. If we skip an update because it has insufficient
+// priority, it remains in the queue to be processed later, during a lower
+// priority render. Crucially, all updates subsequent to a skipped update also
+// remain in the queue *regardless of their priority*. That means high priority
+// updates are sometimes processed twice, at two separate priorities. We also
+// keep track of a base state, that represents the state before the first
+// update in the queue is applied.
+//
+// For example:
+//
+//   Given a base state of '', and the following queue of updates
+//
+//     A1 - B2 - C1 - D2
+//
+//   where the number indicates the priority, and the update is applied to the
+//   previous state by appending a letter, React will process these updates as
+//   two separate renders, one per distinct priority level:
+//
+//   First render, at priority 1:
+//     Base state: ''
+//     Updates: [A1, C1]
+//     Result state: 'AC'
+//
+//   Second render, at priority 2:
+//     Base state: 'A'            <-  The base state does not include C1,
+//                                    because B2 was skipped.
+//     Updates: [B2, C1, D2]      <-  C1 was rebased on top of B2
+//     Result state: 'ABCD'
+//
+// Because we process updates in insertion order, and rebase high priority
+// updates when preceding updates are skipped, the final result is deterministic
+// regardless of priority. Intermediate state may vary according to system
+// resources, but the final state is always the same.
+
+var UpdateState = 0;
+var ReplaceState = 1;
+var ForceUpdate = 2;
+var CaptureUpdate = 3;
+
+// Global state that is reset at the beginning of calling `processUpdateQueue`.
+// It should only be read right after calling `processUpdateQueue`, via
+// `checkHasForceUpdateAfterProcessing`.
+var hasForceUpdate = false;
+
+var didWarnUpdateInsideUpdate = void 0;
+var currentlyProcessingQueue = void 0;
+var resetCurrentlyProcessingQueue = void 0;
+{
+  didWarnUpdateInsideUpdate = false;
+  currentlyProcessingQueue = null;
+  resetCurrentlyProcessingQueue = function () {
+    currentlyProcessingQueue = null;
+  };
+}
+
+function createUpdateQueue(baseState) {
+  var queue = {
+    baseState: baseState,
+    firstUpdate: null,
+    lastUpdate: null,
+    firstCapturedUpdate: null,
+    lastCapturedUpdate: null,
+    firstEffect: null,
+    lastEffect: null,
+    firstCapturedEffect: null,
+    lastCapturedEffect: null
+  };
+  return queue;
+}
+
+function cloneUpdateQueue(currentQueue) {
+  var queue = {
+    baseState: currentQueue.baseState,
+    firstUpdate: currentQueue.firstUpdate,
+    lastUpdate: currentQueue.lastUpdate,
+
+    // TODO: With resuming, if we bail out and resuse the child tree, we should
+    // keep these effects.
+    firstCapturedUpdate: null,
+    lastCapturedUpdate: null,
+
+    firstEffect: null,
+    lastEffect: null,
+
+    firstCapturedEffect: null,
+    lastCapturedEffect: null
+  };
+  return queue;
+}
+
+function createUpdate(expirationTime) {
+  return {
+    expirationTime: expirationTime,
+
+    tag: UpdateState,
+    payload: null,
+    callback: null,
+
+    next: null,
+    nextEffect: null
+  };
+}
+
+function appendUpdateToQueue(queue, update) {
+  // Append the update to the end of the list.
+  if (queue.lastUpdate === null) {
+    // Queue is empty
+    queue.firstUpdate = queue.lastUpdate = update;
+  } else {
+    queue.lastUpdate.next = update;
+    queue.lastUpdate = update;
+  }
+}
+
+function enqueueUpdate(fiber, update) {
+  // Update queues are created lazily.
+  var alternate = fiber.alternate;
+  var queue1 = void 0;
+  var queue2 = void 0;
+  if (alternate === null) {
+    // There's only one fiber.
+    queue1 = fiber.updateQueue;
+    queue2 = null;
+    if (queue1 === null) {
+      queue1 = fiber.updateQueue = createUpdateQueue(fiber.memoizedState);
+    }
+  } else {
+    // There are two owners.
+    queue1 = fiber.updateQueue;
+    queue2 = alternate.updateQueue;
+    if (queue1 === null) {
+      if (queue2 === null) {
+        // Neither fiber has an update queue. Create new ones.
+        queue1 = fiber.updateQueue = createUpdateQueue(fiber.memoizedState);
+        queue2 = alternate.updateQueue = createUpdateQueue(alternate.memoizedState);
+      } else {
+        // Only one fiber has an update queue. Clone to create a new one.
+        queue1 = fiber.updateQueue = cloneUpdateQueue(queue2);
+      }
+    } else {
+      if (queue2 === null) {
+        // Only one fiber has an update queue. Clone to create a new one.
+        queue2 = alternate.updateQueue = cloneUpdateQueue(queue1);
+      } else {
+        // Both owners have an update queue.
+      }
+    }
+  }
+  if (queue2 === null || queue1 === queue2) {
+    // There's only a single queue.
+    appendUpdateToQueue(queue1, update);
+  } else {
+    // There are two queues. We need to append the update to both queues,
+    // while accounting for the persistent structure of the list — we don't
+    // want the same update to be added multiple times.
+    if (queue1.lastUpdate === null || queue2.lastUpdate === null) {
+      // One of the queues is not empty. We must add the update to both queues.
+      appendUpdateToQueue(queue1, update);
+      appendUpdateToQueue(queue2, update);
+    } else {
+      // Both queues are non-empty. The last update is the same in both lists,
+      // because of structural sharing. So, only append to one of the lists.
+      appendUpdateToQueue(queue1, update);
+      // But we still need to update the `lastUpdate` pointer of queue2.
+      queue2.lastUpdate = update;
+    }
+  }
+
+  {
+    if (fiber.tag === ClassComponent && (currentlyProcessingQueue === queue1 || queue2 !== null && currentlyProcessingQueue === queue2) && !didWarnUpdateInsideUpdate) {
+      warningWithoutStack$1(false, 'An update (setState, replaceState, or forceUpdate) was scheduled ' + 'from inside an update function. Update functions should be pure, ' + 'with zero side-effects. Consider using componentDidUpdate or a ' + 'callback.');
+      didWarnUpdateInsideUpdate = true;
+    }
+  }
+}
+
+function enqueueCapturedUpdate(workInProgress, update) {
+  // Captured updates go into a separate list, and only on the work-in-
+  // progress queue.
+  var workInProgressQueue = workInProgress.updateQueue;
+  if (workInProgressQueue === null) {
+    workInProgressQueue = workInProgress.updateQueue = createUpdateQueue(workInProgress.memoizedState);
+  } else {
+    // TODO: I put this here rather than createWorkInProgress so that we don't
+    // clone the queue unnecessarily. There's probably a better way to
+    // structure this.
+    workInProgressQueue = ensureWorkInProgressQueueIsAClone(workInProgress, workInProgressQueue);
+  }
+
+  // Append the update to the end of the list.
+  if (workInProgressQueue.lastCapturedUpdate === null) {
+    // This is the first render phase update
+    workInProgressQueue.firstCapturedUpdate = workInProgressQueue.lastCapturedUpdate = update;
+  } else {
+    workInProgressQueue.lastCapturedUpdate.next = update;
+    workInProgressQueue.lastCapturedUpdate = update;
+  }
+}
+
+function ensureWorkInProgressQueueIsAClone(workInProgress, queue) {
+  var current = workInProgress.alternate;
+  if (current !== null) {
+    // If the work-in-progress queue is equal to the current queue,
+    // we need to clone it first.
+    if (queue === current.updateQueue) {
+      queue = workInProgress.updateQueue = cloneUpdateQueue(queue);
+    }
+  }
+  return queue;
+}
+
+function getStateFromUpdate(workInProgress, queue, update, prevState, nextProps, instance) {
+  switch (update.tag) {
+    case ReplaceState:
+      {
+        var _payload = update.payload;
+        if (typeof _payload === 'function') {
+          // Updater function
+          {
+            enterDisallowedContextReadInDEV();
+            if (debugRenderPhaseSideEffects || debugRenderPhaseSideEffectsForStrictMode && workInProgress.mode & StrictMode) {
+              _payload.call(instance, prevState, nextProps);
+            }
+          }
+          var nextState = _payload.call(instance, prevState, nextProps);
+          {
+            exitDisallowedContextReadInDEV();
+          }
+          return nextState;
+        }
+        // State object
+        return _payload;
+      }
+    case CaptureUpdate:
+      {
+        workInProgress.effectTag = workInProgress.effectTag & ~ShouldCapture | DidCapture;
+      }
+    // Intentional fallthrough
+    case UpdateState:
+      {
+        var _payload2 = update.payload;
+        var partialState = void 0;
+        if (typeof _payload2 === 'function') {
+          // Updater function
+          {
+            enterDisallowedContextReadInDEV();
+            if (debugRenderPhaseSideEffects || debugRenderPhaseSideEffectsForStrictMode && workInProgress.mode & StrictMode) {
+              _payload2.call(instance, prevState, nextProps);
+            }
+          }
+          partialState = _payload2.call(instance, prevState, nextProps);
+          {
+            exitDisallowedContextReadInDEV();
+          }
+        } else {
+          // Partial state object
+          partialState = _payload2;
+        }
+        if (partialState === null || partialState === undefined) {
+          // Null and undefined are treated as no-ops.
+          return prevState;
+        }
+        // Merge the partial state and the previous state.
+        return _assign({}, prevState, partialState);
+      }
+    case ForceUpdate:
+      {
+        hasForceUpdate = true;
+        return prevState;
+      }
+  }
+  return prevState;
+}
+
+function processUpdateQueue(workInProgress, queue, props, instance, renderExpirationTime) {
+  hasForceUpdate = false;
+
+  queue = ensureWorkInProgressQueueIsAClone(workInProgress, queue);
+
+  {
+    currentlyProcessingQueue = queue;
+  }
+
+  // These values may change as we process the queue.
+  var newBaseState = queue.baseState;
+  var newFirstUpdate = null;
+  var newExpirationTime = NoWork;
+
+  // Iterate through the list of updates to compute the result.
+  var update = queue.firstUpdate;
+  var resultState = newBaseState;
+  while (update !== null) {
+    var updateExpirationTime = update.expirationTime;
+    if (updateExpirationTime < renderExpirationTime) {
+      // This update does not have sufficient priority. Skip it.
+      if (newFirstUpdate === null) {
+        // This is the first skipped update. It will be the first update in
+        // the new list.
+        newFirstUpdate = update;
+        // Since this is the first update that was skipped, the current result
+        // is the new base state.
+        newBaseState = resultState;
+      }
+      // Since this update will remain in the list, update the remaining
+      // expiration time.
+      if (newExpirationTime < updateExpirationTime) {
+        newExpirationTime = updateExpirationTime;
+      }
+    } else {
+      // This update does have sufficient priority. Process it and compute
+      // a new result.
+      resultState = getStateFromUpdate(workInProgress, queue, update, resultState, props, instance);
+      var _callback = update.callback;
+      if (_callback !== null) {
+        workInProgress.effectTag |= Callback;
+        // Set this to null, in case it was mutated during an aborted render.
+        update.nextEffect = null;
+        if (queue.lastEffect === null) {
+          queue.firstEffect = queue.lastEffect = update;
+        } else {
+          queue.lastEffect.nextEffect = update;
+          queue.lastEffect = update;
+        }
+      }
+    }
+    // Continue to the next update.
+    update = update.next;
+  }
+
+  // Separately, iterate though the list of captured updates.
+  var newFirstCapturedUpdate = null;
+  update = queue.firstCapturedUpdate;
+  while (update !== null) {
+    var _updateExpirationTime = update.expirationTime;
+    if (_updateExpirationTime < renderExpirationTime) {
+      // This update does not have sufficient priority. Skip it.
+      if (newFirstCapturedUpdate === null) {
+        // This is the first skipped captured update. It will be the first
+        // update in the new list.
+        newFirstCapturedUpdate = update;
+        // If this is the first update that was skipped, the current result is
+        // the new base state.
+        if (newFirstUpdate === null) {
+          newBaseState = resultState;
+        }
+      }
+      // Since this update will remain in the list, update the remaining
+      // expiration time.
+      if (newExpirationTime < _updateExpirationTime) {
+        newExpirationTime = _updateExpirationTime;
+      }
+    } else {
+      // This update does have sufficient priority. Process it and compute
+      // a new result.
+      resultState = getStateFromUpdate(workInProgress, queue, update, resultState, props, instance);
+      var _callback2 = update.callback;
+      if (_callback2 !== null) {
+        workInProgress.effectTag |= Callback;
+        // Set this to null, in case it was mutated during an aborted render.
+        update.nextEffect = null;
+        if (queue.lastCapturedEffect === null) {
+          queue.firstCapturedEffect = queue.lastCapturedEffect = update;
+        } else {
+          queue.lastCapturedEffect.nextEffect = update;
+          queue.lastCapturedEffect = update;
+        }
+      }
+    }
+    update = update.next;
+  }
+
+  if (newFirstUpdate === null) {
+    queue.lastUpdate = null;
+  }
+  if (newFirstCapturedUpdate === null) {
+    queue.lastCapturedUpdate = null;
+  } else {
+    workInProgress.effectTag |= Callback;
+  }
+  if (newFirstUpdate === null && newFirstCapturedUpdate === null) {
+    // We processed every update, without skipping. That means the new base
+    // state is the same as the result state.
+    newBaseState = resultState;
+  }
+
+  queue.baseState = newBaseState;
+  queue.firstUpdate = newFirstUpdate;
+  queue.firstCapturedUpdate = newFirstCapturedUpdate;
+
+  // Set the remaining expiration time to be whatever is remaining in the queue.
+  // This should be fine because the only two other things that contribute to
+  // expiration time are props and context. We're already in the middle of the
+  // begin phase by the time we start processing the queue, so we've already
+  // dealt with the props. Context in components that specify
+  // shouldComponentUpdate is tricky; but we'll have to account for
+  // that regardless.
+  workInProgress.expirationTime = newExpirationTime;
+  workInProgress.memoizedState = resultState;
+
+  {
+    currentlyProcessingQueue = null;
+  }
+}
+
+function callCallback(callback, context) {
+  !(typeof callback === 'function') ? invariant(false, 'Invalid argument passed as callback. Expected a function. Instead received: %s', callback) : void 0;
+  callback.call(context);
+}
+
+function resetHasForceUpdateBeforeProcessing() {
+  hasForceUpdate = false;
+}
+
+function checkHasForceUpdateAfterProcessing() {
+  return hasForceUpdate;
+}
+
+function commitUpdateQueue(finishedWork, finishedQueue, instance, renderExpirationTime) {
+  // If the finished render included captured updates, and there are still
+  // lower priority updates left over, we need to keep the captured updates
+  // in the queue so that they are rebased and not dropped once we process the
+  // queue again at the lower priority.
+  if (finishedQueue.firstCapturedUpdate !== null) {
+    // Join the captured update list to the end of the normal list.
+    if (finishedQueue.lastUpdate !== null) {
+      finishedQueue.lastUpdate.next = finishedQueue.firstCapturedUpdate;
+      finishedQueue.lastUpdate = finishedQueue.lastCapturedUpdate;
+    }
+    // Clear the list of captured updates.
+    finishedQueue.firstCapturedUpdate = finishedQueue.lastCapturedUpdate = null;
+  }
+
+  // Commit the effects
+  commitUpdateEffects(finishedQueue.firstEffect, instance);
+  finishedQueue.firstEffect = finishedQueue.lastEffect = null;
+
+  commitUpdateEffects(finishedQueue.firstCapturedEffect, instance);
+  finishedQueue.firstCapturedEffect = finishedQueue.lastCapturedEffect = null;
+}
+
+function commitUpdateEffects(effect, instance) {
+  while (effect !== null) {
+    var _callback3 = effect.callback;
+    if (_callback3 !== null) {
+      effect.callback = null;
+      callCallback(_callback3, instance);
+    }
+    effect = effect.nextEffect;
+  }
+}
+
+function createCapturedValue(value, source) {
+  // If the value is an error, call this function immediately after it is thrown
+  // so the stack is accurate.
+  return {
+    value: value,
+    source: source,
+    stack: getStackByFiberInDevAndProd(source)
+  };
 }
 
 function markUpdate(workInProgress) {
@@ -16341,16 +18376,10 @@ function completeWork(current, workInProgress, renderExpirationTime) {
           }
         }
 
-        // The children either timed out after previously being visible, or
-        // were restored after previously being hidden. Schedule an effect
-        // to update their visiblity.
-        if (
-        //
-        nextDidTimeout !== prevDidTimeout ||
-        // Outside concurrent mode, the primary children commit in an
-        // inconsistent state, even if they are hidden. So if they are hidden,
-        // we need to schedule an effect to re-hide them, just in case.
-        (workInProgress.effectTag & ConcurrentMode) === NoContext && nextDidTimeout) {
+        if (nextDidTimeout || prevDidTimeout) {
+          // If the children are hidden, or if they were previous hidden, schedule
+          // an effect to toggle their visibility. This is also used to attach a
+          // retry listener to the promise.
           workInProgress.effectTag |= Update;
         }
         break;
@@ -16383,6 +18412,26 @@ function completeWork(current, workInProgress, renderExpirationTime) {
         }
         break;
       }
+    case DehydratedSuspenseComponent:
+      {
+        if (enableSuspenseServerRenderer) {
+          if (current === null) {
+            var _wasHydrated2 = popHydrationState(workInProgress);
+            !_wasHydrated2 ? invariant(false, 'A dehydrated suspense component was completed without a hydrated node. This is probably a bug in React.') : void 0;
+            skipPastDehydratedSuspenseInstance(workInProgress);
+          } else if ((workInProgress.effectTag & DidCapture) === NoEffect) {
+            // This boundary did not suspend so it's now hydrated.
+            // To handle any future suspense cases, we're going to now upgrade it
+            // to a Suspense component. We detach it from the existing current fiber.
+            current.alternate = null;
+            workInProgress.alternate = null;
+            workInProgress.tag = SuspenseComponent;
+            workInProgress.memoizedState = null;
+            workInProgress.stateNode = null;
+          }
+        }
+        break;
+      }
     default:
       invariant(false, 'Unknown unit of work tag. This error is likely caused by a bug in React. Please file an issue.');
   }
@@ -16390,7 +18439,7 @@ function completeWork(current, workInProgress, renderExpirationTime) {
   return null;
 }
 
-function shouldCaptureSuspense(current, workInProgress) {
+function shouldCaptureSuspense(workInProgress) {
   // In order to capture, the Suspense component must have a fallback prop.
   if (workInProgress.memoizedProps.fallback === undefined) {
     return false;
@@ -16472,6 +18521,8 @@ var didWarnAboutUndefinedSnapshotBeforeUpdate = null;
 {
   didWarnAboutUndefinedSnapshotBeforeUpdate = new Set();
 }
+
+var PossiblyWeakSet$1 = typeof WeakSet === 'function' ? WeakSet : Set;
 
 function logError(boundary, errorInfo) {
   var source = errorInfo.source;
@@ -16577,9 +18628,9 @@ function commitBeforeMutationLifeCycles(current$$1, finishedWork) {
             // but instead we rely on them being set during last render.
             // TODO: revisit this when we implement resuming.
             {
-              if (finishedWork.type === finishedWork.elementType) {
-                !(instance.props === finishedWork.memoizedProps) ? warning$1(false, 'Expected instance props to match memoized props before ' + 'getSnapshotBeforeUpdate. This is likely due to a bug in React. ' + 'Please file an issue.') : void 0;
-                !(instance.state === finishedWork.memoizedState) ? warning$1(false, 'Expected instance state to match memoized state before ' + 'getSnapshotBeforeUpdate. This is likely due to a bug in React. ' + 'Please file an issue.') : void 0;
+              if (finishedWork.type === finishedWork.elementType && !didWarnAboutReassigningProps) {
+                !(instance.props === finishedWork.memoizedProps) ? warning$1(false, 'Expected %s props to match memoized props before ' + 'getSnapshotBeforeUpdate. ' + 'This might either be because of a bug in React, or because ' + 'a component reassigns its own `this.props`. ' + 'Please file an issue.', getComponentName(finishedWork.type) || 'instance') : void 0;
+                !(instance.state === finishedWork.memoizedState) ? warning$1(false, 'Expected %s state to match memoized state before ' + 'getSnapshotBeforeUpdate. ' + 'This might either be because of a bug in React, or because ' + 'a component reassigns its own `this.props`. ' + 'Please file an issue.', getComponentName(finishedWork.type) || 'instance') : void 0;
               }
             }
             var snapshot = instance.getSnapshotBeforeUpdate(finishedWork.elementType === finishedWork.type ? prevProps : resolveDefaultProps(finishedWork.type, prevProps), prevState);
@@ -16611,9 +18662,6 @@ function commitBeforeMutationLifeCycles(current$$1, finishedWork) {
 }
 
 function commitHookEffectList(unmountTag, mountTag, finishedWork) {
-  if (!enableHooks) {
-    return;
-  }
   var updateQueue = finishedWork.updateQueue;
   var lastEffect = updateQueue !== null ? updateQueue.lastEffect : null;
   if (lastEffect !== null) {
@@ -16623,24 +18671,30 @@ function commitHookEffectList(unmountTag, mountTag, finishedWork) {
       if ((effect.tag & unmountTag) !== NoEffect$1) {
         // Unmount
         var destroy = effect.destroy;
-        effect.destroy = null;
-        if (destroy !== null) {
+        effect.destroy = undefined;
+        if (destroy !== undefined) {
           destroy();
         }
       }
       if ((effect.tag & mountTag) !== NoEffect$1) {
         // Mount
         var create = effect.create;
-        var _destroy = create();
-        if (typeof _destroy !== 'function') {
-          {
-            if (_destroy !== null && _destroy !== undefined) {
-              warningWithoutStack$1(false, 'useEffect function must return a cleanup function or ' + 'nothing.%s%s', typeof _destroy.then === 'function' ? ' Promises and useEffect(async () => ...) are not ' + 'supported, but you can call an async function inside an ' + 'effect.' : '', getStackByFiberInDevAndProd(finishedWork));
+        effect.destroy = create();
+
+        {
+          var _destroy = effect.destroy;
+          if (_destroy !== undefined && typeof _destroy !== 'function') {
+            var addendum = void 0;
+            if (_destroy === null) {
+              addendum = ' You returned null. If your effect does not require clean ' + 'up, return undefined (or nothing).';
+            } else if (typeof _destroy.then === 'function') {
+              addendum = '\n\nIt looks like you wrote useEffect(async () => ...) or returned a Promise. ' + 'Instead, write the async function inside your effect ' + 'and call it immediately:\n\n' + 'useEffect(() => {\n' + '  async function fetchData() {\n' + '    // You can await here\n' + '    const response = await MyAPI.getData(someId);\n' + '    // ...\n' + '  }\n' + '  fetchData();\n' + '}, [someId]); // Or [] if effect doesn\'t need props or state\n\n' + 'Learn more about data fetching with Hooks: https://fb.me/react-hooks-data-fetching';
+            } else {
+              addendum = ' You returned: ' + _destroy;
             }
+            warningWithoutStack$1(false, 'An effect function must not return anything besides a function, ' + 'which is used for clean-up.%s%s', addendum, getStackByFiberInDevAndProd(finishedWork));
           }
-          _destroy = null;
         }
-        effect.destroy = _destroy;
       }
       effect = effect.next;
     } while (effect !== firstEffect);
@@ -16671,9 +18725,9 @@ function commitLifeCycles(finishedRoot, current$$1, finishedWork, committedExpir
             // but instead we rely on them being set during last render.
             // TODO: revisit this when we implement resuming.
             {
-              if (finishedWork.type === finishedWork.elementType) {
-                !(instance.props === finishedWork.memoizedProps) ? warning$1(false, 'Expected instance props to match memoized props before ' + 'componentDidMount. This is likely due to a bug in React. ' + 'Please file an issue.') : void 0;
-                !(instance.state === finishedWork.memoizedState) ? warning$1(false, 'Expected instance state to match memoized state before ' + 'componentDidMount. This is likely due to a bug in React. ' + 'Please file an issue.') : void 0;
+              if (finishedWork.type === finishedWork.elementType && !didWarnAboutReassigningProps) {
+                !(instance.props === finishedWork.memoizedProps) ? warning$1(false, 'Expected %s props to match memoized props before ' + 'componentDidMount. ' + 'This might either be because of a bug in React, or because ' + 'a component reassigns its own `this.props`. ' + 'Please file an issue.', getComponentName(finishedWork.type) || 'instance') : void 0;
+                !(instance.state === finishedWork.memoizedState) ? warning$1(false, 'Expected %s state to match memoized state before ' + 'componentDidMount. ' + 'This might either be because of a bug in React, or because ' + 'a component reassigns its own `this.props`. ' + 'Please file an issue.', getComponentName(finishedWork.type) || 'instance') : void 0;
               }
             }
             instance.componentDidMount();
@@ -16686,9 +18740,9 @@ function commitLifeCycles(finishedRoot, current$$1, finishedWork, committedExpir
             // but instead we rely on them being set during last render.
             // TODO: revisit this when we implement resuming.
             {
-              if (finishedWork.type === finishedWork.elementType) {
-                !(instance.props === finishedWork.memoizedProps) ? warning$1(false, 'Expected instance props to match memoized props before ' + 'componentDidUpdate. This is likely due to a bug in React. ' + 'Please file an issue.') : void 0;
-                !(instance.state === finishedWork.memoizedState) ? warning$1(false, 'Expected instance state to match memoized state before ' + 'componentDidUpdate. This is likely due to a bug in React. ' + 'Please file an issue.') : void 0;
+              if (finishedWork.type === finishedWork.elementType && !didWarnAboutReassigningProps) {
+                !(instance.props === finishedWork.memoizedProps) ? warning$1(false, 'Expected %s props to match memoized props before ' + 'componentDidUpdate. ' + 'This might either be because of a bug in React, or because ' + 'a component reassigns its own `this.props`. ' + 'Please file an issue.', getComponentName(finishedWork.type) || 'instance') : void 0;
+                !(instance.state === finishedWork.memoizedState) ? warning$1(false, 'Expected %s state to match memoized state before ' + 'componentDidUpdate. ' + 'This might either be because of a bug in React, or because ' + 'a component reassigns its own `this.props`. ' + 'Please file an issue.', getComponentName(finishedWork.type) || 'instance') : void 0;
               }
             }
             instance.componentDidUpdate(prevProps, prevState, instance.__reactInternalSnapshotBeforeUpdate);
@@ -16698,9 +18752,9 @@ function commitLifeCycles(finishedRoot, current$$1, finishedWork, committedExpir
         var updateQueue = finishedWork.updateQueue;
         if (updateQueue !== null) {
           {
-            if (finishedWork.type === finishedWork.elementType) {
-              !(instance.props === finishedWork.memoizedProps) ? warning$1(false, 'Expected instance props to match memoized props before ' + 'processing the update queue. This is likely due to a bug in React. ' + 'Please file an issue.') : void 0;
-              !(instance.state === finishedWork.memoizedState) ? warning$1(false, 'Expected instance state to match memoized state before ' + 'processing the update queue. This is likely due to a bug in React. ' + 'Please file an issue.') : void 0;
+            if (finishedWork.type === finishedWork.elementType && !didWarnAboutReassigningProps) {
+              !(instance.props === finishedWork.memoizedProps) ? warning$1(false, 'Expected %s props to match memoized props before ' + 'processing the update queue. ' + 'This might either be because of a bug in React, or because ' + 'a component reassigns its own `this.props`. ' + 'Please file an issue.', getComponentName(finishedWork.type) || 'instance') : void 0;
+              !(instance.state === finishedWork.memoizedState) ? warning$1(false, 'Expected %s state to match memoized state before ' + 'processing the update queue. ' + 'This might either be because of a bug in React, or because ' + 'a component reassigns its own `this.props`. ' + 'Please file an issue.', getComponentName(finishedWork.type) || 'instance') : void 0;
             }
           }
           // We could update instance props and state here,
@@ -16781,7 +18835,7 @@ function commitLifeCycles(finishedRoot, current$$1, finishedWork, committedExpir
 
 function hideOrUnhideAllChildren(finishedWork, isHidden) {
   if (supportsMutation) {
-    // We only have the top Fiber that was inserted but we need recurse down its
+    // We only have the top Fiber that was inserted but we need to recurse down its
     var node = finishedWork;
     while (true) {
       if (node.tag === HostComponent) {
@@ -16881,7 +18935,7 @@ function commitUnmount(current$$1) {
             var effect = firstEffect;
             do {
               var destroy = effect.destroy;
-              if (destroy !== null) {
+              if (destroy !== undefined) {
                 safelyCallDestroy(current$$1, destroy);
               }
               effect = effect.next;
@@ -16959,9 +19013,14 @@ function detachFiber(current$$1) {
   // itself will be GC:ed when the parent updates the next time.
   current$$1.return = null;
   current$$1.child = null;
-  if (current$$1.alternate) {
-    current$$1.alternate.child = null;
-    current$$1.alternate.return = null;
+  current$$1.memoizedState = null;
+  current$$1.updateQueue = null;
+  var alternate = current$$1.alternate;
+  if (alternate !== null) {
+    alternate.return = null;
+    alternate.child = null;
+    alternate.memoizedState = null;
+    alternate.updateQueue = null;
   }
 }
 
@@ -17044,7 +19103,7 @@ function getHostSibling(fiber) {
     }
     node.sibling.return = node.return;
     node = node.sibling;
-    while (node.tag !== HostComponent && node.tag !== HostText) {
+    while (node.tag !== HostComponent && node.tag !== HostText && node.tag !== DehydratedSuspenseComponent) {
       // If it is not host node and, we might have a host node inside it.
       // Try to search down until we find one.
       if (node.effectTag & Placement) {
@@ -17104,7 +19163,7 @@ function commitPlacement(finishedWork) {
   }
 
   var before = getHostSibling(finishedWork);
-  // We only have the top Fiber that was inserted but we need recurse down its
+  // We only have the top Fiber that was inserted but we need to recurse down its
   // children to find all the terminal nodes.
   var node = finishedWork;
   while (true) {
@@ -17146,7 +19205,7 @@ function commitPlacement(finishedWork) {
 }
 
 function unmountHostComponents(current$$1) {
-  // We only have the top Fiber that was deleted but we need recurse down its
+  // We only have the top Fiber that was deleted but we need to recurse down its
   var node = current$$1;
 
   // Each iteration, currentParent is populated with node's host parent if not
@@ -17191,13 +19250,20 @@ function unmountHostComponents(current$$1) {
         removeChild(currentParent, node.stateNode);
       }
       // Don't visit children because we already visited them.
+    } else if (enableSuspenseServerRenderer && node.tag === DehydratedSuspenseComponent) {
+      // Delete the dehydrated suspense boundary and all of its content.
+      if (currentParentIsContainer) {
+        clearSuspenseBoundaryFromContainer(currentParent, node.stateNode);
+      } else {
+        clearSuspenseBoundary(currentParent, node.stateNode);
+      }
     } else if (node.tag === HostPortal) {
-      // When we go into a portal, it becomes the parent to remove from.
-      // We will reassign it back when we pop the portal on the way up.
-      currentParent = node.stateNode.containerInfo;
-      currentParentIsContainer = true;
-      // Visit children because portals might contain host components.
       if (node.child !== null) {
+        // When we go into a portal, it becomes the parent to remove from.
+        // We will reassign it back when we pop the portal on the way up.
+        currentParent = node.stateNode.containerInfo;
+        currentParentIsContainer = true;
+        // Visit children because portals might contain host components.
         node.child.return = node;
         node = node.child;
         continue;
@@ -17250,6 +19316,8 @@ function commitWork(current$$1, finishedWork) {
       case MemoComponent:
       case SimpleMemoComponent:
         {
+          // Note: We currently never use MountMutation, but useLayout uses
+          // UnmountMutation.
           commitHookEffectList(UnmountMutation, MountMutation, finishedWork);
           return;
         }
@@ -17265,6 +19333,8 @@ function commitWork(current$$1, finishedWork) {
     case MemoComponent:
     case SimpleMemoComponent:
       {
+        // Note: We currently never use MountMutation, but useLayout uses
+        // UnmountMutation.
         commitHookEffectList(UnmountMutation, MountMutation, finishedWork);
         return;
       }
@@ -17334,6 +19404,30 @@ function commitWork(current$$1, finishedWork) {
         if (primaryChildParent !== null) {
           hideOrUnhideAllChildren(primaryChildParent, newDidTimeout);
         }
+
+        // If this boundary just timed out, then it will have a set of thenables.
+        // For each thenable, attach a listener so that when it resolves, React
+        // attempts to re-render the boundary in the primary (pre-timeout) state.
+        var thenables = finishedWork.updateQueue;
+        if (thenables !== null) {
+          finishedWork.updateQueue = null;
+          var retryCache = finishedWork.stateNode;
+          if (retryCache === null) {
+            retryCache = finishedWork.stateNode = new PossiblyWeakSet$1();
+          }
+          thenables.forEach(function (thenable) {
+            // Memoize using the boundary fiber to prevent redundant listeners.
+            var retry = retryTimedOutBoundary.bind(null, finishedWork, thenable);
+            if (enableSchedulerTracing) {
+              retry = tracing.unstable_wrap(retry);
+            }
+            if (!retryCache.has(thenable)) {
+              retryCache.add(thenable);
+              thenable.then(retry, retry);
+            }
+          });
+        }
+
         return;
       }
     case IncompleteClassComponent:
@@ -17353,6 +19447,9 @@ function commitResetTextContent(current$$1) {
   }
   resetTextContent(current$$1.stateNode);
 }
+
+var PossiblyWeakSet = typeof WeakSet === 'function' ? WeakSet : Set;
+var PossiblyWeakMap = typeof WeakMap === 'function' ? WeakMap : Map;
 
 function createRootErrorUpdate(fiber, errorInfo, expirationTime) {
   var update = createUpdate(expirationTime);
@@ -17410,6 +19507,34 @@ function createClassErrorUpdate(fiber, errorInfo, expirationTime) {
   return update;
 }
 
+function attachPingListener(root, renderExpirationTime, thenable) {
+  // Attach a listener to the promise to "ping" the root and retry. But
+  // only if one does not already exist for the current render expiration
+  // time (which acts like a "thread ID" here).
+  var pingCache = root.pingCache;
+  var threadIDs = void 0;
+  if (pingCache === null) {
+    pingCache = root.pingCache = new PossiblyWeakMap();
+    threadIDs = new Set();
+    pingCache.set(thenable, threadIDs);
+  } else {
+    threadIDs = pingCache.get(thenable);
+    if (threadIDs === undefined) {
+      threadIDs = new Set();
+      pingCache.set(thenable, threadIDs);
+    }
+  }
+  if (!threadIDs.has(renderExpirationTime)) {
+    // Memoize using the thread ID to prevent redundant listeners.
+    threadIDs.add(renderExpirationTime);
+    var ping = pingSuspendedRoot.bind(null, root, thenable, renderExpirationTime);
+    if (enableSchedulerTracing) {
+      ping = tracing.unstable_wrap(ping);
+    }
+    thenable.then(ping, ping);
+  }
+}
+
 function throwException(root, returnFiber, sourceFiber, value, renderExpirationTime) {
   // The source fiber did not complete.
   sourceFiber.effectTag |= Incomplete;
@@ -17451,25 +19576,27 @@ function throwException(root, returnFiber, sourceFiber, value, renderExpirationT
           }
         }
       }
+      // If there is a DehydratedSuspenseComponent we don't have to do anything because
+      // if something suspends inside it, we will simply leave that as dehydrated. It
+      // will never timeout.
       _workInProgress = _workInProgress.return;
     } while (_workInProgress !== null);
 
     // Schedule the nearest Suspense to re-render the timed out view.
     _workInProgress = returnFiber;
     do {
-      if (_workInProgress.tag === SuspenseComponent && shouldCaptureSuspense(_workInProgress.alternate, _workInProgress)) {
+      if (_workInProgress.tag === SuspenseComponent && shouldCaptureSuspense(_workInProgress)) {
         // Found the nearest boundary.
 
-        // If the boundary is not in concurrent mode, we should not suspend, and
-        // likewise, when the promise resolves, we should ping synchronously.
-        var pingTime = (_workInProgress.mode & ConcurrentMode) === NoEffect ? Sync : renderExpirationTime;
-
-        // Attach a listener to the promise to "ping" the root and retry.
-        var onResolveOrReject = retrySuspendedRoot.bind(null, root, _workInProgress, sourceFiber, pingTime);
-        if (enableSchedulerTracing) {
-          onResolveOrReject = tracing.unstable_wrap(onResolveOrReject);
+        // Stash the promise on the boundary fiber. If the boundary times out, we'll
+        var thenables = _workInProgress.updateQueue;
+        if (thenables === null) {
+          var updateQueue = new Set();
+          updateQueue.add(thenable);
+          _workInProgress.updateQueue = updateQueue;
+        } else {
+          thenables.add(thenable);
         }
-        thenable.then(onResolveOrReject, onResolveOrReject);
 
         // If the boundary is outside of concurrent mode, we should *not*
         // suspend the commit. Pretend as if the suspended component rendered
@@ -17488,18 +19615,25 @@ function throwException(root, returnFiber, sourceFiber, value, renderExpirationT
           sourceFiber.effectTag &= ~(LifecycleEffectMask | Incomplete);
 
           if (sourceFiber.tag === ClassComponent) {
-            var _current = sourceFiber.alternate;
-            if (_current === null) {
+            var currentSourceFiber = sourceFiber.alternate;
+            if (currentSourceFiber === null) {
               // This is a new mount. Change the tag so it's not mistaken for a
               // completed class component. For example, we should not call
               // componentWillUnmount if it is deleted.
               sourceFiber.tag = IncompleteClassComponent;
+            } else {
+              // When we try rendering again, we should not reuse the current fiber,
+              // since it's known to be in an inconsistent state. Use a force updte to
+              // prevent a bail out.
+              var update = createUpdate(Sync);
+              update.tag = ForceUpdate;
+              enqueueUpdate(sourceFiber, update);
             }
           }
 
-          // The source fiber did not complete. Mark it with the current
-          // render priority to indicate that it still has pending work.
-          sourceFiber.expirationTime = renderExpirationTime;
+          // The source fiber did not complete. Mark it with Sync priority to
+          // indicate that it still has pending work.
+          sourceFiber.expirationTime = Sync;
 
           // Exit without suspending.
           return;
@@ -17508,9 +19642,11 @@ function throwException(root, returnFiber, sourceFiber, value, renderExpirationT
         // Confirmed that the boundary is in a concurrent mode tree. Continue
         // with the normal suspend path.
 
+        attachPingListener(root, renderExpirationTime, thenable);
+
         var absoluteTimeoutMs = void 0;
         if (earliestTimeoutMs === -1) {
-          // If no explicit threshold is given, default to an abitrarily large
+          // If no explicit threshold is given, default to an arbitrarily large
           // value. The actual size doesn't matter because the threshold for the
           // whole tree will be clamped to the expiration time.
           absoluteTimeoutMs = maxSigned31BitInt;
@@ -17541,6 +19677,29 @@ function throwException(root, returnFiber, sourceFiber, value, renderExpirationT
         _workInProgress.effectTag |= ShouldCapture;
         _workInProgress.expirationTime = renderExpirationTime;
         return;
+      } else if (enableSuspenseServerRenderer && _workInProgress.tag === DehydratedSuspenseComponent) {
+        attachPingListener(root, renderExpirationTime, thenable);
+
+        // Since we already have a current fiber, we can eagerly add a retry listener.
+        var retryCache = _workInProgress.memoizedState;
+        if (retryCache === null) {
+          retryCache = _workInProgress.memoizedState = new PossiblyWeakSet();
+          var _current = _workInProgress.alternate;
+          !_current ? invariant(false, 'A dehydrated suspense boundary must commit before trying to render. This is probably a bug in React.') : void 0;
+          _current.memoizedState = retryCache;
+        }
+        // Memoize using the boundary fiber to prevent redundant listeners.
+        if (!retryCache.has(thenable)) {
+          retryCache.add(thenable);
+          var retry = retryTimedOutBoundary.bind(null, _workInProgress, thenable);
+          if (enableSchedulerTracing) {
+            retry = tracing.unstable_wrap(retry);
+          }
+          thenable.then(retry, retry);
+        }
+        _workInProgress.effectTag |= ShouldCapture;
+        _workInProgress.expirationTime = renderExpirationTime;
+        return;
       }
       // This boundary already captured during this render. Continue to the next
       // boundary.
@@ -17564,8 +19723,8 @@ function throwException(root, returnFiber, sourceFiber, value, renderExpirationT
           var _errorInfo = value;
           workInProgress.effectTag |= ShouldCapture;
           workInProgress.expirationTime = renderExpirationTime;
-          var update = createRootErrorUpdate(workInProgress, _errorInfo, renderExpirationTime);
-          enqueueCapturedUpdate(workInProgress, update);
+          var _update = createRootErrorUpdate(workInProgress, _errorInfo, renderExpirationTime);
+          enqueueCapturedUpdate(workInProgress, _update);
           return;
         }
       case ClassComponent:
@@ -17577,8 +19736,8 @@ function throwException(root, returnFiber, sourceFiber, value, renderExpirationT
           workInProgress.effectTag |= ShouldCapture;
           workInProgress.expirationTime = renderExpirationTime;
           // Schedule the error boundary to re-render using updated state
-          var _update = createClassErrorUpdate(workInProgress, errorInfo, renderExpirationTime);
-          enqueueCapturedUpdate(workInProgress, _update);
+          var _update2 = createClassErrorUpdate(workInProgress, errorInfo, renderExpirationTime);
+          enqueueCapturedUpdate(workInProgress, _update2);
           return;
         }
         break;
@@ -17615,6 +19774,7 @@ function unwindWork(workInProgress, renderExpirationTime) {
       }
     case HostComponent:
       {
+        // TODO: popHydrationState
         popHostContext(workInProgress);
         return null;
       }
@@ -17625,6 +19785,19 @@ function unwindWork(workInProgress, renderExpirationTime) {
           workInProgress.effectTag = _effectTag2 & ~ShouldCapture | DidCapture;
           // Captured a suspense effect. Re-render the boundary.
           return workInProgress;
+        }
+        return null;
+      }
+    case DehydratedSuspenseComponent:
+      {
+        if (enableSuspenseServerRenderer) {
+          // TODO: popHydrationState
+          var _effectTag3 = workInProgress.effectTag;
+          if (_effectTag3 & ShouldCapture) {
+            workInProgress.effectTag = _effectTag3 & ~ShouldCapture | DidCapture;
+            // Captured a suspense effect. Re-render the boundary.
+            return workInProgress;
+          }
         }
         return null;
       }
@@ -17671,23 +19844,7 @@ function unwindInterruptedWork(interruptedWork) {
   }
 }
 
-var Dispatcher = {
-  readContext: readContext,
-  useCallback: useCallback,
-  useContext: useContext,
-  useEffect: useEffect,
-  useImperativeMethods: useImperativeMethods,
-  useLayoutEffect: useLayoutEffect,
-  useMemo: useMemo,
-  useMutationEffect: useMutationEffect,
-  useReducer: useReducer,
-  useRef: useRef,
-  useState: useState
-};
-var DispatcherWithoutHooks = {
-  readContext: readContext
-};
-
+var ReactCurrentDispatcher = ReactSharedInternals.ReactCurrentDispatcher;
 var ReactCurrentOwner$2 = ReactSharedInternals.ReactCurrentOwner;
 
 
@@ -17740,11 +19897,6 @@ if (enableSchedulerTracing) {
 
 // Used to ensure computeUniqueAsyncExpiration is monotonically decreasing.
 var lastUniqueAsyncExpiration = Sync - 1;
-
-// Represents the expiration time that incoming updates should use. (If this
-// is NoWork, use the default strategy: async updates in async mode, sync
-// updates in sync mode.)
-var expirationContext = NoWork;
 
 var isWorking = false;
 
@@ -17972,6 +20124,9 @@ function commitAllLifeCycles(finishedRoot, committedExpirationTime) {
     }
   }
   while (nextEffect !== null) {
+    {
+      setCurrentFiber(nextEffect);
+    }
     var effectTag = nextEffect.effectTag;
 
     if (effectTag & (Update | Callback)) {
@@ -17985,11 +20140,14 @@ function commitAllLifeCycles(finishedRoot, committedExpirationTime) {
       commitAttachRef(nextEffect);
     }
 
-    if (enableHooks && effectTag & Passive) {
+    if (effectTag & Passive) {
       rootWithPendingPassiveEffects = finishedRoot;
     }
 
     nextEffect = nextEffect.nextEffect;
+  }
+  {
+    resetCurrentFiber();
   }
 }
 
@@ -18004,6 +20162,10 @@ function commitPassiveEffects(root, firstEffect) {
 
   var effect = firstEffect;
   do {
+    {
+      setCurrentFiber(effect);
+    }
+
     if (effect.effectTag & Passive) {
       var didError = false;
       var error = void 0;
@@ -18020,6 +20182,9 @@ function commitPassiveEffects(root, firstEffect) {
     }
     effect = effect.nextEffect;
   } while (effect !== null);
+  {
+    resetCurrentFiber();
+  }
 
   isRendering = previousIsRendering;
 
@@ -18027,6 +20192,10 @@ function commitPassiveEffects(root, firstEffect) {
   var rootExpirationTime = root.expirationTime;
   if (rootExpirationTime !== NoWork) {
     requestWork(root, rootExpirationTime);
+  }
+  // Flush any sync work that was scheduled by effects
+  if (!isBatchingUpdates && !isRendering) {
+    performSyncWork();
   }
 }
 
@@ -18043,8 +20212,10 @@ function markLegacyErrorBoundaryAsFailed(instance) {
 }
 
 function flushPassiveEffects() {
+  if (passiveEffectCallbackHandle !== null) {
+    cancelPassiveEffects(passiveEffectCallbackHandle);
+  }
   if (passiveEffectCallback !== null) {
-    scheduler.unstable_cancelCallback(passiveEffectCallbackHandle);
     // We call the scheduled callback instead of commitPassiveEffects directly
     // to ensure tracing works correctly.
     passiveEffectCallback();
@@ -18188,7 +20359,7 @@ function commitRoot(root, finishedWork) {
     }
   }
 
-  if (enableHooks && firstEffect !== null && rootWithPendingPassiveEffects !== null) {
+  if (firstEffect !== null && rootWithPendingPassiveEffects !== null) {
     // This commit included a passive effect. These do not need to fire until
     // after the next paint. Schedule an callback to fire them in an async
     // event. To ensure serial execution, the callback will be flushed early if
@@ -18200,7 +20371,9 @@ function commitRoot(root, finishedWork) {
       // here because that code is still in flux.
       callback = tracing.unstable_wrap(callback);
     }
-    passiveEffectCallbackHandle = scheduler.unstable_scheduleCallback(callback);
+    passiveEffectCallbackHandle = scheduler.unstable_runWithPriority(scheduler.unstable_NormalPriority, function () {
+      return schedulePassiveEffects(callback);
+    });
     passiveEffectCallback = callback;
   }
 
@@ -18591,11 +20764,8 @@ function renderRoot(root, isYieldy) {
   flushPassiveEffects();
 
   isWorking = true;
-  if (enableHooks) {
-    ReactCurrentOwner$2.currentDispatcher = Dispatcher;
-  } else {
-    ReactCurrentOwner$2.currentDispatcher = DispatcherWithoutHooks;
-  }
+  var previousDispatcher = ReactCurrentDispatcher.current;
+  ReactCurrentDispatcher.current = ContextOnlyDispatcher;
 
   var expirationTime = root.nextExpirationTimeToWorkOn;
 
@@ -18635,7 +20805,7 @@ function renderRoot(root, isYieldy) {
             subscriber.onWorkStarted(interactions, threadID);
           } catch (error) {
             // Work thrown by an interaction tracing subscriber should be rethrown,
-            // But only once it's safe (to avoid leaveing the scheduler in an invalid state).
+            // But only once it's safe (to avoid leaving the scheduler in an invalid state).
             // Store the error for now and we'll re-throw in finishRendering().
             if (!hasUnhandledError) {
               hasUnhandledError = true;
@@ -18731,7 +20901,7 @@ function renderRoot(root, isYieldy) {
 
   // We're done performing work. Time to clean up.
   isWorking = false;
-  ReactCurrentOwner$2.currentDispatcher = null;
+  ReactCurrentDispatcher.current = previousDispatcher;
   resetContextDependences();
   resetHooks();
 
@@ -18792,7 +20962,7 @@ function renderRoot(root, isYieldy) {
       return;
     } else if (
     // There's no lower priority work, but we're rendering asynchronously.
-    // Synchronsouly attempt to render the same level one more time. This is
+    // Synchronously attempt to render the same level one more time. This is
     // similar to a suspend, but without a timeout because we're not waiting
     // for a promise to resolve.
     !root.didError && isYieldy) {
@@ -18897,49 +21067,50 @@ function computeUniqueAsyncExpiration() {
 }
 
 function computeExpirationForFiber(currentTime, fiber) {
+  var priorityLevel = scheduler.unstable_getCurrentPriorityLevel();
+
   var expirationTime = void 0;
-  if (expirationContext !== NoWork) {
-    // An explicit expiration context was set;
-    expirationTime = expirationContext;
-  } else if (isWorking) {
-    if (isCommitting$1) {
-      // Updates that occur during the commit phase should have sync priority
-      // by default.
-      expirationTime = Sync;
-    } else {
-      // Updates during the render phase should expire at the same time as
-      // the work that is being rendered.
-      expirationTime = nextRenderExpirationTime;
-    }
+  if ((fiber.mode & ConcurrentMode) === NoContext) {
+    // Outside of concurrent mode, updates are always synchronous.
+    expirationTime = Sync;
+  } else if (isWorking && !isCommitting$1) {
+    // During render phase, updates expire during as the current render.
+    expirationTime = nextRenderExpirationTime;
   } else {
-    // No explicit expiration context was set, and we're not currently
-    // performing work. Calculate a new expiration time.
-    if (fiber.mode & ConcurrentMode) {
-      if (isBatchingInteractiveUpdates) {
-        // This is an interactive update
+    switch (priorityLevel) {
+      case scheduler.unstable_ImmediatePriority:
+        expirationTime = Sync;
+        break;
+      case scheduler.unstable_UserBlockingPriority:
         expirationTime = computeInteractiveExpiration(currentTime);
-      } else {
-        // This is an async update
+        break;
+      case scheduler.unstable_NormalPriority:
+        // This is a normal, concurrent update
         expirationTime = computeAsyncExpiration(currentTime);
-      }
-      // If we're in the middle of rendering a tree, do not update at the same
-      // expiration time that is already rendering.
-      if (nextRoot !== null && expirationTime === nextRenderExpirationTime) {
-        expirationTime -= 1;
-      }
-    } else {
-      // This is a sync update
-      expirationTime = Sync;
+        break;
+      case scheduler.unstable_LowPriority:
+      case scheduler.unstable_IdlePriority:
+        expirationTime = Never;
+        break;
+      default:
+        invariant(false, 'Unknown priority level. This error is likely caused by a bug in React. Please file an issue.');
+    }
+
+    // If we're in the middle of rendering a tree, do not update at the same
+    // expiration time that is already rendering.
+    if (nextRoot !== null && expirationTime === nextRenderExpirationTime) {
+      expirationTime -= 1;
     }
   }
-  if (isBatchingInteractiveUpdates) {
-    // This is an interactive update. Keep track of the lowest pending
-    // interactive expiration time. This allows us to synchronously flush
-    // all interactive updates when needed.
-    if (lowestPriorityPendingInteractiveExpirationTime === NoWork || expirationTime < lowestPriorityPendingInteractiveExpirationTime) {
-      lowestPriorityPendingInteractiveExpirationTime = expirationTime;
-    }
+
+  // Keep track of the lowest pending interactive expiration time. This
+  // allows us to synchronously flush all interactive updates
+  // when needed.
+  // TODO: Move this to renderer?
+  if (priorityLevel === scheduler.unstable_UserBlockingPriority && (lowestPriorityPendingInteractiveExpirationTime === NoWork || expirationTime < lowestPriorityPendingInteractiveExpirationTime)) {
+    lowestPriorityPendingInteractiveExpirationTime = expirationTime;
   }
+
   return expirationTime;
 }
 
@@ -18954,56 +21125,68 @@ function renderDidError() {
   nextRenderDidError = true;
 }
 
-function retrySuspendedRoot(root, boundaryFiber, sourceFiber, suspendedTime) {
-  var retryTime = void 0;
+function pingSuspendedRoot(root, thenable, pingTime) {
+  // A promise that previously suspended React from committing has resolved.
+  // If React is still suspended, try again at the previous level (pingTime).
 
-  if (isPriorityLevelSuspended(root, suspendedTime)) {
-    // Ping at the original level
-    retryTime = suspendedTime;
+  var pingCache = root.pingCache;
+  if (pingCache !== null) {
+    // The thenable resolved, so we no longer need to memoize, because it will
+    // never be thrown again.
+    pingCache.delete(thenable);
+  }
 
-    markPingedPriorityLevel(root, retryTime);
+  if (nextRoot !== null && nextRenderExpirationTime === pingTime) {
+    // Received a ping at the same priority level at which we're currently
+    // rendering. Restart from the root.
+    nextRoot = null;
   } else {
-    // Suspense already timed out. Compute a new expiration time
-    var currentTime = requestCurrentTime();
-    retryTime = computeExpirationForFiber(currentTime, boundaryFiber);
+    // Confirm that the root is still suspended at this level. Otherwise exit.
+    if (isPriorityLevelSuspended(root, pingTime)) {
+      // Ping at the original level
+      markPingedPriorityLevel(root, pingTime);
+      var rootExpirationTime = root.expirationTime;
+      if (rootExpirationTime !== NoWork) {
+        requestWork(root, rootExpirationTime);
+      }
+    }
+  }
+}
+
+function retryTimedOutBoundary(boundaryFiber, thenable) {
+  // The boundary fiber (a Suspense component) previously timed out and was
+  // rendered in its fallback state. One of the promises that suspended it has
+  // resolved, which means at least part of the tree was likely unblocked. Try
+  var retryCache = void 0;
+  if (enableSuspenseServerRenderer) {
+    switch (boundaryFiber.tag) {
+      case SuspenseComponent:
+        retryCache = boundaryFiber.stateNode;
+        break;
+      case DehydratedSuspenseComponent:
+        retryCache = boundaryFiber.memoizedState;
+        break;
+      default:
+        invariant(false, 'Pinged unknown suspense boundary type. This is probably a bug in React.');
+    }
+  } else {
+    retryCache = boundaryFiber.stateNode;
+  }
+  if (retryCache !== null) {
+    // The thenable resolved, so we no longer need to memoize, because it will
+    // never be thrown again.
+    retryCache.delete(thenable);
+  }
+
+  var currentTime = requestCurrentTime();
+  var retryTime = computeExpirationForFiber(currentTime, boundaryFiber);
+  var root = scheduleWorkToRoot(boundaryFiber, retryTime);
+  if (root !== null) {
     markPendingPriorityLevel(root, retryTime);
-  }
-
-  // TODO: If the suspense fiber has already rendered the primary children
-  // without suspending (that is, all of the promises have already resolved),
-  // we should not trigger another update here. One case this happens is when
-  // we are in sync mode and a single promise is thrown both on initial render
-  // and on update; we attach two .then(retrySuspendedRoot) callbacks and each
-  // one performs Sync work, rerendering the Suspense.
-
-  if ((boundaryFiber.mode & ConcurrentMode) !== NoContext) {
-    if (root === nextRoot && nextRenderExpirationTime === suspendedTime) {
-      // Received a ping at the same priority level at which we're currently
-      // rendering. Restart from the root.
-      nextRoot = null;
+    var rootExpirationTime = root.expirationTime;
+    if (rootExpirationTime !== NoWork) {
+      requestWork(root, rootExpirationTime);
     }
-  }
-
-  scheduleWorkToRoot(boundaryFiber, retryTime);
-  if ((boundaryFiber.mode & ConcurrentMode) === NoContext) {
-    // Outside of concurrent mode, we must schedule an update on the source
-    // fiber, too, since it already committed in an inconsistent state and
-    // therefore does not have any pending work.
-    scheduleWorkToRoot(sourceFiber, retryTime);
-    var sourceTag = sourceFiber.tag;
-    if (sourceTag === ClassComponent && sourceFiber.stateNode !== null) {
-      // When we try rendering again, we should not reuse the current fiber,
-      // since it's known to be in an inconsistent state. Use a force updte to
-      // prevent a bail out.
-      var update = createUpdate(retryTime);
-      update.tag = ForceUpdate;
-      enqueueUpdate(sourceFiber, update);
-    }
-  }
-
-  var rootExpirationTime = root.expirationTime;
-  if (rootExpirationTime !== NoWork) {
-    requestWork(root, rootExpirationTime);
   }
 }
 
@@ -19084,6 +21267,14 @@ function scheduleWorkToRoot(fiber, expirationTime) {
   return root;
 }
 
+function warnIfNotCurrentlyBatchingInDev(fiber) {
+  {
+    if (isRendering === false && isBatchingUpdates === false) {
+      warningWithoutStack$1(false, 'An update to %s inside a test was not wrapped in act(...).\n\n' + 'When testing, code that causes React state updates should be wrapped into act(...):\n\n' + 'act(() => {\n' + '  /* fire events that update state */\n' + '});\n' + '/* assert on the output */\n\n' + "This ensures that you're testing the behavior the user would see in the browser." + ' Learn more at https://fb.me/react-wrap-tests-with-act' + '%s', getComponentName(fiber.type), getStackByFiberInDevAndProd(fiber));
+    }
+  }
+}
+
 function scheduleWork(fiber, expirationTime) {
   var root = scheduleWorkToRoot(fiber, expirationTime);
   if (root === null) {
@@ -19126,13 +21317,9 @@ function scheduleWork(fiber, expirationTime) {
 }
 
 function syncUpdates(fn, a, b, c, d) {
-  var previousExpirationContext = expirationContext;
-  expirationContext = Sync;
-  try {
+  return scheduler.unstable_runWithPriority(scheduler.unstable_ImmediatePriority, function () {
     return fn(a, b, c, d);
-  } finally {
-    expirationContext = previousExpirationContext;
-  }
+  });
 }
 
 // TODO: Everything below this is written as if it has been lifted to the
@@ -19153,7 +21340,6 @@ var unhandledError = null;
 
 var isBatchingUpdates = false;
 var isUnbatchingUpdates = false;
-var isBatchingInteractiveUpdates = false;
 
 var completedBatches = null;
 
@@ -19627,7 +21813,9 @@ function completeRoot(root, finishedWork, expirationTime) {
     lastCommittedRootDuringThisBatch = root;
     nestedUpdateCount = 0;
   }
-  commitRoot(root, finishedWork);
+  scheduler.unstable_runWithPriority(scheduler.unstable_ImmediatePriority, function () {
+    commitRoot(root, finishedWork);
+  });
 }
 
 function onUncaughtError(error) {
@@ -19685,9 +21873,6 @@ function flushSync(fn, a) {
 }
 
 function interactiveUpdates$1(fn, a, b) {
-  if (isBatchingInteractiveUpdates) {
-    return fn(a, b);
-  }
   // If there are any pending interactive updates, synchronously flush them.
   // This needs to happen before we read any handlers, because the effect of
   // the previous event may influence which handlers are called during
@@ -19697,14 +21882,13 @@ function interactiveUpdates$1(fn, a, b) {
     performWork(lowestPriorityPendingInteractiveExpirationTime, false);
     lowestPriorityPendingInteractiveExpirationTime = NoWork;
   }
-  var previousIsBatchingInteractiveUpdates = isBatchingInteractiveUpdates;
   var previousIsBatchingUpdates = isBatchingUpdates;
-  isBatchingInteractiveUpdates = true;
   isBatchingUpdates = true;
   try {
-    return fn(a, b);
+    return scheduler.unstable_runWithPriority(scheduler.unstable_UserBlockingPriority, function () {
+      return fn(a, b);
+    });
   } finally {
-    isBatchingInteractiveUpdates = previousIsBatchingInteractiveUpdates;
     isBatchingUpdates = previousIsBatchingUpdates;
     if (!isBatchingUpdates && !isRendering) {
       performSyncWork();
@@ -19893,10 +22077,43 @@ function findHostInstanceWithNoPortals(fiber) {
   return hostFiber.stateNode;
 }
 
+var overrideProps = null;
+
+{
+  var copyWithSetImpl = function (obj, path, idx, value) {
+    if (idx >= path.length) {
+      return value;
+    }
+    var key = path[idx];
+    var updated = Array.isArray(obj) ? obj.slice() : _assign({}, obj);
+    // $FlowFixMe number or string is fine here
+    updated[key] = copyWithSetImpl(obj[key], path, idx + 1, value);
+    return updated;
+  };
+
+  var copyWithSet = function (obj, path, value) {
+    return copyWithSetImpl(obj, path, 0, value);
+  };
+
+  // Support DevTools props for function components, forwardRef, memo, host components, etc.
+  overrideProps = function (fiber, path, value) {
+    flushPassiveEffects();
+    fiber.pendingProps = copyWithSet(fiber.memoizedProps, path, value);
+    if (fiber.alternate) {
+      fiber.alternate.pendingProps = fiber.pendingProps;
+    }
+    scheduleWork(fiber, Sync);
+  };
+}
+
 function injectIntoDevTools(devToolsConfig) {
   var findFiberByHostInstance = devToolsConfig.findFiberByHostInstance;
+  var ReactCurrentDispatcher = ReactSharedInternals.ReactCurrentDispatcher;
+
 
   return injectInternals(_assign({}, devToolsConfig, {
+    overrideProps: overrideProps,
+    currentDispatcherRef: ReactCurrentDispatcher,
     findHostInstanceByFiber: function (fiber) {
       var hostFiber = findCurrentHostFiber(fiber);
       if (hostFiber === null) {
@@ -19934,10 +22151,11 @@ implementation) {
 
 // TODO: this is special because it gets imported during build.
 
-var ReactVersion = '16.6.3';
+var ReactVersion = '16.8.6';
 
 // TODO: This type is shared between the reconciler and ReactDOM, but will
 // eventually be lifted out to the renderer.
+
 var ReactCurrentOwner = ReactSharedInternals.ReactCurrentOwner;
 
 var topLevelUpdateWarnings = void 0;
@@ -20246,9 +22464,6 @@ function legacyCreateRootFromDOMContainer(container, forceHydrate) {
 }
 
 function legacyRenderSubtreeIntoContainer(parentComponent, children, container, forceHydrate, callback) {
-  // TODO: Ensure all entry points contain this check
-  !isValidContainer(container) ? invariant(false, 'Target container is not a DOM element.') : void 0;
-
   {
     topLevelUpdateWarnings(container);
   }
@@ -20292,7 +22507,7 @@ function legacyRenderSubtreeIntoContainer(parentComponent, children, container, 
   return getPublicRootInstance(root._internalRoot);
 }
 
-function createPortal(children, container) {
+function createPortal$$1(children, container) {
   var key = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
 
   !isValidContainer(container) ? invariant(false, 'Target container is not a DOM element.') : void 0;
@@ -20301,7 +22516,7 @@ function createPortal(children, container) {
 }
 
 var ReactDOM = {
-  createPortal: createPortal,
+  createPortal: createPortal$$1,
 
   findDOMNode: function (componentOrElement) {
     {
@@ -20324,18 +22539,31 @@ var ReactDOM = {
     return findHostInstance(componentOrElement);
   },
   hydrate: function (element, container, callback) {
+    !isValidContainer(container) ? invariant(false, 'Target container is not a DOM element.') : void 0;
+    {
+      !!container._reactHasBeenPassedToCreateRootDEV ? warningWithoutStack$1(false, 'You are calling ReactDOM.hydrate() on a container that was previously ' + 'passed to ReactDOM.%s(). This is not supported. ' + 'Did you mean to call createRoot(container, {hydrate: true}).render(element)?', enableStableConcurrentModeAPIs ? 'createRoot' : 'unstable_createRoot') : void 0;
+    }
     // TODO: throw or warn if we couldn't hydrate?
     return legacyRenderSubtreeIntoContainer(null, element, container, true, callback);
   },
   render: function (element, container, callback) {
+    !isValidContainer(container) ? invariant(false, 'Target container is not a DOM element.') : void 0;
+    {
+      !!container._reactHasBeenPassedToCreateRootDEV ? warningWithoutStack$1(false, 'You are calling ReactDOM.render() on a container that was previously ' + 'passed to ReactDOM.%s(). This is not supported. ' + 'Did you mean to call root.render(element)?', enableStableConcurrentModeAPIs ? 'createRoot' : 'unstable_createRoot') : void 0;
+    }
     return legacyRenderSubtreeIntoContainer(null, element, container, false, callback);
   },
   unstable_renderSubtreeIntoContainer: function (parentComponent, element, containerNode, callback) {
+    !isValidContainer(containerNode) ? invariant(false, 'Target container is not a DOM element.') : void 0;
     !(parentComponent != null && has(parentComponent)) ? invariant(false, 'parentComponent must be a valid React Component') : void 0;
     return legacyRenderSubtreeIntoContainer(parentComponent, element, containerNode, false, callback);
   },
   unmountComponentAtNode: function (container) {
     !isValidContainer(container) ? invariant(false, 'unmountComponentAtNode(...): Target container is not a DOM element.') : void 0;
+
+    {
+      !!container._reactHasBeenPassedToCreateRootDEV ? warningWithoutStack$1(false, 'You are calling ReactDOM.unmountComponentAtNode() on a container that was previously ' + 'passed to ReactDOM.%s(). This is not supported. Did you mean to call root.unmount()?', enableStableConcurrentModeAPIs ? 'createRoot' : 'unstable_createRoot') : void 0;
+    }
 
     if (container._reactRootContainer) {
       {
@@ -20376,7 +22604,7 @@ var ReactDOM = {
       didWarnAboutUnstableCreatePortal = true;
       lowPriorityWarning$1(false, 'The ReactDOM.unstable_createPortal() alias has been deprecated, ' + 'and will be removed in React 17+. Update your code to use ' + 'ReactDOM.createPortal() instead. It has the exact same API, ' + 'but without the "unstable_" prefix.');
     }
-    return createPortal.apply(undefined, arguments);
+    return createPortal$$1.apply(undefined, arguments);
   },
 
 
@@ -20386,6 +22614,7 @@ var ReactDOM = {
 
   flushSync: flushSync,
 
+  unstable_createRoot: createRoot,
   unstable_flushControlled: flushControlled,
 
   __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED: {
@@ -20398,14 +22627,17 @@ var ReactDOM = {
 function createRoot(container, options) {
   var functionName = enableStableConcurrentModeAPIs ? 'createRoot' : 'unstable_createRoot';
   !isValidContainer(container) ? invariant(false, '%s(...): Target container is not a DOM element.', functionName) : void 0;
+  {
+    !!container._reactRootContainer ? warningWithoutStack$1(false, 'You are calling ReactDOM.%s() on a container that was previously ' + 'passed to ReactDOM.render(). This is not supported.', enableStableConcurrentModeAPIs ? 'createRoot' : 'unstable_createRoot') : void 0;
+    container._reactHasBeenPassedToCreateRootDEV = true;
+  }
   var hydrate = options != null && options.hydrate === true;
   return new ReactRoot(container, true, hydrate);
 }
 
 if (enableStableConcurrentModeAPIs) {
   ReactDOM.createRoot = createRoot;
-} else {
-  ReactDOM.unstable_createRoot = createRoot;
+  ReactDOM.unstable_createRoot = undefined;
 }
 
 var foundDevTools = injectIntoDevTools({
@@ -20492,6 +22724,1473 @@ if (false) {} else {
 
 /***/ }),
 
+/***/ "./node_modules/react-dom/node_modules/scheduler/cjs/scheduler-tracing.development.js":
+/*!********************************************************************************************!*\
+  !*** ./node_modules/react-dom/node_modules/scheduler/cjs/scheduler-tracing.development.js ***!
+  \********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/** @license React v0.13.6
+ * scheduler-tracing.development.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+
+
+if (true) {
+  (function() {
+'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+// Helps identify side effects in begin-phase lifecycle hooks and setState reducers:
+
+
+// In some cases, StrictMode should also double-render lifecycles.
+// This can be confusing for tests though,
+// And it can be bad for performance in production.
+// This feature flag can be used to control the behavior:
+
+
+// To preserve the "Pause on caught exceptions" behavior of the debugger, we
+// replay the begin phase of a failed component inside invokeGuardedCallback.
+
+
+// Warn about deprecated, async-unsafe lifecycles; relates to RFC #6:
+
+
+// Gather advanced timing metrics for Profiler subtrees.
+
+
+// Trace which interactions trigger each commit.
+var enableSchedulerTracing = true;
+
+// Only used in www builds.
+ // TODO: true? Here it might just be false.
+
+// Only used in www builds.
+
+
+// Only used in www builds.
+
+
+// React Fire: prevent the value and checked attributes from syncing
+// with their related DOM properties
+
+
+// These APIs will no longer be "unstable" in the upcoming 16.7 release,
+// Control this behavior with a flag to support 16.6 minor releases in the meanwhile.
+
+var DEFAULT_THREAD_ID = 0;
+
+// Counters used to generate unique IDs.
+var interactionIDCounter = 0;
+var threadIDCounter = 0;
+
+// Set of currently traced interactions.
+// Interactions "stack"–
+// Meaning that newly traced interactions are appended to the previously active set.
+// When an interaction goes out of scope, the previous set (if any) is restored.
+exports.__interactionsRef = null;
+
+// Listener(s) to notify when interactions begin and end.
+exports.__subscriberRef = null;
+
+if (enableSchedulerTracing) {
+  exports.__interactionsRef = {
+    current: new Set()
+  };
+  exports.__subscriberRef = {
+    current: null
+  };
+}
+
+function unstable_clear(callback) {
+  if (!enableSchedulerTracing) {
+    return callback();
+  }
+
+  var prevInteractions = exports.__interactionsRef.current;
+  exports.__interactionsRef.current = new Set();
+
+  try {
+    return callback();
+  } finally {
+    exports.__interactionsRef.current = prevInteractions;
+  }
+}
+
+function unstable_getCurrent() {
+  if (!enableSchedulerTracing) {
+    return null;
+  } else {
+    return exports.__interactionsRef.current;
+  }
+}
+
+function unstable_getThreadID() {
+  return ++threadIDCounter;
+}
+
+function unstable_trace(name, timestamp, callback) {
+  var threadID = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : DEFAULT_THREAD_ID;
+
+  if (!enableSchedulerTracing) {
+    return callback();
+  }
+
+  var interaction = {
+    __count: 1,
+    id: interactionIDCounter++,
+    name: name,
+    timestamp: timestamp
+  };
+
+  var prevInteractions = exports.__interactionsRef.current;
+
+  // Traced interactions should stack/accumulate.
+  // To do that, clone the current interactions.
+  // The previous set will be restored upon completion.
+  var interactions = new Set(prevInteractions);
+  interactions.add(interaction);
+  exports.__interactionsRef.current = interactions;
+
+  var subscriber = exports.__subscriberRef.current;
+  var returnValue = void 0;
+
+  try {
+    if (subscriber !== null) {
+      subscriber.onInteractionTraced(interaction);
+    }
+  } finally {
+    try {
+      if (subscriber !== null) {
+        subscriber.onWorkStarted(interactions, threadID);
+      }
+    } finally {
+      try {
+        returnValue = callback();
+      } finally {
+        exports.__interactionsRef.current = prevInteractions;
+
+        try {
+          if (subscriber !== null) {
+            subscriber.onWorkStopped(interactions, threadID);
+          }
+        } finally {
+          interaction.__count--;
+
+          // If no async work was scheduled for this interaction,
+          // Notify subscribers that it's completed.
+          if (subscriber !== null && interaction.__count === 0) {
+            subscriber.onInteractionScheduledWorkCompleted(interaction);
+          }
+        }
+      }
+    }
+  }
+
+  return returnValue;
+}
+
+function unstable_wrap(callback) {
+  var threadID = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : DEFAULT_THREAD_ID;
+
+  if (!enableSchedulerTracing) {
+    return callback;
+  }
+
+  var wrappedInteractions = exports.__interactionsRef.current;
+
+  var subscriber = exports.__subscriberRef.current;
+  if (subscriber !== null) {
+    subscriber.onWorkScheduled(wrappedInteractions, threadID);
+  }
+
+  // Update the pending async work count for the current interactions.
+  // Update after calling subscribers in case of error.
+  wrappedInteractions.forEach(function (interaction) {
+    interaction.__count++;
+  });
+
+  var hasRun = false;
+
+  function wrapped() {
+    var prevInteractions = exports.__interactionsRef.current;
+    exports.__interactionsRef.current = wrappedInteractions;
+
+    subscriber = exports.__subscriberRef.current;
+
+    try {
+      var returnValue = void 0;
+
+      try {
+        if (subscriber !== null) {
+          subscriber.onWorkStarted(wrappedInteractions, threadID);
+        }
+      } finally {
+        try {
+          returnValue = callback.apply(undefined, arguments);
+        } finally {
+          exports.__interactionsRef.current = prevInteractions;
+
+          if (subscriber !== null) {
+            subscriber.onWorkStopped(wrappedInteractions, threadID);
+          }
+        }
+      }
+
+      return returnValue;
+    } finally {
+      if (!hasRun) {
+        // We only expect a wrapped function to be executed once,
+        // But in the event that it's executed more than once–
+        // Only decrement the outstanding interaction counts once.
+        hasRun = true;
+
+        // Update pending async counts for all wrapped interactions.
+        // If this was the last scheduled async work for any of them,
+        // Mark them as completed.
+        wrappedInteractions.forEach(function (interaction) {
+          interaction.__count--;
+
+          if (subscriber !== null && interaction.__count === 0) {
+            subscriber.onInteractionScheduledWorkCompleted(interaction);
+          }
+        });
+      }
+    }
+  }
+
+  wrapped.cancel = function cancel() {
+    subscriber = exports.__subscriberRef.current;
+
+    try {
+      if (subscriber !== null) {
+        subscriber.onWorkCanceled(wrappedInteractions, threadID);
+      }
+    } finally {
+      // Update pending async counts for all wrapped interactions.
+      // If this was the last scheduled async work for any of them,
+      // Mark them as completed.
+      wrappedInteractions.forEach(function (interaction) {
+        interaction.__count--;
+
+        if (subscriber && interaction.__count === 0) {
+          subscriber.onInteractionScheduledWorkCompleted(interaction);
+        }
+      });
+    }
+  };
+
+  return wrapped;
+}
+
+var subscribers = null;
+if (enableSchedulerTracing) {
+  subscribers = new Set();
+}
+
+function unstable_subscribe(subscriber) {
+  if (enableSchedulerTracing) {
+    subscribers.add(subscriber);
+
+    if (subscribers.size === 1) {
+      exports.__subscriberRef.current = {
+        onInteractionScheduledWorkCompleted: onInteractionScheduledWorkCompleted,
+        onInteractionTraced: onInteractionTraced,
+        onWorkCanceled: onWorkCanceled,
+        onWorkScheduled: onWorkScheduled,
+        onWorkStarted: onWorkStarted,
+        onWorkStopped: onWorkStopped
+      };
+    }
+  }
+}
+
+function unstable_unsubscribe(subscriber) {
+  if (enableSchedulerTracing) {
+    subscribers.delete(subscriber);
+
+    if (subscribers.size === 0) {
+      exports.__subscriberRef.current = null;
+    }
+  }
+}
+
+function onInteractionTraced(interaction) {
+  var didCatchError = false;
+  var caughtError = null;
+
+  subscribers.forEach(function (subscriber) {
+    try {
+      subscriber.onInteractionTraced(interaction);
+    } catch (error) {
+      if (!didCatchError) {
+        didCatchError = true;
+        caughtError = error;
+      }
+    }
+  });
+
+  if (didCatchError) {
+    throw caughtError;
+  }
+}
+
+function onInteractionScheduledWorkCompleted(interaction) {
+  var didCatchError = false;
+  var caughtError = null;
+
+  subscribers.forEach(function (subscriber) {
+    try {
+      subscriber.onInteractionScheduledWorkCompleted(interaction);
+    } catch (error) {
+      if (!didCatchError) {
+        didCatchError = true;
+        caughtError = error;
+      }
+    }
+  });
+
+  if (didCatchError) {
+    throw caughtError;
+  }
+}
+
+function onWorkScheduled(interactions, threadID) {
+  var didCatchError = false;
+  var caughtError = null;
+
+  subscribers.forEach(function (subscriber) {
+    try {
+      subscriber.onWorkScheduled(interactions, threadID);
+    } catch (error) {
+      if (!didCatchError) {
+        didCatchError = true;
+        caughtError = error;
+      }
+    }
+  });
+
+  if (didCatchError) {
+    throw caughtError;
+  }
+}
+
+function onWorkStarted(interactions, threadID) {
+  var didCatchError = false;
+  var caughtError = null;
+
+  subscribers.forEach(function (subscriber) {
+    try {
+      subscriber.onWorkStarted(interactions, threadID);
+    } catch (error) {
+      if (!didCatchError) {
+        didCatchError = true;
+        caughtError = error;
+      }
+    }
+  });
+
+  if (didCatchError) {
+    throw caughtError;
+  }
+}
+
+function onWorkStopped(interactions, threadID) {
+  var didCatchError = false;
+  var caughtError = null;
+
+  subscribers.forEach(function (subscriber) {
+    try {
+      subscriber.onWorkStopped(interactions, threadID);
+    } catch (error) {
+      if (!didCatchError) {
+        didCatchError = true;
+        caughtError = error;
+      }
+    }
+  });
+
+  if (didCatchError) {
+    throw caughtError;
+  }
+}
+
+function onWorkCanceled(interactions, threadID) {
+  var didCatchError = false;
+  var caughtError = null;
+
+  subscribers.forEach(function (subscriber) {
+    try {
+      subscriber.onWorkCanceled(interactions, threadID);
+    } catch (error) {
+      if (!didCatchError) {
+        didCatchError = true;
+        caughtError = error;
+      }
+    }
+  });
+
+  if (didCatchError) {
+    throw caughtError;
+  }
+}
+
+exports.unstable_clear = unstable_clear;
+exports.unstable_getCurrent = unstable_getCurrent;
+exports.unstable_getThreadID = unstable_getThreadID;
+exports.unstable_trace = unstable_trace;
+exports.unstable_wrap = unstable_wrap;
+exports.unstable_subscribe = unstable_subscribe;
+exports.unstable_unsubscribe = unstable_unsubscribe;
+  })();
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/react-dom/node_modules/scheduler/cjs/scheduler.development.js":
+/*!************************************************************************************!*\
+  !*** ./node_modules/react-dom/node_modules/scheduler/cjs/scheduler.development.js ***!
+  \************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(global) {/** @license React v0.13.6
+ * scheduler.development.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+
+
+if (true) {
+  (function() {
+'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+var enableSchedulerDebugging = false;
+
+/* eslint-disable no-var */
+
+// TODO: Use symbols?
+var ImmediatePriority = 1;
+var UserBlockingPriority = 2;
+var NormalPriority = 3;
+var LowPriority = 4;
+var IdlePriority = 5;
+
+// Max 31 bit integer. The max integer size in V8 for 32-bit systems.
+// Math.pow(2, 30) - 1
+// 0b111111111111111111111111111111
+var maxSigned31BitInt = 1073741823;
+
+// Times out immediately
+var IMMEDIATE_PRIORITY_TIMEOUT = -1;
+// Eventually times out
+var USER_BLOCKING_PRIORITY = 250;
+var NORMAL_PRIORITY_TIMEOUT = 5000;
+var LOW_PRIORITY_TIMEOUT = 10000;
+// Never times out
+var IDLE_PRIORITY = maxSigned31BitInt;
+
+// Callbacks are stored as a circular, doubly linked list.
+var firstCallbackNode = null;
+
+var currentDidTimeout = false;
+// Pausing the scheduler is useful for debugging.
+var isSchedulerPaused = false;
+
+var currentPriorityLevel = NormalPriority;
+var currentEventStartTime = -1;
+var currentExpirationTime = -1;
+
+// This is set when a callback is being executed, to prevent re-entrancy.
+var isExecutingCallback = false;
+
+var isHostCallbackScheduled = false;
+
+var hasNativePerformanceNow = typeof performance === 'object' && typeof performance.now === 'function';
+
+function ensureHostCallbackIsScheduled() {
+  if (isExecutingCallback) {
+    // Don't schedule work yet; wait until the next time we yield.
+    return;
+  }
+  // Schedule the host callback using the earliest expiration in the list.
+  var expirationTime = firstCallbackNode.expirationTime;
+  if (!isHostCallbackScheduled) {
+    isHostCallbackScheduled = true;
+  } else {
+    // Cancel the existing host callback.
+    cancelHostCallback();
+  }
+  requestHostCallback(flushWork, expirationTime);
+}
+
+function flushFirstCallback() {
+  var flushedNode = firstCallbackNode;
+
+  // Remove the node from the list before calling the callback. That way the
+  // list is in a consistent state even if the callback throws.
+  var next = firstCallbackNode.next;
+  if (firstCallbackNode === next) {
+    // This is the last callback in the list.
+    firstCallbackNode = null;
+    next = null;
+  } else {
+    var lastCallbackNode = firstCallbackNode.previous;
+    firstCallbackNode = lastCallbackNode.next = next;
+    next.previous = lastCallbackNode;
+  }
+
+  flushedNode.next = flushedNode.previous = null;
+
+  // Now it's safe to call the callback.
+  var callback = flushedNode.callback;
+  var expirationTime = flushedNode.expirationTime;
+  var priorityLevel = flushedNode.priorityLevel;
+  var previousPriorityLevel = currentPriorityLevel;
+  var previousExpirationTime = currentExpirationTime;
+  currentPriorityLevel = priorityLevel;
+  currentExpirationTime = expirationTime;
+  var continuationCallback;
+  try {
+    continuationCallback = callback();
+  } finally {
+    currentPriorityLevel = previousPriorityLevel;
+    currentExpirationTime = previousExpirationTime;
+  }
+
+  // A callback may return a continuation. The continuation should be scheduled
+  // with the same priority and expiration as the just-finished callback.
+  if (typeof continuationCallback === 'function') {
+    var continuationNode = {
+      callback: continuationCallback,
+      priorityLevel: priorityLevel,
+      expirationTime: expirationTime,
+      next: null,
+      previous: null
+    };
+
+    // Insert the new callback into the list, sorted by its expiration. This is
+    // almost the same as the code in `scheduleCallback`, except the callback
+    // is inserted into the list *before* callbacks of equal expiration instead
+    // of after.
+    if (firstCallbackNode === null) {
+      // This is the first callback in the list.
+      firstCallbackNode = continuationNode.next = continuationNode.previous = continuationNode;
+    } else {
+      var nextAfterContinuation = null;
+      var node = firstCallbackNode;
+      do {
+        if (node.expirationTime >= expirationTime) {
+          // This callback expires at or after the continuation. We will insert
+          // the continuation *before* this callback.
+          nextAfterContinuation = node;
+          break;
+        }
+        node = node.next;
+      } while (node !== firstCallbackNode);
+
+      if (nextAfterContinuation === null) {
+        // No equal or lower priority callback was found, which means the new
+        // callback is the lowest priority callback in the list.
+        nextAfterContinuation = firstCallbackNode;
+      } else if (nextAfterContinuation === firstCallbackNode) {
+        // The new callback is the highest priority callback in the list.
+        firstCallbackNode = continuationNode;
+        ensureHostCallbackIsScheduled();
+      }
+
+      var previous = nextAfterContinuation.previous;
+      previous.next = nextAfterContinuation.previous = continuationNode;
+      continuationNode.next = nextAfterContinuation;
+      continuationNode.previous = previous;
+    }
+  }
+}
+
+function flushImmediateWork() {
+  if (
+  // Confirm we've exited the outer most event handler
+  currentEventStartTime === -1 && firstCallbackNode !== null && firstCallbackNode.priorityLevel === ImmediatePriority) {
+    isExecutingCallback = true;
+    try {
+      do {
+        flushFirstCallback();
+      } while (
+      // Keep flushing until there are no more immediate callbacks
+      firstCallbackNode !== null && firstCallbackNode.priorityLevel === ImmediatePriority);
+    } finally {
+      isExecutingCallback = false;
+      if (firstCallbackNode !== null) {
+        // There's still work remaining. Request another callback.
+        ensureHostCallbackIsScheduled();
+      } else {
+        isHostCallbackScheduled = false;
+      }
+    }
+  }
+}
+
+function flushWork(didTimeout) {
+  // Exit right away if we're currently paused
+
+  if (enableSchedulerDebugging && isSchedulerPaused) {
+    return;
+  }
+
+  isExecutingCallback = true;
+  var previousDidTimeout = currentDidTimeout;
+  currentDidTimeout = didTimeout;
+  try {
+    if (didTimeout) {
+      // Flush all the expired callbacks without yielding.
+      while (firstCallbackNode !== null && !(enableSchedulerDebugging && isSchedulerPaused)) {
+        // TODO Wrap in feature flag
+        // Read the current time. Flush all the callbacks that expire at or
+        // earlier than that time. Then read the current time again and repeat.
+        // This optimizes for as few performance.now calls as possible.
+        var currentTime = exports.unstable_now();
+        if (firstCallbackNode.expirationTime <= currentTime) {
+          do {
+            flushFirstCallback();
+          } while (firstCallbackNode !== null && firstCallbackNode.expirationTime <= currentTime && !(enableSchedulerDebugging && isSchedulerPaused));
+          continue;
+        }
+        break;
+      }
+    } else {
+      // Keep flushing callbacks until we run out of time in the frame.
+      if (firstCallbackNode !== null) {
+        do {
+          if (enableSchedulerDebugging && isSchedulerPaused) {
+            break;
+          }
+          flushFirstCallback();
+        } while (firstCallbackNode !== null && !shouldYieldToHost());
+      }
+    }
+  } finally {
+    isExecutingCallback = false;
+    currentDidTimeout = previousDidTimeout;
+    if (firstCallbackNode !== null) {
+      // There's still work remaining. Request another callback.
+      ensureHostCallbackIsScheduled();
+    } else {
+      isHostCallbackScheduled = false;
+    }
+    // Before exiting, flush all the immediate work that was scheduled.
+    flushImmediateWork();
+  }
+}
+
+function unstable_runWithPriority(priorityLevel, eventHandler) {
+  switch (priorityLevel) {
+    case ImmediatePriority:
+    case UserBlockingPriority:
+    case NormalPriority:
+    case LowPriority:
+    case IdlePriority:
+      break;
+    default:
+      priorityLevel = NormalPriority;
+  }
+
+  var previousPriorityLevel = currentPriorityLevel;
+  var previousEventStartTime = currentEventStartTime;
+  currentPriorityLevel = priorityLevel;
+  currentEventStartTime = exports.unstable_now();
+
+  try {
+    return eventHandler();
+  } finally {
+    currentPriorityLevel = previousPriorityLevel;
+    currentEventStartTime = previousEventStartTime;
+
+    // Before exiting, flush all the immediate work that was scheduled.
+    flushImmediateWork();
+  }
+}
+
+function unstable_next(eventHandler) {
+  var priorityLevel = void 0;
+  switch (currentPriorityLevel) {
+    case ImmediatePriority:
+    case UserBlockingPriority:
+    case NormalPriority:
+      // Shift down to normal priority
+      priorityLevel = NormalPriority;
+      break;
+    default:
+      // Anything lower than normal priority should remain at the current level.
+      priorityLevel = currentPriorityLevel;
+      break;
+  }
+
+  var previousPriorityLevel = currentPriorityLevel;
+  var previousEventStartTime = currentEventStartTime;
+  currentPriorityLevel = priorityLevel;
+  currentEventStartTime = exports.unstable_now();
+
+  try {
+    return eventHandler();
+  } finally {
+    currentPriorityLevel = previousPriorityLevel;
+    currentEventStartTime = previousEventStartTime;
+
+    // Before exiting, flush all the immediate work that was scheduled.
+    flushImmediateWork();
+  }
+}
+
+function unstable_wrapCallback(callback) {
+  var parentPriorityLevel = currentPriorityLevel;
+  return function () {
+    // This is a fork of runWithPriority, inlined for performance.
+    var previousPriorityLevel = currentPriorityLevel;
+    var previousEventStartTime = currentEventStartTime;
+    currentPriorityLevel = parentPriorityLevel;
+    currentEventStartTime = exports.unstable_now();
+
+    try {
+      return callback.apply(this, arguments);
+    } finally {
+      currentPriorityLevel = previousPriorityLevel;
+      currentEventStartTime = previousEventStartTime;
+      flushImmediateWork();
+    }
+  };
+}
+
+function unstable_scheduleCallback(callback, deprecated_options) {
+  var startTime = currentEventStartTime !== -1 ? currentEventStartTime : exports.unstable_now();
+
+  var expirationTime;
+  if (typeof deprecated_options === 'object' && deprecated_options !== null && typeof deprecated_options.timeout === 'number') {
+    // FIXME: Remove this branch once we lift expiration times out of React.
+    expirationTime = startTime + deprecated_options.timeout;
+  } else {
+    switch (currentPriorityLevel) {
+      case ImmediatePriority:
+        expirationTime = startTime + IMMEDIATE_PRIORITY_TIMEOUT;
+        break;
+      case UserBlockingPriority:
+        expirationTime = startTime + USER_BLOCKING_PRIORITY;
+        break;
+      case IdlePriority:
+        expirationTime = startTime + IDLE_PRIORITY;
+        break;
+      case LowPriority:
+        expirationTime = startTime + LOW_PRIORITY_TIMEOUT;
+        break;
+      case NormalPriority:
+      default:
+        expirationTime = startTime + NORMAL_PRIORITY_TIMEOUT;
+    }
+  }
+
+  var newNode = {
+    callback: callback,
+    priorityLevel: currentPriorityLevel,
+    expirationTime: expirationTime,
+    next: null,
+    previous: null
+  };
+
+  // Insert the new callback into the list, ordered first by expiration, then
+  // by insertion. So the new callback is inserted any other callback with
+  // equal expiration.
+  if (firstCallbackNode === null) {
+    // This is the first callback in the list.
+    firstCallbackNode = newNode.next = newNode.previous = newNode;
+    ensureHostCallbackIsScheduled();
+  } else {
+    var next = null;
+    var node = firstCallbackNode;
+    do {
+      if (node.expirationTime > expirationTime) {
+        // The new callback expires before this one.
+        next = node;
+        break;
+      }
+      node = node.next;
+    } while (node !== firstCallbackNode);
+
+    if (next === null) {
+      // No callback with a later expiration was found, which means the new
+      // callback has the latest expiration in the list.
+      next = firstCallbackNode;
+    } else if (next === firstCallbackNode) {
+      // The new callback has the earliest expiration in the entire list.
+      firstCallbackNode = newNode;
+      ensureHostCallbackIsScheduled();
+    }
+
+    var previous = next.previous;
+    previous.next = next.previous = newNode;
+    newNode.next = next;
+    newNode.previous = previous;
+  }
+
+  return newNode;
+}
+
+function unstable_pauseExecution() {
+  isSchedulerPaused = true;
+}
+
+function unstable_continueExecution() {
+  isSchedulerPaused = false;
+  if (firstCallbackNode !== null) {
+    ensureHostCallbackIsScheduled();
+  }
+}
+
+function unstable_getFirstCallbackNode() {
+  return firstCallbackNode;
+}
+
+function unstable_cancelCallback(callbackNode) {
+  var next = callbackNode.next;
+  if (next === null) {
+    // Already cancelled.
+    return;
+  }
+
+  if (next === callbackNode) {
+    // This is the only scheduled callback. Clear the list.
+    firstCallbackNode = null;
+  } else {
+    // Remove the callback from its position in the list.
+    if (callbackNode === firstCallbackNode) {
+      firstCallbackNode = next;
+    }
+    var previous = callbackNode.previous;
+    previous.next = next;
+    next.previous = previous;
+  }
+
+  callbackNode.next = callbackNode.previous = null;
+}
+
+function unstable_getCurrentPriorityLevel() {
+  return currentPriorityLevel;
+}
+
+function unstable_shouldYield() {
+  return !currentDidTimeout && (firstCallbackNode !== null && firstCallbackNode.expirationTime < currentExpirationTime || shouldYieldToHost());
+}
+
+// The remaining code is essentially a polyfill for requestIdleCallback. It
+// works by scheduling a requestAnimationFrame, storing the time for the start
+// of the frame, then scheduling a postMessage which gets scheduled after paint.
+// Within the postMessage handler do as much work as possible until time + frame
+// rate. By separating the idle call into a separate event tick we ensure that
+// layout, paint and other browser work is counted against the available time.
+// The frame rate is dynamically adjusted.
+
+// We capture a local reference to any global, in case it gets polyfilled after
+// this module is initially evaluated. We want to be using a
+// consistent implementation.
+var localDate = Date;
+
+// This initialization code may run even on server environments if a component
+// just imports ReactDOM (e.g. for findDOMNode). Some environments might not
+// have setTimeout or clearTimeout. However, we always expect them to be defined
+// on the client. https://github.com/facebook/react/pull/13088
+var localSetTimeout = typeof setTimeout === 'function' ? setTimeout : undefined;
+var localClearTimeout = typeof clearTimeout === 'function' ? clearTimeout : undefined;
+
+// We don't expect either of these to necessarily be defined, but we will error
+// later if they are missing on the client.
+var localRequestAnimationFrame = typeof requestAnimationFrame === 'function' ? requestAnimationFrame : undefined;
+var localCancelAnimationFrame = typeof cancelAnimationFrame === 'function' ? cancelAnimationFrame : undefined;
+
+// requestAnimationFrame does not run when the tab is in the background. If
+// we're backgrounded we prefer for that work to happen so that the page
+// continues to load in the background. So we also schedule a 'setTimeout' as
+// a fallback.
+// TODO: Need a better heuristic for backgrounded work.
+var ANIMATION_FRAME_TIMEOUT = 100;
+var rAFID;
+var rAFTimeoutID;
+var requestAnimationFrameWithTimeout = function (callback) {
+  // schedule rAF and also a setTimeout
+  rAFID = localRequestAnimationFrame(function (timestamp) {
+    // cancel the setTimeout
+    localClearTimeout(rAFTimeoutID);
+    callback(timestamp);
+  });
+  rAFTimeoutID = localSetTimeout(function () {
+    // cancel the requestAnimationFrame
+    localCancelAnimationFrame(rAFID);
+    callback(exports.unstable_now());
+  }, ANIMATION_FRAME_TIMEOUT);
+};
+
+if (hasNativePerformanceNow) {
+  var Performance = performance;
+  exports.unstable_now = function () {
+    return Performance.now();
+  };
+} else {
+  exports.unstable_now = function () {
+    return localDate.now();
+  };
+}
+
+var requestHostCallback;
+var cancelHostCallback;
+var shouldYieldToHost;
+
+var globalValue = null;
+if (typeof window !== 'undefined') {
+  globalValue = window;
+} else if (typeof global !== 'undefined') {
+  globalValue = global;
+}
+
+if (globalValue && globalValue._schedMock) {
+  // Dynamic injection, only for testing purposes.
+  var globalImpl = globalValue._schedMock;
+  requestHostCallback = globalImpl[0];
+  cancelHostCallback = globalImpl[1];
+  shouldYieldToHost = globalImpl[2];
+  exports.unstable_now = globalImpl[3];
+} else if (
+// If Scheduler runs in a non-DOM environment, it falls back to a naive
+// implementation using setTimeout.
+typeof window === 'undefined' ||
+// Check if MessageChannel is supported, too.
+typeof MessageChannel !== 'function') {
+  // If this accidentally gets imported in a non-browser environment, e.g. JavaScriptCore,
+  // fallback to a naive implementation.
+  var _callback = null;
+  var _flushCallback = function (didTimeout) {
+    if (_callback !== null) {
+      try {
+        _callback(didTimeout);
+      } finally {
+        _callback = null;
+      }
+    }
+  };
+  requestHostCallback = function (cb, ms) {
+    if (_callback !== null) {
+      // Protect against re-entrancy.
+      setTimeout(requestHostCallback, 0, cb);
+    } else {
+      _callback = cb;
+      setTimeout(_flushCallback, 0, false);
+    }
+  };
+  cancelHostCallback = function () {
+    _callback = null;
+  };
+  shouldYieldToHost = function () {
+    return false;
+  };
+} else {
+  if (typeof console !== 'undefined') {
+    // TODO: Remove fb.me link
+    if (typeof localRequestAnimationFrame !== 'function') {
+      console.error("This browser doesn't support requestAnimationFrame. " + 'Make sure that you load a ' + 'polyfill in older browsers. https://fb.me/react-polyfills');
+    }
+    if (typeof localCancelAnimationFrame !== 'function') {
+      console.error("This browser doesn't support cancelAnimationFrame. " + 'Make sure that you load a ' + 'polyfill in older browsers. https://fb.me/react-polyfills');
+    }
+  }
+
+  var scheduledHostCallback = null;
+  var isMessageEventScheduled = false;
+  var timeoutTime = -1;
+
+  var isAnimationFrameScheduled = false;
+
+  var isFlushingHostCallback = false;
+
+  var frameDeadline = 0;
+  // We start out assuming that we run at 30fps but then the heuristic tracking
+  // will adjust this value to a faster fps if we get more frequent animation
+  // frames.
+  var previousFrameTime = 33;
+  var activeFrameTime = 33;
+
+  shouldYieldToHost = function () {
+    return frameDeadline <= exports.unstable_now();
+  };
+
+  // We use the postMessage trick to defer idle work until after the repaint.
+  var channel = new MessageChannel();
+  var port = channel.port2;
+  channel.port1.onmessage = function (event) {
+    isMessageEventScheduled = false;
+
+    var prevScheduledCallback = scheduledHostCallback;
+    var prevTimeoutTime = timeoutTime;
+    scheduledHostCallback = null;
+    timeoutTime = -1;
+
+    var currentTime = exports.unstable_now();
+
+    var didTimeout = false;
+    if (frameDeadline - currentTime <= 0) {
+      // There's no time left in this idle period. Check if the callback has
+      // a timeout and whether it's been exceeded.
+      if (prevTimeoutTime !== -1 && prevTimeoutTime <= currentTime) {
+        // Exceeded the timeout. Invoke the callback even though there's no
+        // time left.
+        didTimeout = true;
+      } else {
+        // No timeout.
+        if (!isAnimationFrameScheduled) {
+          // Schedule another animation callback so we retry later.
+          isAnimationFrameScheduled = true;
+          requestAnimationFrameWithTimeout(animationTick);
+        }
+        // Exit without invoking the callback.
+        scheduledHostCallback = prevScheduledCallback;
+        timeoutTime = prevTimeoutTime;
+        return;
+      }
+    }
+
+    if (prevScheduledCallback !== null) {
+      isFlushingHostCallback = true;
+      try {
+        prevScheduledCallback(didTimeout);
+      } finally {
+        isFlushingHostCallback = false;
+      }
+    }
+  };
+
+  var animationTick = function (rafTime) {
+    if (scheduledHostCallback !== null) {
+      // Eagerly schedule the next animation callback at the beginning of the
+      // frame. If the scheduler queue is not empty at the end of the frame, it
+      // will continue flushing inside that callback. If the queue *is* empty,
+      // then it will exit immediately. Posting the callback at the start of the
+      // frame ensures it's fired within the earliest possible frame. If we
+      // waited until the end of the frame to post the callback, we risk the
+      // browser skipping a frame and not firing the callback until the frame
+      // after that.
+      requestAnimationFrameWithTimeout(animationTick);
+    } else {
+      // No pending work. Exit.
+      isAnimationFrameScheduled = false;
+      return;
+    }
+
+    var nextFrameTime = rafTime - frameDeadline + activeFrameTime;
+    if (nextFrameTime < activeFrameTime && previousFrameTime < activeFrameTime) {
+      if (nextFrameTime < 8) {
+        // Defensive coding. We don't support higher frame rates than 120hz.
+        // If the calculated frame time gets lower than 8, it is probably a bug.
+        nextFrameTime = 8;
+      }
+      // If one frame goes long, then the next one can be short to catch up.
+      // If two frames are short in a row, then that's an indication that we
+      // actually have a higher frame rate than what we're currently optimizing.
+      // We adjust our heuristic dynamically accordingly. For example, if we're
+      // running on 120hz display or 90hz VR display.
+      // Take the max of the two in case one of them was an anomaly due to
+      // missed frame deadlines.
+      activeFrameTime = nextFrameTime < previousFrameTime ? previousFrameTime : nextFrameTime;
+    } else {
+      previousFrameTime = nextFrameTime;
+    }
+    frameDeadline = rafTime + activeFrameTime;
+    if (!isMessageEventScheduled) {
+      isMessageEventScheduled = true;
+      port.postMessage(undefined);
+    }
+  };
+
+  requestHostCallback = function (callback, absoluteTimeout) {
+    scheduledHostCallback = callback;
+    timeoutTime = absoluteTimeout;
+    if (isFlushingHostCallback || absoluteTimeout < 0) {
+      // Don't wait for the next frame. Continue working ASAP, in a new event.
+      port.postMessage(undefined);
+    } else if (!isAnimationFrameScheduled) {
+      // If rAF didn't already schedule one, we need to schedule a frame.
+      // TODO: If this rAF doesn't materialize because the browser throttles, we
+      // might want to still have setTimeout trigger rIC as a backup to ensure
+      // that we keep performing work.
+      isAnimationFrameScheduled = true;
+      requestAnimationFrameWithTimeout(animationTick);
+    }
+  };
+
+  cancelHostCallback = function () {
+    scheduledHostCallback = null;
+    isMessageEventScheduled = false;
+    timeoutTime = -1;
+  };
+}
+
+exports.unstable_ImmediatePriority = ImmediatePriority;
+exports.unstable_UserBlockingPriority = UserBlockingPriority;
+exports.unstable_NormalPriority = NormalPriority;
+exports.unstable_IdlePriority = IdlePriority;
+exports.unstable_LowPriority = LowPriority;
+exports.unstable_runWithPriority = unstable_runWithPriority;
+exports.unstable_next = unstable_next;
+exports.unstable_scheduleCallback = unstable_scheduleCallback;
+exports.unstable_cancelCallback = unstable_cancelCallback;
+exports.unstable_wrapCallback = unstable_wrapCallback;
+exports.unstable_getCurrentPriorityLevel = unstable_getCurrentPriorityLevel;
+exports.unstable_shouldYield = unstable_shouldYield;
+exports.unstable_continueExecution = unstable_continueExecution;
+exports.unstable_pauseExecution = unstable_pauseExecution;
+exports.unstable_getFirstCallbackNode = unstable_getFirstCallbackNode;
+  })();
+}
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+
+/***/ }),
+
+/***/ "./node_modules/react-dom/node_modules/scheduler/index.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/react-dom/node_modules/scheduler/index.js ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+if (false) {} else {
+  module.exports = __webpack_require__(/*! ./cjs/scheduler.development.js */ "./node_modules/react-dom/node_modules/scheduler/cjs/scheduler.development.js");
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/react-dom/node_modules/scheduler/tracing.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/react-dom/node_modules/scheduler/tracing.js ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+if (false) {} else {
+  module.exports = __webpack_require__(/*! ./cjs/scheduler-tracing.development.js */ "./node_modules/react-dom/node_modules/scheduler/cjs/scheduler-tracing.development.js");
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/react-sound/lib/index.js":
+/*!***********************************************!*\
+  !*** ./node_modules/react-sound/lib/index.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var pendingCalls = [];
+var initialized = false;
+
+var soundManager = void 0;
+// Allow server side rendering
+if (typeof window !== 'undefined') {
+  if (true) {
+    var _require = __webpack_require__(/*! soundmanager2 */ "./node_modules/soundmanager2/script/soundmanager2.js");
+
+    soundManager = _require.soundManager;
+  } else { var _require2; }
+
+  soundManager.onready(function () {
+    pendingCalls.slice().forEach(function (cb) {
+      return cb();
+    });
+  });
+}
+
+function _createSound(options, cb) {
+  if (soundManager.ok()) {
+    cb(soundManager.createSound(options));
+    return function () {};
+  } else {
+    if (!initialized) {
+      initialized = true;
+      soundManager.beginDelayedInit();
+    }
+
+    var call = function call() {
+      cb(soundManager.createSound(options));
+    };
+
+    pendingCalls.push(call);
+
+    return function () {
+      pendingCalls.splice(pendingCalls.indexOf(call), 1);
+    };
+  }
+}
+
+function noop() {}
+
+var playStatuses = {
+  PLAYING: 'PLAYING',
+  STOPPED: 'STOPPED',
+  PAUSED: 'PAUSED'
+};
+
+var Sound = function (_React$Component) {
+  _inherits(Sound, _React$Component);
+
+  function Sound() {
+    _classCallCheck(this, Sound);
+
+    return _possibleConstructorReturn(this, (Sound.__proto__ || Object.getPrototypeOf(Sound)).apply(this, arguments));
+  }
+
+  _createClass(Sound, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      this.createSound(function (sound) {
+        return _this2.updateSound(sound);
+      });
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      this.removeSound();
+    }
+  }, {
+    key: 'componentDidUpdate',
+    value: function componentDidUpdate(prevProps) {
+      var _this3 = this;
+
+      if (this.props.url !== prevProps.url) {
+        this.createSound(function (sound) {
+          return _this3.updateSound(sound, prevProps);
+        });
+      } else {
+        this.updateSound(this.sound);
+      }
+    }
+  }, {
+    key: 'updateSound',
+    value: function updateSound(sound) {
+      var prevProps = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+      if (!sound) {
+        return;
+      }
+
+      if (this.props.playStatus === playStatuses.PLAYING) {
+        if (sound.playState === 0) {
+          sound.play();
+        }
+
+        if (sound.paused) {
+          sound.resume();
+        }
+      } else if (this.props.playStatus === playStatuses.STOPPED) {
+        if (sound.playState !== 0) {
+          sound.stop();
+        }
+      } else {
+        // this.props.playStatus === playStatuses.PAUSED
+        if (!sound.paused) {
+          sound.pause();
+        }
+      }
+
+      if (this.props.playFromPosition != null) {
+        if (this.props.playFromPosition !== prevProps.playFromPosition) {
+          sound.setPosition(this.props.playFromPosition);
+        }
+      }
+
+      if (this.props.position != null) {
+        if (sound.position !== this.props.position && Math.round(sound.position) !== Math.round(this.props.position)) {
+
+          sound.setPosition(this.props.position);
+        }
+      }
+
+      if (this.props.volume !== prevProps.volume) {
+        sound.setVolume(this.props.volume);
+      }
+
+      if (this.props.playbackRate !== prevProps.playbackRate) {
+        sound.setPlaybackRate(this.props.playbackRate);
+      }
+    }
+  }, {
+    key: 'createSound',
+    value: function createSound(callback) {
+      var _this4 = this;
+
+      this.removeSound();
+
+      var instance = this;
+
+      if (!this.props.url) {
+        return;
+      }
+
+      this.stopCreatingSound = _createSound({
+        url: this.props.url,
+        autoLoad: this.props.autoLoad,
+        volume: this.props.volume,
+        position: this.props.playFromPosition || this.props.position || 0,
+        playbackRate: this.props.playbackRate,
+        whileloading: function whileloading() {
+          instance.props.onLoading(this);
+        },
+        whileplaying: function whileplaying() {
+          instance.props.onPlaying(this);
+        },
+        onerror: function onerror(errorCode, description) {
+          instance.props.onError(errorCode, description, this);
+        },
+        onload: function onload() {
+          instance.props.onLoad(this);
+        },
+        onpause: function onpause() {
+          instance.props.onPause(this);
+        },
+        onresume: function onresume() {
+          instance.props.onResume(this);
+        },
+        onstop: function onstop() {
+          instance.props.onStop(this);
+        },
+        onfinish: function onfinish() {
+          if (instance.props.loop && instance.props.playStatus === playStatuses.PLAYING) {
+            instance.sound.play();
+          } else {
+            instance.props.onFinishedPlaying();
+          }
+        },
+        onbufferchange: function onbufferchange() {
+          instance.props.onBufferChange(this.isBuffering);
+        }
+      }, function (sound) {
+        _this4.sound = sound;
+        callback(sound);
+      });
+    }
+  }, {
+    key: 'removeSound',
+    value: function removeSound() {
+      if (this.stopCreatingSound) {
+        this.stopCreatingSound();
+        delete this.stopCreatingSound;
+      }
+
+      if (this.sound) {
+        try {
+          this.sound.destruct();
+        } catch (e) {} // eslint-disable-line
+
+        delete this.sound;
+      }
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return null;
+    }
+  }]);
+
+  return Sound;
+}(_react2.default.Component);
+
+Sound.status = playStatuses;
+Sound.propTypes = {
+  url: _propTypes2.default.string.isRequired,
+  playStatus: _propTypes2.default.oneOf(Object.keys(playStatuses)).isRequired,
+  position: _propTypes2.default.number,
+  playFromPosition: _propTypes2.default.number,
+  volume: _propTypes2.default.number,
+  playbackRate: _propTypes2.default.number,
+  onError: _propTypes2.default.func,
+  onLoading: _propTypes2.default.func,
+  onLoad: _propTypes2.default.func,
+  onPlaying: _propTypes2.default.func,
+  onPause: _propTypes2.default.func,
+  onResume: _propTypes2.default.func,
+  onStop: _propTypes2.default.func,
+  onFinishedPlaying: _propTypes2.default.func,
+  onBufferChange: _propTypes2.default.func,
+  autoLoad: _propTypes2.default.bool,
+  loop: _propTypes2.default.bool
+};
+Sound.defaultProps = {
+  volume: 100,
+  playbackRate: 1,
+  onError: noop,
+  onLoading: noop,
+  onPlaying: noop,
+  onLoad: noop,
+  onPause: noop,
+  onResume: noop,
+  onStop: noop,
+  onFinishedPlaying: noop,
+  onBufferChange: noop,
+  autoLoad: false,
+  loop: false
+};
+exports.default = Sound;
+
+/***/ }),
+
 /***/ "./node_modules/react/cjs/react.development.js":
 /*!*****************************************************!*\
   !*** ./node_modules/react/cjs/react.development.js ***!
@@ -20500,7 +24199,7 @@ if (false) {} else {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/** @license React v16.6.1
+/** @license React v16.8.6
  * react.development.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -20522,7 +24221,7 @@ var checkPropTypes = __webpack_require__(/*! prop-types/checkPropTypes */ "./nod
 
 // TODO: this is special because it gets imported during build.
 
-var ReactVersion = '16.6.3';
+var ReactVersion = '16.8.6';
 
 // The Symbol used to tag the ReactElement-like types. If there is no native Symbol
 // nor polyfill, then a plain number is used for performance.
@@ -20555,43 +24254,6 @@ function getIteratorFn(maybeIterable) {
   }
   return null;
 }
-
-var enableHooks = false;
-// Helps identify side effects in begin-phase lifecycle hooks and setState reducers:
-
-
-// In some cases, StrictMode should also double-render lifecycles.
-// This can be confusing for tests though,
-// And it can be bad for performance in production.
-// This feature flag can be used to control the behavior:
-
-
-// To preserve the "Pause on caught exceptions" behavior of the debugger, we
-// replay the begin phase of a failed component inside invokeGuardedCallback.
-
-
-// Warn about deprecated, async-unsafe lifecycles; relates to RFC #6:
-
-
-// Gather advanced timing metrics for Profiler subtrees.
-
-
-// Trace which interactions trigger each commit.
-
-
-// Only used in www builds.
-
-
-// Only used in www builds.
-
-
-// React Fire: prevent the value and checked attributes from syncing
-// with their related DOM properties
-
-
-// These APIs will no longer be "unstable" in the upcoming 16.7 release,
-// Control this behavior with a flag to support 16.6 minor releases in the meanwhile.
-var enableStableConcurrentModeAPIs = false;
 
 /**
  * Use invariant() to assert state which your program assumes to be true.
@@ -20949,6 +24611,17 @@ function createRef() {
 }
 
 /**
+ * Keeps track of the current dispatcher.
+ */
+var ReactCurrentDispatcher = {
+  /**
+   * @internal
+   * @type {ReactComponent}
+   */
+  current: null
+};
+
+/**
  * Keeps track of the current owner.
  *
  * The current owner is the component who should own any components that are
@@ -20959,8 +24632,7 @@ var ReactCurrentOwner = {
    * @internal
    * @type {ReactComponent}
    */
-  current: null,
-  currentDispatcher: null
+  current: null
 };
 
 var BEFORE_SLASH_RE = /^(.*)[\\\/]/;
@@ -21091,6 +24763,7 @@ function setCurrentlyValidatingElement(element) {
 }
 
 var ReactSharedInternals = {
+  ReactCurrentDispatcher: ReactCurrentDispatcher,
   ReactCurrentOwner: ReactCurrentOwner,
   // Used by renderers to avoid bundling object-assign twice in UMD bundles:
   assign: _assign
@@ -21870,13 +25543,51 @@ function createContext(defaultValue, calculateChangedBits) {
 }
 
 function lazy(ctor) {
-  return {
+  var lazyType = {
     $$typeof: REACT_LAZY_TYPE,
     _ctor: ctor,
     // React uses these fields to store the result.
     _status: -1,
     _result: null
   };
+
+  {
+    // In production, this would just set it on the object.
+    var defaultProps = void 0;
+    var propTypes = void 0;
+    Object.defineProperties(lazyType, {
+      defaultProps: {
+        configurable: true,
+        get: function () {
+          return defaultProps;
+        },
+        set: function (newDefaultProps) {
+          warning$1(false, 'React.lazy(...): It is not supported to assign `defaultProps` to ' + 'a lazy component import. Either specify them where the component ' + 'is defined, or create a wrapping component around it.');
+          defaultProps = newDefaultProps;
+          // Match production behavior more closely:
+          Object.defineProperty(lazyType, 'defaultProps', {
+            enumerable: true
+          });
+        }
+      },
+      propTypes: {
+        configurable: true,
+        get: function () {
+          return propTypes;
+        },
+        set: function (newPropTypes) {
+          warning$1(false, 'React.lazy(...): It is not supported to assign `propTypes` to ' + 'a lazy component import. Either specify them where the component ' + 'is defined, or create a wrapping component around it.');
+          propTypes = newPropTypes;
+          // Match production behavior more closely:
+          Object.defineProperty(lazyType, 'propTypes', {
+            enumerable: true
+          });
+        }
+      }
+    });
+  }
+
+  return lazyType;
 }
 
 function forwardRef(render) {
@@ -21922,14 +25633,16 @@ function memo(type, compare) {
 }
 
 function resolveDispatcher() {
-  var dispatcher = ReactCurrentOwner.currentDispatcher;
-  !(dispatcher !== null) ? invariant(false, 'Hooks can only be called inside the body of a function component.') : void 0;
+  var dispatcher = ReactCurrentDispatcher.current;
+  !(dispatcher !== null) ? invariant(false, 'Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:\n1. You might have mismatching versions of React and the renderer (such as React DOM)\n2. You might be breaking the Rules of Hooks\n3. You might have more than one copy of React in the same app\nSee https://fb.me/react-invalid-hook-call for tips about how to debug and fix this problem.') : void 0;
   return dispatcher;
 }
 
-function useContext(Context, observedBits) {
+function useContext(Context, unstable_observedBits) {
   var dispatcher = resolveDispatcher();
   {
+    !(unstable_observedBits === undefined) ? warning$1(false, 'useContext() second argument is reserved for future ' + 'use in React. Passing it is not supported. ' + 'You passed: %s.%s', unstable_observedBits, typeof unstable_observedBits === 'number' && Array.isArray(arguments[2]) ? '\n\nDid you call array.map(useContext)? ' + 'Calling Hooks inside a loop is not supported. ' + 'Learn more at https://fb.me/rules-of-hooks' : '') : void 0;
+
     // TODO: add a more generic warning for invalid values.
     if (Context._context !== undefined) {
       var realContext = Context._context;
@@ -21942,7 +25655,7 @@ function useContext(Context, observedBits) {
       }
     }
   }
-  return dispatcher.useContext(Context, observedBits);
+  return dispatcher.useContext(Context, unstable_observedBits);
 }
 
 function useState(initialState) {
@@ -21950,9 +25663,9 @@ function useState(initialState) {
   return dispatcher.useState(initialState);
 }
 
-function useReducer(reducer, initialState, initialAction) {
+function useReducer(reducer, initialArg, init) {
   var dispatcher = resolveDispatcher();
-  return dispatcher.useReducer(reducer, initialState, initialAction);
+  return dispatcher.useReducer(reducer, initialArg, init);
 }
 
 function useRef(initialValue) {
@@ -21963,11 +25676,6 @@ function useRef(initialValue) {
 function useEffect(create, inputs) {
   var dispatcher = resolveDispatcher();
   return dispatcher.useEffect(create, inputs);
-}
-
-function useMutationEffect(create, inputs) {
-  var dispatcher = resolveDispatcher();
-  return dispatcher.useMutationEffect(create, inputs);
 }
 
 function useLayoutEffect(create, inputs) {
@@ -21985,9 +25693,16 @@ function useMemo(create, inputs) {
   return dispatcher.useMemo(create, inputs);
 }
 
-function useImperativeMethods(ref, create, inputs) {
+function useImperativeHandle(ref, create, inputs) {
   var dispatcher = resolveDispatcher();
-  return dispatcher.useImperativeMethods(ref, create, inputs);
+  return dispatcher.useImperativeHandle(ref, create, inputs);
+}
+
+function useDebugValue(value, formatterFn) {
+  {
+    var dispatcher = resolveDispatcher();
+    return dispatcher.useDebugValue(value, formatterFn);
+  }
 }
 
 /**
@@ -22076,7 +25791,7 @@ function validateExplicitKey(element, parentType) {
 
   setCurrentlyValidatingElement(element);
   {
-    warning$1(false, 'Each child in an array or iterator should have a unique "key" prop.' + '%s%s See https://fb.me/react-warning-keys for more information.', currentComponentErrorInfo, childOwner);
+    warning$1(false, 'Each child in a list should have a unique "key" prop.' + '%s%s See https://fb.me/react-warning-keys for more information.', currentComponentErrorInfo, childOwner);
   }
   setCurrentlyValidatingElement(null);
 }
@@ -22132,16 +25847,17 @@ function validateChildKeys(node, parentType) {
  */
 function validatePropTypes(element) {
   var type = element.type;
-  var name = void 0,
-      propTypes = void 0;
+  if (type === null || type === undefined || typeof type === 'string') {
+    return;
+  }
+  var name = getComponentName(type);
+  var propTypes = void 0;
   if (typeof type === 'function') {
-    // Class or function component
-    name = type.displayName || type.name;
     propTypes = type.propTypes;
-  } else if (typeof type === 'object' && type !== null && type.$$typeof === REACT_FORWARD_REF_TYPE) {
-    // ForwardRef
-    var functionName = type.render.displayName || type.render.name || '';
-    name = type.displayName || (functionName !== '' ? 'ForwardRef(' + functionName + ')' : 'ForwardRef');
+  } else if (typeof type === 'object' && (type.$$typeof === REACT_FORWARD_REF_TYPE ||
+  // Note: Memo only checks outer props here.
+  // Inner props are checked in the reconciler.
+  type.$$typeof === REACT_MEMO_TYPE)) {
     propTypes = type.propTypes;
   } else {
     return;
@@ -22272,6 +25988,45 @@ function cloneElementWithValidation(element, props, children) {
   return newElement;
 }
 
+// Helps identify side effects in begin-phase lifecycle hooks and setState reducers:
+
+
+// In some cases, StrictMode should also double-render lifecycles.
+// This can be confusing for tests though,
+// And it can be bad for performance in production.
+// This feature flag can be used to control the behavior:
+
+
+// To preserve the "Pause on caught exceptions" behavior of the debugger, we
+// replay the begin phase of a failed component inside invokeGuardedCallback.
+
+
+// Warn about deprecated, async-unsafe lifecycles; relates to RFC #6:
+
+
+// Gather advanced timing metrics for Profiler subtrees.
+
+
+// Trace which interactions trigger each commit.
+
+
+// Only used in www builds.
+ // TODO: true? Here it might just be false.
+
+// Only used in www builds.
+
+
+// Only used in www builds.
+
+
+// React Fire: prevent the value and checked attributes from syncing
+// with their related DOM properties
+
+
+// These APIs will no longer be "unstable" in the upcoming 16.7 release,
+// Control this behavior with a flag to support 16.6 minor releases in the meanwhile.
+var enableStableConcurrentModeAPIs = false;
+
 var React = {
   Children: {
     map: mapChildren,
@@ -22290,6 +26045,17 @@ var React = {
   lazy: lazy,
   memo: memo,
 
+  useCallback: useCallback,
+  useContext: useContext,
+  useEffect: useEffect,
+  useImperativeHandle: useImperativeHandle,
+  useDebugValue: useDebugValue,
+  useLayoutEffect: useLayoutEffect,
+  useMemo: useMemo,
+  useReducer: useReducer,
+  useRef: useRef,
+  useState: useState,
+
   Fragment: REACT_FRAGMENT_TYPE,
   StrictMode: REACT_STRICT_MODE_TYPE,
   Suspense: REACT_SUSPENSE_TYPE,
@@ -22301,28 +26067,22 @@ var React = {
 
   version: ReactVersion,
 
+  unstable_ConcurrentMode: REACT_CONCURRENT_MODE_TYPE,
+  unstable_Profiler: REACT_PROFILER_TYPE,
+
   __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED: ReactSharedInternals
 };
+
+// Note: some APIs are added with feature flags.
+// Make sure that stable builds for open source
+// don't modify the React object to avoid deopts.
+// Also let's not expose their names in stable builds.
 
 if (enableStableConcurrentModeAPIs) {
   React.ConcurrentMode = REACT_CONCURRENT_MODE_TYPE;
   React.Profiler = REACT_PROFILER_TYPE;
-} else {
-  React.unstable_ConcurrentMode = REACT_CONCURRENT_MODE_TYPE;
-  React.unstable_Profiler = REACT_PROFILER_TYPE;
-}
-
-if (enableHooks) {
-  React.useCallback = useCallback;
-  React.useContext = useContext;
-  React.useEffect = useEffect;
-  React.useImperativeMethods = useImperativeMethods;
-  React.useLayoutEffect = useLayoutEffect;
-  React.useMemo = useMemo;
-  React.useMutationEffect = useMutationEffect;
-  React.useReducer = useReducer;
-  React.useRef = useRef;
-  React.useState = useState;
+  React.unstable_ConcurrentMode = undefined;
+  React.unstable_Profiler = undefined;
 }
 
 
@@ -22361,1119 +26121,6373 @@ if (false) {} else {
 
 /***/ }),
 
-/***/ "./node_modules/scheduler/cjs/scheduler-tracing.development.js":
-/*!*********************************************************************!*\
-  !*** ./node_modules/scheduler/cjs/scheduler-tracing.development.js ***!
-  \*********************************************************************/
+/***/ "./node_modules/soundmanager2/script/soundmanager2.js":
+/*!************************************************************!*\
+  !*** ./node_modules/soundmanager2/script/soundmanager2.js ***!
+  \************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-/** @license React v16.6.1
- * scheduler-tracing.development.js
+/* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_RESULT__;/** @license
  *
- * Copyright (c) Facebook, Inc. and its affiliates.
+ * SoundManager 2: JavaScript Sound for the Web
+ * ----------------------------------------------
+ * http://schillmania.com/projects/soundmanager2/
  *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
+ * Copyright (c) 2007, Scott Schiller. All rights reserved.
+ * Code provided under the BSD License:
+ * http://schillmania.com/projects/soundmanager2/license.txt
+ *
+ * V2.97a.20170601
  */
 
+/**
+ * About this file
+ * -------------------------------------------------------------------------------------
+ * This is the fully-commented source version of the SoundManager 2 API,
+ * recommended for use during development and testing.
+ *
+ * See soundmanager2-nodebug-jsmin.js for an optimized build (~11KB with gzip.)
+ * http://schillmania.com/projects/soundmanager2/doc/getstarted/#basic-inclusion
+ * Alternately, serve this file with gzip for 75% compression savings (~30KB over HTTP.)
+ *
+ * You may notice <d> and </d> comments in this source; these are delimiters for
+ * debug blocks which are removed in the -nodebug builds, further optimizing code size.
+ *
+ * Also, as you may note: Whoa, reliable cross-platform/device audio support is hard! ;)
+ */
 
+(function SM2(window, _undefined) {
 
+/* global Audio, document, window, navigator, define, module, SM2_DEFER, opera, setTimeout, setInterval, clearTimeout, sm2Debugger */
 
-
-if (true) {
-  (function() {
 'use strict';
 
-Object.defineProperty(exports, '__esModule', { value: true });
+if (!window || !window.document) {
 
-// Helps identify side effects in begin-phase lifecycle hooks and setState reducers:
+  // Don't cross the [environment] streams. SM2 expects to be running in a browser, not under node.js etc.
+  // Additionally, if a browser somehow manages to fail this test, as Egon said: "It would be bad."
 
+  throw new Error('SoundManager requires a browser with window and document objects.');
 
-// In some cases, StrictMode should also double-render lifecycles.
-// This can be confusing for tests though,
-// And it can be bad for performance in production.
-// This feature flag can be used to control the behavior:
-
-
-// To preserve the "Pause on caught exceptions" behavior of the debugger, we
-// replay the begin phase of a failed component inside invokeGuardedCallback.
-
-
-// Warn about deprecated, async-unsafe lifecycles; relates to RFC #6:
-
-
-// Gather advanced timing metrics for Profiler subtrees.
-
-
-// Trace which interactions trigger each commit.
-var enableSchedulerTracing = true;
-
-// Only used in www builds.
-
-
-// Only used in www builds.
-
-
-// React Fire: prevent the value and checked attributes from syncing
-// with their related DOM properties
-
-
-// These APIs will no longer be "unstable" in the upcoming 16.7 release,
-// Control this behavior with a flag to support 16.6 minor releases in the meanwhile.
-
-var DEFAULT_THREAD_ID = 0;
-
-// Counters used to generate unique IDs.
-var interactionIDCounter = 0;
-var threadIDCounter = 0;
-
-// Set of currently traced interactions.
-// Interactions "stack"–
-// Meaning that newly traced interactions are appended to the previously active set.
-// When an interaction goes out of scope, the previous set (if any) is restored.
-exports.__interactionsRef = null;
-
-// Listener(s) to notify when interactions begin and end.
-exports.__subscriberRef = null;
-
-if (enableSchedulerTracing) {
-  exports.__interactionsRef = {
-    current: new Set()
-  };
-  exports.__subscriberRef = {
-    current: null
-  };
 }
 
-function unstable_clear(callback) {
-  if (!enableSchedulerTracing) {
-    return callback();
-  }
+var soundManager = null;
 
-  var prevInteractions = exports.__interactionsRef.current;
-  exports.__interactionsRef.current = new Set();
+/**
+ * The SoundManager constructor.
+ *
+ * @constructor
+ * @param {string} smURL Optional: Path to SWF files
+ * @param {string} smID Optional: The ID to use for the SWF container element
+ * @this {SoundManager}
+ * @return {SoundManager} The new SoundManager instance
+ */
 
-  try {
-    return callback();
-  } finally {
-    exports.__interactionsRef.current = prevInteractions;
-  }
-}
+function SoundManager(smURL, smID) {
 
-function unstable_getCurrent() {
-  if (!enableSchedulerTracing) {
-    return null;
-  } else {
-    return exports.__interactionsRef.current;
-  }
-}
+  /**
+   * soundManager configuration options list
+   * defines top-level configuration properties to be applied to the soundManager instance (eg. soundManager.flashVersion)
+   * to set these properties, use the setup() method - eg., soundManager.setup({url: '/swf/', flashVersion: 9})
+   */
 
-function unstable_getThreadID() {
-  return ++threadIDCounter;
-}
+  this.setupOptions = {
 
-function unstable_trace(name, timestamp, callback) {
-  var threadID = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : DEFAULT_THREAD_ID;
+    url: (smURL || null),             // path (directory) where SoundManager 2 SWFs exist, eg., /path/to/swfs/
+    flashVersion: 8,                  // flash build to use (8 or 9.) Some API features require 9.
+    debugMode: true,                  // enable debugging output (console.log() with HTML fallback)
+    debugFlash: false,                // enable debugging output inside SWF, troubleshoot Flash/browser issues
+    useConsole: true,                 // use console.log() if available (otherwise, writes to #soundmanager-debug element)
+    consoleOnly: true,                // if console is being used, do not create/write to #soundmanager-debug
+    waitForWindowLoad: false,         // force SM2 to wait for window.onload() before trying to call soundManager.onload()
+    bgColor: '#ffffff',               // SWF background color. N/A when wmode = 'transparent'
+    useHighPerformance: false,        // position:fixed flash movie can help increase js/flash speed, minimize lag
+    flashPollingInterval: null,       // msec affecting whileplaying/loading callback frequency. If null, default of 50 msec is used.
+    html5PollingInterval: null,       // msec affecting whileplaying() for HTML5 audio, excluding mobile devices. If null, native HTML5 update events are used.
+    flashLoadTimeout: 1000,           // msec to wait for flash movie to load before failing (0 = infinity)
+    wmode: null,                      // flash rendering mode - null, 'transparent', or 'opaque' (last two allow z-index to work)
+    allowScriptAccess: 'always',      // for scripting the SWF (object/embed property), 'always' or 'sameDomain'
+    useFlashBlock: false,             // *requires flashblock.css, see demos* - allow recovery from flash blockers. Wait indefinitely and apply timeout CSS to SWF, if applicable.
+    useHTML5Audio: true,              // use HTML5 Audio() where API is supported (most Safari, Chrome versions), Firefox (MP3/MP4 support varies.) Ideally, transparent vs. Flash API where possible.
+    forceUseGlobalHTML5Audio: false,  // if true, a single Audio() object is used for all sounds - and only one can play at a time.
+    ignoreMobileRestrictions: false,  // if true, SM2 will not apply global HTML5 audio rules to mobile UAs. iOS > 7 and WebViews may allow multiple Audio() instances.
+    html5Test: /^(probably|maybe)$/i, // HTML5 Audio() format support test. Use /^probably$/i; if you want to be more conservative.
+    preferFlash: false,               // overrides useHTML5audio, will use Flash for MP3/MP4/AAC if present. Potential option if HTML5 playback with these formats is quirky.
+    noSWFCache: false,                // if true, appends ?ts={date} to break aggressive SWF caching.
+    idPrefix: 'sound'                 // if an id is not provided to createSound(), this prefix is used for generated IDs - 'sound0', 'sound1' etc.
 
-  if (!enableSchedulerTracing) {
-    return callback();
-  }
-
-  var interaction = {
-    __count: 1,
-    id: interactionIDCounter++,
-    name: name,
-    timestamp: timestamp
   };
 
-  var prevInteractions = exports.__interactionsRef.current;
+  this.defaultOptions = {
 
-  // Traced interactions should stack/accumulate.
-  // To do that, clone the current interactions.
-  // The previous set will be restored upon completion.
-  var interactions = new Set(prevInteractions);
-  interactions.add(interaction);
-  exports.__interactionsRef.current = interactions;
+    /**
+     * the default configuration for sound objects made with createSound() and related methods
+     * eg., volume, auto-load behaviour and so forth
+     */
 
-  var subscriber = exports.__subscriberRef.current;
-  var returnValue = void 0;
+    autoLoad: false,        // enable automatic loading (otherwise .load() will be called on demand with .play(), the latter being nicer on bandwidth - if you want to .load yourself, you also can)
+    autoPlay: false,        // enable playing of file as soon as possible (much faster if "stream" is true)
+    from: null,             // position to start playback within a sound (msec), default = beginning
+    loops: 1,               // how many times to repeat the sound (position will wrap around to 0, setPosition() will break out of loop when >0)
+    onid3: null,            // callback function for "ID3 data is added/available"
+    onerror: null,          // callback function for "load failed" (or, playback/network/decode error under HTML5.)
+    onload: null,           // callback function for "load finished"
+    whileloading: null,     // callback function for "download progress update" (X of Y bytes received)
+    onplay: null,           // callback for "play" start
+    onpause: null,          // callback for "pause"
+    onresume: null,         // callback for "resume" (pause toggle)
+    whileplaying: null,     // callback during play (position update)
+    onposition: null,       // object containing times and function callbacks for positions of interest
+    onstop: null,           // callback for "user stop"
+    onfinish: null,         // callback function for "sound finished playing"
+    multiShot: true,        // let sounds "restart" or layer on top of each other when played multiple times, rather than one-shot/one at a time
+    multiShotEvents: false, // fire multiple sound events (currently onfinish() only) when multiShot is enabled
+    position: null,         // offset (milliseconds) to seek to within loaded sound data.
+    pan: 0,                 // "pan" settings, left-to-right, -100 to 100
+    playbackRate: 1,        // rate at which to play the sound (HTML5-only)
+    stream: true,           // allows playing before entire file has loaded (recommended)
+    to: null,               // position to end playback within a sound (msec), default = end
+    type: null,             // MIME-like hint for file pattern / canPlay() tests, eg. audio/mp3
+    usePolicyFile: false,   // enable crossdomain.xml request for audio on remote domains (for ID3/waveform access)
+    volume: 100             // self-explanatory. 0-100, the latter being the max.
 
-  try {
-    if (subscriber !== null) {
-      subscriber.onInteractionTraced(interaction);
+  };
+
+  this.flash9Options = {
+
+    /**
+     * flash 9-only options,
+     * merged into defaultOptions if flash 9 is being used
+     */
+
+    onfailure: null,        // callback function for when playing fails (Flash 9, MovieStar + RTMP-only)
+    isMovieStar: null,      // "MovieStar" MPEG4 audio mode. Null (default) = auto detect MP4, AAC etc. based on URL. true = force on, ignore URL
+    usePeakData: false,     // enable left/right channel peak (level) data
+    useWaveformData: false, // enable sound spectrum (raw waveform data) - NOTE: May increase CPU load.
+    useEQData: false,       // enable sound EQ (frequency spectrum data) - NOTE: May increase CPU load.
+    onbufferchange: null,   // callback for "isBuffering" property change
+    ondataerror: null       // callback for waveform/eq data access error (flash playing audio in other tabs/domains)
+
+  };
+
+  this.movieStarOptions = {
+
+    /**
+     * flash 9.0r115+ MPEG4 audio options,
+     * merged into defaultOptions if flash 9+movieStar mode is enabled
+     */
+
+    bufferTime: 3,          // seconds of data to buffer before playback begins (null = flash default of 0.1 seconds - if AAC playback is gappy, try increasing.)
+    serverURL: null,        // rtmp: FMS or FMIS server to connect to, required when requesting media via RTMP or one of its variants
+    onconnect: null,        // rtmp: callback for connection to flash media server
+    duration: null          // rtmp: song duration (msec)
+
+  };
+
+  this.audioFormats = {
+
+    /**
+     * determines HTML5 support + flash requirements.
+     * if no support (via flash and/or HTML5) for a "required" format, SM2 will fail to start.
+     * flash fallback is used for MP3 or MP4 if HTML5 can't play it (or if preferFlash = true)
+     */
+
+    mp3: {
+      type: ['audio/mpeg; codecs="mp3"', 'audio/mpeg', 'audio/mp3', 'audio/MPA', 'audio/mpa-robust'],
+      required: true
+    },
+
+    mp4: {
+      related: ['aac', 'm4a', 'm4b'], // additional formats under the MP4 container
+      type: ['audio/mp4; codecs="mp4a.40.2"', 'audio/aac', 'audio/x-m4a', 'audio/MP4A-LATM', 'audio/mpeg4-generic'],
+      required: false
+    },
+
+    ogg: {
+      type: ['audio/ogg; codecs=vorbis'],
+      required: false
+    },
+
+    opus: {
+      type: ['audio/ogg; codecs=opus', 'audio/opus'],
+      required: false
+    },
+
+    wav: {
+      type: ['audio/wav; codecs="1"', 'audio/wav', 'audio/wave', 'audio/x-wav'],
+      required: false
+    },
+
+    flac: {
+      type: ['audio/flac'],
+      required: false
     }
-  } finally {
+
+  };
+
+  // HTML attributes (id + class names) for the SWF container
+
+  this.movieID = 'sm2-container';
+  this.id = (smID || 'sm2movie');
+
+  this.debugID = 'soundmanager-debug';
+  this.debugURLParam = /([#?&])debug=1/i;
+
+  // dynamic attributes
+
+  this.versionNumber = 'V2.97a.20170601';
+  this.version = null;
+  this.movieURL = null;
+  this.altURL = null;
+  this.swfLoaded = false;
+  this.enabled = false;
+  this.oMC = null;
+  this.sounds = {};
+  this.soundIDs = [];
+  this.muted = false;
+  this.didFlashBlock = false;
+  this.filePattern = null;
+
+  this.filePatterns = {
+    flash8: /\.mp3(\?.*)?$/i,
+    flash9: /\.mp3(\?.*)?$/i
+  };
+
+  // support indicators, set at init
+
+  this.features = {
+    buffering: false,
+    peakData: false,
+    waveformData: false,
+    eqData: false,
+    movieStar: false
+  };
+
+  // flash sandbox info, used primarily in troubleshooting
+
+  this.sandbox = {
+    // <d>
+    type: null,
+    types: {
+      remote: 'remote (domain-based) rules',
+      localWithFile: 'local with file access (no internet access)',
+      localWithNetwork: 'local with network (internet access only, no local access)',
+      localTrusted: 'local, trusted (local+internet access)'
+    },
+    description: null,
+    noRemote: null,
+    noLocal: null
+    // </d>
+  };
+
+  /**
+   * format support (html5/flash)
+   * stores canPlayType() results based on audioFormats.
+   * eg. { mp3: boolean, mp4: boolean }
+   * treat as read-only.
+   */
+
+  this.html5 = {
+    usingFlash: null // set if/when flash fallback is needed
+  };
+
+  // file type support hash
+  this.flash = {};
+
+  // determined at init time
+  this.html5Only = false;
+
+  // used for special cases (eg. iPad/iPhone/palm OS?)
+  this.ignoreFlash = false;
+
+  /**
+   * a few private internals (OK, a lot. :D)
+   */
+
+  var SMSound,
+  sm2 = this, globalHTML5Audio = null, flash = null, sm = 'soundManager', smc = sm + ': ', h5 = 'HTML5::', id, ua = navigator.userAgent, wl = window.location.href.toString(), doc = document, doNothing, setProperties, init, fV, on_queue = [], debugOpen = true, debugTS, didAppend = false, appendSuccess = false, didInit = false, disabled = false, windowLoaded = false, _wDS, wdCount = 0, initComplete, mixin, assign, extraOptions, addOnEvent, processOnEvents, initUserOnload, delayWaitForEI, waitForEI, rebootIntoHTML5, setVersionInfo, handleFocus, strings, initMovie, domContentLoaded, winOnLoad, didDCLoaded, getDocument, createMovie, catchError, setPolling, initDebug, debugLevels = ['log', 'info', 'warn', 'error'], defaultFlashVersion = 8, disableObject, failSafely, normalizeMovieURL, oRemoved = null, oRemovedHTML = null, str, flashBlockHandler, getSWFCSS, swfCSS, toggleDebug, loopFix, policyFix, complain, idCheck, waitingForEI = false, initPending = false, startTimer, stopTimer, timerExecute, h5TimerCount = 0, h5IntervalTimer = null, parseURL, messages = [],
+  canIgnoreFlash, needsFlash = null, featureCheck, html5OK, html5CanPlay, html5ErrorCodes, html5Ext, html5Unload, domContentLoadedIE, testHTML5, event, slice = Array.prototype.slice, useGlobalHTML5Audio = false, lastGlobalHTML5URL, hasFlash, detectFlash, badSafariFix, html5_events, showSupport, flushMessages, wrapCallback, idCounter = 0, didSetup, msecScale = 1000,
+  is_iDevice = ua.match(/(ipad|iphone|ipod)/i), isAndroid = ua.match(/android/i), isIE = ua.match(/msie|trident/i),
+  isWebkit = ua.match(/webkit/i),
+  isSafari = (ua.match(/safari/i) && !ua.match(/chrome/i)),
+  isOpera = (ua.match(/opera/i)),
+  mobileHTML5 = (ua.match(/(mobile|pre\/|xoom)/i) || is_iDevice || isAndroid),
+  isBadSafari = (!wl.match(/usehtml5audio/i) && !wl.match(/sm2-ignorebadua/i) && isSafari && !ua.match(/silk/i) && ua.match(/OS\sX\s10_6_([3-7])/i)), // Safari 4 and 5 (excluding Kindle Fire, "Silk") occasionally fail to load/play HTML5 audio on Snow Leopard 10.6.3 through 10.6.7 due to bug(s) in QuickTime X and/or other underlying frameworks. :/ Confirmed bug. https://bugs.webkit.org/show_bug.cgi?id=32159
+  hasConsole = (window.console !== _undefined && console.log !== _undefined),
+  isFocused = (doc.hasFocus !== _undefined ? doc.hasFocus() : null),
+  tryInitOnFocus = (isSafari && (doc.hasFocus === _undefined || !doc.hasFocus())),
+  okToDisable = !tryInitOnFocus,
+  flashMIME = /(mp3|mp4|mpa|m4a|m4b)/i,
+  emptyURL = 'about:blank', // safe URL to unload, or load nothing from (flash 8 + most HTML5 UAs)
+  emptyWAV = 'data:audio/wave;base64,/UklGRiYAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQIAAAD//w==', // tiny WAV for HTML5 unloading
+  overHTTP = (doc.location ? doc.location.protocol.match(/http/i) : null),
+  http = (!overHTTP ? '//' : ''),
+  // mp3, mp4, aac etc.
+  netStreamMimeTypes = /^\s*audio\/(?:x-)?(?:mpeg4|aac|flv|mov|mp4|m4v|m4a|m4b|mp4v|3gp|3g2)\s*(?:$|;)/i,
+  // Flash v9.0r115+ "moviestar" formats
+  netStreamTypes = ['mpeg4', 'aac', 'flv', 'mov', 'mp4', 'm4v', 'f4v', 'm4a', 'm4b', 'mp4v', '3gp', '3g2'],
+  netStreamPattern = new RegExp('\\.(' + netStreamTypes.join('|') + ')(\\?.*)?$', 'i');
+
+  this.mimePattern = /^\s*audio\/(?:x-)?(?:mp(?:eg|3))\s*(?:$|;)/i; // default mp3 set
+
+  // use altURL if not "online"
+  this.useAltURL = !overHTTP;
+
+  swfCSS = {
+    swfBox: 'sm2-object-box',
+    swfDefault: 'movieContainer',
+    swfError: 'swf_error', // SWF loaded, but SM2 couldn't start (other error)
+    swfTimedout: 'swf_timedout',
+    swfLoaded: 'swf_loaded',
+    swfUnblocked: 'swf_unblocked', // or loaded OK
+    sm2Debug: 'sm2_debug',
+    highPerf: 'high_performance',
+    flashDebug: 'flash_debug'
+  };
+
+  /**
+   * HTML5 error codes, per W3C
+   * Error code 1, MEDIA_ERR_ABORTED: Client aborted download at user's request.
+   * Error code 2, MEDIA_ERR_NETWORK: A network error of some description caused the user agent to stop fetching the media resource, after the resource was established to be usable.
+   * Error code 3, MEDIA_ERR_DECODE: An error of some description occurred while decoding the media resource, after the resource was established to be usable.
+   * Error code 4, MEDIA_ERR_SRC_NOT_SUPPORTED: Media (audio file) not supported ("not usable.")
+   * Reference: https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+   */
+  html5ErrorCodes = [
+    null,
+    'MEDIA_ERR_ABORTED',
+    'MEDIA_ERR_NETWORK',
+    'MEDIA_ERR_DECODE',
+    'MEDIA_ERR_SRC_NOT_SUPPORTED'
+  ];
+
+  /**
+   * basic HTML5 Audio() support test
+   * try...catch because of IE 9 "not implemented" nonsense
+   * https://github.com/Modernizr/Modernizr/issues/224
+   */
+
+  this.hasHTML5 = (function() {
     try {
-      if (subscriber !== null) {
-        subscriber.onWorkStarted(interactions, threadID);
-      }
-    } finally {
-      try {
-        returnValue = callback();
-      } finally {
-        exports.__interactionsRef.current = prevInteractions;
-
-        try {
-          if (subscriber !== null) {
-            subscriber.onWorkStopped(interactions, threadID);
-          }
-        } finally {
-          interaction.__count--;
-
-          // If no async work was scheduled for this interaction,
-          // Notify subscribers that it's completed.
-          if (subscriber !== null && interaction.__count === 0) {
-            subscriber.onInteractionScheduledWorkCompleted(interaction);
-          }
-        }
-      }
+      // new Audio(null) for stupid Opera 9.64 case, which throws not_enough_arguments exception otherwise.
+      return (Audio !== _undefined && (isOpera && opera !== _undefined && opera.version() < 10 ? new Audio(null) : new Audio()).canPlayType !== _undefined);
+    } catch(e) {
+      return false;
     }
-  }
+  }());
 
-  return returnValue;
-}
+  /**
+   * Public SoundManager API
+   * -----------------------
+   */
 
-function unstable_wrap(callback) {
-  var threadID = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : DEFAULT_THREAD_ID;
+  /**
+   * Configures top-level soundManager properties.
+   *
+   * @param {object} options Option parameters, eg. { flashVersion: 9, url: '/path/to/swfs/' }
+   * onready and ontimeout are also accepted parameters. call soundManager.setup() to see the full list.
+   */
 
-  if (!enableSchedulerTracing) {
-    return callback;
-  }
+  this.setup = function(options) {
 
-  var wrappedInteractions = exports.__interactionsRef.current;
+    var noURL = (!sm2.url);
 
-  var subscriber = exports.__subscriberRef.current;
-  if (subscriber !== null) {
-    subscriber.onWorkScheduled(wrappedInteractions, threadID);
-  }
+    // warn if flash options have already been applied
 
-  // Update the pending async work count for the current interactions.
-  // Update after calling subscribers in case of error.
-  wrappedInteractions.forEach(function (interaction) {
-    interaction.__count++;
-  });
-
-  var hasRun = false;
-
-  function wrapped() {
-    var prevInteractions = exports.__interactionsRef.current;
-    exports.__interactionsRef.current = wrappedInteractions;
-
-    subscriber = exports.__subscriberRef.current;
-
-    try {
-      var returnValue = void 0;
-
-      try {
-        if (subscriber !== null) {
-          subscriber.onWorkStarted(wrappedInteractions, threadID);
-        }
-      } finally {
-        try {
-          returnValue = callback.apply(undefined, arguments);
-        } finally {
-          exports.__interactionsRef.current = prevInteractions;
-
-          if (subscriber !== null) {
-            subscriber.onWorkStopped(wrappedInteractions, threadID);
-          }
-        }
-      }
-
-      return returnValue;
-    } finally {
-      if (!hasRun) {
-        // We only expect a wrapped function to be executed once,
-        // But in the event that it's executed more than once–
-        // Only decrement the outstanding interaction counts once.
-        hasRun = true;
-
-        // Update pending async counts for all wrapped interactions.
-        // If this was the last scheduled async work for any of them,
-        // Mark them as completed.
-        wrappedInteractions.forEach(function (interaction) {
-          interaction.__count--;
-
-          if (subscriber !== null && interaction.__count === 0) {
-            subscriber.onInteractionScheduledWorkCompleted(interaction);
-          }
-        });
-      }
+    if (options !== _undefined && didInit && needsFlash && sm2.ok() && (options.flashVersion !== _undefined || options.url !== _undefined || options.html5Test !== _undefined)) {
+      complain(str('setupLate'));
     }
-  }
 
-  wrapped.cancel = function cancel() {
-    subscriber = exports.__subscriberRef.current;
+    // TODO: defer: true?
 
-    try {
-      if (subscriber !== null) {
-        subscriber.onWorkCanceled(wrappedInteractions, threadID);
-      }
-    } finally {
-      // Update pending async counts for all wrapped interactions.
-      // If this was the last scheduled async work for any of them,
-      // Mark them as completed.
-      wrappedInteractions.forEach(function (interaction) {
-        interaction.__count--;
+    assign(options);
 
-        if (subscriber && interaction.__count === 0) {
-          subscriber.onInteractionScheduledWorkCompleted(interaction);
+    if (!useGlobalHTML5Audio) {
+
+      if (mobileHTML5) {
+
+        // force the singleton HTML5 pattern on mobile, by default.
+        if (!sm2.setupOptions.ignoreMobileRestrictions || sm2.setupOptions.forceUseGlobalHTML5Audio) {
+          messages.push(strings.globalHTML5);
+          useGlobalHTML5Audio = true;
         }
-      });
+
+      } else if (sm2.setupOptions.forceUseGlobalHTML5Audio) {
+
+        // only apply singleton HTML5 on desktop if forced.
+        messages.push(strings.globalHTML5);
+        useGlobalHTML5Audio = true;
+
+      }
+
     }
+
+    if (!didSetup && mobileHTML5) {
+
+      if (sm2.setupOptions.ignoreMobileRestrictions) {
+
+        messages.push(strings.ignoreMobile);
+
+      } else {
+
+        // prefer HTML5 for mobile + tablet-like devices, probably more reliable vs. flash at this point.
+
+        // <d>
+        if (!sm2.setupOptions.useHTML5Audio || sm2.setupOptions.preferFlash) {
+          // notify that defaults are being changed.
+          sm2._wD(strings.mobileUA);
+        }
+        // </d>
+
+        sm2.setupOptions.useHTML5Audio = true;
+        sm2.setupOptions.preferFlash = false;
+
+        if (is_iDevice) {
+
+          // no flash here.
+          sm2.ignoreFlash = true;
+
+        } else if ((isAndroid && !ua.match(/android\s2\.3/i)) || !isAndroid) {
+
+          /**
+           * Android devices tend to work better with a single audio instance, specifically for chained playback of sounds in sequence.
+           * Common use case: exiting sound onfinish() -> createSound() -> play()
+           * Presuming similar restrictions for other mobile, non-Android, non-iOS devices.
+           */
+
+          // <d>
+          sm2._wD(strings.globalHTML5);
+          // </d>
+
+          useGlobalHTML5Audio = true;
+
+        }
+
+      }
+
+    }
+
+    // special case 1: "Late setup". SM2 loaded normally, but user didn't assign flash URL eg., setup({url:...}) before SM2 init. Treat as delayed init.
+
+    if (options) {
+
+      if (noURL && didDCLoaded && options.url !== _undefined) {
+        sm2.beginDelayedInit();
+      }
+
+      // special case 2: If lazy-loading SM2 (DOMContentLoaded has already happened) and user calls setup() with url: parameter, try to init ASAP.
+
+      if (!didDCLoaded && options.url !== _undefined && doc.readyState === 'complete') {
+        setTimeout(domContentLoaded, 1);
+      }
+
+    }
+
+    didSetup = true;
+
+    return sm2;
+
   };
 
-  return wrapped;
-}
+  this.ok = function() {
 
-var subscribers = null;
-if (enableSchedulerTracing) {
-  subscribers = new Set();
-}
+    return (needsFlash ? (didInit && !disabled) : (sm2.useHTML5Audio && sm2.hasHTML5));
 
-function unstable_subscribe(subscriber) {
-  if (enableSchedulerTracing) {
-    subscribers.add(subscriber);
+  };
 
-    if (subscribers.size === 1) {
-      exports.__subscriberRef.current = {
-        onInteractionScheduledWorkCompleted: onInteractionScheduledWorkCompleted,
-        onInteractionTraced: onInteractionTraced,
-        onWorkCanceled: onWorkCanceled,
-        onWorkScheduled: onWorkScheduled,
-        onWorkStarted: onWorkStarted,
-        onWorkStopped: onWorkStopped
+  this.supported = this.ok; // legacy
+
+  this.getMovie = function(movie_id) {
+
+    // safety net: some old browsers differ on SWF references, possibly related to ExternalInterface / flash version
+    return id(movie_id) || doc[movie_id] || window[movie_id];
+
+  };
+
+  /**
+   * Creates a SMSound sound object instance. Can also be overloaded, e.g., createSound('mySound', '/some.mp3');
+   *
+   * @param {object} oOptions Sound options (at minimum, url parameter is required.)
+   * @return {object} SMSound The new SMSound object.
+   */
+
+  this.createSound = function(oOptions, _url) {
+
+    var cs, cs_string, options, oSound = null;
+
+    // <d>
+    cs = sm + '.createSound(): ';
+    cs_string = cs + str(!didInit ? 'notReady' : 'notOK');
+    // </d>
+
+    if (!didInit || !sm2.ok()) {
+      complain(cs_string);
+      return false;
+    }
+
+    if (_url !== _undefined) {
+      // function overloading in JS! :) ... assume simple createSound(id, url) use case.
+      oOptions = {
+        id: oOptions,
+        url: _url
       };
     }
-  }
-}
 
-function unstable_unsubscribe(subscriber) {
-  if (enableSchedulerTracing) {
-    subscribers.delete(subscriber);
+    // inherit from defaultOptions
+    options = mixin(oOptions);
 
-    if (subscribers.size === 0) {
-      exports.__subscriberRef.current = null;
+    options.url = parseURL(options.url);
+
+    // generate an id, if needed.
+    if (options.id === _undefined) {
+      options.id = sm2.setupOptions.idPrefix + (idCounter++);
     }
-  }
-}
 
-function onInteractionTraced(interaction) {
-  var didCatchError = false;
-  var caughtError = null;
+    // <d>
+    if (options.id.toString().charAt(0).match(/^[0-9]$/)) {
+      sm2._wD(cs + str('badID', options.id), 2);
+    }
 
-  subscribers.forEach(function (subscriber) {
-    try {
-      subscriber.onInteractionTraced(interaction);
-    } catch (error) {
-      if (!didCatchError) {
-        didCatchError = true;
-        caughtError = error;
+    sm2._wD(cs + options.id + (options.url ? ' (' + options.url + ')' : ''), 1);
+    // </d>
+
+    if (idCheck(options.id, true)) {
+      sm2._wD(cs + options.id + ' exists', 1);
+      return sm2.sounds[options.id];
+    }
+
+    function make() {
+
+      options = loopFix(options);
+      sm2.sounds[options.id] = new SMSound(options);
+      sm2.soundIDs.push(options.id);
+      return sm2.sounds[options.id];
+
+    }
+
+    if (html5OK(options)) {
+
+      oSound = make();
+      // <d>
+      if (!sm2.html5Only) {
+        sm2._wD(options.id + ': Using HTML5');
+      }
+      // </d>
+      oSound._setup_html5(options);
+
+    } else {
+
+      if (sm2.html5Only) {
+        sm2._wD(options.id + ': No HTML5 support for this sound, and no Flash. Exiting.');
+        return make();
+      }
+
+      // TODO: Move HTML5/flash checks into generic URL parsing/handling function.
+
+      if (sm2.html5.usingFlash && options.url && options.url.match(/data:/i)) {
+        // data: URIs not supported by Flash, either.
+        sm2._wD(options.id + ': data: URIs not supported via Flash. Exiting.');
+        return make();
+      }
+
+      if (fV > 8) {
+        if (options.isMovieStar === null) {
+          // attempt to detect MPEG-4 formats
+          options.isMovieStar = !!(options.serverURL || (options.type ? options.type.match(netStreamMimeTypes) : false) || (options.url && options.url.match(netStreamPattern)));
+        }
+        // <d>
+        if (options.isMovieStar) {
+          sm2._wD(cs + 'using MovieStar handling');
+          if (options.loops > 1) {
+            _wDS('noNSLoop');
+          }
+        }
+        // </d>
+      }
+
+      options = policyFix(options, cs);
+      oSound = make();
+
+      if (fV === 8) {
+        flash._createSound(options.id, options.loops || 1, options.usePolicyFile);
+      } else {
+        flash._createSound(options.id, options.url, options.usePeakData, options.useWaveformData, options.useEQData, options.isMovieStar, (options.isMovieStar ? options.bufferTime : false), options.loops || 1, options.serverURL, options.duration || null, options.autoPlay, true, options.autoLoad, options.usePolicyFile);
+        if (!options.serverURL) {
+          // We are connected immediately
+          oSound.connected = true;
+          if (options.onconnect) {
+            options.onconnect.apply(oSound);
+          }
+        }
+      }
+
+      if (!options.serverURL && (options.autoLoad || options.autoPlay)) {
+        // call load for non-rtmp streams
+        oSound.load(options);
+      }
+
+    }
+
+    // rtmp will play in onconnect
+    if (!options.serverURL && options.autoPlay) {
+      oSound.play();
+    }
+
+    return oSound;
+
+  };
+
+  /**
+   * Destroys a SMSound sound object instance.
+   *
+   * @param {string} sID The ID of the sound to destroy
+   */
+
+  this.destroySound = function(sID, _bFromSound) {
+
+    // explicitly destroy a sound before normal page unload, etc.
+
+    if (!idCheck(sID)) return false;
+
+    var oS = sm2.sounds[sID], i;
+
+    oS.stop();
+
+    // Disable all callbacks after stop(), when the sound is being destroyed
+    oS._iO = {};
+
+    oS.unload();
+
+    for (i = 0; i < sm2.soundIDs.length; i++) {
+      if (sm2.soundIDs[i] === sID) {
+        sm2.soundIDs.splice(i, 1);
+        break;
       }
     }
-  });
 
-  if (didCatchError) {
-    throw caughtError;
-  }
-}
+    if (!_bFromSound) {
+      // ignore if being called from SMSound instance
+      oS.destruct(true);
+    }
 
-function onInteractionScheduledWorkCompleted(interaction) {
-  var didCatchError = false;
-  var caughtError = null;
+    oS = null;
+    delete sm2.sounds[sID];
 
-  subscribers.forEach(function (subscriber) {
-    try {
-      subscriber.onInteractionScheduledWorkCompleted(interaction);
-    } catch (error) {
-      if (!didCatchError) {
-        didCatchError = true;
-        caughtError = error;
+    return true;
+
+  };
+
+  /**
+   * Calls the load() method of a SMSound object by ID.
+   *
+   * @param {string} sID The ID of the sound
+   * @param {object} oOptions Optional: Sound options
+   */
+
+  this.load = function(sID, oOptions) {
+
+    if (!idCheck(sID)) return false;
+
+    return sm2.sounds[sID].load(oOptions);
+
+  };
+
+  /**
+   * Calls the unload() method of a SMSound object by ID.
+   *
+   * @param {string} sID The ID of the sound
+   */
+
+  this.unload = function(sID) {
+
+    if (!idCheck(sID)) return false;
+
+    return sm2.sounds[sID].unload();
+
+  };
+
+  /**
+   * Calls the onPosition() method of a SMSound object by ID.
+   *
+   * @param {string} sID The ID of the sound
+   * @param {number} nPosition The position to watch for
+   * @param {function} oMethod The relevant callback to fire
+   * @param {object} oScope Optional: The scope to apply the callback to
+   * @return {SMSound} The SMSound object
+   */
+
+  this.onPosition = function(sID, nPosition, oMethod, oScope) {
+
+    if (!idCheck(sID)) return false;
+
+    return sm2.sounds[sID].onposition(nPosition, oMethod, oScope);
+
+  };
+
+  // legacy/backwards-compability: lower-case method name
+  this.onposition = this.onPosition;
+
+  /**
+   * Calls the clearOnPosition() method of a SMSound object by ID.
+   *
+   * @param {string} sID The ID of the sound
+   * @param {number} nPosition The position to watch for
+   * @param {function} oMethod Optional: The relevant callback to fire
+   * @return {SMSound} The SMSound object
+   */
+
+  this.clearOnPosition = function(sID, nPosition, oMethod) {
+
+    if (!idCheck(sID)) return false;
+
+    return sm2.sounds[sID].clearOnPosition(nPosition, oMethod);
+
+  };
+
+  /**
+   * Calls the play() method of a SMSound object by ID.
+   *
+   * @param {string} sID The ID of the sound
+   * @param {object} oOptions Optional: Sound options
+   * @return {SMSound} The SMSound object
+   */
+
+  this.play = function(sID, oOptions) {
+
+    var result = null,
+        // legacy function-overloading use case: play('mySound', '/path/to/some.mp3');
+        overloaded = (oOptions && !(oOptions instanceof Object));
+
+    if (!didInit || !sm2.ok()) {
+      complain(sm + '.play(): ' + str(!didInit ? 'notReady' : 'notOK'));
+      return false;
+    }
+
+    if (!idCheck(sID, overloaded)) {
+
+      // no sound found for the given ID. Bail.
+      if (!overloaded) return false;
+
+      if (overloaded) {
+        oOptions = {
+          url: oOptions
+        };
+      }
+
+      if (oOptions && oOptions.url) {
+        // overloading use case, create+play: .play('someID', {url:'/path/to.mp3'});
+        sm2._wD(sm + '.play(): Attempting to create "' + sID + '"', 1);
+        oOptions.id = sID;
+        result = sm2.createSound(oOptions).play();
+      }
+
+    } else if (overloaded) {
+
+      // existing sound object case
+      oOptions = {
+        url: oOptions
+      };
+
+    }
+
+    if (result === null) {
+      // default case
+      result = sm2.sounds[sID].play(oOptions);
+    }
+
+    return result;
+
+  };
+
+  // just for convenience
+  this.start = this.play;
+
+  /**
+   * Calls the setPlaybackRate() method of a SMSound object by ID.
+   *
+   * @param {string} sID The ID of the sound
+   * @return {SMSound} The SMSound object
+   */
+
+  this.setPlaybackRate = function(sID, rate, allowOverride) {
+
+    if (!idCheck(sID)) return false;
+
+    return sm2.sounds[sID].setPlaybackRate(rate, allowOverride);
+
+  };
+
+  /**
+   * Calls the setPosition() method of a SMSound object by ID.
+   *
+   * @param {string} sID The ID of the sound
+   * @param {number} nMsecOffset Position (milliseconds)
+   * @return {SMSound} The SMSound object
+   */
+
+  this.setPosition = function(sID, nMsecOffset) {
+
+    if (!idCheck(sID)) return false;
+
+    return sm2.sounds[sID].setPosition(nMsecOffset);
+
+  };
+
+  /**
+   * Calls the stop() method of a SMSound object by ID.
+   *
+   * @param {string} sID The ID of the sound
+   * @return {SMSound} The SMSound object
+   */
+
+  this.stop = function(sID) {
+
+    if (!idCheck(sID)) return false;
+
+    sm2._wD(sm + '.stop(' + sID + ')', 1);
+
+    return sm2.sounds[sID].stop();
+
+  };
+
+  /**
+   * Stops all currently-playing sounds.
+   */
+
+  this.stopAll = function() {
+
+    var oSound;
+    sm2._wD(sm + '.stopAll()', 1);
+
+    for (oSound in sm2.sounds) {
+      if (sm2.sounds.hasOwnProperty(oSound)) {
+        // apply only to sound objects
+        sm2.sounds[oSound].stop();
       }
     }
-  });
 
-  if (didCatchError) {
-    throw caughtError;
-  }
-}
+  };
 
-function onWorkScheduled(interactions, threadID) {
-  var didCatchError = false;
-  var caughtError = null;
+  /**
+   * Calls the pause() method of a SMSound object by ID.
+   *
+   * @param {string} sID The ID of the sound
+   * @return {SMSound} The SMSound object
+   */
 
-  subscribers.forEach(function (subscriber) {
-    try {
-      subscriber.onWorkScheduled(interactions, threadID);
-    } catch (error) {
-      if (!didCatchError) {
-        didCatchError = true;
-        caughtError = error;
+  this.pause = function(sID) {
+
+    if (!idCheck(sID)) return false;
+
+    return sm2.sounds[sID].pause();
+
+  };
+
+  /**
+   * Pauses all currently-playing sounds.
+   */
+
+  this.pauseAll = function() {
+
+    var i;
+    for (i = sm2.soundIDs.length - 1; i >= 0; i--) {
+      sm2.sounds[sm2.soundIDs[i]].pause();
+    }
+
+  };
+
+  /**
+   * Calls the resume() method of a SMSound object by ID.
+   *
+   * @param {string} sID The ID of the sound
+   * @return {SMSound} The SMSound object
+   */
+
+  this.resume = function(sID) {
+
+    if (!idCheck(sID)) return false;
+
+    return sm2.sounds[sID].resume();
+
+  };
+
+  /**
+   * Resumes all currently-paused sounds.
+   */
+
+  this.resumeAll = function() {
+
+    var i;
+    for (i = sm2.soundIDs.length - 1; i >= 0; i--) {
+      sm2.sounds[sm2.soundIDs[i]].resume();
+    }
+
+  };
+
+  /**
+   * Calls the togglePause() method of a SMSound object by ID.
+   *
+   * @param {string} sID The ID of the sound
+   * @return {SMSound} The SMSound object
+   */
+
+  this.togglePause = function(sID) {
+
+    if (!idCheck(sID)) return false;
+
+    return sm2.sounds[sID].togglePause();
+
+  };
+
+  /**
+   * Calls the setPan() method of a SMSound object by ID.
+   *
+   * @param {string} sID The ID of the sound
+   * @param {number} nPan The pan value (-100 to 100)
+   * @return {SMSound} The SMSound object
+   */
+
+  this.setPan = function(sID, nPan) {
+
+    if (!idCheck(sID)) return false;
+
+    return sm2.sounds[sID].setPan(nPan);
+
+  };
+
+  /**
+   * Calls the setVolume() method of a SMSound object by ID
+   * Overloaded case: pass only volume argument eg., setVolume(50) to apply to all sounds.
+   *
+   * @param {string} sID The ID of the sound
+   * @param {number} nVol The volume value (0 to 100)
+   * @return {SMSound} The SMSound object
+   */
+
+  this.setVolume = function(sID, nVol) {
+
+    // setVolume(50) function overloading case - apply to all sounds
+
+    var i, j;
+
+    if (sID !== _undefined && !isNaN(sID) && nVol === _undefined) {
+      for (i = 0, j = sm2.soundIDs.length; i < j; i++) {
+        sm2.sounds[sm2.soundIDs[i]].setVolume(sID);
+      }
+      return false;
+    }
+
+    // setVolume('mySound', 50) case
+
+    if (!idCheck(sID)) return false;
+
+    return sm2.sounds[sID].setVolume(nVol);
+
+  };
+
+  /**
+   * Calls the mute() method of either a single SMSound object by ID, or all sound objects.
+   *
+   * @param {string} sID Optional: The ID of the sound (if omitted, all sounds will be used.)
+   */
+
+  this.mute = function(sID) {
+
+    var i = 0;
+
+    if (sID instanceof String) {
+      sID = null;
+    }
+
+    if (!sID) {
+
+      sm2._wD(sm + '.mute(): Muting all sounds');
+      for (i = sm2.soundIDs.length - 1; i >= 0; i--) {
+        sm2.sounds[sm2.soundIDs[i]].mute();
+      }
+      sm2.muted = true;
+
+    } else {
+
+      if (!idCheck(sID)) return false;
+
+      sm2._wD(sm + '.mute(): Muting "' + sID + '"');
+      return sm2.sounds[sID].mute();
+
+    }
+
+    return true;
+
+  };
+
+  /**
+   * Mutes all sounds.
+   */
+
+  this.muteAll = function() {
+
+    sm2.mute();
+
+  };
+
+  /**
+   * Calls the unmute() method of either a single SMSound object by ID, or all sound objects.
+   *
+   * @param {string} sID Optional: The ID of the sound (if omitted, all sounds will be used.)
+   */
+
+  this.unmute = function(sID) {
+
+    var i;
+
+    if (sID instanceof String) {
+      sID = null;
+    }
+
+    if (!sID) {
+
+      sm2._wD(sm + '.unmute(): Unmuting all sounds');
+      for (i = sm2.soundIDs.length - 1; i >= 0; i--) {
+        sm2.sounds[sm2.soundIDs[i]].unmute();
+      }
+      sm2.muted = false;
+
+    } else {
+
+      if (!idCheck(sID)) return false;
+
+      sm2._wD(sm + '.unmute(): Unmuting "' + sID + '"');
+
+      return sm2.sounds[sID].unmute();
+
+    }
+
+    return true;
+
+  };
+
+  /**
+   * Unmutes all sounds.
+   */
+
+  this.unmuteAll = function() {
+
+    sm2.unmute();
+
+  };
+
+  /**
+   * Calls the toggleMute() method of a SMSound object by ID.
+   *
+   * @param {string} sID The ID of the sound
+   * @return {SMSound} The SMSound object
+   */
+
+  this.toggleMute = function(sID) {
+
+    if (!idCheck(sID)) return false;
+
+    return sm2.sounds[sID].toggleMute();
+
+  };
+
+  /**
+   * Retrieves the memory used by the flash plugin.
+   *
+   * @return {number} The amount of memory in use
+   */
+
+  this.getMemoryUse = function() {
+
+    // flash-only
+    var ram = 0;
+
+    if (flash && fV !== 8) {
+      ram = parseInt(flash._getMemoryUse(), 10);
+    }
+
+    return ram;
+
+  };
+
+  /**
+   * Undocumented: NOPs soundManager and all SMSound objects.
+   */
+
+  this.disable = function(bNoDisable) {
+
+    // destroy all functions
+    var i;
+
+    if (bNoDisable === _undefined) {
+      bNoDisable = false;
+    }
+
+    // already disabled?
+    if (disabled) return false;
+
+    disabled = true;
+
+    _wDS('shutdown', 1);
+
+    for (i = sm2.soundIDs.length - 1; i >= 0; i--) {
+      disableObject(sm2.sounds[sm2.soundIDs[i]]);
+    }
+
+    disableObject(sm2);
+
+    // fire "complete", despite fail
+    initComplete(bNoDisable);
+
+    event.remove(window, 'load', initUserOnload);
+
+    return true;
+
+  };
+
+  /**
+   * Determines playability of a MIME type, eg. 'audio/mp3'.
+   */
+
+  this.canPlayMIME = function(sMIME) {
+
+    var result;
+
+    if (sm2.hasHTML5) {
+      result = html5CanPlay({
+        type: sMIME
+      });
+    }
+
+    if (!result && needsFlash) {
+      // if flash 9, test netStream (movieStar) types as well.
+      result = (sMIME && sm2.ok() ? !!((fV > 8 ? sMIME.match(netStreamMimeTypes) : null) || sMIME.match(sm2.mimePattern)) : null); // TODO: make less "weird" (per JSLint)
+    }
+
+    return result;
+
+  };
+
+  /**
+   * Determines playability of a URL based on audio support.
+   *
+   * @param {string} sURL The URL to test
+   * @return {boolean} URL playability
+   */
+
+  this.canPlayURL = function(sURL) {
+
+    var result;
+
+    if (sm2.hasHTML5) {
+      result = html5CanPlay({
+        url: sURL
+      });
+    }
+
+    if (!result && needsFlash) {
+      result = (sURL && sm2.ok() ? !!(sURL.match(sm2.filePattern)) : null);
+    }
+
+    return result;
+
+  };
+
+  /**
+   * Determines playability of an HTML DOM &lt;a&gt; object (or similar object literal) based on audio support.
+   *
+   * @param {object} oLink an HTML DOM &lt;a&gt; object or object literal including href and/or type attributes
+   * @return {boolean} URL playability
+   */
+
+  this.canPlayLink = function(oLink) {
+
+    if (oLink.type !== _undefined && oLink.type && sm2.canPlayMIME(oLink.type)) return true;
+
+    return sm2.canPlayURL(oLink.href);
+
+  };
+
+  /**
+   * Retrieves a SMSound object by ID.
+   *
+   * @param {string} sID The ID of the sound
+   * @return {SMSound} The SMSound object
+   */
+
+  this.getSoundById = function(sID, _suppressDebug) {
+
+    if (!sID) return null;
+
+    var result = sm2.sounds[sID];
+
+    // <d>
+    if (!result && !_suppressDebug) {
+      sm2._wD(sm + '.getSoundById(): Sound "' + sID + '" not found.', 2);
+    }
+    // </d>
+
+    return result;
+
+  };
+
+  /**
+   * Queues a callback for execution when SoundManager has successfully initialized.
+   *
+   * @param {function} oMethod The callback method to fire
+   * @param {object} oScope Optional: The scope to apply to the callback
+   */
+
+  this.onready = function(oMethod, oScope) {
+
+    var sType = 'onready',
+        result = false;
+
+    if (typeof oMethod === 'function') {
+
+      // <d>
+      if (didInit) {
+        sm2._wD(str('queue', sType));
+      }
+      // </d>
+
+      if (!oScope) {
+        oScope = window;
+      }
+
+      addOnEvent(sType, oMethod, oScope);
+      processOnEvents();
+
+      result = true;
+
+    } else {
+
+      throw str('needFunction', sType);
+
+    }
+
+    return result;
+
+  };
+
+  /**
+   * Queues a callback for execution when SoundManager has failed to initialize.
+   *
+   * @param {function} oMethod The callback method to fire
+   * @param {object} oScope Optional: The scope to apply to the callback
+   */
+
+  this.ontimeout = function(oMethod, oScope) {
+
+    var sType = 'ontimeout',
+        result = false;
+
+    if (typeof oMethod === 'function') {
+
+      // <d>
+      if (didInit) {
+        sm2._wD(str('queue', sType));
+      }
+      // </d>
+
+      if (!oScope) {
+        oScope = window;
+      }
+
+      addOnEvent(sType, oMethod, oScope);
+      processOnEvents({ type: sType });
+
+      result = true;
+
+    } else {
+
+      throw str('needFunction', sType);
+
+    }
+
+    return result;
+
+  };
+
+  /**
+   * Writes console.log()-style debug output to a console or in-browser element.
+   * Applies when debugMode = true
+   *
+   * @param {string} sText The console message
+   * @param {object} nType Optional log level (number), or object. Number case: Log type/style where 0 = 'info', 1 = 'warn', 2 = 'error'. Object case: Object to be dumped.
+   */
+
+  this._writeDebug = function(sText, sTypeOrObject) {
+
+    // pseudo-private console.log()-style output
+    // <d>
+
+    var sDID = 'soundmanager-debug', o, oItem;
+
+    if (!sm2.setupOptions.debugMode) return false;
+
+    if (hasConsole && sm2.useConsole) {
+      if (sTypeOrObject && typeof sTypeOrObject === 'object') {
+        // object passed; dump to console.
+        console.log(sText, sTypeOrObject);
+      } else if (debugLevels[sTypeOrObject] !== _undefined) {
+        console[debugLevels[sTypeOrObject]](sText);
+      } else {
+        console.log(sText);
+      }
+      if (sm2.consoleOnly) return true;
+    }
+
+    o = id(sDID);
+
+    if (!o) return false;
+
+    oItem = doc.createElement('div');
+
+    if (++wdCount % 2 === 0) {
+      oItem.className = 'sm2-alt';
+    }
+
+    if (sTypeOrObject === _undefined) {
+      sTypeOrObject = 0;
+    } else {
+      sTypeOrObject = parseInt(sTypeOrObject, 10);
+    }
+
+    oItem.appendChild(doc.createTextNode(sText));
+
+    if (sTypeOrObject) {
+      if (sTypeOrObject >= 2) {
+        oItem.style.fontWeight = 'bold';
+      }
+      if (sTypeOrObject === 3) {
+        oItem.style.color = '#ff3333';
       }
     }
-  });
 
-  if (didCatchError) {
-    throw caughtError;
+    // top-to-bottom
+    // o.appendChild(oItem);
+
+    // bottom-to-top
+    o.insertBefore(oItem, o.firstChild);
+
+    o = null;
+    // </d>
+
+    return true;
+
+  };
+
+  // <d>
+  // last-resort debugging option
+  if (wl.indexOf('sm2-debug=alert') !== -1) {
+    this._writeDebug = function(sText) {
+      window.alert(sText);
+    };
   }
-}
+  // </d>
 
-function onWorkStarted(interactions, threadID) {
-  var didCatchError = false;
-  var caughtError = null;
+  // alias
+  this._wD = this._writeDebug;
 
-  subscribers.forEach(function (subscriber) {
-    try {
-      subscriber.onWorkStarted(interactions, threadID);
-    } catch (error) {
-      if (!didCatchError) {
-        didCatchError = true;
-        caughtError = error;
-      }
+  /**
+   * Provides debug / state information on all SMSound objects.
+   */
+
+  this._debug = function() {
+
+    // <d>
+    var i, j;
+    _wDS('currentObj', 1);
+
+    for (i = 0, j = sm2.soundIDs.length; i < j; i++) {
+      sm2.sounds[sm2.soundIDs[i]]._debug();
     }
-  });
+    // </d>
 
-  if (didCatchError) {
-    throw caughtError;
-  }
-}
+  };
 
-function onWorkStopped(interactions, threadID) {
-  var didCatchError = false;
-  var caughtError = null;
+  /**
+   * Restarts and re-initializes the SoundManager instance.
+   *
+   * @param {boolean} resetEvents Optional: When true, removes all registered onready and ontimeout event callbacks.
+   * @param {boolean} excludeInit Options: When true, does not call beginDelayedInit() (which would restart SM2).
+   * @return {object} soundManager The soundManager instance.
+   */
 
-  subscribers.forEach(function (subscriber) {
-    try {
-      subscriber.onWorkStopped(interactions, threadID);
-    } catch (error) {
-      if (!didCatchError) {
-        didCatchError = true;
-        caughtError = error;
-      }
+  this.reboot = function(resetEvents, excludeInit) {
+
+    // reset some (or all) state, and re-init unless otherwise specified.
+
+    // <d>
+    if (sm2.soundIDs.length) {
+      sm2._wD('Destroying ' + sm2.soundIDs.length + ' SMSound object' + (sm2.soundIDs.length !== 1 ? 's' : '') + '...');
     }
-  });
+    // </d>
 
-  if (didCatchError) {
-    throw caughtError;
-  }
-}
+    var i, j, k;
 
-function onWorkCanceled(interactions, threadID) {
-  var didCatchError = false;
-  var caughtError = null;
-
-  subscribers.forEach(function (subscriber) {
-    try {
-      subscriber.onWorkCanceled(interactions, threadID);
-    } catch (error) {
-      if (!didCatchError) {
-        didCatchError = true;
-        caughtError = error;
-      }
+    for (i = sm2.soundIDs.length - 1; i >= 0; i--) {
+      sm2.sounds[sm2.soundIDs[i]].destruct();
     }
-  });
 
-  if (didCatchError) {
-    throw caughtError;
-  }
-}
+    // trash ze flash (remove from the DOM)
 
-exports.unstable_clear = unstable_clear;
-exports.unstable_getCurrent = unstable_getCurrent;
-exports.unstable_getThreadID = unstable_getThreadID;
-exports.unstable_trace = unstable_trace;
-exports.unstable_wrap = unstable_wrap;
-exports.unstable_subscribe = unstable_subscribe;
-exports.unstable_unsubscribe = unstable_unsubscribe;
-  })();
-}
+    if (flash) {
 
+      try {
 
-/***/ }),
+        if (isIE) {
+          oRemovedHTML = flash.innerHTML;
+        }
 
-/***/ "./node_modules/scheduler/cjs/scheduler.development.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/scheduler/cjs/scheduler.development.js ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+        oRemoved = flash.parentNode.removeChild(flash);
 
-"use strict";
-/** @license React v16.6.1
- * scheduler.development.js
- *
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
+      } catch(e) {
 
+        // Remove failed? May be due to flash blockers silently removing the SWF object/embed node from the DOM. Warn and continue.
 
+        _wDS('badRemove', 2);
 
+      }
 
+    }
 
-if (true) {
-  (function() {
-'use strict';
+    // actually, force recreate of movie.
 
-Object.defineProperty(exports, '__esModule', { value: true });
+    oRemovedHTML = oRemoved = needsFlash = flash = null;
 
-/* eslint-disable no-var */
+    sm2.enabled = didDCLoaded = didInit = waitingForEI = initPending = didAppend = appendSuccess = disabled = useGlobalHTML5Audio = sm2.swfLoaded = false;
 
-// TODO: Use symbols?
-var ImmediatePriority = 1;
-var UserBlockingPriority = 2;
-var NormalPriority = 3;
-var LowPriority = 4;
-var IdlePriority = 5;
+    sm2.soundIDs = [];
+    sm2.sounds = {};
 
-// Max 31 bit integer. The max integer size in V8 for 32-bit systems.
-// Math.pow(2, 30) - 1
-// 0b111111111111111111111111111111
-var maxSigned31BitInt = 1073741823;
+    idCounter = 0;
+    didSetup = false;
 
-// Times out immediately
-var IMMEDIATE_PRIORITY_TIMEOUT = -1;
-// Eventually times out
-var USER_BLOCKING_PRIORITY = 250;
-var NORMAL_PRIORITY_TIMEOUT = 5000;
-var LOW_PRIORITY_TIMEOUT = 10000;
-// Never times out
-var IDLE_PRIORITY = maxSigned31BitInt;
+    if (!resetEvents) {
+      // reset callbacks for onready, ontimeout etc. so that they will fire again on re-init
+      for (i in on_queue) {
+        if (on_queue.hasOwnProperty(i)) {
+          for (j = 0, k = on_queue[i].length; j < k; j++) {
+            on_queue[i][j].fired = false;
+          }
+        }
+      }
+    } else {
+      // remove all callbacks entirely
+      on_queue = [];
+    }
 
-// Callbacks are stored as a circular, doubly linked list.
-var firstCallbackNode = null;
+    // <d>
+    if (!excludeInit) {
+      sm2._wD(sm + ': Rebooting...');
+    }
+    // </d>
 
-var currentDidTimeout = false;
-var currentPriorityLevel = NormalPriority;
-var currentEventStartTime = -1;
-var currentExpirationTime = -1;
+    // reset HTML5 and flash canPlay test results
 
-// This is set when a callback is being executed, to prevent re-entrancy.
-var isExecutingCallback = false;
-
-var isHostCallbackScheduled = false;
-
-var hasNativePerformanceNow = typeof performance === 'object' && typeof performance.now === 'function';
-
-function ensureHostCallbackIsScheduled() {
-  if (isExecutingCallback) {
-    // Don't schedule work yet; wait until the next time we yield.
-    return;
-  }
-  // Schedule the host callback using the earliest expiration in the list.
-  var expirationTime = firstCallbackNode.expirationTime;
-  if (!isHostCallbackScheduled) {
-    isHostCallbackScheduled = true;
-  } else {
-    // Cancel the existing host callback.
-    cancelHostCallback();
-  }
-  requestHostCallback(flushWork, expirationTime);
-}
-
-function flushFirstCallback() {
-  var flushedNode = firstCallbackNode;
-
-  // Remove the node from the list before calling the callback. That way the
-  // list is in a consistent state even if the callback throws.
-  var next = firstCallbackNode.next;
-  if (firstCallbackNode === next) {
-    // This is the last callback in the list.
-    firstCallbackNode = null;
-    next = null;
-  } else {
-    var lastCallbackNode = firstCallbackNode.previous;
-    firstCallbackNode = lastCallbackNode.next = next;
-    next.previous = lastCallbackNode;
-  }
-
-  flushedNode.next = flushedNode.previous = null;
-
-  // Now it's safe to call the callback.
-  var callback = flushedNode.callback;
-  var expirationTime = flushedNode.expirationTime;
-  var priorityLevel = flushedNode.priorityLevel;
-  var previousPriorityLevel = currentPriorityLevel;
-  var previousExpirationTime = currentExpirationTime;
-  currentPriorityLevel = priorityLevel;
-  currentExpirationTime = expirationTime;
-  var continuationCallback;
-  try {
-    continuationCallback = callback();
-  } finally {
-    currentPriorityLevel = previousPriorityLevel;
-    currentExpirationTime = previousExpirationTime;
-  }
-
-  // A callback may return a continuation. The continuation should be scheduled
-  // with the same priority and expiration as the just-finished callback.
-  if (typeof continuationCallback === 'function') {
-    var continuationNode = {
-      callback: continuationCallback,
-      priorityLevel: priorityLevel,
-      expirationTime: expirationTime,
-      next: null,
-      previous: null
+    sm2.html5 = {
+      usingFlash: null
     };
 
-    // Insert the new callback into the list, sorted by its expiration. This is
-    // almost the same as the code in `scheduleCallback`, except the callback
-    // is inserted into the list *before* callbacks of equal expiration instead
-    // of after.
-    if (firstCallbackNode === null) {
-      // This is the first callback in the list.
-      firstCallbackNode = continuationNode.next = continuationNode.previous = continuationNode;
-    } else {
-      var nextAfterContinuation = null;
-      var node = firstCallbackNode;
-      do {
-        if (node.expirationTime >= expirationTime) {
-          // This callback expires at or after the continuation. We will insert
-          // the continuation *before* this callback.
-          nextAfterContinuation = node;
-          break;
-        }
-        node = node.next;
-      } while (node !== firstCallbackNode);
+    sm2.flash = {};
 
-      if (nextAfterContinuation === null) {
-        // No equal or lower priority callback was found, which means the new
-        // callback is the lowest priority callback in the list.
-        nextAfterContinuation = firstCallbackNode;
-      } else if (nextAfterContinuation === firstCallbackNode) {
-        // The new callback is the highest priority callback in the list.
-        firstCallbackNode = continuationNode;
-        ensureHostCallbackIsScheduled();
+    // reset device-specific HTML/flash mode switches
+
+    sm2.html5Only = false;
+    sm2.ignoreFlash = false;
+
+    window.setTimeout(function() {
+
+      // by default, re-init
+
+      if (!excludeInit) {
+        sm2.beginDelayedInit();
       }
 
-      var previous = nextAfterContinuation.previous;
-      previous.next = nextAfterContinuation.previous = continuationNode;
-      continuationNode.next = nextAfterContinuation;
-      continuationNode.previous = previous;
-    }
-  }
-}
+    }, 20);
 
-function flushImmediateWork() {
-  if (
-  // Confirm we've exited the outer most event handler
-  currentEventStartTime === -1 && firstCallbackNode !== null && firstCallbackNode.priorityLevel === ImmediatePriority) {
-    isExecutingCallback = true;
-    try {
-      do {
-        flushFirstCallback();
-      } while (
-      // Keep flushing until there are no more immediate callbacks
-      firstCallbackNode !== null && firstCallbackNode.priorityLevel === ImmediatePriority);
-    } finally {
-      isExecutingCallback = false;
-      if (firstCallbackNode !== null) {
-        // There's still work remaining. Request another callback.
-        ensureHostCallbackIsScheduled();
+    return sm2;
+
+  };
+
+  this.reset = function() {
+
+    /**
+     * Shuts down and restores the SoundManager instance to its original loaded state, without an explicit reboot. All onready/ontimeout handlers are removed.
+     * After this call, SM2 may be re-initialized via soundManager.beginDelayedInit().
+     * @return {object} soundManager The soundManager instance.
+     */
+
+    _wDS('reset');
+
+    return sm2.reboot(true, true);
+
+  };
+
+  /**
+   * Undocumented: Determines the SM2 flash movie's load progress.
+   *
+   * @return {number or null} Percent loaded, or if invalid/unsupported, null.
+   */
+
+  this.getMoviePercent = function() {
+
+    /**
+     * Interesting syntax notes...
+     * Flash/ExternalInterface (ActiveX/NPAPI) bridge methods are not typeof "function" nor instanceof Function, but are still valid.
+     * Furthermore, using (flash && flash.PercentLoaded) causes IE to throw "object doesn't support this property or method".
+     * Thus, 'in' syntax must be used.
+     */
+
+    return (flash && 'PercentLoaded' in flash ? flash.PercentLoaded() : null);
+
+  };
+
+  /**
+   * Additional helper for manually invoking SM2's init process after DOM Ready / window.onload().
+   */
+
+  this.beginDelayedInit = function() {
+
+    windowLoaded = true;
+    domContentLoaded();
+
+    setTimeout(function() {
+
+      if (initPending) return false;
+
+      createMovie();
+      initMovie();
+      initPending = true;
+
+      return true;
+
+    }, 20);
+
+    delayWaitForEI();
+
+  };
+
+  /**
+   * Destroys the SoundManager instance and all SMSound instances.
+   */
+
+  this.destruct = function() {
+
+    sm2._wD(sm + '.destruct()');
+    sm2.disable(true);
+
+  };
+
+  /**
+   * SMSound() (sound object) constructor
+   * ------------------------------------
+   *
+   * @param {object} oOptions Sound options (id and url are required attributes)
+   * @return {SMSound} The new SMSound object
+   */
+
+  SMSound = function(oOptions) {
+
+    var s = this, resetProperties, add_html5_events, remove_html5_events, stop_html5_timer, start_html5_timer, attachOnPosition, onplay_called = false, onPositionItems = [], onPositionFired = 0, detachOnPosition, applyFromTo, lastURL = null, lastHTML5State, urlOmitted;
+
+    lastHTML5State = {
+      // tracks duration + position (time)
+      duration: null,
+      time: null
+    };
+
+    this.id = oOptions.id;
+
+    // legacy
+    this.sID = this.id;
+
+    this.url = oOptions.url;
+    this.options = mixin(oOptions);
+
+    // per-play-instance-specific options
+    this.instanceOptions = this.options;
+
+    // short alias
+    this._iO = this.instanceOptions;
+
+    // assign property defaults
+    this.pan = this.options.pan;
+    this.volume = this.options.volume;
+
+    // whether or not this object is using HTML5
+    this.isHTML5 = false;
+
+    // internal HTML5 Audio() object reference
+    this._a = null;
+
+    // for flash 8 special-case createSound() without url, followed by load/play with url case
+    urlOmitted = (!this.url);
+
+    /**
+     * SMSound() public methods
+     * ------------------------
+     */
+
+    this.id3 = {};
+
+    /**
+     * Writes SMSound object parameters to debug console
+     */
+
+    this._debug = function() {
+
+      // <d>
+      sm2._wD(s.id + ': Merged options:', s.options);
+      // </d>
+
+    };
+
+    /**
+     * Begins loading a sound per its *url*.
+     *
+     * @param {object} options Optional: Sound options
+     * @return {SMSound} The SMSound object
+     */
+
+    this.load = function(options) {
+
+      var oSound = null, instanceOptions;
+
+      if (options !== _undefined) {
+        s._iO = mixin(options, s.options);
       } else {
-        isHostCallbackScheduled = false;
-      }
-    }
-  }
-}
-
-function flushWork(didTimeout) {
-  isExecutingCallback = true;
-  var previousDidTimeout = currentDidTimeout;
-  currentDidTimeout = didTimeout;
-  try {
-    if (didTimeout) {
-      // Flush all the expired callbacks without yielding.
-      while (firstCallbackNode !== null) {
-        // Read the current time. Flush all the callbacks that expire at or
-        // earlier than that time. Then read the current time again and repeat.
-        // This optimizes for as few performance.now calls as possible.
-        var currentTime = exports.unstable_now();
-        if (firstCallbackNode.expirationTime <= currentTime) {
-          do {
-            flushFirstCallback();
-          } while (firstCallbackNode !== null && firstCallbackNode.expirationTime <= currentTime);
-          continue;
+        options = s.options;
+        s._iO = options;
+        if (lastURL && lastURL !== s.url) {
+          _wDS('manURL');
+          s._iO.url = s.url;
+          s.url = null;
         }
-        break;
       }
-    } else {
-      // Keep flushing callbacks until we run out of time in the frame.
-      if (firstCallbackNode !== null) {
-        do {
-          flushFirstCallback();
-        } while (firstCallbackNode !== null && !shouldYieldToHost());
+
+      if (!s._iO.url) {
+        s._iO.url = s.url;
       }
-    }
-  } finally {
-    isExecutingCallback = false;
-    currentDidTimeout = previousDidTimeout;
-    if (firstCallbackNode !== null) {
-      // There's still work remaining. Request another callback.
-      ensureHostCallbackIsScheduled();
-    } else {
-      isHostCallbackScheduled = false;
-    }
-    // Before exiting, flush all the immediate work that was scheduled.
-    flushImmediateWork();
-  }
-}
 
-function unstable_runWithPriority(priorityLevel, eventHandler) {
-  switch (priorityLevel) {
-    case ImmediatePriority:
-    case UserBlockingPriority:
-    case NormalPriority:
-    case LowPriority:
-    case IdlePriority:
-      break;
-    default:
-      priorityLevel = NormalPriority;
-  }
+      s._iO.url = parseURL(s._iO.url);
 
-  var previousPriorityLevel = currentPriorityLevel;
-  var previousEventStartTime = currentEventStartTime;
-  currentPriorityLevel = priorityLevel;
-  currentEventStartTime = exports.unstable_now();
+      // ensure we're in sync
+      s.instanceOptions = s._iO;
 
-  try {
-    return eventHandler();
-  } finally {
-    currentPriorityLevel = previousPriorityLevel;
-    currentEventStartTime = previousEventStartTime;
+      // local shortcut
+      instanceOptions = s._iO;
 
-    // Before exiting, flush all the immediate work that was scheduled.
-    flushImmediateWork();
-  }
-}
+      sm2._wD(s.id + ': load (' + instanceOptions.url + ')');
 
-function unstable_wrapCallback(callback) {
-  var parentPriorityLevel = currentPriorityLevel;
-  return function () {
-    // This is a fork of runWithPriority, inlined for performance.
-    var previousPriorityLevel = currentPriorityLevel;
-    var previousEventStartTime = currentEventStartTime;
-    currentPriorityLevel = parentPriorityLevel;
-    currentEventStartTime = exports.unstable_now();
-
-    try {
-      return callback.apply(this, arguments);
-    } finally {
-      currentPriorityLevel = previousPriorityLevel;
-      currentEventStartTime = previousEventStartTime;
-      flushImmediateWork();
-    }
-  };
-}
-
-function unstable_scheduleCallback(callback, deprecated_options) {
-  var startTime = currentEventStartTime !== -1 ? currentEventStartTime : exports.unstable_now();
-
-  var expirationTime;
-  if (typeof deprecated_options === 'object' && deprecated_options !== null && typeof deprecated_options.timeout === 'number') {
-    // FIXME: Remove this branch once we lift expiration times out of React.
-    expirationTime = startTime + deprecated_options.timeout;
-  } else {
-    switch (currentPriorityLevel) {
-      case ImmediatePriority:
-        expirationTime = startTime + IMMEDIATE_PRIORITY_TIMEOUT;
-        break;
-      case UserBlockingPriority:
-        expirationTime = startTime + USER_BLOCKING_PRIORITY;
-        break;
-      case IdlePriority:
-        expirationTime = startTime + IDLE_PRIORITY;
-        break;
-      case LowPriority:
-        expirationTime = startTime + LOW_PRIORITY_TIMEOUT;
-        break;
-      case NormalPriority:
-      default:
-        expirationTime = startTime + NORMAL_PRIORITY_TIMEOUT;
-    }
-  }
-
-  var newNode = {
-    callback: callback,
-    priorityLevel: currentPriorityLevel,
-    expirationTime: expirationTime,
-    next: null,
-    previous: null
-  };
-
-  // Insert the new callback into the list, ordered first by expiration, then
-  // by insertion. So the new callback is inserted any other callback with
-  // equal expiration.
-  if (firstCallbackNode === null) {
-    // This is the first callback in the list.
-    firstCallbackNode = newNode.next = newNode.previous = newNode;
-    ensureHostCallbackIsScheduled();
-  } else {
-    var next = null;
-    var node = firstCallbackNode;
-    do {
-      if (node.expirationTime > expirationTime) {
-        // The new callback expires before this one.
-        next = node;
-        break;
+      if (!instanceOptions.url && !s.url) {
+        sm2._wD(s.id + ': load(): url is unassigned. Exiting.', 2);
+        return s;
       }
-      node = node.next;
-    } while (node !== firstCallbackNode);
 
-    if (next === null) {
-      // No callback with a later expiration was found, which means the new
-      // callback has the latest expiration in the list.
-      next = firstCallbackNode;
-    } else if (next === firstCallbackNode) {
-      // The new callback has the earliest expiration in the entire list.
-      firstCallbackNode = newNode;
-      ensureHostCallbackIsScheduled();
-    }
-
-    var previous = next.previous;
-    previous.next = next.previous = newNode;
-    newNode.next = next;
-    newNode.previous = previous;
-  }
-
-  return newNode;
-}
-
-function unstable_cancelCallback(callbackNode) {
-  var next = callbackNode.next;
-  if (next === null) {
-    // Already cancelled.
-    return;
-  }
-
-  if (next === callbackNode) {
-    // This is the only scheduled callback. Clear the list.
-    firstCallbackNode = null;
-  } else {
-    // Remove the callback from its position in the list.
-    if (callbackNode === firstCallbackNode) {
-      firstCallbackNode = next;
-    }
-    var previous = callbackNode.previous;
-    previous.next = next;
-    next.previous = previous;
-  }
-
-  callbackNode.next = callbackNode.previous = null;
-}
-
-function unstable_getCurrentPriorityLevel() {
-  return currentPriorityLevel;
-}
-
-function unstable_shouldYield() {
-  return !currentDidTimeout && (firstCallbackNode !== null && firstCallbackNode.expirationTime < currentExpirationTime || shouldYieldToHost());
-}
-
-// The remaining code is essentially a polyfill for requestIdleCallback. It
-// works by scheduling a requestAnimationFrame, storing the time for the start
-// of the frame, then scheduling a postMessage which gets scheduled after paint.
-// Within the postMessage handler do as much work as possible until time + frame
-// rate. By separating the idle call into a separate event tick we ensure that
-// layout, paint and other browser work is counted against the available time.
-// The frame rate is dynamically adjusted.
-
-// We capture a local reference to any global, in case it gets polyfilled after
-// this module is initially evaluated. We want to be using a
-// consistent implementation.
-var localDate = Date;
-
-// This initialization code may run even on server environments if a component
-// just imports ReactDOM (e.g. for findDOMNode). Some environments might not
-// have setTimeout or clearTimeout. However, we always expect them to be defined
-// on the client. https://github.com/facebook/react/pull/13088
-var localSetTimeout = typeof setTimeout === 'function' ? setTimeout : undefined;
-var localClearTimeout = typeof clearTimeout === 'function' ? clearTimeout : undefined;
-
-// We don't expect either of these to necessarily be defined, but we will error
-// later if they are missing on the client.
-var localRequestAnimationFrame = typeof requestAnimationFrame === 'function' ? requestAnimationFrame : undefined;
-var localCancelAnimationFrame = typeof cancelAnimationFrame === 'function' ? cancelAnimationFrame : undefined;
-
-// requestAnimationFrame does not run when the tab is in the background. If
-// we're backgrounded we prefer for that work to happen so that the page
-// continues to load in the background. So we also schedule a 'setTimeout' as
-// a fallback.
-// TODO: Need a better heuristic for backgrounded work.
-var ANIMATION_FRAME_TIMEOUT = 100;
-var rAFID;
-var rAFTimeoutID;
-var requestAnimationFrameWithTimeout = function (callback) {
-  // schedule rAF and also a setTimeout
-  rAFID = localRequestAnimationFrame(function (timestamp) {
-    // cancel the setTimeout
-    localClearTimeout(rAFTimeoutID);
-    callback(timestamp);
-  });
-  rAFTimeoutID = localSetTimeout(function () {
-    // cancel the requestAnimationFrame
-    localCancelAnimationFrame(rAFID);
-    callback(exports.unstable_now());
-  }, ANIMATION_FRAME_TIMEOUT);
-};
-
-if (hasNativePerformanceNow) {
-  var Performance = performance;
-  exports.unstable_now = function () {
-    return Performance.now();
-  };
-} else {
-  exports.unstable_now = function () {
-    return localDate.now();
-  };
-}
-
-var requestHostCallback;
-var cancelHostCallback;
-var shouldYieldToHost;
-
-if (typeof window !== 'undefined' && window._schedMock) {
-  // Dynamic injection, only for testing purposes.
-  var impl = window._schedMock;
-  requestHostCallback = impl[0];
-  cancelHostCallback = impl[1];
-  shouldYieldToHost = impl[2];
-} else if (
-// If Scheduler runs in a non-DOM environment, it falls back to a naive
-// implementation using setTimeout.
-typeof window === 'undefined' ||
-// "addEventListener" might not be available on the window object
-// if this is a mocked "window" object. So we need to validate that too.
-typeof window.addEventListener !== 'function') {
-  var _callback = null;
-  var _currentTime = -1;
-  var _flushCallback = function (didTimeout, ms) {
-    if (_callback !== null) {
-      var cb = _callback;
-      _callback = null;
-      try {
-        _currentTime = ms;
-        cb(didTimeout);
-      } finally {
-        _currentTime = -1;
+      // <d>
+      if (!s.isHTML5 && fV === 8 && !s.url && !instanceOptions.autoPlay) {
+        // flash 8 load() -> play() won't work before onload has fired.
+        sm2._wD(s.id + ': Flash 8 load() limitation: Wait for onload() before calling play().', 1);
       }
-    }
-  };
-  requestHostCallback = function (cb, ms) {
-    if (_currentTime !== -1) {
-      // Protect against re-entrancy.
-      setTimeout(requestHostCallback, 0, cb, ms);
-    } else {
-      _callback = cb;
-      setTimeout(_flushCallback, ms, true, ms);
-      setTimeout(_flushCallback, maxSigned31BitInt, false, maxSigned31BitInt);
-    }
-  };
-  cancelHostCallback = function () {
-    _callback = null;
-  };
-  shouldYieldToHost = function () {
-    return false;
-  };
-  exports.unstable_now = function () {
-    return _currentTime === -1 ? 0 : _currentTime;
-  };
-} else {
-  if (typeof console !== 'undefined') {
-    // TODO: Remove fb.me link
-    if (typeof localRequestAnimationFrame !== 'function') {
-      console.error("This browser doesn't support requestAnimationFrame. " + 'Make sure that you load a ' + 'polyfill in older browsers. https://fb.me/react-polyfills');
-    }
-    if (typeof localCancelAnimationFrame !== 'function') {
-      console.error("This browser doesn't support cancelAnimationFrame. " + 'Make sure that you load a ' + 'polyfill in older browsers. https://fb.me/react-polyfills');
-    }
-  }
+      // </d>
 
-  var scheduledHostCallback = null;
-  var isMessageEventScheduled = false;
-  var timeoutTime = -1;
+      if (instanceOptions.url === s.url && s.readyState !== 0 && s.readyState !== 2) {
+        _wDS('onURL', 1);
+        // if loaded and an onload() exists, fire immediately.
+        if (s.readyState === 3 && instanceOptions.onload) {
+          // assume success based on truthy duration.
+          wrapCallback(s, function() {
+            instanceOptions.onload.apply(s, [(!!s.duration)]);
+          });
+        }
+        return s;
+      }
 
-  var isAnimationFrameScheduled = false;
+      // reset a few state properties
 
-  var isFlushingHostCallback = false;
+      s.loaded = false;
+      s.readyState = 1;
+      s.playState = 0;
+      s.id3 = {};
 
-  var frameDeadline = 0;
-  // We start out assuming that we run at 30fps but then the heuristic tracking
-  // will adjust this value to a faster fps if we get more frequent animation
-  // frames.
-  var previousFrameTime = 33;
-  var activeFrameTime = 33;
+      // TODO: If switching from HTML5 -> flash (or vice versa), stop currently-playing audio.
 
-  shouldYieldToHost = function () {
-    return frameDeadline <= exports.unstable_now();
-  };
+      if (html5OK(instanceOptions)) {
 
-  // We use the postMessage trick to defer idle work until after the repaint.
-  var messageKey = '__reactIdleCallback$' + Math.random().toString(36).slice(2);
-  var idleTick = function (event) {
-    if (event.source !== window || event.data !== messageKey) {
-      return;
-    }
+        oSound = s._setup_html5(instanceOptions);
 
-    isMessageEventScheduled = false;
+        if (!oSound._called_load) {
 
-    var prevScheduledCallback = scheduledHostCallback;
-    var prevTimeoutTime = timeoutTime;
-    scheduledHostCallback = null;
-    timeoutTime = -1;
+          s._html5_canplay = false;
 
-    var currentTime = exports.unstable_now();
+          // TODO: review called_load / html5_canplay logic
 
-    var didTimeout = false;
-    if (frameDeadline - currentTime <= 0) {
-      // There's no time left in this idle period. Check if the callback has
-      // a timeout and whether it's been exceeded.
-      if (prevTimeoutTime !== -1 && prevTimeoutTime <= currentTime) {
-        // Exceeded the timeout. Invoke the callback even though there's no
-        // time left.
-        didTimeout = true;
+          // if url provided directly to load(), assign it here.
+
+          if (s.url !== instanceOptions.url) {
+
+            sm2._wD(_wDS('manURL') + ': ' + instanceOptions.url);
+
+            s._a.src = instanceOptions.url;
+
+            // TODO: review / re-apply all relevant options (volume, loop, onposition etc.)
+
+            // reset position for new URL
+            s.setPosition(0);
+
+          }
+
+          // given explicit load call, try to preload.
+
+          // early HTML5 implementation (non-standard)
+          s._a.autobuffer = 'auto';
+
+          // standard property, values: none / metadata / auto
+          // reference: http://msdn.microsoft.com/en-us/library/ie/ff974759%28v=vs.85%29.aspx
+          s._a.preload = 'auto';
+
+          s._a._called_load = true;
+
+        } else {
+
+          sm2._wD(s.id + ': Ignoring request to load again');
+
+        }
+
       } else {
-        // No timeout.
-        if (!isAnimationFrameScheduled) {
-          // Schedule another animation callback so we retry later.
-          isAnimationFrameScheduled = true;
-          requestAnimationFrameWithTimeout(animationTick);
+
+        if (sm2.html5Only) {
+          sm2._wD(s.id + ': No flash support. Exiting.');
+          return s;
         }
-        // Exit without invoking the callback.
-        scheduledHostCallback = prevScheduledCallback;
-        timeoutTime = prevTimeoutTime;
+
+        if (s._iO.url && s._iO.url.match(/data:/i)) {
+          // data: URIs not supported by Flash, either.
+          sm2._wD(s.id + ': data: URIs not supported via Flash. Exiting.');
+          return s;
+        }
+
+        try {
+          s.isHTML5 = false;
+          s._iO = policyFix(loopFix(instanceOptions));
+          // if we have "position", disable auto-play as we'll be seeking to that position at onload().
+          if (s._iO.autoPlay && (s._iO.position || s._iO.from)) {
+            sm2._wD(s.id + ': Disabling autoPlay because of non-zero offset case');
+            s._iO.autoPlay = false;
+          }
+          // re-assign local shortcut
+          instanceOptions = s._iO;
+          if (fV === 8) {
+            flash._load(s.id, instanceOptions.url, instanceOptions.stream, instanceOptions.autoPlay, instanceOptions.usePolicyFile);
+          } else {
+            flash._load(s.id, instanceOptions.url, !!(instanceOptions.stream), !!(instanceOptions.autoPlay), instanceOptions.loops || 1, !!(instanceOptions.autoLoad), instanceOptions.usePolicyFile);
+          }
+        } catch(e) {
+          _wDS('smError', 2);
+          debugTS('onload', false);
+          catchError({
+            type: 'SMSOUND_LOAD_JS_EXCEPTION',
+            fatal: true
+          });
+        }
+
+      }
+
+      // after all of this, ensure sound url is up to date.
+      s.url = instanceOptions.url;
+
+      return s;
+
+    };
+
+    /**
+     * Unloads a sound, canceling any open HTTP requests.
+     *
+     * @return {SMSound} The SMSound object
+     */
+
+    this.unload = function() {
+
+      // Flash 8/AS2 can't "close" a stream - fake it by loading an empty URL
+      // Flash 9/AS3: Close stream, preventing further load
+      // HTML5: Most UAs will use empty URL
+
+      if (s.readyState !== 0) {
+
+        sm2._wD(s.id + ': unload()');
+
+        if (!s.isHTML5) {
+
+          if (fV === 8) {
+            flash._unload(s.id, emptyURL);
+          } else {
+            flash._unload(s.id);
+          }
+
+        } else {
+
+          stop_html5_timer();
+
+          if (s._a) {
+
+            s._a.pause();
+
+            // update empty URL, too
+            lastURL = html5Unload(s._a);
+
+          }
+
+        }
+
+        // reset load/status flags
+        resetProperties();
+
+      }
+
+      return s;
+
+    };
+
+    /**
+     * Unloads and destroys a sound.
+     */
+
+    this.destruct = function(_bFromSM) {
+
+      sm2._wD(s.id + ': Destruct');
+
+      if (!s.isHTML5) {
+
+        // kill sound within Flash
+        // Disable the onfailure handler
+        s._iO.onfailure = null;
+        flash._destroySound(s.id);
+
+      } else {
+
+        stop_html5_timer();
+
+        if (s._a) {
+          s._a.pause();
+          html5Unload(s._a);
+          if (!useGlobalHTML5Audio) {
+            remove_html5_events();
+          }
+          // break obvious circular reference
+          s._a._s = null;
+          s._a = null;
+        }
+
+      }
+
+      if (!_bFromSM) {
+        // ensure deletion from controller
+        sm2.destroySound(s.id, true);
+      }
+
+    };
+
+    /**
+     * Begins playing a sound.
+     *
+     * @param {object} options Optional: Sound options
+     * @return {SMSound} The SMSound object
+     */
+
+    this.play = function(options, _updatePlayState) {
+
+      var fN, allowMulti, a, onready,
+          audioClone, onended, oncanplay,
+          startOK = true;
+
+      // <d>
+      fN = s.id + ': play(): ';
+      // </d>
+
+      // default to true
+      _updatePlayState = (_updatePlayState === _undefined ? true : _updatePlayState);
+
+      if (!options) {
+        options = {};
+      }
+
+      // first, use local URL (if specified)
+      if (s.url) {
+        s._iO.url = s.url;
+      }
+
+      // mix in any options defined at createSound()
+      s._iO = mixin(s._iO, s.options);
+
+      // mix in any options specific to this method
+      s._iO = mixin(options, s._iO);
+
+      s._iO.url = parseURL(s._iO.url);
+
+      s.instanceOptions = s._iO;
+
+      // RTMP-only
+      if (!s.isHTML5 && s._iO.serverURL && !s.connected) {
+        if (!s.getAutoPlay()) {
+          sm2._wD(fN + ' Netstream not connected yet - setting autoPlay');
+          s.setAutoPlay(true);
+        }
+        // play will be called in onconnect()
+        return s;
+      }
+
+      if (html5OK(s._iO)) {
+        s._setup_html5(s._iO);
+        start_html5_timer();
+      }
+
+      if (s.playState === 1 && !s.paused) {
+
+        allowMulti = s._iO.multiShot;
+
+        if (!allowMulti) {
+
+          sm2._wD(fN + 'Already playing (one-shot)', 1);
+
+          if (s.isHTML5) {
+            // go back to original position.
+            s.setPosition(s._iO.position);
+          }
+
+          return s;
+
+        }
+
+        sm2._wD(fN + 'Already playing (multi-shot)', 1);
+
+      }
+
+      // edge case: play() with explicit URL parameter
+      if (options.url && options.url !== s.url) {
+
+        // special case for createSound() followed by load() / play() with url; avoid double-load case.
+        if (!s.readyState && !s.isHTML5 && fV === 8 && urlOmitted) {
+
+          urlOmitted = false;
+
+        } else {
+
+          // load using merged options
+          s.load(s._iO);
+
+        }
+
+      }
+
+      if (!s.loaded) {
+
+        if (s.readyState === 0) {
+
+          sm2._wD(fN + 'Attempting to load');
+
+          // try to get this sound playing ASAP
+          if (!s.isHTML5 && !sm2.html5Only) {
+
+            // flash: assign directly because setAutoPlay() increments the instanceCount
+            s._iO.autoPlay = true;
+            s.load(s._iO);
+
+          } else if (s.isHTML5) {
+
+            // iOS needs this when recycling sounds, loading a new URL on an existing object.
+            s.load(s._iO);
+
+          } else {
+
+            sm2._wD(fN + 'Unsupported type. Exiting.');
+
+            return s;
+
+          }
+
+          // HTML5 hack - re-set instanceOptions?
+          s.instanceOptions = s._iO;
+
+        } else if (s.readyState === 2) {
+
+          sm2._wD(fN + 'Could not load - exiting', 2);
+
+          return s;
+
+        } else {
+
+          sm2._wD(fN + 'Loading - attempting to play...');
+
+        }
+
+      } else {
+
+        // "play()"
+        sm2._wD(fN.substr(0, fN.lastIndexOf(':')));
+
+      }
+
+      if (!s.isHTML5 && fV === 9 && s.position > 0 && s.position === s.duration) {
+        // flash 9 needs a position reset if play() is called while at the end of a sound.
+        sm2._wD(fN + 'Sound at end, resetting to position: 0');
+        options.position = 0;
+      }
+
+      /**
+       * Streams will pause when their buffer is full if they are being loaded.
+       * In this case paused is true, but the song hasn't started playing yet.
+       * If we just call resume() the onplay() callback will never be called.
+       * So only call resume() if the position is > 0.
+       * Another reason is because options like volume won't have been applied yet.
+       * For normal sounds, just resume.
+       */
+
+      if (s.paused && s.position >= 0 && (!s._iO.serverURL || s.position > 0)) {
+
+        // https://gist.github.com/37b17df75cc4d7a90bf6
+        sm2._wD(fN + 'Resuming from paused state', 1);
+        s.resume();
+
+      } else {
+
+        s._iO = mixin(options, s._iO);
+
+        /**
+         * Preload in the event of play() with position under Flash,
+         * or from/to parameters and non-RTMP case
+         */
+        if (((!s.isHTML5 && s._iO.position !== null && s._iO.position > 0) || (s._iO.from !== null && s._iO.from > 0) || s._iO.to !== null) && s.instanceCount === 0 && s.playState === 0 && !s._iO.serverURL) {
+
+          onready = function() {
+            // sound "canplay" or onload()
+            // re-apply position/from/to to instance options, and start playback
+            s._iO = mixin(options, s._iO);
+            s.play(s._iO);
+          };
+
+          // HTML5 needs to at least have "canplay" fired before seeking.
+          if (s.isHTML5 && !s._html5_canplay) {
+
+            // this hasn't been loaded yet. load it first, and then do this again.
+            sm2._wD(fN + 'Beginning load for non-zero offset case');
+
+            s.load({
+              // note: custom HTML5-only event added for from/to implementation.
+              _oncanplay: onready
+            });
+
+          } else if (!s.isHTML5 && !s.loaded && (!s.readyState || s.readyState !== 2)) {
+
+            // to be safe, preload the whole thing in Flash.
+
+            sm2._wD(fN + 'Preloading for non-zero offset case');
+
+            s.load({
+              onload: onready
+            });
+
+          }
+
+          // otherwise, we're ready to go. re-apply local options, and continue
+
+          s._iO = applyFromTo();
+
+        }
+
+        // sm2._wD(fN + 'Starting to play');
+
+        // increment instance counter, where enabled + supported
+        if (!s.instanceCount || s._iO.multiShotEvents || (s.isHTML5 && s._iO.multiShot && !useGlobalHTML5Audio) || (!s.isHTML5 && fV > 8 && !s.getAutoPlay())) {
+          s.instanceCount++;
+        }
+
+        // if first play and onposition parameters exist, apply them now
+        if (s._iO.onposition && s.playState === 0) {
+          attachOnPosition(s);
+        }
+
+        s.playState = 1;
+        s.paused = false;
+
+        s.position = (s._iO.position !== _undefined && !isNaN(s._iO.position) ? s._iO.position : 0);
+
+        if (!s.isHTML5) {
+          s._iO = policyFix(loopFix(s._iO));
+        }
+
+        if (s._iO.onplay && _updatePlayState) {
+          s._iO.onplay.apply(s);
+          onplay_called = true;
+        }
+
+        s.setVolume(s._iO.volume, true);
+        s.setPan(s._iO.pan, true);
+
+        if (s._iO.playbackRate !== 1) {
+          s.setPlaybackRate(s._iO.playbackRate);
+        }
+
+        if (!s.isHTML5) {
+
+          startOK = flash._start(s.id, s._iO.loops || 1, (fV === 9 ? s.position : s.position / msecScale), s._iO.multiShot || false);
+
+          if (fV === 9 && !startOK) {
+            // edge case: no sound hardware, or 32-channel flash ceiling hit.
+            // applies only to Flash 9, non-NetStream/MovieStar sounds.
+            // http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/media/Sound.html#play%28%29
+            sm2._wD(fN + 'No sound hardware, or 32-sound ceiling hit', 2);
+            if (s._iO.onplayerror) {
+              s._iO.onplayerror.apply(s);
+            }
+
+          }
+
+        } else if (s.instanceCount < 2) {
+
+            // HTML5 single-instance case
+
+            start_html5_timer();
+
+            a = s._setup_html5();
+
+            s.setPosition(s._iO.position);
+
+            a.play();
+
+          } else {
+
+            // HTML5 multi-shot case
+
+            sm2._wD(s.id + ': Cloning Audio() for instance #' + s.instanceCount + '...');
+
+            audioClone = new Audio(s._iO.url);
+
+            onended = function() {
+              event.remove(audioClone, 'ended', onended);
+              s._onfinish(s);
+              // cleanup
+              html5Unload(audioClone);
+              audioClone = null;
+            };
+
+            oncanplay = function() {
+              event.remove(audioClone, 'canplay', oncanplay);
+              try {
+                audioClone.currentTime = s._iO.position / msecScale;
+              } catch(err) {
+                complain(s.id + ': multiShot play() failed to apply position of ' + (s._iO.position / msecScale));
+              }
+              audioClone.play();
+            };
+
+            event.add(audioClone, 'ended', onended);
+
+            // apply volume to clones, too
+            if (s._iO.volume !== _undefined) {
+              audioClone.volume = Math.max(0, Math.min(1, s._iO.volume / 100));
+            }
+
+            // playing multiple muted sounds? if you do this, you're weird ;) - but let's cover it.
+            if (s.muted) {
+              audioClone.muted = true;
+            }
+
+            if (s._iO.position) {
+              // HTML5 audio can't seek before onplay() event has fired.
+              // wait for canplay, then seek to position and start playback.
+              event.add(audioClone, 'canplay', oncanplay);
+            } else {
+              // begin playback at currentTime: 0
+              audioClone.play();
+            }
+
+          }
+
+      }
+
+      return s;
+
+    };
+
+    // just for convenience
+    this.start = this.play;
+
+    /**
+     * Stops playing a sound (and optionally, all sounds)
+     *
+     * @param {boolean} bAll Optional: Whether to stop all sounds
+     * @return {SMSound} The SMSound object
+     */
+
+    this.stop = function(bAll) {
+
+      var instanceOptions = s._iO,
+          originalPosition;
+
+      if (s.playState === 1) {
+
+        sm2._wD(s.id + ': stop()');
+
+        s._onbufferchange(0);
+        s._resetOnPosition(0);
+        s.paused = false;
+
+        if (!s.isHTML5) {
+          s.playState = 0;
+        }
+
+        // remove onPosition listeners, if any
+        detachOnPosition();
+
+        // and "to" position, if set
+        if (instanceOptions.to) {
+          s.clearOnPosition(instanceOptions.to);
+        }
+
+        if (!s.isHTML5) {
+
+          flash._stop(s.id, bAll);
+
+          // hack for netStream: just unload
+          if (instanceOptions.serverURL) {
+            s.unload();
+          }
+
+        } else if (s._a) {
+
+            originalPosition = s.position;
+
+            // act like Flash, though
+            s.setPosition(0);
+
+            // hack: reflect old position for onstop() (also like Flash)
+            s.position = originalPosition;
+
+            // html5 has no stop()
+            // NOTE: pausing means iOS requires interaction to resume.
+            s._a.pause();
+
+            s.playState = 0;
+
+            // and update UI
+            s._onTimer();
+
+            stop_html5_timer();
+
+          }
+
+        s.instanceCount = 0;
+        s._iO = {};
+
+        if (instanceOptions.onstop) {
+          instanceOptions.onstop.apply(s);
+        }
+
+      }
+
+      return s;
+
+    };
+
+    /**
+     * Undocumented/internal: Sets autoPlay for RTMP.
+     *
+     * @param {boolean} autoPlay state
+     */
+
+    this.setAutoPlay = function(autoPlay) {
+
+      sm2._wD(s.id + ': Autoplay turned ' + (autoPlay ? 'on' : 'off'));
+      s._iO.autoPlay = autoPlay;
+
+      if (!s.isHTML5) {
+        flash._setAutoPlay(s.id, autoPlay);
+        if (autoPlay) {
+          // only increment the instanceCount if the sound isn't loaded (TODO: verify RTMP)
+          if (!s.instanceCount && s.readyState === 1) {
+            s.instanceCount++;
+            sm2._wD(s.id + ': Incremented instance count to ' + s.instanceCount);
+          }
+        }
+      }
+
+    };
+
+    /**
+     * Undocumented/internal: Returns the autoPlay boolean.
+     *
+     * @return {boolean} The current autoPlay value
+     */
+
+    this.getAutoPlay = function() {
+
+      return s._iO.autoPlay;
+
+    };
+
+    /**
+     * Sets the playback rate of a sound (HTML5-only.)
+     *
+     * @param {number} playbackRate (+/-)
+     * @return {SMSound} The SMSound object
+     */
+
+    this.setPlaybackRate = function(playbackRate) {
+
+      // Per Mozilla, limit acceptable values to prevent playback from stopping (unless allowOverride is truthy.)
+      // https://developer.mozilla.org/en-US/Apps/Build/Audio_and_video_delivery/WebAudio_playbackRate_explained
+      var normalizedRate = Math.max(0.5, Math.min(4, playbackRate));
+
+      // <d>
+      if (normalizedRate !== playbackRate) {
+        sm2._wD(s.id + ': setPlaybackRate(' + playbackRate + '): limiting rate to ' + normalizedRate, 2);
+      }
+      // </d>
+
+      if (s.isHTML5) {
+        try {
+          s._iO.playbackRate = normalizedRate;
+          s._a.playbackRate = normalizedRate;
+        } catch(e) {
+          sm2._wD(s.id + ': setPlaybackRate(' + normalizedRate + ') failed: ' + e.message, 2);
+        }
+      }
+
+      return s;
+
+    };
+
+    /**
+     * Sets the position of a sound.
+     *
+     * @param {number} nMsecOffset Position (milliseconds)
+     * @return {SMSound} The SMSound object
+     */
+
+    this.setPosition = function(nMsecOffset) {
+
+      if (nMsecOffset === _undefined) {
+        nMsecOffset = 0;
+      }
+
+      var position, position1K,
+          // Use the duration from the instance options, if we don't have a track duration yet.
+          // position >= 0 and <= current available (loaded) duration
+          offset = (s.isHTML5 ? Math.max(nMsecOffset, 0) : Math.min(s.duration || s._iO.duration, Math.max(nMsecOffset, 0)));
+
+      s.position = offset;
+      position1K = s.position / msecScale;
+      s._resetOnPosition(s.position);
+      s._iO.position = offset;
+
+      if (!s.isHTML5) {
+
+        position = (fV === 9 ? s.position : position1K);
+
+        if (s.readyState && s.readyState !== 2) {
+          // if paused or not playing, will not resume (by playing)
+          flash._setPosition(s.id, position, (s.paused || !s.playState), s._iO.multiShot);
+        }
+
+      } else if (s._a) {
+
+        // Set the position in the canplay handler if the sound is not ready yet
+        if (s._html5_canplay) {
+
+          if (s._a.currentTime.toFixed(3) !== position1K.toFixed(3)) {
+
+            /**
+             * DOM/JS errors/exceptions to watch out for:
+             * if seek is beyond (loaded?) position, "DOM exception 11"
+             * "INDEX_SIZE_ERR": DOM exception 1
+             */
+            sm2._wD(s.id + ': setPosition(' + position1K + ')');
+
+            try {
+              s._a.currentTime = position1K;
+              if (s.playState === 0 || s.paused) {
+                // allow seek without auto-play/resume
+                s._a.pause();
+              }
+            } catch(e) {
+              sm2._wD(s.id + ': setPosition(' + position1K + ') failed: ' + e.message, 2);
+            }
+
+          }
+
+        } else if (position1K) {
+
+          // warn on non-zero seek attempts
+          sm2._wD(s.id + ': setPosition(' + position1K + '): Cannot seek yet, sound not ready', 2);
+          return s;
+
+        }
+
+        if (s.paused) {
+
+          // if paused, refresh UI right away by forcing update
+          s._onTimer(true);
+
+        }
+
+      }
+
+      return s;
+
+    };
+
+    /**
+     * Pauses sound playback.
+     *
+     * @return {SMSound} The SMSound object
+     */
+
+    this.pause = function(_bCallFlash) {
+
+      if (s.paused || (s.playState === 0 && s.readyState !== 1)) return s;
+
+      sm2._wD(s.id + ': pause()');
+      s.paused = true;
+
+      if (!s.isHTML5) {
+        if (_bCallFlash || _bCallFlash === _undefined) {
+          flash._pause(s.id, s._iO.multiShot);
+        }
+      } else {
+        s._setup_html5().pause();
+        stop_html5_timer();
+      }
+
+      if (s._iO.onpause) {
+        s._iO.onpause.apply(s);
+      }
+
+      return s;
+
+    };
+
+    /**
+     * Resumes sound playback.
+     *
+     * @return {SMSound} The SMSound object
+     */
+
+    /**
+     * When auto-loaded streams pause on buffer full they have a playState of 0.
+     * We need to make sure that the playState is set to 1 when these streams "resume".
+     * When a paused stream is resumed, we need to trigger the onplay() callback if it
+     * hasn't been called already. In this case since the sound is being played for the
+     * first time, I think it's more appropriate to call onplay() rather than onresume().
+     */
+
+    this.resume = function() {
+
+      var instanceOptions = s._iO;
+
+      if (!s.paused) return s;
+
+      sm2._wD(s.id + ': resume()');
+      s.paused = false;
+      s.playState = 1;
+
+      if (!s.isHTML5) {
+
+        if (instanceOptions.isMovieStar && !instanceOptions.serverURL) {
+          // Bizarre Webkit bug (Chrome reported via 8tracks.com dudes): AAC content paused for 30+ seconds(?) will not resume without a reposition.
+          s.setPosition(s.position);
+        }
+
+        // flash method is toggle-based (pause/resume)
+        flash._pause(s.id, instanceOptions.multiShot);
+
+      } else {
+
+        s._setup_html5().play();
+        start_html5_timer();
+
+      }
+
+      if (!onplay_called && instanceOptions.onplay) {
+
+        instanceOptions.onplay.apply(s);
+        onplay_called = true;
+
+      } else if (instanceOptions.onresume) {
+
+        instanceOptions.onresume.apply(s);
+
+      }
+
+      return s;
+
+    };
+
+    /**
+     * Toggles sound playback.
+     *
+     * @return {SMSound} The SMSound object
+     */
+
+    this.togglePause = function() {
+
+      sm2._wD(s.id + ': togglePause()');
+
+      if (s.playState === 0) {
+        s.play({
+          position: (fV === 9 && !s.isHTML5 ? s.position : s.position / msecScale)
+        });
+        return s;
+      }
+
+      if (s.paused) {
+        s.resume();
+      } else {
+        s.pause();
+      }
+
+      return s;
+
+    };
+
+    /**
+     * Sets the panning (L-R) effect.
+     *
+     * @param {number} nPan The pan value (-100 to 100)
+     * @return {SMSound} The SMSound object
+     */
+
+    this.setPan = function(nPan, bInstanceOnly) {
+
+      if (nPan === _undefined) {
+        nPan = 0;
+      }
+
+      if (bInstanceOnly === _undefined) {
+        bInstanceOnly = false;
+      }
+
+      if (!s.isHTML5) {
+        flash._setPan(s.id, nPan);
+      } // else { no HTML5 pan? }
+
+      s._iO.pan = nPan;
+
+      if (!bInstanceOnly) {
+        s.pan = nPan;
+        s.options.pan = nPan;
+      }
+
+      return s;
+
+    };
+
+    /**
+     * Sets the volume.
+     *
+     * @param {number} nVol The volume value (0 to 100)
+     * @return {SMSound} The SMSound object
+     */
+
+    this.setVolume = function(nVol, _bInstanceOnly) {
+
+      /**
+       * Note: Setting volume has no effect on iOS "special snowflake" devices.
+       * Hardware volume control overrides software, and volume
+       * will always return 1 per Apple docs. (iOS 4 + 5.)
+       * http://developer.apple.com/library/safari/documentation/AudioVideo/Conceptual/HTML-canvas-guide/AddingSoundtoCanvasAnimations/AddingSoundtoCanvasAnimations.html
+       */
+
+      if (nVol === _undefined) {
+        nVol = 100;
+      }
+
+      if (_bInstanceOnly === _undefined) {
+        _bInstanceOnly = false;
+      }
+
+      if (!s.isHTML5) {
+
+        flash._setVolume(s.id, (sm2.muted && !s.muted) || s.muted ? 0 : nVol);
+
+      } else if (s._a) {
+
+        if (sm2.muted && !s.muted) {
+          s.muted = true;
+          s._a.muted = true;
+        }
+
+        // valid range for native HTML5 Audio(): 0-1
+        s._a.volume = Math.max(0, Math.min(1, nVol / 100));
+
+      }
+
+      s._iO.volume = nVol;
+
+      if (!_bInstanceOnly) {
+        s.volume = nVol;
+        s.options.volume = nVol;
+      }
+
+      return s;
+
+    };
+
+    /**
+     * Mutes the sound.
+     *
+     * @return {SMSound} The SMSound object
+     */
+
+    this.mute = function() {
+
+      s.muted = true;
+
+      if (!s.isHTML5) {
+        flash._setVolume(s.id, 0);
+      } else if (s._a) {
+        s._a.muted = true;
+      }
+
+      return s;
+
+    };
+
+    /**
+     * Unmutes the sound.
+     *
+     * @return {SMSound} The SMSound object
+     */
+
+    this.unmute = function() {
+
+      s.muted = false;
+      var hasIO = (s._iO.volume !== _undefined);
+
+      if (!s.isHTML5) {
+        flash._setVolume(s.id, hasIO ? s._iO.volume : s.options.volume);
+      } else if (s._a) {
+        s._a.muted = false;
+      }
+
+      return s;
+
+    };
+
+    /**
+     * Toggles the muted state of a sound.
+     *
+     * @return {SMSound} The SMSound object
+     */
+
+    this.toggleMute = function() {
+
+      return (s.muted ? s.unmute() : s.mute());
+
+    };
+
+    /**
+     * Registers a callback to be fired when a sound reaches a given position during playback.
+     *
+     * @param {number} nPosition The position to watch for
+     * @param {function} oMethod The relevant callback to fire
+     * @param {object} oScope Optional: The scope to apply the callback to
+     * @return {SMSound} The SMSound object
+     */
+
+    this.onPosition = function(nPosition, oMethod, oScope) {
+
+      // TODO: basic dupe checking?
+
+      onPositionItems.push({
+        position: parseInt(nPosition, 10),
+        method: oMethod,
+        scope: (oScope !== _undefined ? oScope : s),
+        fired: false
+      });
+
+      return s;
+
+    };
+
+    // legacy/backwards-compability: lower-case method name
+    this.onposition = this.onPosition;
+
+    /**
+     * Removes registered callback(s) from a sound, by position and/or callback.
+     *
+     * @param {number} nPosition The position to clear callback(s) for
+     * @param {function} oMethod Optional: Identify one callback to be removed when multiple listeners exist for one position
+     * @return {SMSound} The SMSound object
+     */
+
+    this.clearOnPosition = function(nPosition, oMethod) {
+
+      var i;
+
+      nPosition = parseInt(nPosition, 10);
+
+      if (isNaN(nPosition)) {
+        // safety check
         return;
       }
+
+      for (i = 0; i < onPositionItems.length; i++) {
+
+        if (nPosition === onPositionItems[i].position) {
+          // remove this item if no method was specified, or, if the method matches
+
+          if (!oMethod || (oMethod === onPositionItems[i].method)) {
+
+            if (onPositionItems[i].fired) {
+              // decrement "fired" counter, too
+              onPositionFired--;
+            }
+
+            onPositionItems.splice(i, 1);
+
+          }
+
+        }
+
+      }
+
+    };
+
+    this._processOnPosition = function() {
+
+      var i, item, j = onPositionItems.length;
+
+      if (!j || !s.playState || onPositionFired >= j) return false;
+
+      for (i = j - 1; i >= 0; i--) {
+
+        item = onPositionItems[i];
+
+        if (!item.fired && s.position >= item.position) {
+
+          item.fired = true;
+          onPositionFired++;
+          item.method.apply(item.scope, [item.position]);
+
+          //  reset j -- onPositionItems.length can be changed in the item callback above... occasionally breaking the loop.
+          j = onPositionItems.length;
+
+        }
+
+      }
+
+      return true;
+
+    };
+
+    this._resetOnPosition = function(nPosition) {
+
+      // reset "fired" for items interested in this position
+      var i, item, j = onPositionItems.length;
+
+      if (!j) return false;
+
+      for (i = j - 1; i >= 0; i--) {
+
+        item = onPositionItems[i];
+
+        if (item.fired && nPosition <= item.position) {
+          item.fired = false;
+          onPositionFired--;
+        }
+
+      }
+
+      return true;
+
+    };
+
+    /**
+     * SMSound() private internals
+     * --------------------------------
+     */
+
+    applyFromTo = function() {
+
+      var instanceOptions = s._iO,
+          f = instanceOptions.from,
+          t = instanceOptions.to,
+          start, end;
+
+      end = function() {
+
+        // end has been reached.
+        sm2._wD(s.id + ': "To" time of ' + t + ' reached.');
+
+        // detach listener
+        s.clearOnPosition(t, end);
+
+        // stop should clear this, too
+        s.stop();
+
+      };
+
+      start = function() {
+
+        sm2._wD(s.id + ': Playing "from" ' + f);
+
+        // add listener for end
+        if (t !== null && !isNaN(t)) {
+          s.onPosition(t, end);
+        }
+
+      };
+
+      if (f !== null && !isNaN(f)) {
+
+        // apply to instance options, guaranteeing correct start position.
+        instanceOptions.position = f;
+
+        // multiShot timing can't be tracked, so prevent that.
+        instanceOptions.multiShot = false;
+
+        start();
+
+      }
+
+      // return updated instanceOptions including starting position
+      return instanceOptions;
+
+    };
+
+    attachOnPosition = function() {
+
+      var item,
+          op = s._iO.onposition;
+
+      // attach onposition things, if any, now.
+
+      if (op) {
+
+        for (item in op) {
+          if (op.hasOwnProperty(item)) {
+            s.onPosition(parseInt(item, 10), op[item]);
+          }
+        }
+
+      }
+
+    };
+
+    detachOnPosition = function() {
+
+      var item,
+          op = s._iO.onposition;
+
+      // detach any onposition()-style listeners.
+
+      if (op) {
+
+        for (item in op) {
+          if (op.hasOwnProperty(item)) {
+            s.clearOnPosition(parseInt(item, 10));
+          }
+        }
+
+      }
+
+    };
+
+    start_html5_timer = function() {
+
+      if (s.isHTML5) {
+        startTimer(s);
+      }
+
+    };
+
+    stop_html5_timer = function() {
+
+      if (s.isHTML5) {
+        stopTimer(s);
+      }
+
+    };
+
+    resetProperties = function(retainPosition) {
+
+      if (!retainPosition) {
+        onPositionItems = [];
+        onPositionFired = 0;
+      }
+
+      onplay_called = false;
+
+      s._hasTimer = null;
+      s._a = null;
+      s._html5_canplay = false;
+      s.bytesLoaded = null;
+      s.bytesTotal = null;
+      s.duration = (s._iO && s._iO.duration ? s._iO.duration : null);
+      s.durationEstimate = null;
+      s.buffered = [];
+
+      // legacy: 1D array
+      s.eqData = [];
+
+      s.eqData.left = [];
+      s.eqData.right = [];
+
+      s.failures = 0;
+      s.isBuffering = false;
+      s.instanceOptions = {};
+      s.instanceCount = 0;
+      s.loaded = false;
+      s.metadata = {};
+
+      // 0 = uninitialised, 1 = loading, 2 = failed/error, 3 = loaded/success
+      s.readyState = 0;
+
+      s.muted = false;
+      s.paused = false;
+
+      s.peakData = {
+        left: 0,
+        right: 0
+      };
+
+      s.waveformData = {
+        left: [],
+        right: []
+      };
+
+      s.playState = 0;
+      s.position = null;
+
+      s.id3 = {};
+
+    };
+
+    resetProperties();
+
+    /**
+     * Pseudo-private SMSound internals
+     * --------------------------------
+     */
+
+    this._onTimer = function(bForce) {
+
+      /**
+       * HTML5-only _whileplaying() etc.
+       * called from both HTML5 native events, and polling/interval-based timers
+       * mimics flash and fires only when time/duration change, so as to be polling-friendly
+       */
+
+      var duration, isNew = false, time, x = {};
+
+      if (s._hasTimer || bForce) {
+
+        // TODO: May not need to track readyState (1 = loading)
+
+        if (s._a && (bForce || ((s.playState > 0 || s.readyState === 1) && !s.paused))) {
+
+          duration = s._get_html5_duration();
+
+          if (duration !== lastHTML5State.duration) {
+
+            lastHTML5State.duration = duration;
+            s.duration = duration;
+            isNew = true;
+
+          }
+
+          // TODO: investigate why this goes wack if not set/re-set each time.
+          s.durationEstimate = s.duration;
+
+          time = (s._a.currentTime * msecScale || 0);
+
+          if (time !== lastHTML5State.time) {
+
+            lastHTML5State.time = time;
+            isNew = true;
+
+          }
+
+          if (isNew || bForce) {
+
+            s._whileplaying(time, x, x, x, x);
+
+          }
+
+        }/* else {
+
+          // sm2._wD('_onTimer: Warn for "'+s.id+'": '+(!s._a?'Could not find element. ':'')+(s.playState === 0?'playState bad, 0?':'playState = '+s.playState+', OK'));
+
+          return false;
+
+        }*/
+
+      }
+
+      return isNew;
+
+    };
+
+    this._get_html5_duration = function() {
+
+      var instanceOptions = s._iO,
+          // if audio object exists, use its duration - else, instance option duration (if provided - it's a hack, really, and should be retired) OR null
+          d = (s._a && s._a.duration ? s._a.duration * msecScale : (instanceOptions && instanceOptions.duration ? instanceOptions.duration : null)),
+          result = (d && !isNaN(d) && d !== Infinity ? d : null);
+
+      return result;
+
+    };
+
+    this._apply_loop = function(a, nLoops) {
+
+      /**
+       * boolean instead of "loop", for webkit? - spec says string. http://www.w3.org/TR/html-markup/audio.html#audio.attrs.loop
+       * note that loop is either off or infinite under HTML5, unlike Flash which allows arbitrary loop counts to be specified.
+       */
+
+      // <d>
+      if (!a.loop && nLoops > 1) {
+        sm2._wD('Note: Native HTML5 looping is infinite.', 1);
+      }
+      // </d>
+
+      a.loop = (nLoops > 1 ? 'loop' : '');
+
+    };
+
+    this._setup_html5 = function(options) {
+
+      var instanceOptions = mixin(s._iO, options),
+          a = useGlobalHTML5Audio ? globalHTML5Audio : s._a,
+          dURL = decodeURI(instanceOptions.url),
+          sameURL;
+
+      /**
+       * "First things first, I, Poppa..." (reset the previous state of the old sound, if playing)
+       * Fixes case with devices that can only play one sound at a time
+       * Otherwise, other sounds in mid-play will be terminated without warning and in a stuck state
+       */
+
+      if (useGlobalHTML5Audio) {
+
+        if (dURL === decodeURI(lastGlobalHTML5URL)) {
+          // global HTML5 audio: re-use of URL
+          sameURL = true;
+        }
+
+      } else if (dURL === decodeURI(lastURL)) {
+
+        // options URL is the same as the "last" URL, and we used (loaded) it
+        sameURL = true;
+
+      }
+
+      if (a) {
+
+        if (a._s) {
+
+          if (useGlobalHTML5Audio) {
+
+            if (a._s && a._s.playState && !sameURL) {
+
+              // global HTML5 audio case, and loading a new URL. stop the currently-playing one.
+              a._s.stop();
+
+            }
+
+          } else if (!useGlobalHTML5Audio && dURL === decodeURI(lastURL)) {
+
+            // non-global HTML5 reuse case: same url, ignore request
+            s._apply_loop(a, instanceOptions.loops);
+
+            return a;
+
+          }
+
+        }
+
+        if (!sameURL) {
+
+          // don't retain onPosition() stuff with new URLs.
+
+          if (lastURL) {
+            resetProperties(false);
+          }
+
+          // assign new HTML5 URL
+
+          a.src = instanceOptions.url;
+
+          s.url = instanceOptions.url;
+
+          lastURL = instanceOptions.url;
+
+          lastGlobalHTML5URL = instanceOptions.url;
+
+          a._called_load = false;
+
+        }
+
+      } else {
+
+        if (instanceOptions.autoLoad || instanceOptions.autoPlay) {
+
+          s._a = new Audio(instanceOptions.url);
+          s._a.load();
+
+        } else {
+
+          // null for stupid Opera 9.64 case
+          s._a = (isOpera && opera.version() < 10 ? new Audio(null) : new Audio());
+
+        }
+
+        // assign local reference
+        a = s._a;
+
+        a._called_load = false;
+
+        if (useGlobalHTML5Audio) {
+
+          globalHTML5Audio = a;
+
+        }
+
+      }
+
+      s.isHTML5 = true;
+
+      // store a ref on the track
+      s._a = a;
+
+      // store a ref on the audio
+      a._s = s;
+
+      add_html5_events();
+
+      s._apply_loop(a, instanceOptions.loops);
+
+      if (instanceOptions.autoLoad || instanceOptions.autoPlay) {
+
+        s.load();
+
+      } else {
+
+        // early HTML5 implementation (non-standard)
+        a.autobuffer = false;
+
+        // standard ('none' is also an option.)
+        a.preload = 'auto';
+
+      }
+
+      return a;
+
+    };
+
+    add_html5_events = function() {
+
+      if (s._a._added_events) return false;
+
+      var f;
+
+      function add(oEvt, oFn, bCapture) {
+        return s._a ? s._a.addEventListener(oEvt, oFn, bCapture || false) : null;
+      }
+
+      s._a._added_events = true;
+
+      for (f in html5_events) {
+        if (html5_events.hasOwnProperty(f)) {
+          add(f, html5_events[f]);
+        }
+      }
+
+      return true;
+
+    };
+
+    remove_html5_events = function() {
+
+      // Remove event listeners
+
+      var f;
+
+      function remove(oEvt, oFn, bCapture) {
+        return (s._a ? s._a.removeEventListener(oEvt, oFn, bCapture || false) : null);
+      }
+
+      sm2._wD(s.id + ': Removing event listeners');
+      s._a._added_events = false;
+
+      for (f in html5_events) {
+        if (html5_events.hasOwnProperty(f)) {
+          remove(f, html5_events[f]);
+        }
+      }
+
+    };
+
+    /**
+     * Pseudo-private event internals
+     * ------------------------------
+     */
+
+    this._onload = function(nSuccess) {
+
+      var fN,
+          // check for duration to prevent false positives from flash 8 when loading from cache.
+          loadOK = !!nSuccess || (!s.isHTML5 && fV === 8 && s.duration);
+
+      // <d>
+      fN = s.id + ': ';
+      sm2._wD(fN + (loadOK ? 'onload()' : 'Failed to load / invalid sound?' + (!s.duration ? ' Zero-length duration reported.' : ' -') + ' (' + s.url + ')'), (loadOK ? 1 : 2));
+
+      if (!loadOK && !s.isHTML5) {
+        if (sm2.sandbox.noRemote === true) {
+          sm2._wD(fN + str('noNet'), 1);
+        }
+        if (sm2.sandbox.noLocal === true) {
+          sm2._wD(fN + str('noLocal'), 1);
+        }
+      }
+      // </d>
+
+      s.loaded = loadOK;
+      s.readyState = (loadOK ? 3 : 2);
+      s._onbufferchange(0);
+
+      if (!loadOK && !s.isHTML5) {
+        // note: no error code from Flash.
+        s._onerror();
+      }
+
+      if (s._iO.onload) {
+        wrapCallback(s, function() {
+          s._iO.onload.apply(s, [loadOK]);
+        });
+      }
+
+      return true;
+
+    };
+
+    this._onerror = function(errorCode, description) {
+
+      // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+      if (s._iO.onerror) {
+        wrapCallback(s, function() {
+          s._iO.onerror.apply(s, [errorCode, description]);
+        });
+      }
+
+    };
+
+    this._onbufferchange = function(nIsBuffering) {
+
+      // ignore if not playing
+      if (s.playState === 0) return false;
+
+      if ((nIsBuffering && s.isBuffering) || (!nIsBuffering && !s.isBuffering)) return false;
+
+      s.isBuffering = (nIsBuffering === 1);
+
+      if (s._iO.onbufferchange) {
+        sm2._wD(s.id + ': Buffer state change: ' + nIsBuffering);
+        s._iO.onbufferchange.apply(s, [nIsBuffering]);
+      }
+
+      return true;
+
+    };
+
+    /**
+     * Playback may have stopped due to buffering, or related reason.
+     * This state can be encountered on iOS < 6 when auto-play is blocked.
+     */
+
+    this._onsuspend = function() {
+
+      if (s._iO.onsuspend) {
+        sm2._wD(s.id + ': Playback suspended');
+        s._iO.onsuspend.apply(s);
+      }
+
+      return true;
+
+    };
+
+    /**
+     * flash 9/movieStar + RTMP-only method, should fire only once at most
+     * at this point we just recreate failed sounds rather than trying to reconnect
+     */
+
+    this._onfailure = function(msg, level, code) {
+
+      s.failures++;
+      sm2._wD(s.id + ': Failure (' + s.failures + '): ' + msg);
+
+      if (s._iO.onfailure && s.failures === 1) {
+        s._iO.onfailure(msg, level, code);
+      } else {
+        sm2._wD(s.id + ': Ignoring failure');
+      }
+
+    };
+
+    /**
+     * flash 9/movieStar + RTMP-only method for unhandled warnings/exceptions from Flash
+     * e.g., RTMP "method missing" warning (non-fatal) for getStreamLength on server
+     */
+
+    this._onwarning = function(msg, level, code) {
+
+      if (s._iO.onwarning) {
+        s._iO.onwarning(msg, level, code);
+      }
+
+    };
+
+    this._onfinish = function() {
+
+      // store local copy before it gets trashed...
+      var io_onfinish = s._iO.onfinish;
+
+      s._onbufferchange(0);
+      s._resetOnPosition(0);
+
+      // reset some state items
+      if (s.instanceCount) {
+
+        s.instanceCount--;
+
+        if (!s.instanceCount) {
+
+          // remove onPosition listeners, if any
+          detachOnPosition();
+
+          // reset instance options
+          s.playState = 0;
+          s.paused = false;
+          s.instanceCount = 0;
+          s.instanceOptions = {};
+          s._iO = {};
+          stop_html5_timer();
+
+          // reset position, too
+          if (s.isHTML5) {
+            s.position = 0;
+          }
+
+        }
+
+        if (!s.instanceCount || s._iO.multiShotEvents) {
+          // fire onfinish for last, or every instance
+          if (io_onfinish) {
+            sm2._wD(s.id + ': onfinish()');
+            wrapCallback(s, function() {
+              io_onfinish.apply(s);
+            });
+          }
+        }
+
+      }
+
+    };
+
+    this._whileloading = function(nBytesLoaded, nBytesTotal, nDuration, nBufferLength) {
+
+      var instanceOptions = s._iO;
+
+      s.bytesLoaded = nBytesLoaded;
+      s.bytesTotal = nBytesTotal;
+      s.duration = Math.floor(nDuration);
+      s.bufferLength = nBufferLength;
+
+      if (!s.isHTML5 && !instanceOptions.isMovieStar) {
+
+        if (instanceOptions.duration) {
+          // use duration from options, if specified and larger. nobody should be specifying duration in options, actually, and it should be retired.
+          s.durationEstimate = (s.duration > instanceOptions.duration) ? s.duration : instanceOptions.duration;
+        } else {
+          s.durationEstimate = parseInt((s.bytesTotal / s.bytesLoaded) * s.duration, 10);
+        }
+
+      } else {
+
+        s.durationEstimate = s.duration;
+
+      }
+
+      // for flash, reflect sequential-load-style buffering
+      if (!s.isHTML5) {
+        s.buffered = [{
+          start: 0,
+          end: s.duration
+        }];
+      }
+
+      // allow whileloading to fire even if "load" fired under HTML5, due to HTTP range/partials
+      if ((s.readyState !== 3 || s.isHTML5) && instanceOptions.whileloading) {
+        instanceOptions.whileloading.apply(s);
+      }
+
+    };
+
+    this._whileplaying = function(nPosition, oPeakData, oWaveformDataLeft, oWaveformDataRight, oEQData) {
+
+      var instanceOptions = s._iO,
+          eqLeft;
+
+      // flash safety net
+      if (isNaN(nPosition) || nPosition === null) return false;
+
+      // Safari HTML5 play() may return small -ve values when starting from position: 0, eg. -50.120396875. Unexpected/invalid per W3, I think. Normalize to 0.
+      s.position = Math.max(0, nPosition);
+
+      s._processOnPosition();
+
+      if (!s.isHTML5 && fV > 8) {
+
+        if (instanceOptions.usePeakData && oPeakData !== _undefined && oPeakData) {
+          s.peakData = {
+            left: oPeakData.leftPeak,
+            right: oPeakData.rightPeak
+          };
+        }
+
+        if (instanceOptions.useWaveformData && oWaveformDataLeft !== _undefined && oWaveformDataLeft) {
+          s.waveformData = {
+            left: oWaveformDataLeft.split(','),
+            right: oWaveformDataRight.split(',')
+          };
+        }
+
+        if (instanceOptions.useEQData) {
+          if (oEQData !== _undefined && oEQData && oEQData.leftEQ) {
+            eqLeft = oEQData.leftEQ.split(',');
+            s.eqData = eqLeft;
+            s.eqData.left = eqLeft;
+            if (oEQData.rightEQ !== _undefined && oEQData.rightEQ) {
+              s.eqData.right = oEQData.rightEQ.split(',');
+            }
+          }
+        }
+
+      }
+
+      if (s.playState === 1) {
+
+        // special case/hack: ensure buffering is false if loading from cache (and not yet started)
+        if (!s.isHTML5 && fV === 8 && !s.position && s.isBuffering) {
+          s._onbufferchange(0);
+        }
+
+        if (instanceOptions.whileplaying) {
+          // flash may call after actual finish
+          instanceOptions.whileplaying.apply(s);
+        }
+
+      }
+
+      return true;
+
+    };
+
+    this._oncaptiondata = function(oData) {
+
+      /**
+       * internal: flash 9 + NetStream (MovieStar/RTMP-only) feature
+       *
+       * @param {object} oData
+       */
+
+      sm2._wD(s.id + ': Caption data received.');
+
+      s.captiondata = oData;
+
+      if (s._iO.oncaptiondata) {
+        s._iO.oncaptiondata.apply(s, [oData]);
+      }
+
+    };
+
+    this._onmetadata = function(oMDProps, oMDData) {
+
+      /**
+       * internal: flash 9 + NetStream (MovieStar/RTMP-only) feature
+       * RTMP may include song title, MovieStar content may include encoding info
+       *
+       * @param {array} oMDProps (names)
+       * @param {array} oMDData (values)
+       */
+
+      sm2._wD(s.id + ': Metadata received.');
+
+      var oData = {}, i, j;
+
+      for (i = 0, j = oMDProps.length; i < j; i++) {
+        oData[oMDProps[i]] = oMDData[i];
+      }
+
+      s.metadata = oData;
+
+      if (s._iO.onmetadata) {
+        s._iO.onmetadata.call(s, s.metadata);
+      }
+
+    };
+
+    this._onid3 = function(oID3Props, oID3Data) {
+
+      /**
+       * internal: flash 8 + flash 9 ID3 feature
+       * may include artist, song title etc.
+       *
+       * @param {array} oID3Props (names)
+       * @param {array} oID3Data (values)
+       */
+
+      sm2._wD(s.id + ': ID3 data received.');
+
+      var oData = [], i, j;
+
+      for (i = 0, j = oID3Props.length; i < j; i++) {
+        oData[oID3Props[i]] = oID3Data[i];
+      }
+
+      s.id3 = mixin(s.id3, oData);
+
+      if (s._iO.onid3) {
+        s._iO.onid3.apply(s);
+      }
+
+    };
+
+    // flash/RTMP-only
+
+    this._onconnect = function(bSuccess) {
+
+      bSuccess = (bSuccess === 1);
+      sm2._wD(s.id + ': ' + (bSuccess ? 'Connected.' : 'Failed to connect? - ' + s.url), (bSuccess ? 1 : 2));
+      s.connected = bSuccess;
+
+      if (bSuccess) {
+
+        s.failures = 0;
+
+        if (idCheck(s.id)) {
+          if (s.getAutoPlay()) {
+            // only update the play state if auto playing
+            s.play(_undefined, s.getAutoPlay());
+          } else if (s._iO.autoLoad) {
+            s.load();
+          }
+        }
+
+        if (s._iO.onconnect) {
+          s._iO.onconnect.apply(s, [bSuccess]);
+        }
+
+      }
+
+    };
+
+    this._ondataerror = function(sError) {
+
+      // flash 9 wave/eq data handler
+      // hack: called at start, and end from flash at/after onfinish()
+      if (s.playState > 0) {
+        sm2._wD(s.id + ': Data error: ' + sError);
+        if (s._iO.ondataerror) {
+          s._iO.ondataerror.apply(s);
+        }
+      }
+
+    };
+
+    // <d>
+    this._debug();
+    // </d>
+
+  }; // SMSound()
+
+  /**
+   * Private SoundManager internals
+   * ------------------------------
+   */
+
+  getDocument = function() {
+
+    return (doc.body || doc.getElementsByTagName('div')[0]);
+
+  };
+
+  id = function(sID) {
+
+    return doc.getElementById(sID);
+
+  };
+
+  mixin = function(oMain, oAdd) {
+
+    // non-destructive merge
+    var o1 = (oMain || {}), o2, o;
+
+    // if unspecified, o2 is the default options object
+    o2 = (oAdd === _undefined ? sm2.defaultOptions : oAdd);
+
+    for (o in o2) {
+
+      if (o2.hasOwnProperty(o) && o1[o] === _undefined) {
+
+        if (typeof o2[o] !== 'object' || o2[o] === null) {
+
+          // assign directly
+          o1[o] = o2[o];
+
+        } else {
+
+          // recurse through o2
+          o1[o] = mixin(o1[o], o2[o]);
+
+        }
+
+      }
+
     }
 
-    if (prevScheduledCallback !== null) {
-      isFlushingHostCallback = true;
-      try {
-        prevScheduledCallback(didTimeout);
-      } finally {
-        isFlushingHostCallback = false;
+    return o1;
+
+  };
+
+  wrapCallback = function(oSound, callback) {
+
+    /**
+     * 03/03/2013: Fix for Flash Player 11.6.602.171 + Flash 8 (flashVersion = 8) SWF issue
+     * setTimeout() fix for certain SMSound callbacks like onload() and onfinish(), where subsequent calls like play() and load() fail when Flash Player 11.6.602.171 is installed, and using soundManager with flashVersion = 8 (which is the default).
+     * Not sure of exact cause. Suspect race condition and/or invalid (NaN-style) position argument trickling down to the next JS -> Flash _start() call, in the play() case.
+     * Fix: setTimeout() to yield, plus safer null / NaN checking on position argument provided to Flash.
+     * https://getsatisfaction.com/schillmania/topics/recent_chrome_update_seems_to_have_broken_my_sm2_audio_player
+     */
+    if (!oSound.isHTML5 && fV === 8) {
+      window.setTimeout(callback, 0);
+    } else {
+      callback();
+    }
+
+  };
+
+  // additional soundManager properties that soundManager.setup() will accept
+
+  extraOptions = {
+    onready: 1,
+    ontimeout: 1,
+    defaultOptions: 1,
+    flash9Options: 1,
+    movieStarOptions: 1
+  };
+
+  assign = function(o, oParent) {
+
+    /**
+     * recursive assignment of properties, soundManager.setup() helper
+     * allows property assignment based on whitelist
+     */
+
+    var i,
+        result = true,
+        hasParent = (oParent !== _undefined),
+        setupOptions = sm2.setupOptions,
+        bonusOptions = extraOptions;
+
+    // <d>
+
+    // if soundManager.setup() called, show accepted parameters.
+
+    if (o === _undefined) {
+
+      result = [];
+
+      for (i in setupOptions) {
+
+        if (setupOptions.hasOwnProperty(i)) {
+          result.push(i);
+        }
+
+      }
+
+      for (i in bonusOptions) {
+
+        if (bonusOptions.hasOwnProperty(i)) {
+
+          if (typeof sm2[i] === 'object') {
+            result.push(i + ': {...}');
+          } else if (sm2[i] instanceof Function) {
+            result.push(i + ': function() {...}');
+          } else {
+            result.push(i);
+          }
+
+        }
+
+      }
+
+      sm2._wD(str('setup', result.join(', ')));
+
+      return false;
+
+    }
+
+    // </d>
+
+    for (i in o) {
+
+      if (o.hasOwnProperty(i)) {
+
+        // if not an {object} we want to recurse through...
+
+        if (typeof o[i] !== 'object' || o[i] === null || o[i] instanceof Array || o[i] instanceof RegExp) {
+
+          // check "allowed" options
+
+          if (hasParent && bonusOptions[oParent] !== _undefined) {
+
+            // valid recursive / nested object option, eg., { defaultOptions: { volume: 50 } }
+            sm2[oParent][i] = o[i];
+
+          } else if (setupOptions[i] !== _undefined) {
+
+            // special case: assign to setupOptions object, which soundManager property references
+            sm2.setupOptions[i] = o[i];
+
+            // assign directly to soundManager, too
+            sm2[i] = o[i];
+
+          } else if (bonusOptions[i] === _undefined) {
+
+            // invalid or disallowed parameter. complain.
+            complain(str((sm2[i] === _undefined ? 'setupUndef' : 'setupError'), i), 2);
+
+            result = false;
+
+          } else if (sm2[i] instanceof Function) {
+
+            /**
+             * valid extraOptions (bonusOptions) parameter.
+             * is it a method, like onready/ontimeout? call it.
+             * multiple parameters should be in an array, eg. soundManager.setup({onready: [myHandler, myScope]});
+             */
+            sm2[i].apply(sm2, (o[i] instanceof Array ? o[i] : [o[i]]));
+
+          } else {
+
+            // good old-fashioned direct assignment
+            sm2[i] = o[i];
+
+          }
+
+        } else if (bonusOptions[i] === _undefined) {
+
+          // recursion case, eg., { defaultOptions: { ... } }
+
+          // invalid or disallowed parameter. complain.
+          complain(str((sm2[i] === _undefined ? 'setupUndef' : 'setupError'), i), 2);
+
+          result = false;
+
+        } else {
+
+          // recurse through object
+          return assign(o[i], i);
+
+        }
+
+      }
+
+    }
+
+    return result;
+
+  };
+
+  function preferFlashCheck(kind) {
+
+    // whether flash should play a given type
+    return (sm2.preferFlash && hasFlash && !sm2.ignoreFlash && (sm2.flash[kind] !== _undefined && sm2.flash[kind]));
+
+  }
+
+  /**
+   * Internal DOM2-level event helpers
+   * ---------------------------------
+   */
+
+  event = (function() {
+
+    // normalize event methods
+    var old = (window.attachEvent),
+    evt = {
+      add: (old ? 'attachEvent' : 'addEventListener'),
+      remove: (old ? 'detachEvent' : 'removeEventListener')
+    };
+
+    // normalize "on" event prefix, optional capture argument
+    function getArgs(oArgs) {
+
+      var args = slice.call(oArgs),
+          len = args.length;
+
+      if (old) {
+        // prefix
+        args[1] = 'on' + args[1];
+        if (len > 3) {
+          // no capture
+          args.pop();
+        }
+      } else if (len === 3) {
+        args.push(false);
+      }
+
+      return args;
+
+    }
+
+    function apply(args, sType) {
+
+      // normalize and call the event method, with the proper arguments
+      var element = args.shift(),
+          method = [evt[sType]];
+
+      if (old) {
+        // old IE can't do apply().
+        element[method](args[0], args[1]);
+      } else {
+        element[method].apply(element, args);
+      }
+
+    }
+
+    function add() {
+      apply(getArgs(arguments), 'add');
+    }
+
+    function remove() {
+      apply(getArgs(arguments), 'remove');
+    }
+
+    return {
+      add: add,
+      remove: remove
+    };
+
+  }());
+
+  /**
+   * Internal HTML5 event handling
+   * -----------------------------
+   */
+
+  function html5_event(oFn) {
+
+    // wrap html5 event handlers so we don't call them on destroyed and/or unloaded sounds
+
+    return function(e) {
+
+      var s = this._s,
+          result;
+
+      if (!s || !s._a) {
+        // <d>
+        if (s && s.id) {
+          sm2._wD(s.id + ': Ignoring ' + e.type);
+        } else {
+          sm2._wD(h5 + 'Ignoring ' + e.type);
+        }
+        // </d>
+        result = null;
+      } else {
+        result = oFn.call(this, e);
+      }
+
+      return result;
+
+    };
+
+  }
+
+  html5_events = {
+
+    // HTML5 event-name-to-handler map
+
+    abort: html5_event(function() {
+
+      sm2._wD(this._s.id + ': abort');
+
+    }),
+
+    // enough has loaded to play
+
+    canplay: html5_event(function() {
+
+      var s = this._s,
+          position1K;
+
+      if (s._html5_canplay) {
+        // this event has already fired. ignore.
+        return;
+      }
+
+      s._html5_canplay = true;
+      sm2._wD(s.id + ': canplay');
+      s._onbufferchange(0);
+
+      // position according to instance options
+      position1K = (s._iO.position !== _undefined && !isNaN(s._iO.position) ? s._iO.position / msecScale : null);
+
+      // set the position if position was provided before the sound loaded
+      if (this.currentTime !== position1K) {
+        sm2._wD(s.id + ': canplay: Setting position to ' + position1K);
+        try {
+          this.currentTime = position1K;
+        } catch(ee) {
+          sm2._wD(s.id + ': canplay: Setting position of ' + position1K + ' failed: ' + ee.message, 2);
+        }
+      }
+
+      // hack for HTML5 from/to case
+      if (s._iO._oncanplay) {
+        s._iO._oncanplay();
+      }
+
+    }),
+
+    canplaythrough: html5_event(function() {
+
+      var s = this._s;
+
+      if (!s.loaded) {
+        s._onbufferchange(0);
+        s._whileloading(s.bytesLoaded, s.bytesTotal, s._get_html5_duration());
+        s._onload(true);
+      }
+
+    }),
+
+    durationchange: html5_event(function() {
+
+      // durationchange may fire at various times, probably the safest way to capture accurate/final duration.
+
+      var s = this._s,
+          duration;
+
+      duration = s._get_html5_duration();
+
+      if (!isNaN(duration) && duration !== s.duration) {
+
+        sm2._wD(this._s.id + ': durationchange (' + duration + ')' + (s.duration ? ', previously ' + s.duration : ''));
+
+        s.durationEstimate = s.duration = duration;
+
+      }
+
+    }),
+
+    // TODO: Reserved for potential use
+    /*
+    emptied: html5_event(function() {
+
+      sm2._wD(this._s.id + ': emptied');
+
+    }),
+    */
+
+    ended: html5_event(function() {
+
+      var s = this._s;
+
+      sm2._wD(s.id + ': ended');
+
+      s._onfinish();
+
+    }),
+
+    error: html5_event(function() {
+
+      var description = (html5ErrorCodes[this.error.code] || null);
+      sm2._wD(this._s.id + ': HTML5 error, code ' + this.error.code + (description ? ' (' + description + ')' : ''));
+      this._s._onload(false);
+      this._s._onerror(this.error.code, description);
+
+    }),
+
+    loadeddata: html5_event(function() {
+
+      var s = this._s;
+
+      sm2._wD(s.id + ': loadeddata');
+
+      // safari seems to nicely report progress events, eventually totalling 100%
+      if (!s._loaded && !isSafari) {
+        s.duration = s._get_html5_duration();
+      }
+
+    }),
+
+    loadedmetadata: html5_event(function() {
+
+      sm2._wD(this._s.id + ': loadedmetadata');
+
+    }),
+
+    loadstart: html5_event(function() {
+
+      sm2._wD(this._s.id + ': loadstart');
+      // assume buffering at first
+      this._s._onbufferchange(1);
+
+    }),
+
+    play: html5_event(function() {
+
+      // sm2._wD(this._s.id + ': play()');
+      // once play starts, no buffering
+      this._s._onbufferchange(0);
+
+    }),
+
+    playing: html5_event(function() {
+
+      sm2._wD(this._s.id + ': playing ' + String.fromCharCode(9835));
+      // once play starts, no buffering
+      this._s._onbufferchange(0);
+
+    }),
+
+    progress: html5_event(function(e) {
+
+      // note: can fire repeatedly after "loaded" event, due to use of HTTP range/partials
+
+      var s = this._s,
+          i, j, progStr, buffered = 0,
+          isProgress = (e.type === 'progress'),
+          ranges = e.target.buffered,
+          // firefox 3.6 implements e.loaded/total (bytes)
+          loaded = (e.loaded || 0),
+          total = (e.total || 1);
+
+      // reset the "buffered" (loaded byte ranges) array
+      s.buffered = [];
+
+      if (ranges && ranges.length) {
+
+        // if loaded is 0, try TimeRanges implementation as % of load
+        // https://developer.mozilla.org/en/DOM/TimeRanges
+
+        // re-build "buffered" array
+        // HTML5 returns seconds. SM2 API uses msec for setPosition() etc., whether Flash or HTML5.
+        for (i = 0, j = ranges.length; i < j; i++) {
+          s.buffered.push({
+            start: ranges.start(i) * msecScale,
+            end: ranges.end(i) * msecScale
+          });
+        }
+
+        // use the last value locally
+        buffered = (ranges.end(0) - ranges.start(0)) * msecScale;
+
+        // linear case, buffer sum; does not account for seeking and HTTP partials / byte ranges
+        loaded = Math.min(1, buffered / (e.target.duration * msecScale));
+
+        // <d>
+        if (isProgress && ranges.length > 1) {
+          progStr = [];
+          j = ranges.length;
+          for (i = 0; i < j; i++) {
+            progStr.push((e.target.buffered.start(i) * msecScale) + '-' + (e.target.buffered.end(i) * msecScale));
+          }
+          sm2._wD(this._s.id + ': progress, timeRanges: ' + progStr.join(', '));
+        }
+
+        if (isProgress && !isNaN(loaded)) {
+          sm2._wD(this._s.id + ': progress, ' + Math.floor(loaded * 100) + '% loaded');
+        }
+        // </d>
+
+      }
+
+      if (!isNaN(loaded)) {
+
+        // TODO: prevent calls with duplicate values.
+        s._whileloading(loaded, total, s._get_html5_duration());
+        if (loaded && total && loaded === total) {
+          // in case "onload" doesn't fire (eg. gecko 1.9.2)
+          html5_events.canplaythrough.call(this, e);
+        }
+
+      }
+
+    }),
+
+    ratechange: html5_event(function() {
+
+      sm2._wD(this._s.id + ': ratechange');
+
+    }),
+
+    suspend: html5_event(function(e) {
+
+      // download paused/stopped, may have finished (eg. onload)
+      var s = this._s;
+
+      sm2._wD(this._s.id + ': suspend');
+      html5_events.progress.call(this, e);
+      s._onsuspend();
+
+    }),
+
+    stalled: html5_event(function() {
+
+      sm2._wD(this._s.id + ': stalled');
+
+    }),
+
+    timeupdate: html5_event(function() {
+
+      this._s._onTimer();
+
+    }),
+
+    waiting: html5_event(function() {
+
+      var s = this._s;
+
+      // see also: seeking
+      sm2._wD(this._s.id + ': waiting');
+
+      // playback faster than download rate, etc.
+      s._onbufferchange(1);
+
+    })
+
+  };
+
+  html5OK = function(iO) {
+
+    // playability test based on URL or MIME type
+
+    var result;
+
+    if (!iO || (!iO.type && !iO.url && !iO.serverURL)) {
+
+      // nothing to check
+      result = false;
+
+    } else if (iO.serverURL || (iO.type && preferFlashCheck(iO.type))) {
+
+      // RTMP, or preferring flash
+      result = false;
+
+    } else {
+
+      // Use type, if specified. Pass data: URIs to HTML5. If HTML5-only mode, no other options, so just give 'er
+      result = ((iO.type ? html5CanPlay({ type: iO.type }) : html5CanPlay({ url: iO.url }) || sm2.html5Only || iO.url.match(/data:/i)));
+
+    }
+
+    return result;
+
+  };
+
+  html5Unload = function(oAudio) {
+
+    /**
+     * Internal method: Unload media, and cancel any current/pending network requests.
+     * Firefox can load an empty URL, which allegedly destroys the decoder and stops the download.
+     * https://developer.mozilla.org/En/Using_audio_and_video_in_Firefox#Stopping_the_download_of_media
+     * However, Firefox has been seen loading a relative URL from '' and thus requesting the hosting page on unload.
+     * Other UA behaviour is unclear, so everyone else gets an about:blank-style URL.
+     */
+
+    var url;
+
+    if (oAudio) {
+
+      // Firefox and Chrome accept short WAVe data: URIs. Chome dislikes audio/wav, but accepts audio/wav for data: MIME.
+      // Desktop Safari complains / fails on data: URI, so it gets about:blank.
+      url = (isSafari ? emptyURL : (sm2.html5.canPlayType('audio/wav') ? emptyWAV : emptyURL));
+
+      oAudio.src = url;
+
+      // reset some state, too
+      if (oAudio._called_unload !== _undefined) {
+        oAudio._called_load = false;
+      }
+
+    }
+
+    if (useGlobalHTML5Audio) {
+
+      // ensure URL state is trashed, also
+      lastGlobalHTML5URL = null;
+
+    }
+
+    return url;
+
+  };
+
+  html5CanPlay = function(o) {
+
+    /**
+     * Try to find MIME, test and return truthiness
+     * o = {
+     *  url: '/path/to/an.mp3',
+     *  type: 'audio/mp3'
+     * }
+     */
+
+    if (!sm2.useHTML5Audio || !sm2.hasHTML5) return false;
+
+    var url = (o.url || null),
+        mime = (o.type || null),
+        aF = sm2.audioFormats,
+        result,
+        offset,
+        fileExt,
+        item;
+
+    // account for known cases like audio/mp3
+
+    if (mime && sm2.html5[mime] !== _undefined) return (sm2.html5[mime] && !preferFlashCheck(mime));
+
+    if (!html5Ext) {
+
+      html5Ext = [];
+
+      for (item in aF) {
+
+        if (aF.hasOwnProperty(item)) {
+
+          html5Ext.push(item);
+
+          if (aF[item].related) {
+            html5Ext = html5Ext.concat(aF[item].related);
+          }
+
+        }
+
+      }
+
+      html5Ext = new RegExp('\\.(' + html5Ext.join('|') + ')(\\?.*)?$', 'i');
+
+    }
+
+    // TODO: Strip URL queries, etc.
+    fileExt = (url ? url.toLowerCase().match(html5Ext) : null);
+
+    if (!fileExt || !fileExt.length) {
+
+      if (!mime) {
+
+        result = false;
+
+      } else {
+
+        // audio/mp3 -> mp3, result should be known
+        offset = mime.indexOf(';');
+
+        // strip "audio/X; codecs..."
+        fileExt = (offset !== -1 ? mime.substr(0, offset) : mime).substr(6);
+
+      }
+
+    } else {
+
+      // match the raw extension name - "mp3", for example
+      fileExt = fileExt[1];
+
+    }
+
+    if (fileExt && sm2.html5[fileExt] !== _undefined) {
+
+      // result known
+      result = (sm2.html5[fileExt] && !preferFlashCheck(fileExt));
+
+    } else {
+
+      mime = 'audio/' + fileExt;
+      result = sm2.html5.canPlayType({ type: mime });
+
+      sm2.html5[fileExt] = result;
+
+      // sm2._wD('canPlayType, found result: ' + result);
+      result = (result && sm2.html5[mime] && !preferFlashCheck(mime));
+    }
+
+    return result;
+
+  };
+
+  testHTML5 = function() {
+
+    /**
+     * Internal: Iterates over audioFormats, determining support eg. audio/mp3, audio/mpeg and so on
+     * assigns results to html5[] and flash[].
+     */
+
+    if (!sm2.useHTML5Audio || !sm2.hasHTML5) {
+
+      // without HTML5, we need Flash.
+      sm2.html5.usingFlash = true;
+      needsFlash = true;
+
+      return false;
+
+    }
+
+    // double-whammy: Opera 9.64 throws WRONG_ARGUMENTS_ERR if no parameter passed to Audio(), and Webkit + iOS happily tries to load "null" as a URL. :/
+    var a = (Audio !== _undefined ? (isOpera && opera.version() < 10 ? new Audio(null) : new Audio()) : null),
+        item, lookup, support = {}, aF, i;
+
+    function cp(m) {
+
+      var canPlay, j,
+          result = false,
+          isOK = false;
+
+      if (!a || typeof a.canPlayType !== 'function') return result;
+
+      if (m instanceof Array) {
+
+        // iterate through all mime types, return any successes
+
+        for (i = 0, j = m.length; i < j; i++) {
+
+          if (sm2.html5[m[i]] || a.canPlayType(m[i]).match(sm2.html5Test)) {
+
+            isOK = true;
+            sm2.html5[m[i]] = true;
+
+            // note flash support, too
+            sm2.flash[m[i]] = !!(m[i].match(flashMIME));
+
+          }
+
+        }
+
+        result = isOK;
+
+      } else {
+
+        canPlay = (a && typeof a.canPlayType === 'function' ? a.canPlayType(m) : false);
+        result = !!(canPlay && (canPlay.match(sm2.html5Test)));
+
+      }
+
+      return result;
+
+    }
+
+    // test all registered formats + codecs
+
+    aF = sm2.audioFormats;
+
+    for (item in aF) {
+
+      if (aF.hasOwnProperty(item)) {
+
+        lookup = 'audio/' + item;
+
+        support[item] = cp(aF[item].type);
+
+        // write back generic type too, eg. audio/mp3
+        support[lookup] = support[item];
+
+        // assign flash
+        if (item.match(flashMIME)) {
+
+          sm2.flash[item] = true;
+          sm2.flash[lookup] = true;
+
+        } else {
+
+          sm2.flash[item] = false;
+          sm2.flash[lookup] = false;
+
+        }
+
+        // assign result to related formats, too
+
+        if (aF[item] && aF[item].related) {
+
+          for (i = aF[item].related.length - 1; i >= 0; i--) {
+
+            // eg. audio/m4a
+            support['audio/' + aF[item].related[i]] = support[item];
+            sm2.html5[aF[item].related[i]] = support[item];
+            sm2.flash[aF[item].related[i]] = support[item];
+
+          }
+
+        }
+
+      }
+
+    }
+
+    support.canPlayType = (a ? cp : null);
+    sm2.html5 = mixin(sm2.html5, support);
+
+    sm2.html5.usingFlash = featureCheck();
+    needsFlash = sm2.html5.usingFlash;
+
+    return true;
+
+  };
+
+  strings = {
+
+    // <d>
+    notReady: 'Unavailable - wait until onready() has fired.',
+    notOK: 'Audio support is not available.',
+    domError: sm + 'exception caught while appending SWF to DOM.',
+    spcWmode: 'Removing wmode, preventing known SWF loading issue(s)',
+    swf404: smc + 'Verify that %s is a valid path.',
+    tryDebug: 'Try ' + sm + '.debugFlash = true for more security details (output goes to SWF.)',
+    checkSWF: 'See SWF output for more debug info.',
+    localFail: smc + 'Non-HTTP page (' + doc.location.protocol + ' URL?) Review Flash player security settings for this special case:\nhttp://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager04.html\nMay need to add/allow path, eg. c:/sm2/ or /users/me/sm2/',
+    waitFocus: smc + 'Special case: Waiting for SWF to load with window focus...',
+    waitForever: smc + 'Waiting indefinitely for Flash (will recover if unblocked)...',
+    waitSWF: smc + 'Waiting for 100% SWF load...',
+    needFunction: smc + 'Function object expected for %s',
+    badID: 'Sound ID "%s" should be a string, starting with a non-numeric character',
+    currentObj: smc + '_debug(): Current sound objects',
+    waitOnload: smc + 'Waiting for window.onload()',
+    docLoaded: smc + 'Document already loaded',
+    onload: smc + 'initComplete(): calling soundManager.onload()',
+    onloadOK: sm + '.onload() complete',
+    didInit: smc + 'init(): Already called?',
+    secNote: 'Flash security note: Network/internet URLs will not load due to security restrictions. Access can be configured via Flash Player Global Security Settings Page: http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager04.html',
+    badRemove: smc + 'Failed to remove Flash node.',
+    shutdown: sm + '.disable(): Shutting down',
+    queue: smc + 'Queueing %s handler',
+    smError: 'SMSound.load(): Exception: JS-Flash communication failed, or JS error.',
+    fbTimeout: 'No flash response, applying .' + swfCSS.swfTimedout + ' CSS...',
+    fbLoaded: 'Flash loaded',
+    fbHandler: smc + 'flashBlockHandler()',
+    manURL: 'SMSound.load(): Using manually-assigned URL',
+    onURL: sm + '.load(): current URL already assigned.',
+    badFV: sm + '.flashVersion must be 8 or 9. "%s" is invalid. Reverting to %s.',
+    as2loop: 'Note: Setting stream:false so looping can work (flash 8 limitation)',
+    noNSLoop: 'Note: Looping not implemented for MovieStar formats',
+    needfl9: 'Note: Switching to flash 9, required for MP4 formats.',
+    mfTimeout: 'Setting flashLoadTimeout = 0 (infinite) for off-screen, mobile flash case',
+    needFlash: smc + 'Fatal error: Flash is needed to play some required formats, but is not available.',
+    gotFocus: smc + 'Got window focus.',
+    policy: 'Enabling usePolicyFile for data access',
+    setup: sm + '.setup(): allowed parameters: %s',
+    setupError: sm + '.setup(): "%s" cannot be assigned with this method.',
+    setupUndef: sm + '.setup(): Could not find option "%s"',
+    setupLate: sm + '.setup(): url, flashVersion and html5Test property changes will not take effect until reboot().',
+    noURL: smc + 'Flash URL required. Call soundManager.setup({url:...}) to get started.',
+    sm2Loaded: 'SoundManager 2: Ready. ' + String.fromCharCode(10003),
+    reset: sm + '.reset(): Removing event callbacks',
+    mobileUA: 'Mobile UA detected, preferring HTML5 by default.',
+    globalHTML5: 'Using singleton HTML5 Audio() pattern for this device.',
+    ignoreMobile: 'Ignoring mobile restrictions for this device.'
+    // </d>
+
+  };
+
+  str = function() {
+
+    // internal string replace helper.
+    // arguments: o [,items to replace]
+    // <d>
+
+    var args,
+        i, j, o,
+        sstr;
+
+    // real array, please
+    args = slice.call(arguments);
+
+    // first argument
+    o = args.shift();
+
+    sstr = (strings && strings[o] ? strings[o] : '');
+
+    if (sstr && args && args.length) {
+      for (i = 0, j = args.length; i < j; i++) {
+        sstr = sstr.replace('%s', args[i]);
       }
     }
-  };
-  // Assumes that we have addEventListener in this environment. Might need
-  // something better for old IE.
-  window.addEventListener('message', idleTick, false);
 
-  var animationTick = function (rafTime) {
-    if (scheduledHostCallback !== null) {
-      // Eagerly schedule the next animation callback at the beginning of the
-      // frame. If the scheduler queue is not empty at the end of the frame, it
-      // will continue flushing inside that callback. If the queue *is* empty,
-      // then it will exit immediately. Posting the callback at the start of the
-      // frame ensures it's fired within the earliest possible frame. If we
-      // waited until the end of the frame to post the callback, we risk the
-      // browser skipping a frame and not firing the callback until the frame
-      // after that.
-      requestAnimationFrameWithTimeout(animationTick);
+    return sstr;
+    // </d>
+
+  };
+
+  loopFix = function(sOpt) {
+
+    // flash 8 requires stream = false for looping to work
+    if (fV === 8 && sOpt.loops > 1 && sOpt.stream) {
+      _wDS('as2loop');
+      sOpt.stream = false;
+    }
+
+    return sOpt;
+
+  };
+
+  policyFix = function(sOpt, sPre) {
+
+    if (sOpt && !sOpt.usePolicyFile && (sOpt.onid3 || sOpt.usePeakData || sOpt.useWaveformData || sOpt.useEQData)) {
+      sm2._wD((sPre || '') + str('policy'));
+      sOpt.usePolicyFile = true;
+    }
+
+    return sOpt;
+
+  };
+
+  complain = function(sMsg) {
+
+    // <d>
+    if (hasConsole && console.warn !== _undefined) {
+      console.warn(sMsg);
     } else {
-      // No pending work. Exit.
-      isAnimationFrameScheduled = false;
+      sm2._wD(sMsg);
+    }
+    // </d>
+
+  };
+
+  doNothing = function() {
+
+    return false;
+
+  };
+
+  disableObject = function(o) {
+
+    var oProp;
+
+    for (oProp in o) {
+      if (o.hasOwnProperty(oProp) && typeof o[oProp] === 'function') {
+        o[oProp] = doNothing;
+      }
+    }
+
+    oProp = null;
+
+  };
+
+  failSafely = function(bNoDisable) {
+
+    // general failure exception handler
+
+    if (bNoDisable === _undefined) {
+      bNoDisable = false;
+    }
+
+    if (disabled || bNoDisable) {
+      sm2.disable(bNoDisable);
+    }
+
+  };
+
+  normalizeMovieURL = function(movieURL) {
+
+    var urlParams = null, url;
+
+    if (movieURL) {
+
+      if (movieURL.match(/\.swf(\?.*)?$/i)) {
+
+        urlParams = movieURL.substr(movieURL.toLowerCase().lastIndexOf('.swf?') + 4);
+
+        // assume user knows what they're doing
+        if (urlParams) return movieURL;
+
+      } else if (movieURL.lastIndexOf('/') !== movieURL.length - 1) {
+
+        // append trailing slash, if needed
+        movieURL += '/';
+
+      }
+
+    }
+
+    url = (movieURL && movieURL.lastIndexOf('/') !== -1 ? movieURL.substr(0, movieURL.lastIndexOf('/') + 1) : './') + sm2.movieURL;
+
+    if (sm2.noSWFCache) {
+      url += ('?ts=' + new Date().getTime());
+    }
+
+    return url;
+
+  };
+
+  setVersionInfo = function() {
+
+    // short-hand for internal use
+
+    fV = parseInt(sm2.flashVersion, 10);
+
+    if (fV !== 8 && fV !== 9) {
+      sm2._wD(str('badFV', fV, defaultFlashVersion));
+      sm2.flashVersion = fV = defaultFlashVersion;
+    }
+
+    // debug flash movie, if applicable
+
+    var isDebug = (sm2.debugMode || sm2.debugFlash ? '_debug.swf' : '.swf');
+
+    if (sm2.useHTML5Audio && !sm2.html5Only && sm2.audioFormats.mp4.required && fV < 9) {
+      sm2._wD(str('needfl9'));
+      sm2.flashVersion = fV = 9;
+    }
+
+    sm2.version = sm2.versionNumber + (sm2.html5Only ? ' (HTML5-only mode)' : (fV === 9 ? ' (AS3/Flash 9)' : ' (AS2/Flash 8)'));
+
+    // set up default options
+    if (fV > 8) {
+
+      // +flash 9 base options
+      sm2.defaultOptions = mixin(sm2.defaultOptions, sm2.flash9Options);
+      sm2.features.buffering = true;
+
+      // +moviestar support
+      sm2.defaultOptions = mixin(sm2.defaultOptions, sm2.movieStarOptions);
+      sm2.filePatterns.flash9 = new RegExp('\\.(mp3|' + netStreamTypes.join('|') + ')(\\?.*)?$', 'i');
+      sm2.features.movieStar = true;
+
+    } else {
+
+      sm2.features.movieStar = false;
+
+    }
+
+    // regExp for flash canPlay(), etc.
+    sm2.filePattern = sm2.filePatterns[(fV !== 8 ? 'flash9' : 'flash8')];
+
+    // if applicable, use _debug versions of SWFs
+    sm2.movieURL = (fV === 8 ? 'soundmanager2.swf' : 'soundmanager2_flash9.swf').replace('.swf', isDebug);
+
+    sm2.features.peakData = sm2.features.waveformData = sm2.features.eqData = (fV > 8);
+
+  };
+
+  setPolling = function(bPolling, bHighPerformance) {
+
+    if (!flash) {
       return;
     }
 
-    var nextFrameTime = rafTime - frameDeadline + activeFrameTime;
-    if (nextFrameTime < activeFrameTime && previousFrameTime < activeFrameTime) {
-      if (nextFrameTime < 8) {
-        // Defensive coding. We don't support higher frame rates than 120hz.
-        // If the calculated frame time gets lower than 8, it is probably a bug.
-        nextFrameTime = 8;
+    flash._setPolling(bPolling, bHighPerformance);
+
+  };
+
+  initDebug = function() {
+
+    // starts debug mode, creating output <div> for UAs without console object
+
+    // allow force of debug mode via URL
+    // <d>
+    if (sm2.debugURLParam.test(wl)) {
+      sm2.setupOptions.debugMode = sm2.debugMode = true;
+    }
+
+    if (id(sm2.debugID)) {
+      return;
+    }
+
+    var oD, oDebug, oTarget, oToggle, tmp;
+
+    if (sm2.debugMode && !id(sm2.debugID) && (!hasConsole || !sm2.useConsole || !sm2.consoleOnly)) {
+
+      oD = doc.createElement('div');
+      oD.id = sm2.debugID + '-toggle';
+
+      oToggle = {
+        position: 'fixed',
+        bottom: '0px',
+        right: '0px',
+        width: '1.2em',
+        height: '1.2em',
+        lineHeight: '1.2em',
+        margin: '2px',
+        textAlign: 'center',
+        border: '1px solid #999',
+        cursor: 'pointer',
+        background: '#fff',
+        color: '#333',
+        zIndex: 10001
+      };
+
+      oD.appendChild(doc.createTextNode('-'));
+      oD.onclick = toggleDebug;
+      oD.title = 'Toggle SM2 debug console';
+
+      if (ua.match(/msie 6/i)) {
+        oD.style.position = 'absolute';
+        oD.style.cursor = 'hand';
       }
-      // If one frame goes long, then the next one can be short to catch up.
-      // If two frames are short in a row, then that's an indication that we
-      // actually have a higher frame rate than what we're currently optimizing.
-      // We adjust our heuristic dynamically accordingly. For example, if we're
-      // running on 120hz display or 90hz VR display.
-      // Take the max of the two in case one of them was an anomaly due to
-      // missed frame deadlines.
-      activeFrameTime = nextFrameTime < previousFrameTime ? previousFrameTime : nextFrameTime;
+
+      for (tmp in oToggle) {
+        if (oToggle.hasOwnProperty(tmp)) {
+          oD.style[tmp] = oToggle[tmp];
+        }
+      }
+
+      oDebug = doc.createElement('div');
+      oDebug.id = sm2.debugID;
+      oDebug.style.display = (sm2.debugMode ? 'block' : 'none');
+
+      if (sm2.debugMode && !id(oD.id)) {
+        try {
+          oTarget = getDocument();
+          oTarget.appendChild(oD);
+        } catch(e2) {
+          throw new Error(str('domError') + ' \n' + e2.toString());
+        }
+        oTarget.appendChild(oDebug);
+      }
+
+    }
+
+    oTarget = null;
+    // </d>
+
+  };
+
+  idCheck = this.getSoundById;
+
+  // <d>
+  _wDS = function(o, errorLevel) {
+
+    return (!o ? '' : sm2._wD(str(o), errorLevel));
+
+  };
+
+  toggleDebug = function() {
+
+    var o = id(sm2.debugID),
+    oT = id(sm2.debugID + '-toggle');
+
+    if (!o) {
+      return;
+    }
+
+    if (debugOpen) {
+      // minimize
+      oT.innerHTML = '+';
+      o.style.display = 'none';
     } else {
-      previousFrameTime = nextFrameTime;
+      oT.innerHTML = '-';
+      o.style.display = 'block';
     }
-    frameDeadline = rafTime + activeFrameTime;
-    if (!isMessageEventScheduled) {
-      isMessageEventScheduled = true;
-      window.postMessage(messageKey, '*');
-    }
+
+    debugOpen = !debugOpen;
+
   };
 
-  requestHostCallback = function (callback, absoluteTimeout) {
-    scheduledHostCallback = callback;
-    timeoutTime = absoluteTimeout;
-    if (isFlushingHostCallback || absoluteTimeout < 0) {
-      // Don't wait for the next frame. Continue working ASAP, in a new event.
-      window.postMessage(messageKey, '*');
-    } else if (!isAnimationFrameScheduled) {
-      // If rAF didn't already schedule one, we need to schedule a frame.
-      // TODO: If this rAF doesn't materialize because the browser throttles, we
-      // might want to still have setTimeout trigger rIC as a backup to ensure
-      // that we keep performing work.
-      isAnimationFrameScheduled = true;
-      requestAnimationFrameWithTimeout(animationTick);
+  debugTS = function(sEventType, bSuccess, sMessage) {
+
+    // troubleshooter debug hooks
+
+    if (window.sm2Debugger !== _undefined) {
+      try {
+        sm2Debugger.handleEvent(sEventType, bSuccess, sMessage);
+      } catch(e) {
+        // oh well
+        return false;
+      }
     }
+
+    return true;
+
+  };
+  // </d>
+
+  getSWFCSS = function() {
+
+    var css = [];
+
+    if (sm2.debugMode) {
+      css.push(swfCSS.sm2Debug);
+    }
+
+    if (sm2.debugFlash) {
+      css.push(swfCSS.flashDebug);
+    }
+
+    if (sm2.useHighPerformance) {
+      css.push(swfCSS.highPerf);
+    }
+
+    return css.join(' ');
+
   };
 
-  cancelHostCallback = function () {
-    scheduledHostCallback = null;
-    isMessageEventScheduled = false;
-    timeoutTime = -1;
+  flashBlockHandler = function() {
+
+    // *possible* flash block situation.
+
+    var name = str('fbHandler'),
+        p = sm2.getMoviePercent(),
+        css = swfCSS,
+        error = {
+          type: 'FLASHBLOCK'
+        };
+
+    if (sm2.html5Only) {
+      // no flash, or unused
+      return;
+    }
+
+    if (!sm2.ok()) {
+
+      if (needsFlash) {
+        // make the movie more visible, so user can fix
+        sm2.oMC.className = getSWFCSS() + ' ' + css.swfDefault + ' ' + (p === null ? css.swfTimedout : css.swfError);
+        sm2._wD(name + ': ' + str('fbTimeout') + (p ? ' (' + str('fbLoaded') + ')' : ''));
+      }
+
+      sm2.didFlashBlock = true;
+
+      // fire onready(), complain lightly
+      processOnEvents({
+        type: 'ontimeout',
+        ignoreInit: true,
+        error: error
+      });
+
+      catchError(error);
+
+    } else {
+
+      // SM2 loaded OK (or recovered)
+
+      // <d>
+      if (sm2.didFlashBlock) {
+        sm2._wD(name + ': Unblocked');
+      }
+      // </d>
+
+      if (sm2.oMC) {
+        sm2.oMC.className = [getSWFCSS(), css.swfDefault, css.swfLoaded + (sm2.didFlashBlock ? ' ' + css.swfUnblocked : '')].join(' ');
+      }
+
+    }
+
   };
+
+  addOnEvent = function(sType, oMethod, oScope) {
+
+    if (on_queue[sType] === _undefined) {
+      on_queue[sType] = [];
+    }
+
+    on_queue[sType].push({
+      method: oMethod,
+      scope: (oScope || null),
+      fired: false
+    });
+
+  };
+
+  processOnEvents = function(oOptions) {
+
+    // if unspecified, assume OK/error
+
+    if (!oOptions) {
+      oOptions = {
+        type: (sm2.ok() ? 'onready' : 'ontimeout')
+      };
+    }
+
+    // not ready yet.
+    if (!didInit && oOptions && !oOptions.ignoreInit) return false;
+
+    // invalid case
+    if (oOptions.type === 'ontimeout' && (sm2.ok() || (disabled && !oOptions.ignoreInit))) return false;
+
+    var status = {
+          success: (oOptions && oOptions.ignoreInit ? sm2.ok() : !disabled)
+        },
+
+        // queue specified by type, or none
+        srcQueue = (oOptions && oOptions.type ? on_queue[oOptions.type] || [] : []),
+
+        queue = [], i, j,
+        args = [status],
+        canRetry = (needsFlash && !sm2.ok());
+
+    if (oOptions.error) {
+      args[0].error = oOptions.error;
+    }
+
+    for (i = 0, j = srcQueue.length; i < j; i++) {
+      if (srcQueue[i].fired !== true) {
+        queue.push(srcQueue[i]);
+      }
+    }
+
+    if (queue.length) {
+
+      // sm2._wD(sm + ': Firing ' + queue.length + ' ' + oOptions.type + '() item' + (queue.length === 1 ? '' : 's'));
+      for (i = 0, j = queue.length; i < j; i++) {
+
+        if (queue[i].scope) {
+          queue[i].method.apply(queue[i].scope, args);
+        } else {
+          queue[i].method.apply(this, args);
+        }
+
+        if (!canRetry) {
+          // useFlashBlock and SWF timeout case doesn't count here.
+          queue[i].fired = true;
+
+        }
+
+      }
+
+    }
+
+    return true;
+
+  };
+
+  initUserOnload = function() {
+
+    window.setTimeout(function() {
+
+      if (sm2.useFlashBlock) {
+        flashBlockHandler();
+      }
+
+      processOnEvents();
+
+      // call user-defined "onload", scoped to window
+
+      if (typeof sm2.onload === 'function') {
+        _wDS('onload', 1);
+        sm2.onload.apply(window);
+        _wDS('onloadOK', 1);
+      }
+
+      if (sm2.waitForWindowLoad) {
+        event.add(window, 'load', initUserOnload);
+      }
+
+    }, 1);
+
+  };
+
+  detectFlash = function() {
+
+    /**
+     * Hat tip: Flash Detect library (BSD, (C) 2007) by Carl "DocYes" S. Yestrau
+     * http://featureblend.com/javascript-flash-detection-library.html / http://featureblend.com/license.txt
+     */
+
+    // this work has already been done.
+    if (hasFlash !== _undefined) return hasFlash;
+
+    var hasPlugin = false, n = navigator, obj, type, types, AX = window.ActiveXObject;
+
+    // MS Edge 14 throws an "Unspecified Error" because n.plugins is inaccessible due to permissions
+    var nP;
+
+    try {
+      nP = n.plugins;
+    } catch(e) {
+      nP = undefined;
+    }
+
+    if (nP && nP.length) {
+
+      type = 'application/x-shockwave-flash';
+      types = n.mimeTypes;
+
+      if (types && types[type] && types[type].enabledPlugin && types[type].enabledPlugin.description) {
+        hasPlugin = true;
+      }
+
+    } else if (AX !== _undefined && !ua.match(/MSAppHost/i)) {
+
+      // Windows 8 Store Apps (MSAppHost) are weird (compatibility?) and won't complain here, but will barf if Flash/ActiveX object is appended to the DOM.
+      try {
+        obj = new AX('ShockwaveFlash.ShockwaveFlash');
+      } catch(e) {
+        // oh well
+        obj = null;
+      }
+
+      hasPlugin = (!!obj);
+
+      // cleanup, because it is ActiveX after all
+      obj = null;
+
+    }
+
+    hasFlash = hasPlugin;
+
+    return hasPlugin;
+
+  };
+
+  featureCheck = function() {
+
+    var flashNeeded,
+        item,
+        formats = sm2.audioFormats,
+        // iPhone <= 3.1 has broken HTML5 audio(), but firmware 3.2 (original iPad) + iOS4 works.
+        isSpecial = (is_iDevice && !!(ua.match(/os (1|2|3_0|3_1)\s/i)));
+
+    if (isSpecial) {
+
+      // has Audio(), but is broken; let it load links directly.
+      sm2.hasHTML5 = false;
+
+      // ignore flash case, however
+      sm2.html5Only = true;
+
+      // hide the SWF, if present
+      if (sm2.oMC) {
+        sm2.oMC.style.display = 'none';
+      }
+
+    } else if (sm2.useHTML5Audio) {
+
+        if (!sm2.html5 || !sm2.html5.canPlayType) {
+          sm2._wD('SoundManager: No HTML5 Audio() support detected.');
+          sm2.hasHTML5 = false;
+        }
+
+        // <d>
+        if (isBadSafari) {
+          sm2._wD(smc + 'Note: Buggy HTML5 Audio in Safari on this OS X release, see https://bugs.webkit.org/show_bug.cgi?id=32159 - ' + (!hasFlash ? ' would use flash fallback for MP3/MP4, but none detected.' : 'will use flash fallback for MP3/MP4, if available'), 1);
+        }
+        // </d>
+
+      }
+
+    if (sm2.useHTML5Audio && sm2.hasHTML5) {
+
+      // sort out whether flash is optional, required or can be ignored.
+
+      // innocent until proven guilty.
+      canIgnoreFlash = true;
+
+      for (item in formats) {
+
+        if (formats.hasOwnProperty(item)) {
+
+          if (formats[item].required) {
+
+            if (!sm2.html5.canPlayType(formats[item].type)) {
+
+              // 100% HTML5 mode is not possible.
+              canIgnoreFlash = false;
+              flashNeeded = true;
+
+            } else if (sm2.preferFlash && (sm2.flash[item] || sm2.flash[formats[item].type])) {
+
+              // flash may be required, or preferred for this format.
+              flashNeeded = true;
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+    // sanity check...
+    if (sm2.ignoreFlash) {
+      flashNeeded = false;
+      canIgnoreFlash = true;
+    }
+
+    sm2.html5Only = (sm2.hasHTML5 && sm2.useHTML5Audio && !flashNeeded);
+
+    return (!sm2.html5Only);
+
+  };
+
+  parseURL = function(url) {
+
+    /**
+     * Internal: Finds and returns the first playable URL (or failing that, the first URL.)
+     * @param {string or array} url A single URL string, OR, an array of URL strings or {url:'/path/to/resource', type:'audio/mp3'} objects.
+     */
+
+    var i, j, urlResult = 0, result;
+
+    if (url instanceof Array) {
+
+      // find the first good one
+      for (i = 0, j = url.length; i < j; i++) {
+
+        if (url[i] instanceof Object) {
+
+          // MIME check
+          if (sm2.canPlayMIME(url[i].type)) {
+            urlResult = i;
+            break;
+          }
+
+        } else if (sm2.canPlayURL(url[i])) {
+
+          // URL string check
+          urlResult = i;
+          break;
+
+        }
+
+      }
+
+      // normalize to string
+      if (url[urlResult].url) {
+        url[urlResult] = url[urlResult].url;
+      }
+
+      result = url[urlResult];
+
+    } else {
+
+      // single URL case
+      result = url;
+
+    }
+
+    return result;
+
+  };
+
+
+  startTimer = function(oSound) {
+
+    /**
+     * attach a timer to this sound, and start an interval if needed
+     */
+
+    if (!oSound._hasTimer) {
+
+      oSound._hasTimer = true;
+
+      if (!mobileHTML5 && sm2.html5PollingInterval) {
+
+        if (h5IntervalTimer === null && h5TimerCount === 0) {
+
+          h5IntervalTimer = setInterval(timerExecute, sm2.html5PollingInterval);
+
+        }
+
+        h5TimerCount++;
+
+      }
+
+    }
+
+  };
+
+  stopTimer = function(oSound) {
+
+    /**
+     * detach a timer
+     */
+
+    if (oSound._hasTimer) {
+
+      oSound._hasTimer = false;
+
+      if (!mobileHTML5 && sm2.html5PollingInterval) {
+
+        // interval will stop itself at next execution.
+
+        h5TimerCount--;
+
+      }
+
+    }
+
+  };
+
+  timerExecute = function() {
+
+    /**
+     * manual polling for HTML5 progress events, ie., whileplaying()
+     * (can achieve greater precision than conservative default HTML5 interval)
+     */
+
+    var i;
+
+    if (h5IntervalTimer !== null && !h5TimerCount) {
+
+      // no active timers, stop polling interval.
+
+      clearInterval(h5IntervalTimer);
+
+      h5IntervalTimer = null;
+
+      return;
+
+    }
+
+    // check all HTML5 sounds with timers
+
+    for (i = sm2.soundIDs.length - 1; i >= 0; i--) {
+
+      if (sm2.sounds[sm2.soundIDs[i]].isHTML5 && sm2.sounds[sm2.soundIDs[i]]._hasTimer) {
+        sm2.sounds[sm2.soundIDs[i]]._onTimer();
+      }
+
+    }
+
+  };
+
+  catchError = function(options) {
+
+    options = (options !== _undefined ? options : {});
+
+    if (typeof sm2.onerror === 'function') {
+      sm2.onerror.apply(window, [{
+        type: (options.type !== _undefined ? options.type : null)
+      }]);
+    }
+
+    if (options.fatal !== _undefined && options.fatal) {
+      sm2.disable();
+    }
+
+  };
+
+  badSafariFix = function() {
+
+    // special case: "bad" Safari (OS X 10.3 - 10.7) must fall back to flash for MP3/MP4
+    if (!isBadSafari || !detectFlash()) {
+      // doesn't apply
+      return;
+    }
+
+    var aF = sm2.audioFormats, i, item;
+
+    for (item in aF) {
+
+      if (aF.hasOwnProperty(item)) {
+
+        if (item === 'mp3' || item === 'mp4') {
+
+          sm2._wD(sm + ': Using flash fallback for ' + item + ' format');
+          sm2.html5[item] = false;
+
+          // assign result to related formats, too
+          if (aF[item] && aF[item].related) {
+            for (i = aF[item].related.length - 1; i >= 0; i--) {
+              sm2.html5[aF[item].related[i]] = false;
+            }
+          }
+
+        }
+
+      }
+
+    }
+
+  };
+
+  /**
+   * Pseudo-private flash/ExternalInterface methods
+   * ----------------------------------------------
+   */
+
+  this._setSandboxType = function(sandboxType) {
+
+    // <d>
+    // Security sandbox according to Flash plugin
+    var sb = sm2.sandbox;
+
+    sb.type = sandboxType;
+    sb.description = sb.types[(sb.types[sandboxType] !== _undefined ? sandboxType : 'unknown')];
+
+    if (sb.type === 'localWithFile') {
+
+      sb.noRemote = true;
+      sb.noLocal = false;
+      _wDS('secNote', 2);
+
+    } else if (sb.type === 'localWithNetwork') {
+
+      sb.noRemote = false;
+      sb.noLocal = true;
+
+    } else if (sb.type === 'localTrusted') {
+
+      sb.noRemote = false;
+      sb.noLocal = false;
+
+    }
+    // </d>
+
+  };
+
+  this._externalInterfaceOK = function(swfVersion) {
+
+    // flash callback confirming flash loaded, EI working etc.
+    // swfVersion: SWF build string
+
+    if (sm2.swfLoaded) {
+      return;
+    }
+
+    var e;
+
+    debugTS('swf', true);
+    debugTS('flashtojs', true);
+    sm2.swfLoaded = true;
+    tryInitOnFocus = false;
+
+    if (isBadSafari) {
+      badSafariFix();
+    }
+
+    // complain if JS + SWF build/version strings don't match, excluding +DEV builds
+    // <d>
+    if (!swfVersion || swfVersion.replace(/\+dev/i, '') !== sm2.versionNumber.replace(/\+dev/i, '')) {
+
+      e = sm + ': Fatal: JavaScript file build "' + sm2.versionNumber + '" does not match Flash SWF build "' + swfVersion + '" at ' + sm2.url + '. Ensure both are up-to-date.';
+
+      // escape flash -> JS stack so this error fires in window.
+      setTimeout(function() {
+        throw new Error(e);
+      }, 0);
+
+      // exit, init will fail with timeout
+      return;
+
+    }
+    // </d>
+
+    // IE needs a larger timeout
+    setTimeout(init, isIE ? 100 : 1);
+
+  };
+
+  /**
+   * Private initialization helpers
+   * ------------------------------
+   */
+
+  createMovie = function(movieID, movieURL) {
+
+    // ignore if already connected
+    if (didAppend && appendSuccess) return false;
+
+    function initMsg() {
+
+      // <d>
+
+      var options = [],
+          title,
+          msg = [],
+          delimiter = ' + ';
+
+      title = 'SoundManager ' + sm2.version + (!sm2.html5Only && sm2.useHTML5Audio ? (sm2.hasHTML5 ? ' + HTML5 audio' : ', no HTML5 audio support') : '');
+
+      if (!sm2.html5Only) {
+
+        if (sm2.preferFlash) {
+          options.push('preferFlash');
+        }
+
+        if (sm2.useHighPerformance) {
+          options.push('useHighPerformance');
+        }
+
+        if (sm2.flashPollingInterval) {
+          options.push('flashPollingInterval (' + sm2.flashPollingInterval + 'ms)');
+        }
+
+        if (sm2.html5PollingInterval) {
+          options.push('html5PollingInterval (' + sm2.html5PollingInterval + 'ms)');
+        }
+
+        if (sm2.wmode) {
+          options.push('wmode (' + sm2.wmode + ')');
+        }
+
+        if (sm2.debugFlash) {
+          options.push('debugFlash');
+        }
+
+        if (sm2.useFlashBlock) {
+          options.push('flashBlock');
+        }
+
+      } else if (sm2.html5PollingInterval) {
+          options.push('html5PollingInterval (' + sm2.html5PollingInterval + 'ms)');
+        }
+
+      if (options.length) {
+        msg = msg.concat([options.join(delimiter)]);
+      }
+
+      sm2._wD(title + (msg.length ? delimiter + msg.join(', ') : ''), 1);
+
+      showSupport();
+
+      // </d>
+
+    }
+
+    if (sm2.html5Only) {
+
+      // 100% HTML5 mode
+      setVersionInfo();
+
+      initMsg();
+      sm2.oMC = id(sm2.movieID);
+      init();
+
+      // prevent multiple init attempts
+      didAppend = true;
+
+      appendSuccess = true;
+
+      return false;
+
+    }
+
+    // flash path
+    var remoteURL = (movieURL || sm2.url),
+    localURL = (sm2.altURL || remoteURL),
+    swfTitle = 'JS/Flash audio component (SoundManager 2)',
+    oTarget = getDocument(),
+    extraClass = getSWFCSS(),
+    isRTL = null,
+    html = doc.getElementsByTagName('html')[0],
+    oEmbed, oMovie, tmp, movieHTML, oEl, s, x, sClass;
+
+    isRTL = (html && html.dir && html.dir.match(/rtl/i));
+    movieID = (movieID === _undefined ? sm2.id : movieID);
+
+    function param(name, value) {
+      return '<param name="' + name + '" value="' + value + '" />';
+    }
+
+    // safety check for legacy (change to Flash 9 URL)
+    setVersionInfo();
+    sm2.url = normalizeMovieURL(overHTTP ? remoteURL : localURL);
+    movieURL = sm2.url;
+
+    sm2.wmode = (!sm2.wmode && sm2.useHighPerformance ? 'transparent' : sm2.wmode);
+
+    if (sm2.wmode !== null && (ua.match(/msie 8/i) || (!isIE && !sm2.useHighPerformance)) && navigator.platform.match(/win32|win64/i)) {
+      /**
+       * extra-special case: movie doesn't load until scrolled into view when using wmode = anything but 'window' here
+       * does not apply when using high performance (position:fixed means on-screen), OR infinite flash load timeout
+       * wmode breaks IE 8 on Vista + Win7 too in some cases, as of January 2011 (?)
+       */
+      messages.push(strings.spcWmode);
+      sm2.wmode = null;
+    }
+
+    oEmbed = {
+      name: movieID,
+      id: movieID,
+      src: movieURL,
+      quality: 'high',
+      allowScriptAccess: sm2.allowScriptAccess,
+      bgcolor: sm2.bgColor,
+      pluginspage: http + 'www.macromedia.com/go/getflashplayer',
+      title: swfTitle,
+      type: 'application/x-shockwave-flash',
+      wmode: sm2.wmode,
+      // http://help.adobe.com/en_US/as3/mobile/WS4bebcd66a74275c36cfb8137124318eebc6-7ffd.html
+      hasPriority: 'true'
+    };
+
+    if (sm2.debugFlash) {
+      oEmbed.FlashVars = 'debug=1';
+    }
+
+    if (!sm2.wmode) {
+      // don't write empty attribute
+      delete oEmbed.wmode;
+    }
+
+    if (isIE) {
+
+      // IE is "special".
+      oMovie = doc.createElement('div');
+      movieHTML = [
+        '<object id="' + movieID + '" data="' + movieURL + '" type="' + oEmbed.type + '" title="' + oEmbed.title + '" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0">',
+        param('movie', movieURL),
+        param('AllowScriptAccess', sm2.allowScriptAccess),
+        param('quality', oEmbed.quality),
+        (sm2.wmode ? param('wmode', sm2.wmode) : ''),
+        param('bgcolor', sm2.bgColor),
+        param('hasPriority', 'true'),
+        (sm2.debugFlash ? param('FlashVars', oEmbed.FlashVars) : ''),
+        '</object>'
+      ].join('');
+
+    } else {
+
+      oMovie = doc.createElement('embed');
+      for (tmp in oEmbed) {
+        if (oEmbed.hasOwnProperty(tmp)) {
+          oMovie.setAttribute(tmp, oEmbed[tmp]);
+        }
+      }
+
+    }
+
+    initDebug();
+    extraClass = getSWFCSS();
+    oTarget = getDocument();
+
+    if (oTarget) {
+
+      sm2.oMC = (id(sm2.movieID) || doc.createElement('div'));
+
+      if (!sm2.oMC.id) {
+
+        sm2.oMC.id = sm2.movieID;
+        sm2.oMC.className = swfCSS.swfDefault + ' ' + extraClass;
+        s = null;
+        oEl = null;
+
+        if (!sm2.useFlashBlock) {
+          if (sm2.useHighPerformance) {
+            // on-screen at all times
+            s = {
+              position: 'fixed',
+              width: '8px',
+              height: '8px',
+              // >= 6px for flash to run fast, >= 8px to start up under Firefox/win32 in some cases. odd? yes.
+              bottom: '0px',
+              left: '0px',
+              overflow: 'hidden'
+            };
+          } else {
+            // hide off-screen, lower priority
+            s = {
+              position: 'absolute',
+              width: '6px',
+              height: '6px',
+              top: '-9999px',
+              left: '-9999px'
+            };
+            if (isRTL) {
+              s.left = Math.abs(parseInt(s.left, 10)) + 'px';
+            }
+          }
+        }
+
+        if (isWebkit) {
+          // soundcloud-reported render/crash fix, safari 5
+          sm2.oMC.style.zIndex = 10000;
+        }
+
+        if (!sm2.debugFlash) {
+          for (x in s) {
+            if (s.hasOwnProperty(x)) {
+              sm2.oMC.style[x] = s[x];
+            }
+          }
+        }
+
+        try {
+
+          if (!isIE) {
+            sm2.oMC.appendChild(oMovie);
+          }
+
+          oTarget.appendChild(sm2.oMC);
+
+          if (isIE) {
+            oEl = sm2.oMC.appendChild(doc.createElement('div'));
+            oEl.className = swfCSS.swfBox;
+            oEl.innerHTML = movieHTML;
+          }
+
+          appendSuccess = true;
+
+        } catch(e) {
+
+          throw new Error(str('domError') + ' \n' + e.toString());
+
+        }
+
+      } else {
+
+        // SM2 container is already in the document (eg. flashblock use case)
+        sClass = sm2.oMC.className;
+        sm2.oMC.className = (sClass ? sClass + ' ' : swfCSS.swfDefault) + (extraClass ? ' ' + extraClass : '');
+        sm2.oMC.appendChild(oMovie);
+
+        if (isIE) {
+          oEl = sm2.oMC.appendChild(doc.createElement('div'));
+          oEl.className = swfCSS.swfBox;
+          oEl.innerHTML = movieHTML;
+        }
+
+        appendSuccess = true;
+
+      }
+
+    }
+
+    didAppend = true;
+
+    initMsg();
+
+    // sm2._wD(sm + ': Trying to load ' + movieURL + (!overHTTP && sm2.altURL ? ' (alternate URL)' : ''), 1);
+
+    return true;
+
+  };
+
+  initMovie = function() {
+
+    if (sm2.html5Only) {
+      createMovie();
+      return false;
+    }
+
+    // attempt to get, or create, movie (may already exist)
+    if (flash) return false;
+
+    if (!sm2.url) {
+
+      /**
+       * Something isn't right - we've reached init, but the soundManager url property has not been set.
+       * User has not called setup({url: ...}), or has not set soundManager.url (legacy use case) directly before init time.
+       * Notify and exit. If user calls setup() with a url: property, init will be restarted as in the deferred loading case.
+       */
+
+       _wDS('noURL');
+       return false;
+
+    }
+
+    // inline markup case
+    flash = sm2.getMovie(sm2.id);
+
+    if (!flash) {
+
+      if (!oRemoved) {
+
+        // try to create
+        createMovie(sm2.id, sm2.url);
+
+      } else {
+
+        // try to re-append removed movie after reboot()
+        if (!isIE) {
+          sm2.oMC.appendChild(oRemoved);
+        } else {
+          sm2.oMC.innerHTML = oRemovedHTML;
+        }
+
+        oRemoved = null;
+        didAppend = true;
+
+      }
+
+      flash = sm2.getMovie(sm2.id);
+
+    }
+
+    if (typeof sm2.oninitmovie === 'function') {
+      setTimeout(sm2.oninitmovie, 1);
+    }
+
+    // <d>
+    flushMessages();
+    // </d>
+
+    return true;
+
+  };
+
+  delayWaitForEI = function() {
+
+    setTimeout(waitForEI, 1000);
+
+  };
+
+  rebootIntoHTML5 = function() {
+
+    // special case: try for a reboot with preferFlash: false, if 100% HTML5 mode is possible and useFlashBlock is not enabled.
+
+    window.setTimeout(function() {
+
+      complain(smc + 'useFlashBlock is false, 100% HTML5 mode is possible. Rebooting with preferFlash: false...');
+
+      sm2.setup({
+        preferFlash: false
+      }).reboot();
+
+      // if for some reason you want to detect this case, use an ontimeout() callback and look for html5Only and didFlashBlock == true.
+      sm2.didFlashBlock = true;
+
+      sm2.beginDelayedInit();
+
+    }, 1);
+
+  };
+
+  waitForEI = function() {
+
+    var p,
+        loadIncomplete = false;
+
+    if (!sm2.url) {
+      // No SWF url to load (noURL case) - exit for now. Will be retried when url is set.
+      return;
+    }
+
+    if (waitingForEI) {
+      return;
+    }
+
+    waitingForEI = true;
+    event.remove(window, 'load', delayWaitForEI);
+
+    if (hasFlash && tryInitOnFocus && !isFocused) {
+      // Safari won't load flash in background tabs, only when focused.
+      _wDS('waitFocus');
+      return;
+    }
+
+    if (!didInit) {
+      p = sm2.getMoviePercent();
+      if (p > 0 && p < 100) {
+        loadIncomplete = true;
+      }
+    }
+
+    setTimeout(function() {
+
+      p = sm2.getMoviePercent();
+
+      if (loadIncomplete) {
+        // special case: if movie *partially* loaded, retry until it's 100% before assuming failure.
+        waitingForEI = false;
+        sm2._wD(str('waitSWF'));
+        window.setTimeout(delayWaitForEI, 1);
+        return;
+      }
+
+      // <d>
+      if (!didInit) {
+
+        sm2._wD(sm + ': No Flash response within expected time. Likely causes: ' + (p === 0 ? 'SWF load failed, ' : '') + 'Flash blocked or JS-Flash security error.' + (sm2.debugFlash ? ' ' + str('checkSWF') : ''), 2);
+
+        if (!overHTTP && p) {
+
+          _wDS('localFail', 2);
+
+          if (!sm2.debugFlash) {
+            _wDS('tryDebug', 2);
+          }
+
+        }
+
+        if (p === 0) {
+
+          // if 0 (not null), probably a 404.
+          sm2._wD(str('swf404', sm2.url), 1);
+
+        }
+
+        debugTS('flashtojs', false, ': Timed out' + (overHTTP ? ' (Check flash security or flash blockers)' : ' (No plugin/missing SWF?)'));
+
+      }
+      // </d>
+
+      // give up / time-out, depending
+
+      if (!didInit && okToDisable) {
+
+        if (p === null) {
+
+          // SWF failed to report load progress. Possibly blocked.
+
+          if (sm2.useFlashBlock || sm2.flashLoadTimeout === 0) {
+
+            if (sm2.useFlashBlock) {
+
+              flashBlockHandler();
+
+            }
+
+            _wDS('waitForever');
+
+          } else if (!sm2.useFlashBlock && canIgnoreFlash) {
+
+            // no custom flash block handling, but SWF has timed out. Will recover if user unblocks / allows SWF load.
+            rebootIntoHTML5();
+
+          } else {
+
+            _wDS('waitForever');
+
+            // fire any regular registered ontimeout() listeners.
+            processOnEvents({
+              type: 'ontimeout',
+              ignoreInit: true,
+              error: {
+                type: 'INIT_FLASHBLOCK'
+              }
+            });
+
+          }
+
+        } else if (sm2.flashLoadTimeout === 0) {
+
+          // SWF loaded? Shouldn't be a blocking issue, then.
+
+          _wDS('waitForever');
+
+        } else if (!sm2.useFlashBlock && canIgnoreFlash) {
+
+          rebootIntoHTML5();
+
+        } else {
+
+          failSafely(true);
+
+        }
+
+      }
+
+    }, sm2.flashLoadTimeout);
+
+  };
+
+  handleFocus = function() {
+
+    function cleanup() {
+      event.remove(window, 'focus', handleFocus);
+    }
+
+    if (isFocused || !tryInitOnFocus) {
+      // already focused, or not special Safari background tab case
+      cleanup();
+      return true;
+    }
+
+    okToDisable = true;
+    isFocused = true;
+    _wDS('gotFocus');
+
+    // allow init to restart
+    waitingForEI = false;
+
+    // kick off ExternalInterface timeout, now that the SWF has started
+    delayWaitForEI();
+
+    cleanup();
+    return true;
+
+  };
+
+  flushMessages = function() {
+
+    // <d>
+
+    // SM2 pre-init debug messages
+    if (messages.length) {
+      sm2._wD('SoundManager 2: ' + messages.join(' '), 1);
+      messages = [];
+    }
+
+    // </d>
+
+  };
+
+  showSupport = function() {
+
+    // <d>
+
+    flushMessages();
+
+    var item, tests = [];
+
+    if (sm2.useHTML5Audio && sm2.hasHTML5) {
+      for (item in sm2.audioFormats) {
+        if (sm2.audioFormats.hasOwnProperty(item)) {
+          tests.push(item + ' = ' + sm2.html5[item] + (!sm2.html5[item] && needsFlash && sm2.flash[item] ? ' (using flash)' : (sm2.preferFlash && sm2.flash[item] && needsFlash ? ' (preferring flash)' : (!sm2.html5[item] ? ' (' + (sm2.audioFormats[item].required ? 'required, ' : '') + 'and no flash support)' : ''))));
+        }
+      }
+      sm2._wD('SoundManager 2 HTML5 support: ' + tests.join(', '), 1);
+    }
+
+    // </d>
+
+  };
+
+  initComplete = function(bNoDisable) {
+
+    if (didInit) return false;
+
+    if (sm2.html5Only) {
+      // all good.
+      _wDS('sm2Loaded', 1);
+      didInit = true;
+      initUserOnload();
+      debugTS('onload', true);
+      return true;
+    }
+
+    var wasTimeout = (sm2.useFlashBlock && sm2.flashLoadTimeout && !sm2.getMoviePercent()),
+        result = true,
+        error;
+
+    if (!wasTimeout) {
+      didInit = true;
+    }
+
+    error = {
+      type: (!hasFlash && needsFlash ? 'NO_FLASH' : 'INIT_TIMEOUT')
+    };
+
+    sm2._wD('SoundManager 2 ' + (disabled ? 'failed to load' : 'loaded') + ' (' + (disabled ? 'Flash security/load error' : 'OK') + ') ' + String.fromCharCode(disabled ? 10006 : 10003), disabled ? 2 : 1);
+
+    if (disabled || bNoDisable) {
+
+      if (sm2.useFlashBlock && sm2.oMC) {
+        sm2.oMC.className = getSWFCSS() + ' ' + (sm2.getMoviePercent() === null ? swfCSS.swfTimedout : swfCSS.swfError);
+      }
+
+      processOnEvents({
+        type: 'ontimeout',
+        error: error,
+        ignoreInit: true
+      });
+
+      debugTS('onload', false);
+      catchError(error);
+
+      result = false;
+
+    } else {
+
+      debugTS('onload', true);
+
+    }
+
+    if (!disabled) {
+
+      if (sm2.waitForWindowLoad && !windowLoaded) {
+
+        _wDS('waitOnload');
+        event.add(window, 'load', initUserOnload);
+
+      } else {
+
+        // <d>
+        if (sm2.waitForWindowLoad && windowLoaded) {
+          _wDS('docLoaded');
+        }
+        // </d>
+
+        initUserOnload();
+
+      }
+
+    }
+
+    return result;
+
+  };
+
+  /**
+   * apply top-level setupOptions object as local properties, eg., this.setupOptions.flashVersion -> this.flashVersion (soundManager.flashVersion)
+   * this maintains backward compatibility, and allows properties to be defined separately for use by soundManager.setup().
+   */
+
+  setProperties = function() {
+
+    var i,
+        o = sm2.setupOptions;
+
+    for (i in o) {
+
+      if (o.hasOwnProperty(i)) {
+
+        // assign local property if not already defined
+
+        if (sm2[i] === _undefined) {
+
+          sm2[i] = o[i];
+
+        } else if (sm2[i] !== o[i]) {
+
+          // legacy support: write manually-assigned property (eg., soundManager.url) back to setupOptions to keep things in sync
+          sm2.setupOptions[i] = sm2[i];
+
+        }
+
+      }
+
+    }
+
+  };
+
+
+  init = function() {
+
+    // called after onload()
+
+    if (didInit) {
+      _wDS('didInit');
+      return false;
+    }
+
+    function cleanup() {
+      event.remove(window, 'load', sm2.beginDelayedInit);
+    }
+
+    if (sm2.html5Only) {
+
+      if (!didInit) {
+        // we don't need no steenking flash!
+        cleanup();
+        sm2.enabled = true;
+        initComplete();
+      }
+
+      return true;
+
+    }
+
+    // flash path
+    initMovie();
+
+    try {
+
+      // attempt to talk to Flash
+      flash._externalInterfaceTest(false);
+
+      /**
+       * Apply user-specified polling interval, OR, if "high performance" set, faster vs. default polling
+       * (determines frequency of whileloading/whileplaying callbacks, effectively driving UI framerates)
+       */
+      setPolling(true, (sm2.flashPollingInterval || (sm2.useHighPerformance ? 10 : 50)));
+
+      if (!sm2.debugMode) {
+        // stop the SWF from making debug output calls to JS
+        flash._disableDebug();
+      }
+
+      sm2.enabled = true;
+      debugTS('jstoflash', true);
+
+      if (!sm2.html5Only) {
+        // prevent browser from showing cached page state (or rather, restoring "suspended" page state) via back button, because flash may be dead
+        // http://www.webkit.org/blog/516/webkit-page-cache-ii-the-unload-event/
+        event.add(window, 'unload', doNothing);
+      }
+
+    } catch(e) {
+
+      sm2._wD('js/flash exception: ' + e.toString());
+
+      debugTS('jstoflash', false);
+
+      catchError({
+        type: 'JS_TO_FLASH_EXCEPTION',
+        fatal: true
+      });
+
+      // don't disable, for reboot()
+      failSafely(true);
+
+      initComplete();
+
+      return false;
+
+    }
+
+    initComplete();
+
+    // disconnect events
+    cleanup();
+
+    return true;
+
+  };
+
+  domContentLoaded = function() {
+
+    if (didDCLoaded) return false;
+
+    didDCLoaded = true;
+
+    // assign top-level soundManager properties eg. soundManager.url
+    setProperties();
+
+    initDebug();
+
+    if (!hasFlash && sm2.hasHTML5) {
+
+      sm2._wD('SoundManager 2: No Flash detected' + (!sm2.useHTML5Audio ? ', enabling HTML5.' : '. Trying HTML5-only mode.'), 1);
+
+      sm2.setup({
+        useHTML5Audio: true,
+        // make sure we aren't preferring flash, either
+        // TODO: preferFlash should not matter if flash is not installed. Currently, stuff breaks without the below tweak.
+        preferFlash: false
+      });
+
+    }
+
+    testHTML5();
+
+    if (!hasFlash && needsFlash) {
+
+      messages.push(strings.needFlash);
+
+      // TODO: Fatal here vs. timeout approach, etc.
+      // hack: fail sooner.
+      sm2.setup({
+        flashLoadTimeout: 1
+      });
+
+    }
+
+    if (doc.removeEventListener) {
+      doc.removeEventListener('DOMContentLoaded', domContentLoaded, false);
+    }
+
+    initMovie();
+
+    return true;
+
+  };
+
+  domContentLoadedIE = function() {
+
+    if (doc.readyState === 'complete') {
+      domContentLoaded();
+      doc.detachEvent('onreadystatechange', domContentLoadedIE);
+    }
+
+    return true;
+
+  };
+
+  winOnLoad = function() {
+
+    // catch edge case of initComplete() firing after window.load()
+    windowLoaded = true;
+
+    // catch case where DOMContentLoaded has been sent, but we're still in doc.readyState = 'interactive'
+    domContentLoaded();
+
+    event.remove(window, 'load', winOnLoad);
+
+  };
+
+  // sniff up-front
+  detectFlash();
+
+  // focus and window load, init (primarily flash-driven)
+  event.add(window, 'focus', handleFocus);
+  event.add(window, 'load', delayWaitForEI);
+  event.add(window, 'load', winOnLoad);
+
+  if (doc.addEventListener) {
+
+    doc.addEventListener('DOMContentLoaded', domContentLoaded, false);
+
+  } else if (doc.attachEvent) {
+
+    doc.attachEvent('onreadystatechange', domContentLoadedIE);
+
+  } else {
+
+    // no add/attachevent support - safe to assume no JS -> Flash either
+    debugTS('onload', false);
+    catchError({
+      type: 'NO_DOM2_EVENTS',
+      fatal: true
+    });
+
+  }
+
+} // SoundManager()
+
+// SM2_DEFER details: http://www.schillmania.com/projects/soundmanager2/doc/getstarted/#lazy-loading
+
+if (window.SM2_DEFER === _undefined || !SM2_DEFER) {
+  soundManager = new SoundManager();
 }
 
-exports.unstable_ImmediatePriority = ImmediatePriority;
-exports.unstable_UserBlockingPriority = UserBlockingPriority;
-exports.unstable_NormalPriority = NormalPriority;
-exports.unstable_IdlePriority = IdlePriority;
-exports.unstable_LowPriority = LowPriority;
-exports.unstable_runWithPriority = unstable_runWithPriority;
-exports.unstable_scheduleCallback = unstable_scheduleCallback;
-exports.unstable_cancelCallback = unstable_cancelCallback;
-exports.unstable_wrapCallback = unstable_wrapCallback;
-exports.unstable_getCurrentPriorityLevel = unstable_getCurrentPriorityLevel;
-exports.unstable_shouldYield = unstable_shouldYield;
-  })();
+/**
+ * SoundManager public interfaces
+ * ------------------------------
+ */
+
+if ( true && module && typeof module.exports === 'object') {
+
+  /**
+   * commonJS module
+   */
+
+  module.exports.SoundManager = SoundManager;
+  module.exports.soundManager = soundManager;
+
+} else if (true) {
+
+  /**
+   * AMD - requireJS
+   * basic usage:
+   * require(["/path/to/soundmanager2.js"], function(SoundManager) {
+   *   SoundManager.getInstance().setup({
+   *     url: '/swf/',
+   *     onready: function() { ... }
+   *   })
+   * });
+   *
+   * SM2_DEFER usage:
+   * window.SM2_DEFER = true;
+   * require(["/path/to/soundmanager2.js"], function(SoundManager) {
+   *   SoundManager.getInstance(function() {
+   *     var soundManager = new SoundManager.constructor();
+   *     soundManager.setup({
+   *       url: '/swf/',
+   *       ...
+   *     });
+   *     ...
+   *     soundManager.beginDelayedInit();
+   *     return soundManager;
+   *   })
+   * });
+   */
+
+  !(__WEBPACK_AMD_DEFINE_RESULT__ = (function() {
+    /**
+     * Retrieve the global instance of SoundManager.
+     * If a global instance does not exist it can be created using a callback.
+     *
+     * @param {Function} smBuilder Optional: Callback used to create a new SoundManager instance
+     * @return {SoundManager} The global SoundManager instance
+     */
+    function getInstance(smBuilder) {
+      if (!window.soundManager && smBuilder instanceof Function) {
+        var instance = smBuilder(SoundManager);
+        if (instance instanceof SoundManager) {
+          window.soundManager = instance;
+        }
+      }
+      return window.soundManager;
+    }
+    return {
+      constructor: SoundManager,
+      getInstance: getInstance
+    };
+  }).call(exports, __webpack_require__, exports, module),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+
 }
+
+// standard browser case
+
+// constructor
+window.SoundManager = SoundManager;
+
+/**
+ * note: SM2 requires a window global due to Flash, which makes calls to window.soundManager.
+ * Flash may not always be needed, but this is not known until async init and SM2 may even "reboot" into Flash mode.
+ */
+
+// public API, flash callbacks etc.
+window.soundManager = soundManager;
+
+}(window));
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../webpack/buildin/module.js */ "./node_modules/webpack/buildin/module.js")(module)))
+
+/***/ }),
+
+/***/ "./node_modules/webpack/buildin/global.js":
+/*!***********************************!*\
+  !*** (webpack)/buildin/global.js ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || new Function("return this")();
+} catch (e) {
+	// This works if the window reference is available
+	if (typeof window === "object") g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
 
 
 /***/ }),
 
-/***/ "./node_modules/scheduler/index.js":
-/*!*****************************************!*\
-  !*** ./node_modules/scheduler/index.js ***!
-  \*****************************************/
+/***/ "./node_modules/webpack/buildin/module.js":
+/*!***********************************!*\
+  !*** (webpack)/buildin/module.js ***!
+  \***********************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-
-
-if (false) {} else {
-  module.exports = __webpack_require__(/*! ./cjs/scheduler.development.js */ "./node_modules/scheduler/cjs/scheduler.development.js");
-}
-
-
-/***/ }),
-
-/***/ "./node_modules/scheduler/tracing.js":
-/*!*******************************************!*\
-  !*** ./node_modules/scheduler/tracing.js ***!
-  \*******************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-if (false) {} else {
-  module.exports = __webpack_require__(/*! ./cjs/scheduler-tracing.development.js */ "./node_modules/scheduler/cjs/scheduler-tracing.development.js");
-}
+module.exports = function(module) {
+	if (!module.webpackPolyfill) {
+		module.deprecate = function() {};
+		module.paths = [];
+		// module.parent = undefined by default
+		if (!module.children) module.children = [];
+		Object.defineProperty(module, "loaded", {
+			enumerable: true,
+			get: function() {
+				return module.l;
+			}
+		});
+		Object.defineProperty(module, "id", {
+			enumerable: true,
+			get: function() {
+				return module.i;
+			}
+		});
+		module.webpackPolyfill = 1;
+	}
+	return module;
+};
 
 
 /***/ })

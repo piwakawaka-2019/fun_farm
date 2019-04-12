@@ -1,12 +1,10 @@
-import React from 'react'
-
-class Sheep extends React.Component {
+class Cow extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       play: false
       };
-      this.url="../../sound/damn.mp3"
+      this.url="../../sound/airhorn.mp3"
       this.audio = new Audio(this.url)
     };
     play(){
@@ -15,19 +13,18 @@ class Sheep extends React.Component {
       });
      this.audio.play()
     };
+    
+    
+// load sound
+// click something, play sound
+//connect click/play to image
 
 // sound event listener here 
-
-
 render(){
-  return (
-  <div>
-  <h2>I'm Sheep</h2>
-  <button onClick={this.play.bind(this)}><img src="/images/sheep.jpg"width="100" height="100"></img></button>
+  return(
+    <div>
+  <button onClick={this.play.bind(this)} type="button">click</button>
 </div>
   )
   }
 }
-
-
-export default Sheep
