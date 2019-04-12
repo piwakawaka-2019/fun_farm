@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server & webpack --watch",
+    "start": "webpack && node server",
+    "dev": "node server & webpack --watch",
     "test": "jest --watch --noStackTrace"
   },
   "repository": {
@@ -17,6 +18,17 @@
     "url": "https://github.com/Runminty/fun_farm/issues"
   },
   "homepage": "https://github.com/Runminty/fun_farm#readme",
+
+"babel": {
+  "presets": [
+    "@babel/preset-env",
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    "babel-plugin-transform-class-properties"
+  ]
+},
+
   "dependencies": {
     "babel": "^6.23.0",
     "create-react-app": "^2.1.1",
@@ -27,7 +39,8 @@
     "plugins": "^0.4.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
-    "react-router-dom": "^4.3.1"
+    "react-router-dom": "^4.3.1",
+    "react-sound": "^1.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.1.6",
