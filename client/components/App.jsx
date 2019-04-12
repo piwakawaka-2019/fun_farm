@@ -10,14 +10,25 @@ import Sheep from './Sheep.jsx'
 
 const App = () => {
   return (
-    <div>
-      <h1>Fun farm</h1>,
-    {/* <Pig />,
-    <Cow />,
-    <Rooster />,
-    <Snake />,
-    <Sheep /> */}
-
+    <div className='farm'>
+      <div  className='title'>
+        <h1>Fun farm</h1>,
+    </div>
+      <div  className='Pig'>
+        <Pig />,
+    </div>
+      <div  className='Cow'>
+        <Cow />,
+    </div>
+      <div  className='Rooster'>
+        <Rooster />,
+    </div>
+      <div  className='Snake'>
+        <Snake />,
+    </div>
+      <div  className='Sheep'>
+        <Sheep />,
+    </div>
     </div>
   )
 }
